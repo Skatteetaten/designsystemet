@@ -1,0 +1,52 @@
+---
+title: Fieldset
+description: Fieldset brukes til å gruppere relaterte skjemafelt og gi dem en felles ledetekst.
+icon: /illustrations/fieldset.svg
+---
+
+<Canvas examplesPath="components/fieldset" />
+
+## Bruk Fieldset når
+
+- du har en liste med radioknapper, avkrysningsbokser eller andre skjemafelt som inngår i samme spørsmål
+- skjemaet må deles inn i tydelige seksjoner med en felles ledetekst
+
+## Unngå Fieldset når
+
+- du skal gruppere elementer som ligger utenfor et faktisk `<form>`‑element
+- feltene ikke hører sammen tematisk og du egentlig trenger en vanlig overskrift
+
+## Hvorfor vi anbefaler dette
+
+- Bruker HTML-elementene fieldset og legend som gjør at skjermlesere forstår at en gruppe av felt hører sammen. Uten dette leses hvert felt isolert, uten konteksten brukeren trenger noe som er spesielt problematisk for radioknapper og avkrysningsbokser.
+- Vi prioriterer semantisk struktur fremfor fri layout for å gjøre det enkelt å bygge skjemaer som fungerer konsekvent for alle brukere, uavhengig av teknologi.
+
+## Varianter og når bør du bruke dem
+
+### Plassering og justering
+
+- Bruk Fieldset når det er nødvendig å vise at feltene hører sammen.
+- Bruk `legend` som seksjonens ledetekst — det er denne som gir semantisk gruppering.
+- `legend` kan skjules visuelt, men skal alltid være tilgjengelig for skjermlesere.
+
+### Interaksjon og tilstander
+
+- Fieldset har ingen interaksjon i seg selv, men påvirker hvordan feltene inne i gruppen oppfattes semantisk.
+- Feilmeldinger for feltene i gruppen skal referere til ledeteksten i `legend`.
+
+## Tekst
+
+- `legend` skal beskrive hva alle feltene i gruppen handler om.
+- Ikke bruk identiske tekster i steg-titler (for eksempel i StepList) og i `legend` — disse har ulik funksjon.
+
+## Tilgjengelighet (UU og WCAG)
+
+- `legend` må brukes for at skjermlesere skal kunne tolke gruppen som ett spørsmål.
+- Skjulte `legend`-elementer skal fortsatt gi meningsfull kontekst.
+- Ikke erstatt `legend` med en vanlig visuell overskrift — det bryter semantikken.
+
+import { Fieldset } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={Fieldset} />

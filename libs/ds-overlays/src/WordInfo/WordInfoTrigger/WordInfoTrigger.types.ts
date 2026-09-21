@@ -14,5 +14,4 @@ type WordInfoTriggerCommonProps = BaseProps & {
 };
 
 export interface WordInfoTriggerProps
-  extends WordInfoTriggerCommonProps,
-    Partial<PropsFromButton> {}
+  extends WordInfoTriggerCommonProps, Partial<PropsFromButton> {}

@@ -1,23 +1,23 @@
 import { JSX, useContext, useImperativeHandle, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, Icon } from '@skatteetaten/ds-icons';
 
 import { ChipsRemovableProps } from './ChipsRemovable.types';
 import { ChipsContext } from '../ChipsContext';
-import { getChipDefaultSize } from '../defaults';
+import { defaultChipsSize } from '../defaults';
 
 import styles from './ChipsRemovable.module.scss';
 
 export const ChipsRemovable = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  size = getChipDefaultSize(),
-  disabled,
+  size = defaultChipsSize,
+  disabled = false,
   onClose,
   children,
 }: ChipsRemovableProps): JSX.Element => {

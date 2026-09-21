@@ -3,16 +3,12 @@
 .searchContainer {
   position: relative;
   display: flex;
-
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
 }
 
 .topContainer {
   max-width: 25rem;
 
-  --clear-button-top: 0.3125rem;
+  --clear-button-top: 0.1875rem;
   --clear-button-right: var(--spacing-s);
   --search-result-padding: var(--spacing-xs) var(--spacing-s);
   --input-padding: var(--spacing-xs) var(--spacing-s);
@@ -23,7 +19,7 @@
     var(--spacing-s);
 
   &:where([data-size='large']) {
-    --clear-button-top: var(--spacing-s);
+    --clear-button-top: 0.4375rem;
     --input-padding: var(--spacing-s);
     --input-padding-with-value: var(--spacing-s)
       calc(2 * var(--spacing-s) + var(--size-large) + 2px) var(--spacing-s)
@@ -31,7 +27,7 @@
   }
 
   &:where([data-size='extraLarge']) {
-    --clear-button-top: var(--spacing-m);
+    --clear-button-top: 0.9375rem;
     --input-padding: var(--spacing-m);
     --input-padding-with-value: var(--spacing-m)
       calc(2 * var(--spacing-m) + var(--size-large) + 2px) var(--spacing-m)
@@ -77,7 +73,6 @@
   font-size: var(--font-size-m);
   line-height: var(--semantic-line-height-input);
   outline: none;
-  outline-offset: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -93,6 +88,7 @@
     z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 2px solid var(--semantic-interactive-background);
+    outline-offset: 0;
   }
 
   &:disabled {
@@ -100,7 +96,7 @@
     box-shadow: inset 0 0 0 1px var(--semantic-disabled-foreground);
     color: var(--semantic-disabled-foreground);
     cursor: not-allowed;
-    outline: 0;
+    outline: 0; // for å sikre at outline-offset ikke overskrives av reset filen
   }
 
   &:has(~ div :focus-within),
@@ -109,6 +105,7 @@
     z-index: 1;
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
     outline: 1px solid var(--semantic-interactive-main);
+    outline-offset: 0; // for å sikre at outline-offset ikke overskrives av reset filen
 
     &::selection {
       background: var(--semantic-interactive-background);

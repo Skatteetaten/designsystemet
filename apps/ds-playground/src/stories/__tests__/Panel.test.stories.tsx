@@ -87,23 +87,21 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: (
+      <>
+        <Paragraph hasSpacing>{loremIpsum}</Paragraph>
+        <Button>{'Trykk på meg'}</Button>
+      </>
+    ),
+  },
 } satisfies Meta<typeof Panel>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  children: (
-    <>
-      <Paragraph hasSpacing>{loremIpsum}</Paragraph>
-      <Button>{'Trykk på meg'}</Button>
-    </>
-  ),
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLHeadingElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -124,7 +122,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -137,9 +134,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -154,7 +149,6 @@ export const WithAttributes = {
 export const WithClassNameOverridesPanelWidthAndPadding = {
   name: 'With ClassName Overrides Panel Width And Padding none (A2, A10)',
   args: {
-    ...defaultArgs,
     className: 'dummyPanelOverridesWidthAndPadding',
   },
   argTypes: {
@@ -166,9 +160,7 @@ export const WithClassNameOverridesPanelWidthAndPadding = {
 
 export const Defaults = {
   name: 'Defaults Variant Outline (A1, A2 delvis, A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -182,7 +174,6 @@ export const Defaults = {
 export const VariantFilled = {
   name: 'Variant Filled (A1)',
   args: {
-    ...defaultArgs,
     variant: 'filled',
   },
   argTypes: {
@@ -193,7 +184,6 @@ export const VariantFilled = {
 export const WithTitle = {
   name: 'With Title (A5, A3)',
   args: {
-    ...defaultArgs,
     title: tittelText,
     children: <Paragraph>{loremIpsum}</Paragraph>,
   },
@@ -212,7 +202,6 @@ export const WithTitle = {
 export const WithTitleAs = {
   name: 'With TitleAs (A5)',
   args: {
-    ...defaultArgs,
     title: tittelText,
     titleAs: 'h1',
   },
@@ -229,7 +218,6 @@ export const WithTitleAs = {
 export const WithHideTitle = {
   name: 'With HideTitle (A6)',
   args: {
-    ...defaultArgs,
     title: tittelText,
     hideTitle: true,
   },
@@ -246,7 +234,6 @@ export const WithHideTitle = {
 export const WithSubtitle = {
   name: 'With Subtitle (A7, A3)',
   args: {
-    ...defaultArgs,
     subtitle: subtittelText,
     children: <Paragraph>{loremIpsum}</Paragraph>,
   },
@@ -265,7 +252,6 @@ export const WithSubtitle = {
 export const WithSubtitleAs = {
   name: 'With SubtitleAs (A7)',
   args: {
-    ...defaultArgs,
     subtitle: 'Det er en undertittel med valgt heading nivå',
     subtitleAs: 'h2',
   },
@@ -282,7 +268,6 @@ export const WithSubtitleAs = {
 export const WithHideSubtitle = {
   name: 'With HideSubtitle (A8)',
   args: {
-    ...defaultArgs,
     subtitle: subtittelText,
     hideSubtitle: true,
   },
@@ -311,7 +296,6 @@ export const WithImage = {
   render: TemplateWithGraphics,
   name: 'With Image (A9)',
   args: {
-    ...defaultArgs,
     imageSource: farmerIllustration,
   },
   argTypes: {
@@ -331,7 +315,6 @@ export const WithImageSourceAltText = {
   render: TemplateWithGraphics,
   name: 'With Image With Alt Text (A9)',
   args: {
-    ...defaultArgs,
     imageSource: farmerIllustration,
     imageSourceAltText: 'Bonde med ku',
   },
@@ -353,7 +336,6 @@ export const WithImageMobile = {
   render: TemplateWithGraphics,
   name: 'With Image On Small Screen (A9)',
   args: {
-    ...defaultArgs,
     imageSource: farmerIllustration,
   },
   argTypes: {
@@ -370,7 +352,6 @@ export const WithIcon = {
   render: TemplateWithGraphics,
   name: 'With Icon (A11 delvis)',
   args: {
-    ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
   argTypes: {
@@ -389,7 +370,6 @@ export const WithIconMobile = {
   render: TemplateWithGraphics,
   name: 'With Icon On Small Screen (A12)',
   args: {
-    ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
   argTypes: {
@@ -406,7 +386,6 @@ export const WithHideGraphicMobileAndIcon = {
   render: TemplateWithGraphics,
   name: 'With HideGraphicMobile And Icon On Small Screen (A12, A9)',
   args: {
-    ...defaultArgs,
     hideGraphicMobile: true,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
@@ -424,7 +403,6 @@ export const WithHideGraphicMobileAndImage = {
   render: TemplateWithGraphics,
   name: 'With HideGraphicMobile And Image On Small Screen (A12, A9)',
   args: {
-    ...defaultArgs,
     hideGraphicMobile: true,
     imageSource: farmerIllustration,
   },
@@ -442,7 +420,6 @@ export const WithHideGraphicMobileAndIconDesktop = {
   render: TemplateWithGraphics,
   name: 'With HideGraphicMobile And Icon On Big Screen (A12, A9)',
   args: {
-    ...defaultArgs,
     hideGraphicMobile: true,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
@@ -455,7 +432,6 @@ export const WithHideGraphicMobileAndImageDesktop = {
   render: TemplateWithGraphics,
   name: 'With HideGraphicMobile And Image On Big Screen (A12, A9)',
   args: {
-    ...defaultArgs,
     hideGraphicMobile: true,
     imageSource: farmerIllustration,
   },
@@ -496,9 +472,7 @@ const TemplateWithAllColors: StoryFn<typeof Panel> = (args) => (
 export const WithColorAndVariant = {
   render: TemplateWithAllColors,
   name: 'With Color And Variant (A1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     color: {
       table: { disable: false },
@@ -522,9 +496,7 @@ const TemplateWithAllSpacings: StoryFn<typeof Panel> = (args) => (
 export const WithSpacing = {
   render: TemplateWithAllSpacings,
   name: 'With Spacing (A4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     spacing: {
       table: { disable: false },
@@ -555,9 +527,7 @@ const TemplateWithAllPaddings: StoryFn<typeof Panel> = (_args) => (
 export const WithPadding = {
   render: TemplateWithAllPaddings,
   name: 'With Padding (A10)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     padding: {
       table: { disable: false },
@@ -599,7 +569,6 @@ export const TextAlignedVertical = {
   render: TemplateTwoPanelWithTextAndOneWithIcon,
   name: 'Text Aligned Vertical (A13)',
   args: {
-    ...defaultArgs,
     renderIcon: (): JSX.Element => <InfoIcon size={'extraLarge'} />,
   },
   argTypes: {
@@ -627,7 +596,6 @@ export const TextShortAndIcon = {
 
 export const WithCanManuallySetTitleFocus = {
   args: {
-    ...defaultArgs,
     title: 'Tittel i Panel',
     canManuallySetTitleFocus: true,
   },
@@ -669,7 +637,6 @@ export const WithPanelHeadingRef: Story = {
     );
   },
   args: {
-    ...defaultArgs,
     title: 'Panel Header skal kunne få fokus',
     canManuallySetTitleFocus: true,
     variant: 'outline',

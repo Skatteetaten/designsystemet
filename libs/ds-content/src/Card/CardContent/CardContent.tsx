@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { CardContentProps } from './CardContent.types';
 
 import styles from './CardContent.module.scss';
@@ -9,7 +7,7 @@ import styles from './CardContent.module.scss';
 export const CardContent = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   rightContent,

@@ -24,8 +24,7 @@ interface LinkPropsHTMLAttributes extends LinkHTMLAttributes {
 }
 
 export interface LinkComponentCommonProps
-  extends LinkPropsHTMLAttributes,
-    BaseProps {
+  extends LinkPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLAnchorElement>;
   /**
    * Viser ikon etter lenketeksten som indikerer at lenken er til en side på et

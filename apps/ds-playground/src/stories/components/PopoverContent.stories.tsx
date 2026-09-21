@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { getPopoverContentAsDefault, Popover } from '@skatteetaten/ds-overlays';
+import { Popover } from '@skatteetaten/ds-overlays';
 
 import { category } from '../../../.storybook/helpers';
 import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
@@ -10,12 +10,7 @@ export default {
   title: 'Komponenter/Popover/Content',
   argTypes: {
     // Props
-    as: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPopoverContentAsDefault() },
-      },
-    },
+    as: { table: { category: category.props } },
     children: {
       control: 'text',
       table: { category: category.props },

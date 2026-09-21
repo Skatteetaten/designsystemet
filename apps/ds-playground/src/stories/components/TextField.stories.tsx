@@ -10,15 +10,17 @@ import {
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
-  getAutoCompletePropDescription,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  getDefaultHelpButtonTitle,
+  useFormattedInput,
 } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -26,66 +28,29 @@ const meta = {
   title: 'Komponenter/TextField',
   argTypes: {
     // Props
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    defaultValue: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    classNames: { control: false, table: { category: category.props } },
+    defaultValue: { control: 'text', table: { category: category.props } },
     characterLimit: { table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
-    thousandSeparator: {
-      table: { category: category.props },
-      description:
-        '<strong>Deprecated:</strong> Prop skal fjernes i neste major versjon.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     // HTML
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
     },
-    disabled: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     inputMode: {
       control: 'inline-radio',
@@ -97,14 +62,8 @@ const meta = {
     pattern: { table: { category: category.htmlAttribute } },
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
-    required: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
-    value: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
+    required: { table: { category: category.htmlAttribute } },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     list: { control: 'text', table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
@@ -128,9 +87,12 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   name: 'Beløp og postnummer',
   render: (_args): JSX.Element => {
-    const [creditInput, setCreditInput] = useState('10000');
+    const credit = useFormattedInput({
+      type: 'number',
+      initialValue: '10000',
+    });
 
-    const [postaCodeInput, setPostaCodeInput] = useState('');
+    const [postalCodeInput, setPostalCodeInput] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     return (
@@ -139,19 +101,16 @@ export const Examples: Story = {
           label={'Ønsket kredittgrense (NOK)'}
           className={'textField300'}
           description={'Gjennomsnittlig oppgjør for fire dager'}
-          value={creditInput}
+          value={credit.value}
           hasSpacing
-          thousandSeparator
-          onChange={(e: ChangeEvent<HTMLInputElement>): void =>
-            setCreditInput(e.target.value)
-          }
+          onChange={credit.onChange}
         />
         <TextField
           label={'Postnummer'}
           name={'test'}
           className={'textField150'}
           errorMessage={errorMessage}
-          value={postaCodeInput}
+          value={postalCodeInput}
           maxLength={4}
           pattern={'\\d{4}'}
           required
@@ -161,7 +120,7 @@ export const Examples: Story = {
               setErrorMessage('Postnummer kan kun inneholde tall.');
             }
 
-            setPostaCodeInput(e.target.value);
+            setPostalCodeInput(e.target.value);
           }}
           onBlur={(e: FocusEvent<HTMLInputElement>): void => {
             if (e.target.validity.patternMismatch) {

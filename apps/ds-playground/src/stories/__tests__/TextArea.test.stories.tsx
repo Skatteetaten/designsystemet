@@ -2,7 +2,14 @@ import { FocusEvent, ChangeEvent, useState, useRef, JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { useArgs } from 'storybook/preview-api';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -17,14 +24,9 @@ import {
 } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const textarea = canvas.getByRole('textbox');
-    await expect(textarea).toBeInTheDocument();
-    await expect(textarea).toHaveAttribute(attribute, expectedValue);
-  };
+const defaultLabelText = 'Andre opplysninger';
+const valueText = 'Kari Nordmann';
+const errorMessageText = 'Opplysninger er obligatorisk';
 
 const meta = {
   component: TextArea,
@@ -55,7 +57,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: {
@@ -86,22 +87,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabelText,
+  },
 } satisfies Meta<typeof TextArea>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const valueText = 'Kari Nordmann';
-const errorMessageText = 'Opplysninger er obligatorisk';
-
-const defaultLabelText = 'Andre opplysninger';
-const defaultArgs = {
-  label: defaultLabelText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLTextAreaElement | null): void => {
       if (instance) {
         instance.name = 'dummyNameForwardedFromRef';
@@ -114,13 +109,18 @@ export const WithRef = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('name', 'dummyNameForwardedFromRef'),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('textbox')).toHaveAttribute(
+      'name',
+      'dummyNameForwardedFromRef'
+    );
+  },
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -136,9 +136,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -156,7 +154,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
@@ -173,6 +170,9 @@ export const WithCustomClassNames = {
     classNames: {
       table: { disable: false },
     },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -193,9 +193,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults (A1, A2, B2, FS-A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
   },
@@ -233,9 +231,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -258,7 +254,6 @@ export const WithAriaDescribedBy = {
 export const WithDisabled = {
   name: 'With Disabled (B5)',
   args: {
-    ...defaultArgs,
     disabled: true,
     value: valueText,
     helpText: 'Hjelpeknappen skal også være disabled',
@@ -281,7 +276,6 @@ export const WithDisabled = {
 export const WithValue = {
   name: 'With Value',
   args: {
-    ...defaultArgs,
     value: valueText,
   },
   argTypes: {
@@ -300,7 +294,6 @@ export const WithValue = {
 export const WithDefaultValue = {
   name: 'With DefaultValue',
   args: {
-    ...defaultArgs,
     defaultValue: valueText,
   },
   argTypes: {
@@ -319,7 +312,6 @@ export const WithDefaultValue = {
 export const WithDefaultValueAndAutoSize = {
   name: 'With DefaultValue and Autosize',
   args: {
-    ...defaultArgs,
     defaultValue: loremIpsum,
     autosize: true,
   },
@@ -351,7 +343,6 @@ export const WithDefaultValueAndAutoSize = {
 export const WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceholder = {
   name: 'With AutoComplete Name Form AutoCorrect Spellcheck And Placeholder (A2, B1)',
   args: {
-    ...defaultArgs,
     autoComplete: 'given-name',
     name: 'test_name',
     form: 'form_name',
@@ -382,7 +373,6 @@ export const WithAutoCompleteNameFormAutoCorrectSpellcheckAndPlaceholder = {
 export const WithReadOnly = {
   name: 'With ReadOnly (B4)',
   args: {
-    ...defaultArgs,
     value: valueText,
     readOnly: true,
   },
@@ -402,7 +392,6 @@ export const WithReadOnly = {
 export const WithRequired = {
   name: 'With Required (B3)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -419,23 +408,9 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B4, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithMinAndMaxLength = {
   name: 'With MinLength And MaxLength (A4)',
   args: {
-    ...defaultArgs,
     maxLength: 50,
     minLength: 10,
   },
@@ -457,7 +432,6 @@ export const WithMinAndMaxLength = {
 export const WithRows = {
   name: 'With Rows (A5)',
   args: {
-    ...defaultArgs,
     rows: 4,
   },
   argTypes: {
@@ -473,9 +447,7 @@ export const WithRows = {
 
 export const WithoutError = {
   name: 'Without ErrorMessage (B5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     errorMessage: { table: { disable: false } },
   },
@@ -499,7 +471,6 @@ export const WithoutError = {
 export const WithErrorMessage = {
   name: 'With ErrorMessage(B5)',
   args: {
-    ...defaultArgs,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -523,7 +494,6 @@ export const WithErrorMessage = {
 export const WithDescription = {
   name: 'With Description (FS-A3)',
   args: {
-    ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
   argTypes: {
@@ -543,7 +513,6 @@ export const WithDescription = {
 export const WithHideLabel = {
   name: 'With HideLabel (B2)',
   args: {
-    ...defaultArgs,
     hideLabel: true,
   },
   argTypes: {
@@ -559,7 +528,6 @@ export const WithHideLabel = {
 export const WithHelpText = {
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText:
       'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
   },
@@ -578,7 +546,6 @@ export const WithHelpText = {
 export const WithHelpTextAndDescription = {
   name: 'With HelpText And Description (A1)',
   args: {
-    ...defaultArgs,
     helpText:
       'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.',
     description: 'En liten beskrivelse tekst',
@@ -615,7 +582,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A3)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onChange: fn(),
@@ -638,14 +604,17 @@ export const WithEventHandlers = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -671,7 +640,6 @@ export const WithAutoSizeInModal = {
   name: 'With AutoSize in Modal',
   render: InModalTemplate,
   args: {
-    ...defaultArgs,
     autosize: true,
   },
   argTypes: {
@@ -709,7 +677,6 @@ export const WithControlledValueAndAutoSize = {
     );
   },
   args: {
-    ...defaultArgs,
     autosize: true,
     value: loremIpsum,
   },
@@ -763,7 +730,6 @@ export const WithCharacterLimit = {
   name: 'With CharacterLimit (A10)',
   render: TemplateWithCharacterCounter,
   args: {
-    ...defaultArgs,
     characterLimit: 50,
   },
   argTypes: {
@@ -775,7 +741,6 @@ export const WithCharacterLimitAriaStaticText = {
   name: 'With CharacterLimit Aria Static Text',
   render: TemplateWithCharacterCounter,
   args: {
-    ...defaultArgs,
     characterLimit: 50,
   },
   argTypes: {
@@ -801,7 +766,6 @@ export const WithCharacterLimitExceeded = {
   name: 'With CharacterLimit Exceeded (A10)',
   render: TemplateWithCharacterCounter,
   args: {
-    ...defaultArgs,
     characterLimit: 50,
   },
   argTypes: {
@@ -829,7 +793,6 @@ export const WithCharacterLimitAndError = {
   name: 'With CharacterLimit And Error (A10)',
   render: TemplateWithCharacterCounter,
   args: {
-    ...defaultArgs,
     errorMessage: 'Feilmelding',
     characterLimit: 50,
   },
@@ -860,7 +823,6 @@ export const WithCharacterLimitAndResetOnEmptyAString = {
   name: 'With CharacterLimit And Reset On Empty String',
   render: TemplateWithCharacterCounterAndOnBlur,
   args: {
-    ...defaultArgs,
     characterLimit: 50,
   },
   argTypes: {

@@ -4,13 +4,14 @@ import { BaseProps, Color, Position, Size } from '@skatteetaten/ds-core-utils';
 
 import { AccordionItem } from './AccordionItem/AccordionItem';
 
-export type AccordionColor =
-  | Extract<Color, 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'>
-  | 'none';
+export type AccordionColor = Extract<
+  Color,
+  'white' | 'ochre' | 'forest' | 'burgundy' | 'graphite' | 'denim'
+>;
 
 export type AccordionSize = Extract<Size, 'small' | 'medium' | 'large'>;
 
-export type IconPosition = Extract<Position, 'left' | 'right'>;
+export type AccordionIconPosition = Extract<Position, 'left' | 'right'>;
 export interface AccordionProps extends BaseProps {
   ref?: Ref<HTMLDivElement>;
   /** Bakgrunnsfarge */
@@ -18,7 +19,7 @@ export interface AccordionProps extends BaseProps {
   /** Størrelse */
   size?: AccordionSize;
   /** Posisjonen til ikonet */
-  iconPosition?: IconPosition;
+  iconPosition?: AccordionIconPosition;
   /** Tekst eller markup som vises/skjules. */
   children?: ReactNode;
 }

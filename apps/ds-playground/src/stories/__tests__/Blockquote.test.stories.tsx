@@ -27,18 +27,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: loremIpsum,
+  },
 } satisfies Meta<typeof Blockquote>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  children: loremIpsum,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLQuoteElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -61,7 +59,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -74,9 +71,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -90,9 +85,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -138,16 +131,13 @@ export const WithMarkup = {
       control: { disable: true },
     },
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
 } satisfies Story;
 
 export const WithCanBeManuallyFocused: Story = {
   name: 'With Can Receive Focus',
   render: (args) => <Blockquote {...args}>{'Litt fylltekst'}</Blockquote>,
   args: {
-    ...defaultArgs,
     canBeManuallyFocused: true,
   },
   argTypes: {
@@ -175,7 +165,5 @@ const TemplateAllColors: StoryFn<BlockquoteProps> = (args) => (
 export const WithColors = {
   render: TemplateAllColors,
   name: 'With All Colors (A3, A4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
 } satisfies Story;

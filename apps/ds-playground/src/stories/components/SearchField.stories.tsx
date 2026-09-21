@@ -3,23 +3,20 @@ import { JSX, useMemo, useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getAutoCompletePropDescription,
-  getCommonAutoCompleteDefault,
-  getCommonFormVariantDefault,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  getDefaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
 import {
-  getEnableSRNavigationHintDefault,
-  getSearchFieldHasSearchButtonIconDefault,
-  getSearchFieldHideLabelDefault,
-  getSearchFieldIsLoadingDefault,
   SearchField,
   type SearchFieldProps,
   searchInList,
 } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -30,79 +27,33 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     clearButtonTitle: { table: { category: category.props } },
     searchButtonTitle: { table: { category: category.props } },
-    isLoading: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getSearchFieldIsLoadingDefault().toString(),
-        },
-      },
-    },
+    isLoading: { table: { category: category.props } },
     spinnerLabel: { table: { category: category.props } },
     spinnerProps: { table: { category: category.props } },
     results: { control: false, table: { category: category.props } },
-    hasSearchButtonIcon: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getSearchFieldHasSearchButtonIconDefault().toString(),
-        },
-      },
-    },
+    hasSearchButtonIcon: { table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     label: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
-    hideLabel: {
-      table: { category: category.props },
-      defaultValue: { summary: getSearchFieldHideLabelDefault().toString() },
-    },
-    enableSRNavigationHint: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getEnableSRNavigationHintDefault().toString(),
-        },
-      },
-    },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
+    hideLabel: { table: { category: category.props } },
+    enableSRNavigationHint: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
+    size: { control: 'inline-radio', table: { category: category.props } },
     // HTML
     accessKey: { table: { category: category.htmlAttribute } },
     autoComplete: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonAutoCompleteDefault() },
-        type: { summary: 'string' },
-      },
-      type: 'string',
-      description: getAutoCompletePropDescription(),
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
     },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
@@ -110,10 +61,7 @@ const meta = {
     placeholder: { table: { category: category.htmlAttribute } },
     readOnly: { table: { category: category.htmlAttribute } },
     required: { table: { category: category.htmlAttribute } },
-    value: {
-      control: 'text',
-      table: { category: category.htmlAttribute },
-    },
+    value: { control: 'text', table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events
@@ -121,7 +69,7 @@ const meta = {
     onChange: { ...htmlEventDescription },
     onClear: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
     onResultClick: { ...htmlEventDescription },
     onSearch: { ...htmlEventDescription },
     onSearchClick: { ...htmlEventDescription },

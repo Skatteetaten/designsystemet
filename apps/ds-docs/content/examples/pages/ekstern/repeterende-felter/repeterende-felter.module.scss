@@ -1,0 +1,66 @@
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m) 0;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: auto;
+}
+
+.descriptionList {
+  display: grid;
+  gap: var(--spacing-xs);
+  grid-template-columns: 1fr 1fr;
+}
+
+.repeatingFields {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: var(--spacing-m) 0;
+  gap: var(--spacing-m);
+  list-style: none;
+}
+
+.editModal {
+  width: 100%;
+}
+
+.buttonRow {
+  display: flex;
+  gap: var(--spacing-m);
+}
+
+.postalCode {
+  max-width: 109px;
+}
+
+.addressFields {
+  display: flex;
+  gap: var(--spacing-m);
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.panel {
+  margin: var(--spacing-l) auto;
+}
+
+.panelContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s) var(--spacing-l);
+}

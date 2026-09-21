@@ -2,13 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  OpenClose,
-  getOpenCloseIconPositionDefault,
-  getOpenCloseKeepMountedDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseVariantDefault,
-} from '@skatteetaten/ds-collections';
+import { OpenClose } from '@skatteetaten/ds-collections';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
@@ -20,60 +14,20 @@ const meta = {
   title: 'Komponenter/OpenClose',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     iconPosition: {
       control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseIconPositionDefault() },
-      },
+      table: { category: category.props },
     },
     isOnClickOnlyFiredOnOpen: { table: { category: category.props } },
     isExpanded: { table: { category: category.props } },
-    isDefaultExpanded: {
-      table: {
-        category: category.props,
-      },
-    },
-    keepMounted: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseKeepMountedDefault().toString() },
-      },
-    },
-    showUnderline: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseUnderlineDefault().toString() },
-      },
-    },
-    size: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'large' },
-      },
-    },
+    isDefaultExpanded: { table: { category: category.props } },
+    keepMounted: { table: { category: category.props } },
+    showUnderline: { table: { category: category.props } },
+    size: { control: 'inline-radio', table: { category: category.props } },
     title: { table: { category: category.props } },
-    titleAs: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getOpenCloseVariantDefault() },
-      },
-      description:
-        '<strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Bruk <code>size</code> i stedet.',
-    },
-    //Events
+    titleAs: { control: 'inline-radio', table: { category: category.props } },
+    // Events
     onClick: { ...htmlEventDescription },
   },
   args: {
@@ -126,7 +80,7 @@ export const Sizes: Story = {
       <>
         <Paragraph hasSpacing>
           {
-            'Prop "size" kan brukes for å spesifisere størrelsen på OpenClose-komponenten, og erstatter "variant" i neste major. "small" og "large" tilsvarer dagens "compact" og "standard", mens "medium" er en ny størrelse som ligger mellom de to.'
+            'Prop "size" kan brukes for å spesifisere størrelsen på OpenClose-komponenten.'
           }
         </Paragraph>
 

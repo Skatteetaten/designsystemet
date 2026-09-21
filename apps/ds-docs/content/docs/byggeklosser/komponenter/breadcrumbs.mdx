@@ -1,0 +1,64 @@
+---
+title: Breadcrumbs
+description: Breadcrumbs hjelper brukeren med å forstå hvor de er i nettstedets struktur og finne veien tilbake til høyere nivåer.
+icon: /illustrations/breadcrumbs.svg
+---
+
+<Canvas examplesPath="components/breadcrumbs" />
+
+## Bruk Breadcrumbs når
+
+- du vil vise brukeren hvor de er i nettstedets struktur
+- brukeren skal kunne gå tilbake til et høyere nivå
+
+## Unngå Breadcrumbs når
+
+- navigasjonen følger en lineær prosess med flere steg. Bruk i stedet StepList.
+- løsningen kun har ett eller to nivåer. Bruk i stedet en tilbakelenke.
+
+## Hvorfor vi anbefaler dette
+
+- Brødsmulestien hjelper brukeren å forstå hvor de er i sidestrukturen og å navigere til et høyere nivå. På sider med mange nivåer kan dette redusere forvirring og gjøre det enklere å finne frem.
+- Vi anbefaler ikke Breadcrumbs for korte stier med ett eller to nivåer. Da gir de liten navigasjonsverdi, samtidig som de tar plass og kan øke den kognitive belastningen.
+- Breadcrumbs er for navigasjon, ikke for å vise steg i en prosess. For steg-baserte flyter bruker du StepList, som viser fremdrift og har andre krav til universell utforming.
+
+## Varianter og når bør du bruke dem
+
+### Plassering og justering
+
+- Breadcrumbs skal alltid ligge øverst på siden: rett under toppbanneret og over sidetittelen.
+- På innloggede sider skal stien starte med _Min side_, deretter domenet og eventuelle undersider.
+- Tilbakelenker på innloggede sider skal peke til hovedsiden for tjenesten, eller _Min side_ dersom hovedside ikke finnes.
+- Lange stier forkortes automatisk, men kan vises i full lengde ved å sette `shouldCollapse` til `false`.
+
+### Interaksjon og tilstander
+
+- Brukeren kan vise hele den forkortede stien ved å trykke på ekspander-ikonet.
+- På mobil flyttes fokus til den første brødsmulen når hele stien vises.
+
+## Tekst
+
+Teksten bør samsvare med overskriftene eller navigasjonen på nettsiden, slik at det er lett å kjenne igjen nivåene.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Komponenten bruker `<nav>` og annonserer “Jeg er her” med riktig språk.
+- Siste element markeres som gjeldende side med `aria-current="page"`, med mulighet for å skru av mekanismen (`showLastItemAsCurrentPage`).
+
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+
+## Props
+
+<TypeTable of={Breadcrumbs} />
+
+### Breadcrumbs.List
+
+<TypeTable of={Breadcrumbs.List} />
+
+### Breadcrumbs.Item
+
+<TypeTable of={Breadcrumbs.Item} />
+
+### Breadcrumbs.Link
+
+<TypeTable of={Breadcrumbs.Link} />

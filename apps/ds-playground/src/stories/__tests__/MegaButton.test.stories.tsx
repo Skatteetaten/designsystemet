@@ -5,13 +5,9 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import {
   MegaButton,
-  MegaButtonComponentCommonProps,
   MegaButtonDiscriminatedProp,
 } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 const defaultMegaButtonText = 'Klikk her';
 
@@ -58,18 +54,15 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultMegaButtonText,
+  },
 } satisfies Meta<typeof MegaButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: MegaButtonComponentCommonProps = {
-  children: defaultMegaButtonText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -88,7 +81,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -101,9 +93,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -118,7 +108,6 @@ export const WithAttributes = {
 export const Defaults = {
   name: 'Defaults (A1, B2)',
   args: {
-    ...defaultArgs,
     'data-testid': 'pseudoStates',
   },
   argTypes: {
@@ -131,17 +120,13 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const megaButton = canvas.getByRole('button');
     await expect(megaButton).toBeInTheDocument();
-    await expect(megaButton).toHaveAttribute(
-      'type',
-      getCommonButtonTypeDefault()
-    );
+    await expect(megaButton).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
 export const WithLongText = {
   name: 'With Long Text (A2)',
   args: {
-    ...defaultArgs,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den må brekke.',
   },
@@ -153,7 +138,6 @@ export const WithLongText = {
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A1, A2)',
   args: {
-    ...defaultArgs,
     children: 'Denneknappenharenveldiglangtekst.Sålangatdenmåbrekke.',
   },
   argTypes: {
@@ -164,7 +148,6 @@ export const WithLongTextAndBreaking = {
 export const WithExternalIcon = {
   name: 'With External Icon (A4, B5, B7)',
   args: {
-    ...defaultArgs,
     isExternal: true,
     href: '#',
   },
@@ -188,7 +171,6 @@ export const WithExternalIcon = {
 export const WithLongTextAndExternalIcon = {
   name: 'With Long Text and External Icon (A2)',
   args: {
-    ...defaultArgs,
     isExternal: true,
     href: '#',
     children:
@@ -208,7 +190,6 @@ const discriminatedProps: MegaButtonDiscriminatedProp = {
 export const WithDisabled = {
   name: 'With Disabled (B6)',
   args: {
-    ...defaultArgs,
     ...discriminatedProps,
     'data-testid': 'pseudoStates',
   },
@@ -227,7 +208,6 @@ export const WithDisabled = {
 export const WithType = {
   name: 'With Type (B2)',
   args: {
-    ...defaultArgs,
     type: 'submit',
   },
   argTypes: {
@@ -242,7 +222,6 @@ export const WithType = {
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B1)',
   args: {
-    ...defaultArgs,
     ariaDescribedby: 'testid1234',
   },
   argTypes: {
@@ -257,7 +236,6 @@ export const WithAriaDescribedby = {
 export const WithAccesskey = {
   name: 'With Accesskey (B4)',
   args: {
-    children: defaultMegaButtonText,
     accessKey: 'j',
   },
   argTypes: {
@@ -272,7 +250,6 @@ export const WithAccesskey = {
 export const AsLink = {
   name: 'As Link (B3)',
   args: {
-    ...defaultArgs,
     href: 'https://www.skatteetaten.no',
     'data-testid': 'pseudoStates',
   },
@@ -287,7 +264,6 @@ export const AsLink = {
 export const AsLinkExternal = {
   name: 'As Link External (B3, A4)',
   args: {
-    ...defaultArgs,
     href: 'https://www.skatteetaten.no',
     isExternal: true,
     'data-testid': 'pseudoStates',
@@ -341,7 +317,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onClick: fn(),
@@ -375,7 +350,6 @@ export const WithSpinner = {
   render: TemplateWithSpinner,
   name: 'With Spinner (A7)',
   args: {
-    ...defaultArgs,
     hasSpinner: true,
   },
   argTypes: {

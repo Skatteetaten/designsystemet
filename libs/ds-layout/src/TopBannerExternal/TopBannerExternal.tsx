@@ -10,11 +10,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { SearchField } from '@skatteetaten/ds-forms';
 import {
   CancelSVGpath,
@@ -32,7 +28,6 @@ import {
   TopBannerExternalComponent,
 } from './TopBannerExternal.types';
 import { TopBannerExternalUserMenu } from './TopBannerExternalUserMenu/TopBannerExternalUserMenu';
-import { getTopBannerLangPickerLocaleDefault } from './TopBannerLangPicker/defaults';
 import { TopBannerLangPicker } from './TopBannerLangPicker/TopBannerLangPicker';
 import { convertLocaleToLang, isLanguages } from './TopBannerLangPicker/utils';
 import { TopBannerLogo } from './TopBannerLogo/TopBannerLogo';
@@ -44,18 +39,17 @@ import styles from './TopBannerExternal.module.scss';
 /**
  * TopBannerExternal
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-topbannerexternal--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/topbannerexternal/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/topbannerexternal)
  */
-export const TopBannerExternal = (({
+export const TopBannerExternal = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
   firstColumn,
-  defaultLocale = getTopBannerLangPickerLocaleDefault(),
+  defaultLocale = Languages.Bokmal,
   logo,
   secondColumn,
   skipLink,
@@ -64,7 +58,7 @@ export const TopBannerExternal = (({
   additionalLanguages,
   otherLanguagesURL,
   searchContent,
-  showSami,
+  showSami = true,
   children,
   onLanguageClick,
   onLogInClick,
@@ -334,11 +328,11 @@ export const TopBannerExternal = (({
                       <SearchField
                         ref={searchRef}
                         classNames={{ label: styles.mainMenuSearchLabel }}
-                        className={styles.mainMenuSearchSpacing}
                         label={t('topbanner.SearchLabel')}
-                        variant={isMobile ? 'large' : 'extraLarge'}
+                        size={isMobile ? 'large' : 'extraLarge'}
                         hideLabel={false}
                         enableSRNavigationHint={false}
+                        hasSpacing
                         onSearch={onSearch}
                         onSearchClick={onSearchClick}
                       />
@@ -422,7 +416,9 @@ export const TopBannerExternal = (({
       </div>
     </header>
   );
-}) as TopBannerExternalComponent;
+};
+
+export default TopBannerExternal as TopBannerExternalComponent;
 
 TopBannerExternal.displayName = 'TopBannerExternal';
 TopBannerExternal.UserMenu = TopBannerExternalUserMenu;

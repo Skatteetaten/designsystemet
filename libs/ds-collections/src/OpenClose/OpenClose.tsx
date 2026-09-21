@@ -1,14 +1,7 @@
 import { useState, MouseEvent, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
 import { Icon, ChevronDownSVGpath } from '@skatteetaten/ds-icons';
 
-import {
-  getOpenCloseIconPositionDefault,
-  getOpenCloseKeepMountedDefault,
-  getOpenCloseUnderlineDefault,
-  getOpenCloseVariantDefault,
-} from './defaults';
 import { OpenCloseProps } from './OpenClose.types';
 
 import styles from './OpenClose.module.scss';
@@ -16,37 +9,31 @@ import styles from './OpenClose.module.scss';
 /**
  * OpenClose
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-openclose--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/openclose/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/openclose)
  */
 export const OpenClose = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs: HeadingTag,
-  variant = getOpenCloseVariantDefault(),
-  size,
-  iconPosition = getOpenCloseIconPositionDefault(),
-  isExpanded: isExpandedExternal,
-  isDefaultExpanded,
-  isOnClickOnlyFiredOnOpen,
-  showUnderline = getOpenCloseUnderlineDefault(),
-  keepMounted = getOpenCloseKeepMountedDefault(),
+  titleAs: HeadingTag = 'div',
+  size = 'large',
+  iconPosition = 'left',
+  isExpanded: isExpandedExternal = false,
+  isDefaultExpanded = false,
+  isOnClickOnlyFiredOnOpen = false,
+  showUnderline = true,
+  keepMounted = true,
   onClick,
   children,
 }: OpenCloseProps): JSX.Element => {
-  const [isExpandedInternal, setIsExpandedInternal] = useState<boolean>(
-    isDefaultExpanded ?? false
-  );
+  const [isExpandedInternal, setIsExpandedInternal] =
+    useState<boolean>(isDefaultExpanded);
 
-  const isExpanded =
-    isExpandedExternal !== undefined ? isExpandedExternal : isExpandedInternal;
-  const resolvedSize = size ?? (variant === 'compact' ? 'small' : 'large');
+  const isExpanded = isExpandedExternal || isExpandedInternal;
 
-  const Tag = HeadingTag ?? 'div';
   const hasIconRight = iconPosition === 'right';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
@@ -72,11 +59,8 @@ export const OpenClose = ({
   }`.trim();
 
   return (
-    <div
-      className={`${styles.wrapper} ${className}`.trim()}
-      data-size={resolvedSize}
-    >
-      <Tag className={styles.tag}>
+    <div className={`${styles.wrapper} ${className}`.trim()} data-size={size}>
+      <HeadingTag className={styles.tag}>
         <button
           ref={ref}
           id={id}
@@ -90,12 +74,12 @@ export const OpenClose = ({
           <Icon
             svgPath={ChevronDownSVGpath}
             className={iconClassName}
-            size={resolvedSize === 'small' ? 'medium' : 'large'}
+            size={size === 'small' ? 'medium' : 'large'}
           />
 
           <span className={titleClassName}>{title}</span>
         </button>
-      </Tag>
+      </HeadingTag>
       {keepMounted ? (
         <div className={hiddenContentClassName}>{children}</div>
       ) : (

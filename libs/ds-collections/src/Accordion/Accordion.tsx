@@ -1,50 +1,45 @@
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { JSX } from 'react';
 
 import { AccordionComponent, AccordionProps } from './Accordion.types';
 import { AccordionContext } from './AccordionContext';
 import { AccordionItem } from './AccordionItem/AccordionItem';
-import {
-  getAccordionBackgroundColorDefault,
-  getAccordionIconPositionDefault,
-  getAccordionSizeDefault,
-} from './defaults';
+import { defaultAccordionSize } from './AccordionItem/defaults';
 
 import styles from './Accordion.module.scss';
 
 /**
  * Accordion
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-accordion--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/accordion)
  */
-export const Accordion = (({
+export const Accordion = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  color = getAccordionBackgroundColorDefault(),
-  size = getAccordionSizeDefault(),
-  iconPosition = getAccordionIconPositionDefault(),
+  color = 'white',
+  size = defaultAccordionSize,
+  iconPosition = 'right',
   children,
-}: AccordionProps) => {
-  const colorClassName = color !== 'none' ? styles[`accordion_${color}`] : '';
-  const concatenatedClassNames = `${colorClassName} ${className}`.trim();
-
+}: AccordionProps): JSX.Element => {
   return (
     <AccordionContext.Provider value={{ size, iconPosition }}>
       <div
         ref={ref}
-        className={concatenatedClassNames}
+        className={`${styles.accordion} ${className}`.trim()}
         lang={lang}
         id={id}
         data-testid={dataTestId}
+        data-color={color}
       >
         {children}
       </div>
     </AccordionContext.Provider>
   );
-}) as AccordionComponent;
+};
+
+export default Accordion as AccordionComponent;
 
 Accordion.displayName = 'Accordion';
 Accordion.Item = AccordionItem;

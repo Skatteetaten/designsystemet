@@ -1,10 +1,5 @@
 import { useId, JSX } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getHasSpacingDefault,
-} from '@skatteetaten/ds-core-utils';
-
 import { CheckboxContext } from './CheckboxContext';
 import {
   CheckboxGroupComponent,
@@ -19,13 +14,12 @@ import styles from './CheckboxGroup.module.scss';
 /**
  * CheckboxGroup
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkboxgroup--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkboxgroup/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/checkboxgroup)
  */
-export const CheckboxGroup = (({
+export const CheckboxGroup = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -34,14 +28,13 @@ export const CheckboxGroup = (({
   helpSvgPath,
   helpText,
   legend,
-  readOnly,
+  readOnly = false,
   titleHelpSvg,
   ariaDescribedBy,
-  disabled,
+  disabled = false,
   form,
-  hasSpacing = getHasSpacingDefault(),
-  hideLegend,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLegend = false,
   onHelpToggle,
   children,
 }: CheckboxGroupProps): JSX.Element => {
@@ -55,7 +48,7 @@ export const CheckboxGroup = (({
       classNames={{
         ...classNames,
         contentContainer:
-          `${styles.contentContainer} ${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
+          `${hideLegend ? '' : styles.contentContainerSpacing} ${classNames?.contentContainer ?? ''}`.trim(),
       }}
       lang={lang}
       data-testid={dataTestId}
@@ -64,7 +57,6 @@ export const CheckboxGroup = (({
       form={form}
       legend={legend}
       hideLegend={hideLegend}
-      showRequiredMark={showRequiredMark}
       description={description}
       helpSvgPath={helpSvgPath}
       helpText={helpText}
@@ -78,7 +70,7 @@ export const CheckboxGroup = (({
           readOnly,
         }}
       >
-        {children}
+        <div className={styles.checkboxGroupContainer}>{children}</div>
       </CheckboxContext.Provider>
       <ErrorMessage
         className={`${styles.errorMessage} ${
@@ -91,7 +83,9 @@ export const CheckboxGroup = (({
       </ErrorMessage>
     </Fieldset>
   );
-}) as CheckboxGroupComponent;
+};
+
+export default CheckboxGroup as CheckboxGroupComponent;
 
 CheckboxGroup.displayName = 'CheckboxGroup';
 CheckboxGroup.Checkbox = Checkbox;

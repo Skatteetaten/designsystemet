@@ -4,7 +4,6 @@ declare const classNames: {
   readonly article: 'article';
   readonly checkIconContainer: 'checkIconContainer';
   readonly checkIcon: 'checkIcon';
-  readonly noFocusVisible: 'noFocusVisible';
   readonly panel: 'panel';
   readonly marginTopM: 'marginTopM';
   readonly preLine: 'preLine';

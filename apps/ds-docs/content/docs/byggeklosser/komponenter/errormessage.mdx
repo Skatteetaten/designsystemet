@@ -1,0 +1,55 @@
+---
+title: ErrorMessage
+description: ErrorMessage brukes til å vise feil som brukeren må rette for å komme videre, for eksempel i utfyllingen av et skjema. Den gir tydelig og kontekstuell feilmelding knyttet til et spesifikt felt eller område.
+icon: /illustrations/errormessage.svg
+---
+
+<Canvas examplesPath="components/errormessage" />
+
+## Bruk ErrorMessage når
+
+- et felt eller en komponent ikke har innebygd mekanisme for å vise feilmeldinger
+- brukeren må rettes på en konkret feil for å kunne gå videre
+- feilsituasjonen gjelder et bestemt felt eller en bestemt handling
+
+## Unngå ErrorMessage når
+
+- du skal vise flere varsler eller feil som gjelder hele siden — bruk [ErrorSummary](/byggeklosser/komponenter/errorsummary)
+- du skal vise systemfeil eller feil ved innlasting — bruk [Alert](/byggeklosser/komponenter/alert)
+
+## Hvorfor vi anbefaler dette
+
+- Feilmeldinger plassert rett under det aktuelle feltet minimerer kognitiv belastning — brukeren trenger ikke lete for å forstå hva som er feil og hva som må rettes.
+- Innebygd `showError` brukes fremfor egne visningsregler for å sikre at skjermlesere fanger opp endringen automatisk.
+- Vi skiller mellom ErrorMessage (enkeltfelt), Alert (hel side) og ErrorSummary (oppsummering) for å gi brukeren riktig kontekst og navigasjonsstøtte.
+
+## Varianter og når bør du bruke dem
+
+### Plassering og justering
+
+- Feilmeldingen skal vises under feltet eller komponenten som feilen gjelder.
+- Ved generelle feilmeldinger kan den plasseres frittstående, men fortsatt i nær kontekst til det feilen angår.
+
+### Interaksjon og tilstander
+
+- Komponenten skal vises når brukeren har gjort en feil.
+- Når komponenten vises eller skjules må du bruke innebygd egenskap (`showError`) slik at skjermlesere oppfatter endringen.
+- Feilmeldingen skal være tydelig koblet til feltet den hører til.
+
+## Tekst
+
+- Teksten skal tydelig beskrive hva som er feil og hva brukeren må gjøre for å rette det.
+- Teksten skal være kort og presis.
+- Den skal inkludere referanse til feltet, f.eks. «Type virksomhet må fylles ut».
+
+## Tilgjengelighet (UU og WCAG)
+
+- Feilmeldingen skal ha tilstrekkelig kontrast (minst 4.5:1) mot bakgrunnen.
+- Feilmeldingen må være knyttet semantisk til feltet den gjelder.
+- Feilmeldingen skal annonseres av skjermleser når den dukker opp.
+
+import { ErrorMessage } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={ErrorMessage} />

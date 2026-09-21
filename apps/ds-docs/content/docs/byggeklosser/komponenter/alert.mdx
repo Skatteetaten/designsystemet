@@ -1,0 +1,74 @@
+---
+title: Alert
+description: Alert (varsel) brukes for informasjon det er ekstra viktig at brukeren ser og forstår. Komponenten er laget for å fange oppmerksomheten når noe krever handling eller ekstra oppmerksomhet.
+icon: /illustrations/alert.svg
+---
+
+<Canvas examplesPath="components/alert" />
+
+## Bruk Alert når
+
+- du vil fange brukerens oppmerksomhet med korte, viktige meldinger de må ta hensyn til
+- meldingen gjelder hele siden eller en større seksjon
+- du skal vise systemfeil der deler av tjenesten eller enkeltdata er utilgjengelige
+- du skal gi beskjed om midlertidige feil i systemet
+
+## Unngå Alert når
+
+- meldingen gjelder feil knyttet til enkeltfelt. Bruk ErrorMessage i stedet.
+- du trenger en statisk informasjonsboks. Bruk Panel i stedet.
+
+## Hvorfor vi anbefaler dette
+
+- De fem variantene har faste farger for å sikre konsekvent bruk på tvers av Skatteetatens løsninger. Det gjør det enklere for brukeren å gjenkjenne alvorlighetsgraden.
+- Vi skiller mellom [Alert](/byggeklosser/komponenter/alert) (hel side/seksjon), [ErrorMessage](/byggeklosser/komponenter/errormessage) (enkeltfelt) og [ErrorSummary](/byggeklosser/komponenter/errorsummary) (oppsummering) for å gi riktig informasjon på riktig sted. Dette er særlig viktig for skjermleserbrukere som ikke nødvendigvis vet hvor meldingen dukker opp.
+- Innebygd `showAlert` brukes for å sikre at skjermlesere fanger opp endringen automatisk via `aria-live`.
+
+## Varianter og når bør du bruke dem
+
+### Alvorligshetsgrad
+
+Alert har fem forhåndsdefinerte varianter:
+
+- Suksess (Grønn): Brukes til å bekrefte en vellykket operasjon.
+- Nøytral (Blå): Brukes til nøytrale meldinger som kan være nyttige for brukeren.
+- Advarsel (Gul): Brukes til advarsler, ustabilitet, unntak eller midlertidige feil. Egnet ved systemvarsler hvor deler av tjenesten er utilgjengelig.
+- Feil (Rød): Brukes til feil som har oppstått og der brukeren trenger veiledning for hvordan de kan komme videre. Vanlig for kritiske systemfeil.
+- Fare (Rød med kraftig kant): En spesielt uthevet variant. Brukes når brukeren kan miste opplysninger eller ved strengt fortrolig informasjon.
+
+#### Alle varianter:
+
+- Har standardikon og valgfritt lukkekryss.
+- Har faste farger som ikke kan endres, men ikon kan overstyres.
+
+### Plassering og justering
+
+- Bruk riktige farge- og ikonvalg for å understreke alvorlighetsgrad.
+- Alert kan brukes på farget bakgrunn ved å aktivere `backgroundBrightness` for økt kontrast.
+
+### Interaksjon og tilstander
+
+- Alert kan brukes både til varsler som er synlige når siden lastes, og til varsler som vises eller endres etter at brukeren har gjort noe.
+- Velg `ariaLive` ut fra om varselet er statisk eller dynamisk. Ikke la standardverdien stå uten en bevisst vurdering:
+  - Bruk `ariaLive="off"` når varselet allerede er synlig når siden lastes, eller når varselet er en fast del av innholdet på siden eller i skjemaet. Innholdet er fortsatt tilgjengelig for skjermleserbrukere når de navigerer til varselet, men det blir ikke lest opp automatisk.
+  - Bruk `ariaLive="polite"` når varselet vises eller endres dynamisk, for eksempel etter at brukeren har gjort et valg, lagret noe eller det har skjedd en endring på siden. Meldingen blir lest opp av skjermleser på et passende tidspunkt. Dette er standardverdien for alle varianter unntatt `danger`.
+  - Bruk `ariaLive="assertive"` bare når meldingen er kritisk eller tidssensitiv, og brukeren må få den med seg med en gang. Denne verdien kan avbryte det skjermleseren allerede leser, og skal derfor brukes sjelden.
+- Når du viser eller skjuler komponenten, bruk den innebygde egenskapen `showAlert`. Ikke lag egne visibility-regler, da dette kan hindre at skjermlesere fanger opp endringen.
+
+## Tekst
+
+- Hold innholdet kort og presist.
+- Bruk tydelig språk som gjenspeiler alvorlighetsgrad.
+- Skill mellom feil brukeren kan rette selv, og større systemfeil som krever annen informasjon.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Sørg for tilstrekkelig kontrast mellom tekst og bakgrunn (minst 4,5:1).
+- Meldingen bør være tydelig og lett å forstå for alle brukere.
+- Tilpass `ariaLive` til hvordan varselet brukes. Se «Interaksjon og tilstander» for veiledning om når du skal bruke `off`, `polite` og `assertive`.
+
+import { Alert } from '@skatteetaten/ds-status';
+
+## Props
+
+<TypeTable of={Alert} />

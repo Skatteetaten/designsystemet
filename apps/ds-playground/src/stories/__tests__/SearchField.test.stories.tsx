@@ -18,7 +18,11 @@ import {
   fn,
 } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import {
+  getDefaultHelpButtonTitle,
+  getDefaultSpinnerLabel,
+  dsI18n,
+} from '@skatteetaten/ds-core-utils';
 import { SearchField, searchInList } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
@@ -33,6 +37,9 @@ const verifyAttribute =
     await expect(button).toBeInTheDocument();
     await expect(button).toHaveAttribute(attribute, expectedValue);
   };
+
+const valueText = 'skattekort';
+const defaultLabelText = 'Hva leter du etter?';
 
 const meta = {
   component: SearchField,
@@ -66,12 +73,8 @@ const meta = {
     helpText: { table: { disable: true } },
     enableSRNavigationHint: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
+    size: { table: { disable: true } },
     // HTML
     accessKey: { table: { disable: true } },
     autoComplete: { table: { disable: true } },
@@ -98,21 +101,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabelText,
+  },
 } satisfies Meta<typeof SearchField>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const valueText = 'skattekort';
-
-const defaultLabelText = 'Hva leter du etter?';
-const defaultArgs = {
-  label: defaultLabelText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
       if (instance) {
         instance.name = 'dummyNameForwardedFromRef';
@@ -131,7 +129,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -148,9 +145,7 @@ export const WithAttributes = {
     autoComplete: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -171,12 +166,11 @@ const longLabelText =
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames and Long Label (FA3)',
   args: {
-    ...defaultArgs,
     label: longLabelText,
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      searchContainer: 'dummyClassnameFormContainer',
+      searchContainer: 'dummyClassname',
     },
     hideLabel: false,
   },
@@ -185,26 +179,26 @@ export const WithCustomClassNames = {
       table: { disable: false },
     },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(longLabelText);
 
-    const searchContainer = canvasElement.querySelector(
-      `${wrapper} > div > div`
-    );
+    const searchContainer = canvasElement.querySelector(`${wrapper} > div`);
 
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(searchContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(searchContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const WithLongLabel = {
   name: 'With Long Label',
   args: {
-    ...defaultArgs,
     label: longLabelText,
     description: 'Med en LAAAAAAAAAAAAAAAAAAAAAAAAAAAAANG beskrivelse?',
     helpText: 'hjelpetekst',
@@ -221,10 +215,8 @@ export const WithLongLabel = {
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1a, A2, A3, B1, B4)',
-  args: {
-    ...defaultArgs,
-  },
+  name: 'Defaults (A1a, A2, A3, B1, B4)',
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
     helpText: { table: { disable: false } },
@@ -269,9 +261,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -291,51 +281,46 @@ export const WithAriaDescribedBy = {
   },
 } satisfies Story;
 
-const AllVariantsTemplate: StoryFn<typeof SearchField> = (
-  args
-): JSX.Element => {
+const AllSizesTemplate: StoryFn<typeof SearchField> = (args): JSX.Element => {
   return (
     <>
-      <SearchField variant={'medium'} {...args} />
-      <SearchField variant={'large'} {...args} />
-      <SearchField variant={'extraLarge'} {...args} />
+      <SearchField size={'medium'} {...args} />
+      <SearchField size={'large'} {...args} />
+      <SearchField size={'extraLarge'} {...args} />
     </>
   );
 };
 
-export const WithVariants = {
-  name: 'With Variants (A1b, A2)',
+export const WithSizes = {
+  name: 'With Sizes (A1b, A2)',
   args: {
-    ...defaultArgs,
     hideLabel: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
-  render: AllVariantsTemplate,
+  render: AllSizesTemplate,
 } satisfies Story;
 
-export const WithVariantsNoIcon = {
-  name: 'With Variants Without Icon (A1b, A2)',
-  render: AllVariantsTemplate,
+export const WithoutIcon = {
+  name: 'Without Icon (A1b, A2)',
+  render: AllSizesTemplate,
   args: {
-    ...defaultArgs,
     hasSearchButtonIcon: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
   },
 } satisfies Story;
 
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
+export const WithSizeLargeAndLongText = {
+  name: 'With Size Large And Long Text',
   args: {
-    ...defaultArgs,
-    variant: 'large',
+    size: 'large',
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
-    variant: { table: { disable: false } },
+    size: { table: { disable: false } },
     value: { table: { disable: false } },
   },
   globals: {
@@ -348,7 +333,6 @@ export const WithVariantLargeAndLongText = {
 export const WithDisabled = {
   name: 'With Disabled',
   args: {
-    ...defaultArgs,
     disabled: true,
     value: 'En lang tekst som ikke skal synes bak reset-ikonet',
     hideLabel: false,
@@ -366,7 +350,7 @@ export const WithDisabled = {
     await expect(textbox).toBeDisabled();
     await expect(searchButton).toBeDisabled();
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: getDefaultHelpButtonTitle(),
     });
     await expect(helpButton).toBeDisabled();
   },
@@ -375,7 +359,6 @@ export const WithDisabled = {
 export const WithValue = {
   name: 'With Value',
   args: {
-    ...defaultArgs,
     value: valueText,
   },
   argTypes: {
@@ -390,7 +373,6 @@ export const WithValue = {
 export const WithDefaultValue = {
   name: 'With DefaultValue',
   args: {
-    ...defaultArgs,
     defaultValue: valueText,
   },
   argTypes: {
@@ -405,7 +387,6 @@ export const WithDefaultValue = {
 export const WithDescription = {
   name: 'With Description (0b, B2)',
   args: {
-    ...defaultArgs,
     description: 'En liten beskrivelse tekst',
     hideLabel: false,
   },
@@ -426,7 +407,6 @@ export const WithDescription = {
 export const WithHelpText = {
   name: 'With HelpText (0b, B2)',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
   },
@@ -436,7 +416,7 @@ export const WithHelpText = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const helpButton = canvas.getByRole('button', {
-      description: defaultLabelText,
+      name: getDefaultHelpButtonTitle(),
     });
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
@@ -446,7 +426,6 @@ export const WithHelpText = {
 export const WithNameAndPlaceholder = {
   name: 'With Name And Placeholder (A3, B3)',
   args: {
-    ...defaultArgs,
     name: 'test_name',
     placeholder: valueText,
   },
@@ -465,7 +444,6 @@ export const WithNameAndPlaceholder = {
 export const WithCustomButtonTitles = {
   name: 'With Custom Button Titles (A2, A5)',
   args: {
-    ...defaultArgs,
     value: valueText,
     clearButtonTitle: 'clear test',
     searchButtonTitle: 'search test',
@@ -485,7 +463,6 @@ export const WithCustomButtonTitles = {
 export const WithCustomButtonTitleText = {
   name: 'With Custom Button Title Text (A2)',
   args: {
-    ...defaultArgs,
     searchButtonTitle: 'search test',
     hasSearchButtonIcon: false,
   },
@@ -537,7 +514,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A7)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onSearchClick: fn(),
@@ -604,7 +580,6 @@ export const WithArrowKeyNavigation = {
   name: 'With ArrowKeyNavgitaion (C2)',
   render: KeyboardNavigationTemplate,
   args: {
-    ...defaultArgs,
     onResultClick: fn(),
   },
   parameters: {
@@ -644,7 +619,6 @@ export const WithArrowKeyNavigation = {
 export const WithAccesskey = {
   name: 'With Accesskey (B5)',
   args: {
-    ...defaultArgs,
     accessKey: 'j',
   },
   argTypes: {
@@ -659,15 +633,20 @@ export const WithAccesskey = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: getDefaultHelpButtonTitle(),
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -692,7 +671,6 @@ const ResetButtonTemplate: StoryFn<typeof SearchField> = (args) => {
 
 export const WithControlled = {
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     hideLabel: false,
   },
@@ -722,7 +700,6 @@ export const WithControlled = {
 export const WithRequired = {
   name: 'With Required',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -739,26 +716,11 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark',
-  args: {
-    ...defaultArgs,
-    required: true,
-    hideLabel: false,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 const errorMessageText = 'Søkefeltet er obligatorisk';
 
 export const WithErrorMessage = {
   name: 'With ErrorMessage',
   args: {
-    ...defaultArgs,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -776,7 +738,6 @@ export const WithErrorMessage = {
 
 export const WithLongPlaceholder = {
   args: {
-    ...defaultArgs,
     placeholder: 'En lang placeholder som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
@@ -788,7 +749,6 @@ export const WithLongPlaceholder = {
 
 export const WithLongInput = {
   args: {
-    ...defaultArgs,
     defaultValue: 'En lang value som ikke skal synes bak reset-ikonet',
   },
   argTypes: {
@@ -801,7 +761,6 @@ export const WithLongInput = {
 export const WithLoading = {
   name: 'With Loading',
   args: {
-    ...defaultArgs,
     isLoading: true,
   },
   argTypes: {
@@ -816,9 +775,7 @@ export const WithLoading = {
 
     await userEvent.click(searchbox);
 
-    const spinner = await canvas.findByText(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
+    const spinner = await canvas.findByText(getDefaultSpinnerLabel());
     await expect(spinner).toBeInTheDocument();
     await expect(canvas.queryByRole('listbox')).not.toBeInTheDocument();
   },
@@ -827,7 +784,6 @@ export const WithLoading = {
 export const WithCustomSpinnerLabel = {
   name: 'With Custom Spinner Label',
   args: {
-    ...defaultArgs,
     isLoading: true,
     spinnerLabel: 'Laster søk...',
   },
@@ -851,7 +807,6 @@ export const WithCustomSpinnerLabel = {
 export const WithSpinnerProps = {
   name: 'With Spinner Props',
   args: {
-    ...defaultArgs,
     isLoading: true,
     spinnerProps: {
       size: 'small',
@@ -870,9 +825,7 @@ export const WithSpinnerProps = {
 
     await userEvent.click(searchbox);
 
-    const spinner = await canvas.findByText(
-      dsI18n.t('ds_progress:spinner.LoadingLabel')
-    );
+    const spinner = await canvas.findByText(getDefaultSpinnerLabel());
     await expect(spinner.parentElement).toHaveAttribute('data-size', 'small');
     await expect(spinner.parentElement).toHaveAttribute('data-color', 'black');
   },
@@ -903,7 +856,6 @@ export const WithEnableSRNavigationHintsFalse = {
     },
   },
   args: {
-    ...defaultArgs,
     enableSRNavigationHint: false,
   },
   parameters: {
@@ -977,9 +929,7 @@ const TemplateWithTabIndex: StoryFn<typeof SearchField> = () => {
 export const WithTabIndexScope = {
   name: 'With TabIndex Scope',
   render: TemplateWithTabIndex,
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },

@@ -1,0 +1,83 @@
+---
+title: Accordion
+description: Accordion brukes til å skjule og vise innhold slik at brukeren får oversikt og lettere kan navigere til det som er relevant. Den består av seksjoner som kan åpnes og lukkes uavhengig av hverandre.
+icon: /illustrations/accordion.svg
+---
+
+<Canvas examplesPath="components/accordion" />
+
+## Bruk Accordion når
+
+- brukeren kun trenger å se deler av innholdet av gangen
+- seksjonene er uavhengige av hverandre
+- du vil redusere scrolling eller [visuell støy](wordinfo:visuell-stoy)
+
+## Unngå Accordion når
+
+- brukeren trenger å se innholdet samtidig
+- innholdet leses som en sammenhengende tekst
+- det er lite innhold. Vis heller alt direkte.
+- informasjonen har flere nivåer. Unngå Accordion i Accordion.
+- siden ofte skrives ut
+
+## Hvorfor vi anbefaler dette
+
+- Vi skjuler innhold bak Accordion bare når det hjelper brukeren å orientere seg. Innhold som flertallet trenger, bør vises direkte — å skjule det bak en klikk øker kognitiv belastning uten grunn.
+- Accordion inne i Accordion (nesting) gjør navigasjon uforutsigbar og bryter forventet interaksjonsmønster både visuelt og for skjermlesere.
+- På sider som skrives ut er Accordion problematisk fordi lukket innhold ofte ikke skrives ut, og brukeren kan miste viktig informasjon.
+
+## Varianter og når bør du bruke dem
+
+### Fargevarianter
+
+- Hvit (standard)
+- Gul
+- Grønn
+- Burgunder
+- Blå
+- Grå
+
+Farger brukes hovedsakelig når Accordion står i fargede flater eller skal markeres spesielt.
+
+### Størrelser
+
+- Small
+- Medium (standard)
+- Large
+
+### Plassering og justering
+
+- Standard ikon for åpne/lukke står til høyre.
+- Ikonet kan flyttes til venstre ved behov.
+- Tillegsikon kan plasseres til venstre; pilikonet vil da alltid stå til høyre.
+- Accordion bør brukes som en gruppe — ikke enkeltstående elementer midt i innhold uten struktur.
+
+### Interaksjon og tilstander
+
+- Seksjoner kan åpnes og lukkes individuelt.
+- Fokus skal ikke flyttes utilsiktet ved åpning/lukking.
+- Tastaturnavigasjon skal fungere for alle interaktive elementer.
+
+## Tekst
+
+- Bruk en presis overskrift som beskriver innholdet i seksjonen.
+- Hold ett tema per seksjon.
+- Teksten i seksjonen skal være kortfattet og lett å skanne.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Tastaturfokus skal beholdes på knappen ved åpning/lukking.
+- Struktur og ikonbruk må være semantisk riktig.
+- Det skal være tydelig hvilke seksjoner som er åpne eller lukket.
+
+import { Accordion } from '@skatteetaten/ds-collections';
+
+## Props
+
+### Accordion
+
+<TypeTable of={Accordion} />
+
+### Accordion.Item
+
+<TypeTable of={Accordion.Item} />

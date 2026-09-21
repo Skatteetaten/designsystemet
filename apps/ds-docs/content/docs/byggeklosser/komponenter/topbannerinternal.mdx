@@ -1,0 +1,95 @@
+---
+title: TopBannerInternal
+description: TopBannerInternal brukes som toppbanner i interne løsninger for Skatteetatens ansatte, eksempelvis saksbehandling eller administrasjonssystemer. Den gir et tydelig og konsistent utgangspunkt for intern navigasjon, identifikasjon av bruker og løsning, og plassering av overordnede funksjoner.
+icon: /illustrations/topbannerinternal.svg
+---
+
+<Canvas examplesPath="components/topbannerinternal" />
+
+## Bruk TopBannerInternal når
+
+- løsningen er interne systemer for ansatte i Skatteetaten
+- du trenger en konsistent toppseksjon med logo, tittel og eventuelt innlogget bruker
+- løsningen krever plassering av overordnede handlinger, systemnavigasjon eller snarveier
+
+## Unngå TopBannerInternal når
+
+- løsningen er en publikumsløsning – bruk [TopBannerExternal](/byggeklosser/komponenter/topbannerexternal) i stedet
+- løsningen ikke skal ha toppbanner (spesialsider uten intern navigasjon)
+- etatens interne identitet ikke skal være framtredende, f.eks. i tverretatlige samarbeidsløsninger med egen profil (se variant for fargebytte)
+
+## Hvorfor vi anbefaler dette
+
+- Burgundrød standardfarge på interne løsninger skaper visuell distinksjon fra publikumsflater og fra testmiljøer (svart/gul stripe). Dette reduserer risikoen for at ansatte blander produksjon og test.
+- Testtstripe og alternativ farge er dokumentert som unntak fordi de skal være sjeldne — overbruk undergraver signaleffekten.
+- «Hopp til hovedinnhold» er inkludert for at skjermleserbrukere ikke må navigere gjennom banneret på hver sidevisning — dette er et UU-krav som gjelder både interne og eksterne løsninger.
+
+## Varianter og når bør du bruke dem
+
+### Bakgrunnsfarge
+
+- **Burgunder (standard):** brukes i alle interne løsninger som utgangspunkt.
+- **Alternativ farge (denim‑100):** kan brukes i tverretatlige samarbeid eller spesialtilfeller.
+
+### Testmodus
+
+- En sort/gul teststripe kan vises øverst for å markere testmiljø.  
+  Dette brukes kun for å skille test fra produksjon.
+
+### Plassering og justering
+
+- Logo vises til venstre og fungerer som snarvei til startsiden.
+- Tittelområde ligger til høyre for logoen og viser:
+  - Løsningsnavn
+  - Valgfri undertittel
+- Innlogget bruker vises på høyre side når relevant.
+- Aksjonsmeny (valg/lenker) ligger under eller inne i banneret, avhengig av behov.
+
+### Interaksjon og tilstander
+
+### Logo og tittel
+
+- Logo og tittel fungerer som lenke tilbake til løsningens startside.  
+  Alternativ logo er mulig i tverretatlige samarbeidsløsninger.
+- Logo kan skjules på mobil for å spare plass.
+
+### Aksjonsmeny (underkomponent)
+
+- Gir plass til:
+  - lenker til løsninger eller separate sider
+  - systemaksjoner eller navigasjonspunkt
+- Åpnes via en knapp plassert i toppbanneret.
+
+### Søk og knapper
+
+- Plasseres normalt i raden under toppbanneret.
+- Kan unntaksvis legges _i_ toppbanneret for å spare vertikal plass.
+- Bruk standard søkefelt og InlineButton til mørk bakgrunn når funksjonen ligger i banneret.
+
+### Snarvei til hovedinnhold
+
+- En tilgjengelighetsfunksjon som lar brukeren hoppe direkte til hovedinnholdet.
+- Hindrer at skjermleser leser opp toppbanneret ved hver sidevisning.
+
+## Tekst
+
+- Løsningsnavn skal være kort, entydig og lett å identifisere.
+- Undertittel brukes for å gi ekstra kontekst når nødvendig.
+- Aksjonsmenyens titler skal bruke konsise, handlingsorienterte ord eller klare kategorier.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Første tabstopp skal være snarvei til hovedinnhold.
+- Alle interaksjoner i toppbanneret skal ha tydelig fokusmarkering.
+- Navigasjonselementer og menyer skal være tilgjengelige via tastatur.
+- Logo kan skjules visuelt på mobil, men må fortsatt ha semantisk alt‑tekst dersom den er synlig.
+
+import { TopBannerInternal } from '@skatteetaten/ds-layout';
+
+## Props
+
+<TypeTable of={TopBannerInternal} />
+
+### TopBannerInternal.ActionMenu
+
+<TypeTable of={TopBannerInternal.ActionMenu} />

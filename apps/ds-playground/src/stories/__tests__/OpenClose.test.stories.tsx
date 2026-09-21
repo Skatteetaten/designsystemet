@@ -3,10 +3,9 @@ import { MouseEvent, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
 
-import { OpenClose, OpenCloseProps } from '@skatteetaten/ds-collections';
+import { OpenClose } from '@skatteetaten/ds-collections';
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 
-const elementId = 'htmlId';
 const defaultTitle = 'Er jeg pendler?';
 const defaultContent =
   'En pendler er en lønnstaker som overnatter borte på grunn av jobb. Hvis du er pendler kan du ha krav på fradrag for ' +
@@ -30,10 +29,6 @@ const meta = {
       table: { disable: true },
       control: 'inline-radio',
     },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     iconPosition: { table: { disable: true } },
     isExpanded: { table: { disable: true } },
     isDefaultExpanded: { table: { disable: true } },
@@ -50,6 +45,10 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+  },
+  args: {
+    title: defaultTitle,
+    children: defaultContent,
   },
 } satisfies Meta<typeof OpenClose>;
 export default meta;
@@ -102,16 +101,9 @@ const TemplateWithAllHeadings: StoryFn<typeof OpenClose> = (args) => (
     })}
   </>
 );
-
-const defaultArgs: OpenCloseProps = {
-  title: defaultTitle,
-  children: defaultContent,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -136,8 +128,7 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -149,16 +140,14 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     const wrapper = canvas.getAllByRole('generic')[1];
     await expect(wrapper).toHaveClass('dummyClassname');
-    await expect(button).toHaveAttribute('id', elementId);
+    await expect(button).toHaveAttribute('id', 'htmlId');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
   },
@@ -166,9 +155,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A2, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     title: { table: { disable: false } },
   },
@@ -184,7 +171,7 @@ export const Defaults = {
     const title = canvas.getByText(defaultTitle);
     await expect(title).toBeInTheDocument();
     const content = canvas.queryByText(defaultContent);
-    await expect(content).not.toBeInTheDocument();
+    await expect(content).toBeInTheDocument();
 
     const svg = button.querySelector('svg');
     await expect(svg).toBeInTheDocument();
@@ -192,56 +179,9 @@ export const Defaults = {
   },
 } satisfies Story;
 
-export const WithIconRight = {
-  name: 'With Icon Right (A2)',
-  args: {
-    ...defaultArgs,
-    iconPosition: 'right',
-  },
-  argTypes: {
-    iconPosition: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithoutUnderline = {
-  name: 'Without Underline (A3)',
-  args: {
-    ...defaultArgs,
-    showUnderline: false,
-  },
-  argTypes: {
-    showUnderline: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithIconRightAndNoUnderline = {
-  name: 'With Icon Right And No Underline (A2, A3)',
-  args: {
-    ...defaultArgs,
-    iconPosition: 'right',
-    showUnderline: false,
-  },
-  argTypes: {
-    iconPosition: { table: { disable: false } },
-    showUnderline: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const Compact = {
-  name: 'Compact (A1 delvis)',
-  args: {
-    ...defaultArgs,
-    variant: 'compact',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const Small = {
   name: 'Small (A1 delvis)',
   args: {
-    ...defaultArgs,
     size: 'small',
   },
   argTypes: {
@@ -252,7 +192,6 @@ export const Small = {
 export const Medium = {
   name: 'Medium (A1 delvis)',
   args: {
-    ...defaultArgs,
     size: 'medium',
   },
   argTypes: {
@@ -260,15 +199,12 @@ export const Medium = {
   },
 } satisfies Story;
 
-export const CompactWithIconRight = {
-  name: 'Compact With Icon Right (A1 delvis, A2)',
+export const WithIconRight = {
+  name: 'With Icon Right (A2)',
   args: {
-    ...defaultArgs,
-    variant: 'compact',
     iconPosition: 'right',
   },
   argTypes: {
-    variant: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
   },
 } satisfies Story;
@@ -276,7 +212,6 @@ export const CompactWithIconRight = {
 export const SmallWithIconRight = {
   name: 'Small With Icon Right (A1 delvis, A2)',
   args: {
-    ...defaultArgs,
     size: 'small',
     iconPosition: 'right',
   },
@@ -289,7 +224,6 @@ export const SmallWithIconRight = {
 export const MediumWithIconRight = {
   name: 'Medium With Icon Right (A1 delvis, A2)',
   args: {
-    ...defaultArgs,
     size: 'medium',
     iconPosition: 'right',
   },
@@ -299,15 +233,12 @@ export const MediumWithIconRight = {
   },
 } satisfies Story;
 
-export const CompactWithoutUnderline = {
-  name: 'Compact Without Underline (A1 delvis, A3)',
+export const WithoutUnderline = {
+  name: 'Without Underline (A3)',
   args: {
-    ...defaultArgs,
-    variant: 'compact',
     showUnderline: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
   },
 } satisfies Story;
@@ -315,7 +246,6 @@ export const CompactWithoutUnderline = {
 export const SmallWithoutUnderline = {
   name: 'Small Without Underline (A1 delvis, A3)',
   args: {
-    ...defaultArgs,
     size: 'small',
     showUnderline: false,
   },
@@ -328,7 +258,6 @@ export const SmallWithoutUnderline = {
 export const MediumWithoutUnderline = {
   name: 'Medium Without Underline (A1 delvis, A3)',
   args: {
-    ...defaultArgs,
     size: 'medium',
     showUnderline: false,
   },
@@ -338,16 +267,13 @@ export const MediumWithoutUnderline = {
   },
 } satisfies Story;
 
-export const CompactWithIconRightAndNoUnderline = {
-  name: 'Compact With Icon Right And No Underline (A1 delvis, A2, A3)',
+export const WithIconRightAndNoUnderline = {
+  name: 'With Icon Right And No Underline (A2, A3)',
   args: {
-    ...defaultArgs,
-    variant: 'compact',
     iconPosition: 'right',
     showUnderline: false,
   },
   argTypes: {
-    variant: { table: { disable: false } },
     iconPosition: { table: { disable: false } },
     showUnderline: { table: { disable: false } },
   },
@@ -356,7 +282,6 @@ export const CompactWithIconRightAndNoUnderline = {
 export const SmallWithIconRightAndNoUnderline = {
   name: 'Small With Icon Right And No Underline (A1 delvis, A2, A3)',
   args: {
-    ...defaultArgs,
     size: 'small',
     iconPosition: 'right',
     showUnderline: false,
@@ -371,7 +296,6 @@ export const SmallWithIconRightAndNoUnderline = {
 export const MediumWithIconRightAndNoUnderline = {
   name: 'Medium With Icon Right And No Underline (A1 delvis, A2, A3)',
   args: {
-    ...defaultArgs,
     size: 'medium',
     iconPosition: 'right',
     showUnderline: false,
@@ -386,7 +310,6 @@ export const MediumWithIconRightAndNoUnderline = {
 export const IsExpanded = {
   name: 'With IsExpanded (A4 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
   },
   argTypes: {
@@ -401,23 +324,9 @@ export const IsExpanded = {
   },
 } satisfies Story;
 
-export const CompactAndIsExpanded = {
-  name: 'With Compact And IsExpanded (A4 delvis)',
-  args: {
-    ...defaultArgs,
-    isExpanded: true,
-    variant: 'compact',
-  },
-  argTypes: {
-    isExpanded: { table: { disable: false } },
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const SmallAndIsExpanded = {
   name: 'With Small And IsExpanded (A4 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
     size: 'small',
   },
@@ -430,7 +339,6 @@ export const SmallAndIsExpanded = {
 export const MediumAndIsExpanded = {
   name: 'With Medium And IsExpanded (A4 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
     size: 'medium',
   },
@@ -443,7 +351,6 @@ export const MediumAndIsExpanded = {
 export const IconRightContent = {
   name: 'With IsExpanded And Icon Right (A1 delvis)',
   args: {
-    ...defaultArgs,
     isExpanded: true,
     iconPosition: 'right',
   },
@@ -457,7 +364,6 @@ export const WithOnClick = {
   render: TemplateWithOnClick,
   name: 'With OnClick (A4 delvis, B1 delvis)',
   args: {
-    ...defaultArgs,
     onClick: fn(),
   },
   parameters: {
@@ -468,11 +374,11 @@ export const WithOnClick = {
     const button = canvas.getByRole('button');
     await expect(button).toHaveAttribute('aria-expanded', 'false');
     await fireEvent.click(button);
-    const content = canvas.getByText(defaultContent);
     await expect(button).toHaveAttribute('aria-expanded', 'true');
-    await expect(content).toBeInTheDocument();
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeVisible();
     await fireEvent.click(button);
-    await expect(content).not.toBeInTheDocument();
+    await expect(content).not.toBeVisible();
     await waitFor(() => expect(args.onClick).toHaveBeenCalledTimes(2));
   },
 } satisfies Story;
@@ -481,7 +387,6 @@ export const WithIsOnClickOnlyFiredOnOpen = {
   render: TemplateWithOnClick,
   name: 'With IsOnClickOnlyFiredOnOpen (A4 delvis)',
   args: {
-    ...defaultArgs,
     isOnClickOnlyFiredOnOpen: true,
     onClick: fn(),
   },
@@ -503,9 +408,7 @@ export const WithIsOnClickOnlyFiredOnOpen = {
 export const WithChangingTitle = {
   render: TemplateWithChangingTitle,
   name: 'With Changing Title (A4 delvis)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -523,9 +426,7 @@ export const WithChangingTitle = {
 export const WithTitleAs = {
   render: TemplateWithAllHeadings,
   name: 'With TitleAs (B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -543,7 +444,6 @@ export const WithTitleAs = {
 export const WithLongTitle = {
   name: 'With Long Title (A1 delvis)',
   args: {
-    ...defaultArgs,
     title:
       'Denneknappenharenveldiglangtekst.Dentekstengåroverflerelinjerfordidenersålangogdablirikonetriktigplassert.' +
       'Fordetkanjoskjeattittelengåroverflerelinjerhvisdeterenveldiglitenskjerm.Sådamåvisjekkeatdetikkeserrartut.',
@@ -561,7 +461,6 @@ export const WithLongTitle = {
 export const IsDefaultExpanded = {
   name: 'With IsDefaultExpanded',
   args: {
-    ...defaultArgs,
     isDefaultExpanded: true,
   },
   argTypes: {
@@ -579,11 +478,10 @@ export const IsDefaultExpanded = {
   },
 } satisfies Story;
 
-export const WithKeepMountedTrue = {
-  name: 'With KeepMounted True (A9)',
+export const WithKeepMountedFalse = {
+  name: 'With KeepMounted False (A9)',
   args: {
-    ...defaultArgs,
-    keepMounted: true,
+    keepMounted: false,
   },
   argTypes: {
     keepMounted: { table: { disable: false } },
@@ -595,15 +493,16 @@ export const WithKeepMountedTrue = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
 
-    // Initially content should be in DOM but hidden when keepMounted=true
+    // Initially content should not be in DOM when keepMounted=false and collapsed
     await expect(button).toHaveAttribute('aria-expanded', 'false');
-    const content = canvas.getByText(defaultContent);
-    await expect(content).toBeInTheDocument();
-    await expect(content).not.toBeVisible();
+    let content = canvas.queryByText(defaultContent);
+    await expect(content).not.toBeInTheDocument();
 
     // Expand OpenClose
     await fireEvent.click(button);
     await expect(button).toHaveAttribute('aria-expanded', 'true');
+    content = canvas.getByText(defaultContent);
+    await expect(content).toBeInTheDocument();
     await expect(content).toBeVisible();
 
     // Collapse OpenClose
@@ -611,7 +510,7 @@ export const WithKeepMountedTrue = {
     await expect(button).toHaveAttribute('aria-expanded', 'false');
 
     // Content should still be in DOM but hidden when keepMounted=true
-    await expect(content).toBeInTheDocument();
-    await expect(content).not.toBeVisible();
+    content = canvas.queryByText(defaultContent);
+    await expect(content).not.toBeInTheDocument();
   },
 } satisfies Story;

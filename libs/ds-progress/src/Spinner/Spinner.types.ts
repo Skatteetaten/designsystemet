@@ -1,14 +1,13 @@
 import { Ref } from 'react';
 
-import { BaseProps, Size } from '@skatteetaten/ds-core-utils';
+import { BaseProps, Color, Size } from '@skatteetaten/ds-core-utils';
 
 export type SpinnerSize = Extract<
   Size,
   'small' | 'medium' | 'large' | 'extraLarge'
 >;
 
-export const spinnerColorArr = ['white', 'black', 'blue'] as const;
-export type SpinnerColor = (typeof spinnerColorArr)[number];
+export type SpinnerColor = Extract<Color, 'white' | 'black'> | 'interactive';
 
 export const spinnerPositionArr = ['right', 'bottom'] as const;
 export type SpinnerTitlePostion = (typeof spinnerPositionArr)[number];

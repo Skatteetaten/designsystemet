@@ -1,13 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getTopBannerExternalUserMenuHostnameDefault,
   TopBannerExternal,
   TopBannerExternalUserMenu,
   TopBannerExternalUserMenuProps,
 } from '@skatteetaten/ds-layout';
 
-import { category } from '../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 TopBannerExternal.UserMenu.displayName = 'TopBannerExternal.UserMenu';
 
@@ -17,23 +16,12 @@ const meta = {
     // Props
     notificationCount: { table: { category: category.props } },
     user: { table: { category: category.props } },
-    hostname: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getTopBannerExternalUserMenuHostnameDefault(),
-        },
-      },
-    },
-    hideDefaultLinks: {
-      table: {
-        category: category.props,
-      },
-    },
+    hostname: { table: { category: category.props } },
+    hideDefaultLinks: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
     // Events
-    onLogOutClick: { table: { category: category.event } },
-    onSwitchUserClick: { table: { category: category.event } },
+    onLogOutClick: { ...htmlEventDescription },
+    onSwitchUserClick: { ...htmlEventDescription },
   },
   args: {
     user: {

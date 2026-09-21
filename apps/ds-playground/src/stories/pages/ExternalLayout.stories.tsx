@@ -100,8 +100,6 @@ export const StandardLayout = (): JSX.Element => {
             variant={activeStep === 1 ? 'active' : 'passive'}
             title={'StepList har også en innebygd containerbredde'}
             stepNumber={1}
-            //slik at ikke første steg stjeler fokus ved initiell lasting av siden
-            shouldAutoFocusWhenActive={false}
             onNext={onNext}
           >
             {
@@ -136,6 +134,7 @@ export const StandardLayout = (): JSX.Element => {
                   errorMessage={
                     hasStep2Error ? 'Kryss av om du vil gå videre' : undefined
                   }
+                  hasSpacing
                   hideLegend
                   onChange={(e): void => {
                     setHasStep2Error(false);

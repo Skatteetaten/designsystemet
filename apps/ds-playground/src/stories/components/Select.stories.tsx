@@ -3,13 +3,16 @@ import { ChangeEvent, useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import {
-  getCommonFormVariantDefault,
-  getHelpTitleHelpSvgDefault,
+  autoCompletePropDescription,
+  getDefaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
-import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import { Select } from '@skatteetaten/ds-forms';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -21,47 +24,27 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
-    placeholder: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSelectPlaceholderDefault() },
-      },
-    },
-    description: { table: { category: category.props } },
+    placeholder: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getCommonFormVariantDefault() },
-      },
-    },
     label: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at required er tatt i bruk. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     // HTML
-    autoComplete: { table: { category: category.htmlAttribute } },
+    autoComplete: {
+      control: 'text',
+      table: { category: category.htmlAttribute, type: { summary: 'string' } },
+      description: autoCompletePropDescription,
+    },
     disabled: { table: { category: category.htmlAttribute } },
     form: { table: { category: category.htmlAttribute } },
     name: { table: { category: category.htmlAttribute } },
@@ -72,7 +55,7 @@ const meta = {
     onBlur: { ...htmlEventDescription },
     onChange: { ...htmlEventDescription },
     onFocus: { ...htmlEventDescription },
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     label: 'Farge',

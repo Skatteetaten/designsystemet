@@ -1,0 +1,108 @@
+---
+title: TopBannerExternal
+description: TopBannerExternal brukes som toppbanner i alle publikumsløsninger. Den gir brukeren tilgang til sentrale funksjoner som innlogging, meny, søk, språkvalg, representasjonsbytte og varsler. Formålet er å sikre en gjenkjennbar, effektiv og konsistent navigasjonsopplevelse på tvers av tjenester.
+icon: /illustrations/topbannerexternal.svg
+---
+
+<Canvas examplesPath="components/topbannerexternal" />
+
+## Bruk TopBannerExternal når
+
+- løsningen er rettet mot publikum (innbyggere, profesjonelle eller virksomheter)
+- du trenger en standardisert toppnavigasjon med støtte for innlogging og representasjon
+- du vil at navigasjon, søk og brukerfunksjoner skal være likt på tvers av løsninger
+
+## Unngå TopBannerExternal når
+
+- løsningen er intern — bruk [TopBannerInternal](/byggeklosser/komponenter/topbannerinternal) i stedet
+- siden ikke trenger kompleksiteten i toppfunksjonaliteten (se spesialsider under)
+
+## Hvorfor vi anbefaler dette
+
+- Et konsistent toppbanner på tvers av alle publikumsløsninger gir brukerne én gjenkjennelig struktur for navigasjon, innlogging og representasjon — dette øker tillit og reduserer forvirring mellom tjenester.
+- Funksjoner skjules i oppgavemodus for å redusere distraksjoner og hjelpe brukeren fokusere på oppgaven — dette er spesielt viktig i skjema- og prosessflyter.
+- «Hopp til hovedinnhold»-snarvei er et UU-krav for at skjermleserbrukere ikke må navigere gjennom hele banneret på hver sidevisning.
+
+## Varianter og når bør du bruke dem
+
+Komponenten har ingen egne stilvarianter, men funksjonaliteten blir tilpasset basert på:
+
+- innlogget/ikke innlogget bruker
+- om bruker representerer seg selv, virksomhet eller andre personer
+- type side (vanlig visning, oppgave, spesialside)
+- skjermstørrelse
+
+### Plassering og justering
+
+- Plasseres alltid i toppen av siden.
+- Skal være det første interaktive elementet, med snarvei for å hoppe til hovedinnhold.
+- Kan forenkles på sider der hele toppbannerets funksjonalitet ikke er nødvendig (se under «Spesialsider»).
+
+### Interaksjon og tilstander
+
+### Snarvei til hovedinnhold
+
+- For skjermleserbrukere vises en snarvei som hopper direkte til hovedinnholdet.
+- Når brukeren går til en ny side, blir ikke toppbanneren lest opp på nytt.
+
+### Innlogging
+
+- **Ikke innlogget:** Knapp for «Logg inn».
+- **Innlogget:** Visningen tilpasses basert på representasjonsmuligheter:
+  - Bruker representerer kun seg selv: går direkte til Min side.
+  - Bruker representerer personer/virksomheter: viser [RolePicker](/byggeklosser/komponenter/rolepicker).
+  - Profesjonelle brukere (regnskapsførere, m.fl.) kan få spesialvisning.
+
+### Normalvisning (innlogget)
+
+Standardinnhold:
+
+- språkvelger
+- logg ut-knapp
+- søkefunksjon
+- brukermeny (inkl. representasjonsvelger og innboks)
+- meny (tre innholdsblokker for elementer)
+
+### Varsling om uleste meldinger
+
+- Antall uleste meldinger styres av `notificationCount` på brukermenyen. Så lenge verdien er over 0, vises et rødt varselmerke.
+- I brukermenyen vises varselmerket ved innboks-lenken med antall uleste (99+ ved høyere antall).
+- Knappen som åpner brukermenyen viser samtidig en tilsvarende rød varselprikk, slik at brukeren ser at det finnes uleste meldinger uten å måtte åpne menyen først.
+
+### I en oppgave
+
+Når brukeren utfører en aktivitet (f.eks. skjema eller prosess):
+
+- meny, søk og brukermeny skjules for å redusere distraksjoner
+- et grått felt vises for å vise hvem brukeren representerer
+
+### Spesialsider
+
+På sider der toppfunksjonalitet er unødvendig eller forstyrrende:
+
+- toppbanneret kan forenkles ved å skjule funksjoner som innlogging, søk eller representasjon
+- eksempler: «Jobb i Skatteetaten», «Deling av data»
+
+## Tekst
+
+- Språkvelger støtter bokmål, nynorsk og engelsk.
+- Samisk kan brukes i løsninger hvor det er relevant.
+- Tekst for menyer og knapper må være konsis, tydelig og selvforklarende.
+- Hvis innholdet på siden mangler oversettelse til valgt språk, må det vises en tydelig melding om dette, f.eks. «Dette innholdet er ikke tilgjengelig på nynorsk».
+
+## Tilgjengelighet (UU og WCAG)
+
+- Første tabstopp må være «Hopp til hovedinnhold».
+- Banneret leses ikke automatisk på nytt når bruker navigerer – gir mindre støy for skjermleserbrukere.
+- Alle interaksjonselementer må ha tydelige fokustilstander.
+- Språkvelger og representasjonsvalg skal være tilgjengelig og semantisk korrekt.
+
+import { TopBannerExternal } from '@skatteetaten/ds-layout';
+
+## Props
+
+<TypeTable of={TopBannerExternal} />
+
+### TopBannerExternal.UserMenu
+
+<TypeTable of={TopBannerExternal.UserMenu} />

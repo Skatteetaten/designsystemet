@@ -1,0 +1,76 @@
+---
+title: Popover
+description: Popover brukes til å vise korte forklaringer eller utfyllende informasjon i et lite overliggende felt uten å ta brukeren bort fra det opprinnelige innholdet. Den gir brukeren nødvendig kontekst uten å forstyrre flyten.
+icon: /illustrations/popover.svg
+---
+
+<Canvas examplesPath="components/popover" />
+
+## Bruk Popover når
+
+- brukeren trenger kort og presis tilleggsinformasjon
+- du ønsker å forklare et begrep eller gi ekstra veiledning uten å åpne en ny side
+- informasjonen skal være tilgjengelig på forespørsel, men ikke vises permanent
+
+## Unngå Popover når
+
+- forklaringen er lang eller kompleks
+- hjelpetekster i skjema er mer passende
+- informasjonen er kritisk og bør være synlig som standard
+- det kreves at brukeren tar stilling til noe — bruk Modal
+
+## Hvorfor vi anbefaler dette
+
+- Popover er ment for informasjon på forespørsel — innhold som ikke er kritisk, men som kan gi kontekst. Kritisk informasjon skal alltid vises direkte i siden.
+- [Fokusfangst](wordinfo:fokusfangst) og [fokusretur](wordinfo:retur-av-fokus) er påkrevd for at tastatur- og skjermleserbrukere ikke mister oversikten over siden når popoveren åpnes og lukkes.
+- Vi skiller mellom Popover (hjelp på forespørsel), Modal (bruker må ta stilling), WordInfo (begrepforklaring i tekst) og hjelpetekst (skjemakontekst) for å gi brukeren riktig forventning.
+
+## Varianter og når bør du bruke dem
+
+### Farger
+
+Vi bruker fargene gul, grønn og hvit.
+
+- Grønn (standard): hjelpetekster
+- Gul: tips og veiledning
+- Hvit: nøytral informasjon
+
+### Plassering og justering
+
+- Popover-innholdet vises nær triggeren som åpner det.
+- For å unngå at Popover dekker viktig innhold eller handlinger kan du bruke `position` for å styre retningen. Komponenten kan overstyre plasseringen automatisk hvis det er for lite plass på skjermen.
+
+### Interaksjon og tilstander
+
+- Popover skal vises etter at brukeren har aktivert triggeren, og ikke automatisk når siden lastes.
+- Skal kunne lukkes med ESC eller klikk utenfor.
+- Lukkeknappen gir fokus tilbake til triggeren når Popover lukkes.
+
+## Tekst
+
+- Hold teksten kort, presis og lett å skanne.
+- Unngå fullstendige avsnitt — bruk korte forklaringer.
+- Språket skal tydelig beskrive det brukeren trenger å forstå i konteksten.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Popover må fanges opp av skjermleser når den åpnes.
+- Fokus må være kontrollert:
+  - settes til popover‑innholdet ved åpning
+  - returnere til trigger‑elementet ved lukking
+- Sørg for at popover kan navigeres med tastatur.
+- Popover skal ikke brukes for informasjon som brukeren må kunne lese over lengre tid.
+
+import { Popover } from '@skatteetaten/ds-overlays';
+
+## Props
+
+<TypeTable of={Popover} />
+
+### Popover.Content
+
+<TypeTable of={Popover.Content} />
+
+### Popover.Trigger
+
+<TypeTable of={Popover.Trigger} />

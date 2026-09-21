@@ -26,8 +26,7 @@ interface ButtonPropsHTMLAttributes extends ButtonHTMLAttributes {
 }
 
 export interface TopBannerLangPickerButtonProps
-  extends ButtonPropsHTMLAttributes,
-    BaseProps {
+  extends ButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Om komponenten skal være i fokus. */
   focus?: boolean;

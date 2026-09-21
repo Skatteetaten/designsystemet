@@ -4,7 +4,7 @@ import { expect, userEvent, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 
-import { defaultArgs } from './utils/combobox.test.utils';
+import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
 
 const meta = {
   component: Combobox,
@@ -21,7 +21,7 @@ const meta = {
     label: { table: { disable: true } },
     options: { table: { disable: true } },
     placeholder: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     multiple: { table: { disable: true } },
     value: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -55,6 +55,11 @@ const meta = {
   parameters: {
     chromatic: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabel,
+    options: defaultOptions,
+    multiple: true,
+  },
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
@@ -62,10 +67,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Defaults = {
   name: 'Defaults (A1, A10)',
-  args: {
-    ...defaultArgs,
-    multiple: true,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
@@ -82,7 +84,6 @@ export const WithLongText = {
   name: 'With Long Text (A1)',
   args: {
     className: 'width200',
-    multiple: true,
     label: 'Combobox with long option values',
     options: [
       { label: 'Averylongoptionvaluethatexceedsnormallength', value: '1' },
@@ -106,10 +107,7 @@ export const WithLongText = {
 
 export const WithSelectedValues = {
   name: 'With Selected Values (A11)',
-  args: {
-    ...defaultArgs,
-    multiple: true,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
@@ -133,8 +131,6 @@ export const WithSelectedValues = {
 export const WithMaxSelected = {
   name: 'With MaxSelected (A12)',
   args: {
-    ...defaultArgs,
-    multiple: true,
     maxSelected: 3,
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -160,8 +156,6 @@ export const WithMaxSelected = {
 export const WithMaxSelectedValues = {
   name: 'With MaxSelected Values (A12)',
   args: {
-    ...defaultArgs,
-    multiple: true,
     maxSelected: 2,
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -187,10 +181,7 @@ export const WithMaxSelectedValues = {
 
 export const MultipleSelectionMouse = {
   name: 'Flervalg med mus (A11)',
-  args: {
-    ...defaultArgs,
-    multiple: true,
-  },
+  args: {},
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -230,10 +221,7 @@ export const MultipleSelectionMouse = {
 
 export const MultipleSelectionKeyboard = {
   name: 'Flervalg med tastatur (A11)',
-  args: {
-    ...defaultArgs,
-    multiple: true,
-  },
+  args: {},
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -284,10 +272,7 @@ export const MultipleSelectionKeyboard = {
 
 export const KeyboardSelectionRestoresOriginalFocusIndex = {
   name: 'Tastaturvalg etter filtrering bruker original indeks',
-  args: {
-    ...defaultArgs,
-    multiple: true,
-  },
+  args: {},
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -324,8 +309,6 @@ export const KeyboardSelectionRestoresOriginalFocusIndex = {
 export const ClickOpenFocusesLastSelectedValue = {
   name: 'Klikk for aapning fokuserer sist valgte verdi i flervalg',
   args: {
-    ...defaultArgs,
-    multiple: true,
     value: ['no', 'se'],
   },
   parameters: {
@@ -348,8 +331,6 @@ export const ClickOpenFocusesLastSelectedValue = {
 export const AltArrowDownKeepsInputFocusWithSelectedValues = {
   name: 'Alt+Pil ned beholder inputfokus med valgte verdier i flervalg',
   args: {
-    ...defaultArgs,
-    multiple: true,
     value: ['no', 'se'],
   },
   parameters: {
@@ -376,8 +357,6 @@ export const AltArrowDownKeepsInputFocusWithSelectedValues = {
 export const WithName = {
   name: 'With Name',
   args: {
-    ...defaultArgs,
-    multiple: true,
     name: 'categories',
   },
   parameters: {

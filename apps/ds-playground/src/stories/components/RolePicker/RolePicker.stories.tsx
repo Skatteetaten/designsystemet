@@ -9,22 +9,15 @@ import {
   Entity,
   Person,
   RolePicker,
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-  getRolePickerHideCloseButtonDefault,
   Paginated,
   OnEntitySelectHandler,
-  getRolePickerShowInactiveBusinessesDefault,
-  getRolePickerShowSubunitsDefault,
-  getRolePickerShowDeceasedPeopleDefault,
-  getRolePickerMinimumEntitiesForSearchDefault,
 } from '@skatteetaten/ds-overlays';
 
 import RolePickerWithAlertExample from './RolePickerWithAlertExample';
 import rolePickerWithAlertExample from './RolePickerWithAlertExample?raw';
 import RolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample';
 import rolePickerWithTopBannerExternalExample from './RolePickerWithTopBannerExternalExample?raw';
-import { category } from '../../../../.storybook/helpers';
+import { category, htmlEventDescription } from '../../../../.storybook/helpers';
 
 const me: Person = {
   name: 'Ola Nordmann',
@@ -214,69 +207,18 @@ const meta = {
     me: { control: 'object', table: { category: category.props } },
     people: { control: 'object', table: { category: category.props } },
     businesses: { control: 'object', table: { category: category.props } },
-    dismissOnEsc: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getModalDismissOnEscDefault().toString() },
-      },
-    },
-    dismissOnOutsideClick: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getModalDismissOnOutsideClickDefault().toString(),
-        },
-      },
-    },
-    hideCloseButton: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerHideCloseButtonDefault().toString(),
-        },
-      },
-    },
-    minimumEntitiesForSearch: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerMinimumEntitiesForSearchDefault().toString(),
-        },
-      },
-    },
-    showInactiveBusinesses: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerShowInactiveBusinessesDefault().toString(),
-        },
-      },
-    },
-    showSubunits: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerShowSubunitsDefault().toString(),
-        },
-      },
-    },
-    showDeceasedPeople: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getRolePickerShowDeceasedPeopleDefault().toString(),
-        },
-      },
-    },
-    title: {
-      table: {
-        category: category.props,
-      },
-    },
+    dismissOnEsc: { table: { category: category.props } },
+    dismissOnOutsideClick: { table: { category: category.props } },
+    hideCloseButton: { table: { category: category.props } },
+    minimumEntitiesForSearch: { table: { category: category.props } },
+    showInactiveBusinesses: { table: { category: category.props } },
+    showSubunits: { table: { category: category.props } },
+    showDeceasedPeople: { table: { category: category.props } },
+    title: { table: { category: category.props } },
     // Events
-    onClose: { control: false, table: { category: category.event } },
-    onEntitySelect: { control: false, table: { category: category.event } },
-    onLogout: { control: false, table: { category: category.event } },
+    onClose: { ...htmlEventDescription },
+    onEntitySelect: { ...htmlEventDescription },
+    onLogout: { ...htmlEventDescription },
   },
   args: {
     me,

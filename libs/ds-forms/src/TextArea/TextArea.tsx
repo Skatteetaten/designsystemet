@@ -7,12 +7,6 @@ import {
   useRef,
 } from 'react';
 
-import {
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
-
 import { TextAreaProps } from './TextArea.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { InputCounter } from '../InputCounter/InputCounter';
@@ -24,13 +18,12 @@ import styles from './TextArea.module.scss';
 /**
  * TextArea
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-textarea--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/textarea/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/textarea)
  */
 export const TextArea = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -42,30 +35,28 @@ export const TextArea = ({
   label,
   titleHelpSvg,
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
+  autoComplete = 'off',
   autoCorrect,
   characterLimit,
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   maxLength,
   minLength,
   name,
   placeholder,
-  readOnly,
-  required,
+  readOnly = false,
+  required = false,
   rows,
   spellCheck,
   value,
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
 }: TextAreaProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `textAreaErrorId-${useId()}`;
   const generatedId = `textAreaTextboxId-${useId()}`;
   const characterCounterId = `textAreaCharacterCounter-${useId()}`;
@@ -97,10 +88,9 @@ export const TextArea = ({
   };
 
   const autosizeTextarea = autosize ? styles.textarea_autosize : '';
-  const textboxClassName =
-    `${styles.textarea}  ${autosizeTextarea} ${label && !hideLabel ? styles.textareaMarginTop : ''} ${
-      classNames?.textbox ?? ''
-    }`.trim();
+  const textboxClassName = `${styles.textarea}  ${autosizeTextarea} ${
+    classNames?.textbox ?? ''
+  }`.trim();
 
   const resolvedAriaDescribedBy =
     [
@@ -122,7 +112,6 @@ export const TextArea = ({
         classNames={classNames}
         htmlFor={textboxId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}

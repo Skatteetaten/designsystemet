@@ -1,0 +1,100 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.contentWrapper {
+  display: grid;
+  gap: var(--semantic-responsive-internal-container-spacing);
+  grid-template-columns: minmax(0, 1fr);
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-template-areas:
+      'heading'
+      'mdx';
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  &_withToc {
+    @media (min-width: breakpoints.$breakpoint-m) {
+      grid-template-areas:
+        'heading nav'
+        'mdx nav';
+      grid-template-columns: minmax(0, 1fr) max-content;
+    }
+  }
+}
+
+.headingContent {
+  min-width: 0;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-area: heading;
+  }
+}
+
+.navContent {
+  @include styles.sr-only;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    position: sticky;
+    top: var(--spacing-l);
+    display: block;
+    overflow: visible;
+    width: max-content;
+    max-width: 16rem;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    grid-area: nav;
+    place-self: start start;
+    white-space: normal;
+  }
+}
+
+.mdxContent {
+  min-width: 0;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-area: mdx;
+  }
+}
+
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.parentTitle {
+  display: block;
+  margin-bottom: var(--spacing-m);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--semantic-line-height-article);
+}
+
+.mdxIcon {
+  width: 6rem;
+
+  @media (width >= #{breakpoints.$breakpoint-m}) and (width < #{breakpoints.$breakpoint-l}) {
+    display: none;
+  }
+}
+
+.errorPage {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.notFound {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: var(--spacing-xl) auto;
+}
+
+.notFoundArticle {
+  width: var(--semantic-responsive-article);
+  margin: 0 auto;
+}

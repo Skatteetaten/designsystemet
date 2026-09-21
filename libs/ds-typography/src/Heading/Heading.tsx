@@ -1,7 +1,5 @@
 import { JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { HeadingProps } from './Heading.types';
 
 import styles from './Heading.module.scss';
@@ -9,19 +7,18 @@ import styles from './Heading.module.scss';
 /**
  * Heading
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-heading--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/typography/#heading) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/heading)
  */
 export const Heading = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   as: Tag,
   level: externalLevel,
-  canBeManuallyFocused,
-  hasSpacing,
+  canBeManuallyFocused = false,
+  hasSpacing = false,
   children,
 }: HeadingProps): JSX.Element => {
   const TAG_LEVEL_MAP: Record<string, number> = {

@@ -10,23 +10,12 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { FavoriteSVGpath, LogOutSVGpath } from '@skatteetaten/ds-icons';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
 import { rolePickerAnalyticsIds } from './analyticsIds';
-import {
-  getRolePickerHideCloseButtonDefault,
-  getRolePickerMinimumEntitiesForSearchDefault,
-  getRolePickerShowDeceasedPeopleDefault,
-  getRolePickerShowInactiveBusinessesDefault,
-  getRolePickerShowSubunitsDefault,
-} from './defaults';
 import { Business, Entity, RolePickerProps } from './RolePicker.types';
-import {
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-} from '../Modal/defaults';
 import { Modal } from '../Modal/Modal';
 import { RolePickerBusinessList } from './RolePickerBusinessList/RolePickerBusinessList';
 import { RolePickerContext } from './RolePickerContext';
@@ -40,26 +29,25 @@ import styles from './RolePicker.module.scss';
 /**
  * RolePicker
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-rolepicker--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolepicker/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/rolepicker)
  */
 export const RolePicker = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   me,
   businesses,
   people,
   title,
-  dismissOnEsc = getModalDismissOnEscDefault(),
-  dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
-  hideCloseButton = getRolePickerHideCloseButtonDefault(),
-  minimumEntitiesForSearch = getRolePickerMinimumEntitiesForSearchDefault(),
-  showInactiveBusinesses = getRolePickerShowInactiveBusinessesDefault(),
-  showSubunits = getRolePickerShowSubunitsDefault(),
-  showDeceasedPeople = getRolePickerShowDeceasedPeopleDefault(),
+  dismissOnEsc = true,
+  dismissOnOutsideClick = true,
+  hideCloseButton = false,
+  minimumEntitiesForSearch = 11,
+  showInactiveBusinesses = false,
+  showSubunits = true,
+  showDeceasedPeople = false,
   onClose,
   onEntitySelect,
   onLogout,
@@ -128,7 +116,7 @@ export const RolePicker = ({
   const noValidBusinesses =
     !me && !people && businesses && businesses.total === 0;
 
-  let internalTitle = title ? title : t('rolepicker.Heading');
+  let internalTitle = title ?? t('rolepicker.Heading');
 
   if (noValidBusinesses) {
     internalTitle = t('rolepicker.NoBusinessesErrorTitle');

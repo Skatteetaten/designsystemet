@@ -3,11 +3,14 @@ import { useState, JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { getHelpTitleHelpSvgDefault } from '@skatteetaten/ds-core-utils';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  helpSvgPathDescription,
+  htmlEventDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 CheckboxGroup.Checkbox.displayName = 'CheckboxGroup.Checkbox';
@@ -19,30 +22,18 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
-    description: { table: { category: category.props } },
+    description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    helpSvgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: {
-        category: category.props,
-        defaultValue: { summary: 'HelpSimpleSVGpath' },
-      },
-    },
+    helpSvgPath: { ...helpSvgPathDescription },
     helpText: { control: 'text', table: { category: category.props } },
     hideLegend: { table: { category: category.props } },
     legend: { control: 'text', table: { category: category.props } },
     readOnly: { table: { category: category.props } },
-    showRequiredMark: {
-      table: { category: category.props },
-      description:
-        'Om obligatorisk gruppe skal markeres med stjerne. <strong>Deprecated:</strong> Prop skal fjernes ved lansering av neste major versjon. Les mer om mønstre for obligatoriske felt på <a href="https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/">stil og tone</a>.',
-    },
     titleHelpSvg: {
       table: {
         category: category.props,
-        defaultValue: { summary: getHelpTitleHelpSvgDefault() },
+        defaultValue: { summary: getDefaultHelpButtonTitle() },
       },
     },
     // HTML
@@ -51,7 +42,7 @@ const meta = {
     // Aria
     ariaDescribedBy: { table: { category: category.aria } },
     // Events
-    onHelpToggle: { control: false, table: { category: category.event } },
+    onHelpToggle: { ...htmlEventDescription },
   },
   args: {
     children: [
@@ -108,7 +99,7 @@ export const Examples: Story = {
     };
     return (
       <>
-        <CheckboxGroup legend={'Velg det som gjelder deg'}>
+        <CheckboxGroup legend={'Velg det som gjelder deg'} hasSpacing>
           {options.map((option, index) => {
             return (
               <CheckboxGroup.Checkbox

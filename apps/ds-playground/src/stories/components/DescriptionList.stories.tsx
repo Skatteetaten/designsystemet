@@ -3,16 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { InlineButton, IconButton } from '@skatteetaten/ds-buttons';
-import {
-  DescriptionList,
-  getDescriptionListSizeDefault,
-  getDescriptionDirectionDefault,
-  getDescriptionListIsVerticalOnMobileDefault,
-  getDescriptionListIsDescriptionVerticalOnMobileDefault,
-  getDescriptionListVariantDefault,
-  getTermWeightDefault,
-  getDescriptionWeightDefault,
-} from '@skatteetaten/ds-content';
+import { DescriptionList } from '@skatteetaten/ds-content';
 import { ErrorMessage } from '@skatteetaten/ds-forms';
 import {
   CopySVGpath,
@@ -30,64 +21,15 @@ const meta = {
   title: 'Komponenter/DescriptionList',
   argTypes: {
     // Props
-    children: {
-      control: { disable: true },
-      table: { category: category.props },
-    },
-    size: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDescriptionListSizeDefault() },
-      },
-    },
-    variant: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDescriptionListVariantDefault() },
-      },
-    },
-    hasSpacing: {
-      table: {
-        category: category.props,
-      },
-    },
-    isVerticalOnMobile: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getDescriptionListIsVerticalOnMobileDefault().toString(),
-        },
-      },
-    },
-    isDescriptionVerticalOnMobile: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary:
-            getDescriptionListIsDescriptionVerticalOnMobileDefault().toString(),
-        },
-      },
-    },
-    descriptionDirection: {
-      table: {
-        category: category.props,
-        defaultValue: {
-          summary: getDescriptionDirectionDefault(),
-        },
-      },
-    },
-    termWeight: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTermWeightDefault() },
-      },
-    },
-    descriptionWeight: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDescriptionWeightDefault() },
-      },
-    },
+    children: { control: false, table: { category: category.props } },
+    size: { table: { category: category.props } },
+    variant: { table: { category: category.props } },
+    hasSpacing: { table: { category: category.props } },
+    isVerticalOnMobile: { table: { category: category.props } },
+    isDescriptionVerticalOnMobile: { table: { category: category.props } },
+    descriptionDirection: { table: { category: category.props } },
+    termWeight: { table: { category: category.props } },
+    descriptionWeight: { table: { category: category.props } },
   },
   args: {
     children: [
@@ -155,7 +97,7 @@ export const Examples: Story = {
                 <Popover>
                   <Popover.Trigger
                     className={'dummySpacingLeft'}
-                    size={'extraSmall'}
+                    size={'small'}
                   />
                   <Popover.Content>
                     {
@@ -179,7 +121,7 @@ export const Examples: Story = {
           <DescriptionList.Element term={'Adresse'}>
             {'Adresseveien 1 '}
             <IconButton
-              size={'extraSmall'}
+              size={'small'}
               title={'kopier'}
               svgPath={CopySVGpath}
               onClick={() => {

@@ -1,0 +1,28 @@
+.iconList {
+  display: grid;
+  padding: 0;
+  margin: var(--spacing-l) 0 0;
+  font-size: var(--font-size-s);
+  gap: var(--spacing-m);
+  list-style: none;
+
+  &[data-variant='systemIcon'] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &[data-variant='themeIcon'] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.iconListItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+}
+
+.iconWrapper {
+  display: inline-flex;
+  padding: var(--spacing-s);
+  border: 1px solid var(--palette-graphite-10);
+}

@@ -1,0 +1,48 @@
+---
+title: Mixins (SCSS)
+description: Designsystemet tilbyr noen få hjelpestiler som kan brukes når du bygger egne komponenter eller trenger funksjonalitet som går igjen på tvers av løsninger. Hjelpestilene leveres som SCSS-mixins og kan importeres ved behov.
+---
+
+## Når bør jeg bruke hjelpestiler?
+
+Hjelpestilene er ment som et supplement til komponentene og designtokens i designsystemet. De dekker enkelte spesialiserte behov som ellers ofte løses med kopiert eller lokal CSS. For generell styling anbefaler vi å bruke designtokens. For sammensatte brukergrensesnitt anbefaler vi å bruke komponentene i designsystemet når det er mulig.
+
+## Skjule innhold visuelt
+
+Noen ganger ønsker du at innhold skal være tilgjengelig for skjermlesere uten å være synlig på skjermen.
+
+Dette kan for eksempel være nyttig for:
+
+- ekstra forklarende tekst
+- beskrivende etiketter
+- tilgjengelighetsinformasjon
+
+Bruk sr-only-mixinen for dette.
+
+Eksempel:
+
+```scss
+@import '~@skatteetaten/ds-core-utils/styles';
+
+.myLabel {
+  @include sr-only;
+}
+```
+
+Elementet blir skjult visuelt, men vil fortsatt kunne leses av hjelpemidler som skjermlesere.
+
+## Lenkestil
+
+Hvis du bygger egne komponenter og ønsker at et element skal bruke samme visuelle uttrykk som lenker i designsystemet, kan du bruke lenke-mixinen.
+
+Eksempel:
+
+```scss
+@import '~@skatteetaten/ds-core-utils/styles';
+
+.myCustomLink {
+  @include link;
+}
+```
+
+Dette gjør det enklere å oppnå et konsistent uttrykk på tvers av komponenter og egne løsninger.

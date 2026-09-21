@@ -8,7 +8,7 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { RadioProps } from './Radio.types';
 import { getAriaInvalid } from '../../utils';
@@ -19,7 +19,7 @@ import styles from './Radio.module.scss';
 export const Radio = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   description,

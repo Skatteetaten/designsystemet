@@ -1,0 +1,95 @@
+---
+title: StepList
+description: StepList brukes når brukeren skal veiledes gjennom en serie steg, typisk i et skjema eller en veiviser. Den gjør det enklere for brukeren å fullføre oppgaver gjennom tydelig struktur, forutsigbarhet og god fremdriftsforståelse.
+icon: /illustrations/steplist.svg
+---
+
+<Canvas examplesPath="components/steplist" />
+
+## Bruk StepList når
+
+- et skjema eller en prosess har flere steg som må fullføres i rekkefølge
+- komplekse oppgaver bør deles opp i mindre, håndterbare deler
+- en veiviser leder til en konklusjon, for eksempel en anbefaling eller et resultat
+
+## Unngå StepList når
+
+- skjemaet er lite
+- du skal dele inn tekstsider i seksjoner (bruk andre innholdsstrukturer)
+- prosessen ikke har tydelige steg eller rekkefølge
+
+## Hvorfor vi anbefaler dette
+
+- Oppsummeringssteg før innsending er obligatorisk for å gi brukeren mulighet til å kontrollere og rette opp svar.
+- Fokus flyttes automatisk til toppen av hvert nytt steg for at skjermleserbrukere ikke skal måtte navigere forbi hele innholdet for å skjønne at siden har endret seg.
+- ErrorSummary vises først etter «neste»-klikk — ikke under utfylling — for å unngå at feilmeldinger forstyrrer brukeren mens de skriver.
+
+## Varianter og når bør du bruke dem
+
+Komponenten har som helhet ingen varianter, men den fungerer som rammen for skjemaer og veivisere med flere steg.
+
+- Stegnummer som viser rekkefølgen til stegene
+- Innhold per steg, som kan være aktivt eller passivt
+- Handlingsknapp for å gå videre («Neste» og «Send inn»)
+
+### Plassering og justering
+
+- StepList skal brukes som overordnet ramme rundt stegvis innhold.
+- Hvert steg skal fremstå som en egen seksjon i løsningen.
+- Oppsummeringssteg før innsending skal alltid være et eget steg i listen.
+- Etter innsending skal bruker sendes til en egen kvitteringsside (ikke et steg).
+
+### Interaksjon og tilstander
+
+Et steg kan som hovedregel ha to tilstander, aktivt eller passivt. Aktivt brukes når brukerne redigerer i innholdet, mens passivt brukes til å vise et fullført steg. Tillegg finnes en spesialvariant av steget, som brukes å vise resultatet av hele prosessen - for eksempel å vise utfallet av en veiviser.
+
+### Oppsummering før innsending
+
+- Hovedregel: prosessen skal inneholde et oppsummeringssteg der brukeren får se over alt før innsending.
+- Knappeteksten endres fra «Neste» til:
+- «Send inn», når brukeren sender til Skatteetaten
+- «Send videre til signering», når oppgaven går til en annen aktør
+- Eksempler: «Bestill attest»
+
+### Etter innsending
+
+Kvitteringssiden skal inneholde:
+
+- Klar bekreftelse på innsending (eller videresending til signering)
+- Dato og tidspunkt
+- Forventet behandlingstid og hvor bruker får svar
+- Hvor skjemaet kan finnes igjen
+- Opplysningene som ble sendt inn (gjerne med [OpenClose](/byggeklosser/komponenter/openclose))
+
+### Feilhåndtering
+
+- Når et steg inneholder feil, skal [ErrorSummary](/byggeklosser/komponenter/errorsummary) plasseres i bunnen av steget etter at brukeren klikker «Neste» eller «Send inn».
+
+### Navigasjon i steglisten
+
+- Brukeren skal kunne hoppe til andre steg ved behov:
+- Hvis det ikke finnes avhengigheter: senere steg beholder sine verdier.
+- Hvis det finnes avhengigheter: senere steg nullstilles ved endring i tidligere steg.
+
+## Tekst
+
+- Stegtitler skal være korte og tydelige.
+- Navigasjonsknapper skal ha entydige beskrivelser («Neste», «Tilbake», «Send inn»).
+- Oppsummeringssteg skal beskrive hva brukeren skal kontrollere.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Når brukeren klikker «Neste», skal fokus flyttes til toppen av det nye steget.
+- Komponenten oppretter automatisk et fokusmål-element med id `*-focus-target`.
+- «Endre»-knapper i oppsummeringssteg håndterer fokusflyt automatisk.
+- Sørg for korrekt bruk av legend/labels i skjemaelementer per steg.
+
+import { StepList } from '@skatteetaten/ds-collections';
+
+## Props
+
+<TypeTable of={StepList} />
+
+### StepList.Step
+
+<TypeTable of={StepList.Step} />

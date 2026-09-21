@@ -10,8 +10,7 @@ type RequiredLabelHTMLAttributes = Pick<
 >;
 
 export interface LabelWithHelpProps
-  extends RequiredLabelHTMLAttributes,
-    BaseProps {
+  extends RequiredLabelHTMLAttributes, BaseProps {
   ref?: Ref<HTMLLabelElement>;
   classNames?: {
     label?: string;
@@ -32,12 +31,6 @@ export interface LabelWithHelpProps
   helpSvgPath?: HelpProps['helpSvgPath'];
   /** Overskriver default tooltip-tekst til hjelpeikon */
   titleHelpSvg?: HelpProps['titleHelpSvg'];
-  /**
-   * Om obligatorisk label skal markeres med stjerne.
-   *
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon.
-   */
-  showRequiredMark?: boolean;
   /** Callback som kalles når hjelpetekst vises/skjules */
   onHelpToggle?: HelpProps['onHelpToggle'];
 }

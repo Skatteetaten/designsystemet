@@ -3,15 +3,24 @@ import { ChangeEvent, FocusEvent, JSX, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { within as shadowWithin } from 'shadow-dom-testing-library';
 import { useArgs } from 'storybook/preview-api';
-import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
-import { RadioGroup, RadioGroupProps } from '@skatteetaten/ds-forms';
+import { RadioGroup } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
-import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const value = 'annet';
+const defaultLegendText = 'Type virksomhet';
 
 const meta = {
   component: RadioGroup,
@@ -40,9 +49,7 @@ const meta = {
     legend: { table: { disable: true } },
     readOnly: { table: { disable: true } },
     shadowRootNode: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     value: { table: { disable: true } },
-    selectedValue: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     variant: {
       table: { disable: true },
@@ -65,6 +72,20 @@ const meta = {
     imageSnapshot: { disableSnapshot: false },
     htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
   },
+  args: {
+    legend: defaultLegendText,
+    children: [
+      <RadioGroup.Radio key={'radioGroupRadio_1'} value={'foretak'}>
+        {'Enkeltpersonsforetak'}
+      </RadioGroup.Radio>,
+      <RadioGroup.Radio key={'radioGroupRadio_2'} value={'selskap'}>
+        {'Aksjeselskap'}
+      </RadioGroup.Radio>,
+      <RadioGroup.Radio key={'radioGroupRadio_3'} value={'annet'}>
+        {'Annet'}
+      </RadioGroup.Radio>,
+    ],
+  },
 } satisfies Meta<typeof RadioGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -78,8 +99,6 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
       onChange={(e): void => {
         if (args.value !== undefined) {
           setArgs({ value: e.target.value });
-        } else if (args.selectedValue !== undefined) {
-          setArgs({ selectedValue: e.target.value });
         } else if (args.defaultValue !== undefined) {
           setArgs({ defaultValue: e.target.value });
         }
@@ -88,28 +107,10 @@ const Template: StoryFn<typeof RadioGroup> = (args) => {
   );
 };
 
-const selectedValue = 'annet';
-const defaultLegendText = 'Type virksomhet';
-const defaultArgs: RadioGroupProps = {
-  legend: defaultLegendText,
-  children: [
-    <RadioGroup.Radio key={'radioGroupRadio_1'} value={'foretak'}>
-      {'Enkeltpersonsforetak'}
-    </RadioGroup.Radio>,
-    <RadioGroup.Radio key={'radioGroupRadio_2'} value={'selskap'}>
-      {'Aksjeselskap'}
-    </RadioGroup.Radio>,
-    <RadioGroup.Radio key={'radioGroupRadio_3'} value={'annet'}>
-      {'Annet'}
-    </RadioGroup.Radio>,
-  ],
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -133,7 +134,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -148,9 +148,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -166,7 +164,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       legend: 'dummyClassname',
@@ -185,9 +182,6 @@ export const WithCustomClassNames = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -217,9 +211,7 @@ export const WithCustomClassNames = {
 export const Defaults = {
   render: Template,
   name: 'Defaults Variant Standard (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
     legend: { table: { disable: false } },
@@ -254,9 +246,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -280,7 +270,6 @@ export const VariantHorizontal = {
   render: Template,
   name: 'Variant Horizontal (A6)',
   args: {
-    ...defaultArgs,
     variant: 'horizontal',
   },
   argTypes: {
@@ -292,7 +281,6 @@ export const WithHideLegend = {
   render: Template,
   name: 'With HideLegend (B1)',
   args: {
-    ...defaultArgs,
     hideLegend: true,
   },
   argTypes: {
@@ -305,34 +293,11 @@ export const WithHideLegend = {
   },
 } satisfies Story;
 
-export const WithSelectedValue = {
-  render: Template,
-  name: 'With SelectedValue (A3)',
-  args: {
-    ...defaultArgs,
-    selectedValue: selectedValue,
-    defaultValue: undefined,
-  },
-  argTypes: {
-    selectedValue: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { pseudoStates: ['hover', 'focus', 'active'] },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const input = canvas.getByRole('radio', { checked: true });
-
-    await expect(input).toHaveAttribute('value', selectedValue);
-  },
-} satisfies Story;
-
 export const WithValue = {
   render: Template,
   name: 'With Value (A3)',
   args: {
-    ...defaultArgs,
-    value: selectedValue,
+    value,
     defaultValue: undefined,
   },
   argTypes: {
@@ -345,7 +310,7 @@ export const WithValue = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
 
-    await expect(input).toHaveAttribute('value', selectedValue);
+    await expect(input).toHaveAttribute('value', value);
   },
 } satisfies Story;
 
@@ -353,10 +318,8 @@ export const WithDefaultValue = {
   render: Template,
   name: 'With DefaultValue (A3)',
   args: {
-    ...defaultArgs,
-    selectedValue: undefined,
     value: undefined,
-    defaultValue: selectedValue,
+    defaultValue: value,
   },
   argTypes: {
     defaultValue: { table: { disable: false } },
@@ -365,7 +328,7 @@ export const WithDefaultValue = {
     const canvas = within(canvasElement);
     const input = canvas.getByRole('radio', { checked: true });
 
-    await expect(input).toHaveAttribute('value', selectedValue);
+    await expect(input).toHaveAttribute('value', value);
   },
 } satisfies Story;
 
@@ -373,9 +336,8 @@ export const WithDisabled = {
   render: Template,
   name: 'With Disabled (A4 delvis)',
   args: {
-    ...defaultArgs,
     disabled: true,
-    value: selectedValue,
+    value,
     defaultValue: undefined,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -400,7 +362,6 @@ export const WithRequired = {
   render: Template,
   name: 'With Required (A7)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -416,46 +377,10 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  render: Template,
-  name: 'With Required And Mark (A7, A8)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithRequiredAndMarkAndLegendAsMarkup = {
-  render: Template,
-  name: 'With Required And Mark And Legend As Markup (A7, A8)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h4'} level={3}>
-          {defaultLegendText}
-        </Heading>
-        <span>{'Med virksomhet så menes bla bla'}</span>
-      </>
-    ),
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithName = {
   render: Template,
   name: 'With Name (B1)',
   args: {
-    ...defaultArgs,
     name: 'nameFraKonsument',
   },
   argTypes: {
@@ -476,9 +401,7 @@ export const WithName = {
 export const WithoutErrorMessage = {
   render: Template,
   name: 'Without ErrorMessage (B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     errorMessage: { table: { disable: false } },
   },
@@ -502,9 +425,8 @@ export const WithErrorMessage = {
   render: Template,
   name: 'With ErrorMessage (B4, A3)',
   args: {
-    ...defaultArgs,
     errorMessage: 'Feilmelding',
-    value: selectedValue,
+    value,
     defaultValue: undefined,
   },
   argTypes: {
@@ -534,7 +456,6 @@ export const WithErrorMessageAndAriaDescribedby = {
   render: Template,
   name: 'With ErrorMessage And AriaDescribedby (B4)',
   args: {
-    ...defaultArgs,
     children: [
       <RadioGroup.Radio
         key={'radioGroupRadio_1'}
@@ -564,7 +485,6 @@ export const WithHelpText = {
   render: Template,
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText: 'Vi trenger å vite din type virksomhet.',
   },
   argTypes: {
@@ -581,7 +501,6 @@ export const WithHelpText = {
 export const WithDescription = {
   name: 'With Description (A1)',
   args: {
-    ...defaultArgs,
     description: 'Vi trenger å vite din type virksomhet.',
   },
   argTypes: {
@@ -649,7 +568,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers',
   args: {
-    ...defaultArgs,
     onChange: fn(),
   },
   parameters: {
@@ -677,7 +595,6 @@ export const WithOnBlurEvent = {
   name: 'With onBlur Event',
   decorators: [webComponent],
   args: {
-    ...defaultArgs,
     onBlur: fn(),
   },
   parameters: {
@@ -715,23 +632,25 @@ export const WithOnBlurEvent = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
 export const ReadOnly = {
   name: 'Read Only',
   args: {
-    ...defaultArgs,
     readOnly: true,
-    value: selectedValue,
+    value,
     defaultValue: undefined,
     description: 'Dette er en radiogruppe i read only modus',
   },
@@ -754,7 +673,6 @@ export const ReadOnly = {
 export const ReadOnlyAndDescription = {
   name: 'Read Only And Description',
   args: {
-    ...defaultArgs,
     readOnly: true,
   },
   argTypes: {

@@ -83,6 +83,13 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   hideLabel?: boolean;
   /** Viser loading state med spinner */
   isLoading?: boolean;
+  /**
+   * Placeholder vises ikke når minSearchLength er satt eller når minst et
+   * alternativ er valgt i multi-select modus.
+   *
+   * @default Skriv eller velg
+   */
+  placeholder?: string;
   /** Kalles når hjelpeteksten vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
 }
@@ -94,7 +101,7 @@ interface SingleComboboxProps extends ComboboxCommonProps {
    * Størrelsen på combobox. For multi-select er størrelsen automatisk satt til
    * 'large'.
    */
-  variant?: ComboboxSize;
+  size?: ComboboxSize;
   /**
    * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
    * modus
@@ -117,7 +124,7 @@ interface MultiComboboxProps extends ComboboxCommonProps {
    * Størrelsen på combobox. For multi-select er størrelsen automatisk satt til
    * 'large'.
    */
-  variant?: never;
+  size?: never;
   /**
    * Kontrollert(e) verdi(er) - valgfri for både kontrollert og ukontrollert
    * modus
@@ -187,7 +194,7 @@ export type ComboboxButtonProps = {
   isOpen: boolean;
   onClick: (e?: MouseEvent) => void;
   disabled?: boolean;
-  variant?: ComboboxSize;
+  size?: ComboboxSize;
 };
 
 export type ComboboxAccessibilityAnnouncerProps = {

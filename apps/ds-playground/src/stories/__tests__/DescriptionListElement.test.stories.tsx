@@ -22,6 +22,7 @@ const meta = {
   args: {
     term: 'Ansvarlig fagperson',
     children: 'Kenneth Performance',
+    'data-testid': '123ID',
   },
   decorators: [
     (Story): JSX.Element => (
@@ -37,14 +38,9 @@ const meta = {
 } satisfies Meta<typeof DescriptionList.Element>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
-    'data-testid': '123ID',
     ref: (instance: HTMLDListElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -64,11 +60,9 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
-    'data-testid': '123ID',
   },
   argTypes: {
     id: { table: { disable: false } },

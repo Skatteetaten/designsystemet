@@ -11,6 +11,8 @@ import {
 } from './testUtils/storybook.testing.utils';
 import { htmlEventDescription } from '../../../.storybook/helpers';
 
+const defaultLabelText = 'Enkeltpersonsforetak';
+
 const meta = {
   component: RadioGroup.Radio,
   title: 'Tester/RadioGroup/Radio',
@@ -38,6 +40,9 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultLabelText,
+  },
 } satisfies Meta<typeof RadioGroup.Radio>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -48,16 +53,10 @@ const Template: StoryFn<typeof RadioGroup.Radio> = (args) => (
   </RadioGroup>
 );
 
-const defaultLabelText = 'Enkeltpersonsforetak';
-const defaultArgs = {
-  children: defaultLabelText,
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
       if (instance) {
         instance.name = 'dummyIdForwardedFromRef';
@@ -81,7 +80,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -96,9 +94,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -115,9 +111,7 @@ export const WithAttributes = {
 export const Defaults = {
   render: Template,
   name: 'Defaults (A1, A3, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -136,7 +130,6 @@ export const WithDescription = {
   render: Template,
   name: 'With Description (A3, A5)',
   args: {
-    ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
   argTypes: {
@@ -186,7 +179,6 @@ export const WithValue = {
   render: Template,
   name: 'With Value',
   args: {
-    ...defaultArgs,
     value: 'person',
   },
   argTypes: {
@@ -207,7 +199,6 @@ export const WithAriaDescribedby = {
   render: Template,
   name: 'With AriaDescribedby (B4)',
   args: {
-    ...defaultArgs,
     ariaDescribedby: 'htmlId',
   },
   argTypes: {
@@ -252,7 +243,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers',
   args: {
-    ...defaultArgs,
     onBlur: fn(),
     onChange: fn(),
     onFocus: fn(),

@@ -1,0 +1,78 @@
+---
+title: Chips
+description: Chips er små interaktive komponenter som brukes til å styre visning av innhold, ofte i forbindelse med filtrering, valg eller visning av status i en gruppe.
+icon: /illustrations/chips.svg
+---
+
+<Canvas examplesPath="components/chips" />
+
+## Bruk Chips når
+
+- brukeren skal filtrere data, for eksempel i lister eller tabeller
+- du skal vise valgte elementer i en gruppe
+- brukeren skal veksle mellom ulike visninger eller valg
+
+## Unngå Chips når
+
+- du lager menyer, for eksempel sidemeny eller hovedmeny
+- innholdet er statisk metadata. Bruk [Tag](/byggeklosser/komponenter/tag) i stedet.
+- du trenger et element for handling eller innsending i et skjema. Bruk heller [Button](/byggeklosser/komponenter/button).
+- du bare har én enkelt chip — Chips er ment som en samlet gruppe
+
+## Hvorfor vi anbefaler dette
+
+- Chips er ment for kompakte, raske valg i grupper. En enkelt chip gir ikke nok kontekst for at brukeren forstår at de kan velge — da er en knapp eller et annet element mer intuitivt.
+- Vi skiller mellom lukkbare Chips og Chips med checkmarks for å gi tydelig forventning om hva som skjer når brukeren klikker.
+- For lukkbare chips er det å styre fokus et kjent tilgjengelighetsproblem: tastaturbrukere risikerer å miste fokus når et valgt element fjernes, og de må da orientere seg på nytt. Derfor må fokus flyttes til et logisk sted etter at chipen er fjernet.
+
+## Varianter og når bør du bruke dem
+
+### Lukkbar variant
+
+- Brukes til dynamiske filtre og visninger.
+- Egnet når brukeren skal kunne fjerne enkeltvalg.
+
+### Valgbar variant
+
+- Brukes til statiske filtre og visninger.
+- Krever minst tre chips når de brukes uten ikon, for at valgt tilstand skal være tydelig.
+
+### Størrelser
+
+- Medium (standard)
+- Small
+
+### Plassering og justering
+
+- Chips skal brukes i grupper, ikke alene. De skal fremstå som små knapper samlet i en enhetlig visuell rekke eller blokk.
+- Valgbare chips kan brukes som et alternativ til avkrysningsbokser når valgene kan plasseres horisontalt. Valgene bør være korte og raske å skanne — for lange eller komplekse valg skal du heller bruke [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup).
+
+### Interaksjon og tilstander
+
+- Når en chip fjernes via tastatur, skal fokus automatisk flyttes til neste chip.
+- Når alle chips er fjernet, settes fokus til en skjult tekst: «Ingen flere filtre».
+
+## Tekst
+
+- Valgene skal være korte og lettleste.
+- Bruk ord og begreper som er enkle å skanne og sortere.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Fokusflyt må være tydelig og forutsigbar ved fjerning av chips.
+- Skjult tekst brukes for å formidle tilstand når alle chips fjernes.
+- Gi tydelig aria‑navn når siden inneholder flere chip‑grupper.
+
+import { Chips } from '@skatteetaten/ds-collections';
+
+## Props
+
+<TypeTable of={Chips} />
+
+### Chips.Removable
+
+<TypeTable of={Chips.Removable} />
+
+### Chips.Toggle
+
+<TypeTable of={Chips.Toggle} />

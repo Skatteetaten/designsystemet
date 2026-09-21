@@ -7,8 +7,7 @@ type NavigationTileHTMLAttributes = Pick<
   'target' | 'onClick'
 >;
 
-interface NavigationTilePropsHTMLAttributes
-  extends NavigationTileHTMLAttributes {
+interface NavigationTilePropsHTMLAttributes extends NavigationTileHTMLAttributes {
   href: string;
   ariaDescribedby?: string;
   ariaLabel?: string;
@@ -20,8 +19,7 @@ export type NavigationTileSize = Extract<
 >;
 
 export interface NavigationTileComponentCommonProps
-  extends NavigationTilePropsHTMLAttributes,
-    BaseProps {
+  extends NavigationTilePropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLAnchorElement>;
   classNames?: {
     container?: string;

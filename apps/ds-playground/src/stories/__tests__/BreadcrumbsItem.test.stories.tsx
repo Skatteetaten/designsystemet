@@ -3,19 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { BreadcrumbsItemProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
-
-const elementId = 'htmlId';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('listitem')).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 const meta = {
   component: Breadcrumbs.Item,
@@ -41,20 +29,20 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: (
+      <Breadcrumbs.Link href={'#'}>
+        {'Bedrift og organisasjon'}
+      </Breadcrumbs.Link>
+    ),
+  },
 } satisfies Meta<typeof Breadcrumbs.Item>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: BreadcrumbsItemProps = {
-  children: (
-    <Breadcrumbs.Link href={'#'}>{'Bedrift og organisasjon'}</Breadcrumbs.Link>
-  ),
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -67,14 +55,19 @@ export const WithRef = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('listitem')).toHaveAttribute(
+      'id',
+      'dummyIdForwardedFromRef'
+    );
+  },
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -86,15 +79,13 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('listitem');
     await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('id', elementId);
+    await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },
@@ -103,7 +94,6 @@ export const WithAttributes = {
 export const WithAriaCurrent = {
   name: 'With AriaCurrent (B3)',
   args: {
-    ...defaultArgs,
     ariaCurrent: 'page',
   },
   argTypes: {},

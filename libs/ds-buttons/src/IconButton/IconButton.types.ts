@@ -26,13 +26,12 @@ interface IconButtonPropsHTMLAttributes extends IconButtonHTMLAttributes {
 export type IconButtonBrightness = Extract<Brightness, 'light' | 'default'>;
 
 export interface IconButtonProps
-  extends IconButtonPropsHTMLAttributes,
-    BaseProps {
+  extends IconButtonPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLButtonElement>;
   /** Om knappen har en ramme/sirkel. */
   isOutlined?: boolean;
-  /** Størrelse på knappen. extraSmall tas bort i neste major. */
-  size?: Extract<Size, 'extraSmall' | 'small' | 'medium' | 'large'>;
+  /** Størrelse på knappen. */
+  size?: Extract<Size, 'small' | 'medium' | 'large'>;
   /**
    * HTML-path node. Forhåndsdefinerte paths kan importeres fra ds-icons pakke.
    * Alternativt kan custom path sendes.

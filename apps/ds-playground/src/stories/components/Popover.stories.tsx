@@ -2,12 +2,7 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  getPopoverColorDefault,
-  getPopoverPositionDefault,
-  getPopoverRestoreFocusDefault,
-  Popover,
-} from '@skatteetaten/ds-overlays';
+import { Popover } from '@skatteetaten/ds-overlays';
 import { Table } from '@skatteetaten/ds-table';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -22,28 +17,28 @@ const meta = {
     // Props
     children: { control: false, table: { category: category.props } },
     color: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPopoverColorDefault() },
-      },
+      table: { category: category.props, defaultValue: { summary: 'forest' } },
     },
-    disableAutoDismiss: { table: { category: category.props } },
-    disableAutoDismissOnMobile: { table: { category: category.props } },
+    disableAutoDismiss: {
+      table: { category: category.props, defaultValue: { summary: 'true' } },
+    },
+    disableAutoDismissOnMobile: {
+      table: { category: category.props, defaultValue: { summary: 'true' } },
+    },
     position: {
       table: {
         category: category.props,
-        defaultValue: { summary: getPopoverPositionDefault().toString() },
+        defaultValue: { summary: 'bottomStart' },
       },
     },
     shouldRestoreFocus: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPopoverRestoreFocusDefault().toString() },
-      },
+      table: { category: category.props, defaultValue: { summary: 'true' } },
     },
-    isOpen: { table: { category: category.props } },
-    //Events
-    onClose: { ...htmlEventDescription, table: { disable: true } },
+    isOpen: {
+      table: { category: category.props, defaultValue: { summary: 'false' } },
+    },
+    // Events
+    onClose: { ...htmlEventDescription },
   },
 } satisfies Meta<typeof Popover>;
 export default meta;
@@ -144,7 +139,7 @@ export const Example: Story = {
                   <Popover position={'bottomStart'} color={'ochre'}>
                     <Popover.Trigger
                       ariaDescribedby={filesId}
-                      size={'extraSmall'}
+                      size={'small'}
                       className={'dummySpacingLeft'}
                     />
                     <Popover.Content>

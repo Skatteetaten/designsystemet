@@ -48,7 +48,12 @@
       "cache": true
     },
     "@nx/eslint:lint": {
-      "inputs": ["default", "{workspaceRoot}/eslint.config.js"],
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/eslint.config.js",
+        "{workspaceRoot}/tools/eslint-rules/**/*"
+      ],
       "cache": true
     },
     "@nx/rollup:rollup": {
@@ -68,14 +73,20 @@
     "@nx/vitest:test": {
       "cache": true,
       "inputs": ["default", "^production"]
+    },
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   },
   "generators": {
     "@nx/react": {
       "application": {
+        "babel": true,
         "style": "scss",
         "linter": "eslint",
-        "babel": true
+        "bundler": "vite"
       },
       "component": {
         "style": "scss"

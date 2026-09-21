@@ -1,11 +1,7 @@
 import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  NON_BREAKING_SPACE,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, NON_BREAKING_SPACE } from '@skatteetaten/ds-core-utils';
 
 import { RoleBannerProps } from './RoleBanner.types';
 import { getRoleIcon } from './utils';
@@ -15,13 +11,12 @@ import styles from './RoleBanner.module.scss';
 /**
  * RoleBanner
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-rolebanner--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/rolebanner/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/rolebanner)
  */
 export const RoleBanner = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   user,

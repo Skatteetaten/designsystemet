@@ -1,0 +1,71 @@
+---
+title: InlineButton
+description: InlineButton brukes til selvstendige, mindre fremtredende handlinger i skjema, tabeller eller andre flater der en vanlig Button blir for dominerende. Den gir en mer plasseringsvennlig måte å presentere handlinger som «Legg til» eller «Fjern».
+icon: /illustrations/inlinebutton.svg
+---
+
+<Canvas examplesPath="components/inlinebutton" />
+
+## Bruk InlineButton når
+
+- handlingen er liten og ikke en hovedhandling
+- du har begrenset plass i skjema, tabell eller liste
+- du ønsker å plassere en handling tett på innholdet den gjelder
+- handlingen er kjent og ikke krever ekstra visuell vekt
+
+## Unngå InlineButton når
+
+- handlingen er en hovedhandling — bruk Button i stedet
+- handlingen er uklar eller trenger mye forklaring
+
+## Hvorfor vi anbefaler dette
+
+- InlineButton skilles fra vanlig [Button](/byggeklosser/komponenter/button) for å tydeliggjøre at sekundære, plasserte handlinger har mindre visuell vekt enn primærhandlinger. Blanding av disse kan forvirre brukeren om viktigheten av en handling.
+- Vi anbefaler ikke `disabled`-tilstand fordi skjermlesere kan ignorere deaktiverte elementer. En aktiv InlineButton med forklaring er mer tilgjengelig og informativ.
+- InlineButton skal ikke lede til nye sider — det er lenkers rolle. Konsekvent skille mellom lenker og knapper gir forutsigbar hjelp til skjermlesernavigasjon.
+
+## Varianter og når bør du bruke dem
+
+InlineButton finnes i følgende varianter:
+
+### Med ikon
+
+- Ikonet plasseres til venstre eller høyre for teksten.
+- Passer når handlingen skal understrekes visuelt, men fortsatt være kompakt.
+
+### Uten ikon
+
+- Teksten blir automatisk understreket.
+- Passer når du vil holde uttrykket minimalistisk.
+
+### Plassering og justering
+
+- Bruk InlineButton som nær‑handling i kontekst, f.eks. ved siden av et felt, i tabellrader eller i kompakte seksjoner.
+- Unngå overbruk — bruk den bare der Button blir for dominerende eller bryter layout.
+
+### Interaksjon og tilstander
+
+- Bruk `title` hvis handlingen trenger mer forklaring ved hover.
+- Ikke bruk som lenke til nye sider — den skal kun trigge handlinger i grensesnittet.
+- Ikke bruk deaktiverte (disabled) knapper:
+  - Lav kontrast gjør dem vanskelige å oppdage.
+  - Brukere kan miste endringer i status.
+  - Enkelte skjermlesere ignorerer inaktive elementer.
+
+## Tekst
+
+- Bruk korte og tydelige verb i oppfordringsform (for eksempel «Legg til», «Fjern»).
+- Følg Skatteetatens skriveregler for knapper.
+- Unngå tvetydige ord eller handlinger.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Teksten i knappen må være selvforklarende.
+- Sørg for god kontrast mellom tekst og bakgrunn.
+- Bruk aktiv knapp med feilmelding som alternativ til inaktiv knapp.
+
+import { InlineButton } from '@skatteetaten/ds-buttons';
+
+## Props
+
+<TypeTable of={InlineButton} />

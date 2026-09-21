@@ -2,6 +2,7 @@ import {
   useCallback,
   useEffect,
   useEffectEvent,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -224,6 +225,14 @@ interface UseFormattedInputReturn {
   status: FormattedInputStatus;
 }
 
+type PendingCaretPosition = {
+  input: HTMLInputElement;
+  start: number;
+  end: number;
+  expectedValue: string;
+  revision: number;
+};
+
 /**
  * Sjekker om en modifikatortast (Alt, Ctrl, Meta, Shift) er trykket.
  *
@@ -238,36 +247,33 @@ const isModifierKeyPressed = (
 };
 
 /**
- * Posisjonerer markøren etter et bestemt antall siffer i et formatert input.
- * Bruker requestAnimationFrame for å sikre riktig timing med
- * DOM-oppdateringer.
+ * Finner markørposisjon etter et bestemt antall lovlige symboler i formatert
+ * input.
  *
- * @param input - HTML input-elementet
  * @param formattedValue - Den formaterte strengverdien
- * @param targetDigitCount - Antall siffer markøren skal posisjoneres etter
+ * @param targetAllowedSymbolCount - Antall lovlige symboler markøren skal
+ *   posisjoneres etter
  * @param allowedSymbols - Regex for lovlige symboler
  * @returns New cursor position
  */
-const positionCursorAfterDigits = (
-  input: HTMLInputElement,
+const getCursorPositionAfterAllowedSymbols = (
   formattedValue: string,
-  targetDigitCount: number,
+  targetAllowedSymbolCount: number,
   allowedSymbols: RegExp
 ): number => {
   let newPosition = 0;
-  let digitCount = 0;
+  let allowedSymbolCount = 0;
   let i = 0;
-  while (digitCount < targetDigitCount && i < formattedValue.length) {
+  while (
+    allowedSymbolCount < targetAllowedSymbolCount &&
+    i < formattedValue.length
+  ) {
     if (allowedSymbols.test(formattedValue[i])) {
-      digitCount++;
+      allowedSymbolCount++;
       newPosition = i + 1;
     }
     i++;
   }
-
-  requestAnimationFrame(() => {
-    input.setSelectionRange(newPosition, newPosition);
-  });
   return newPosition;
 };
 
@@ -361,6 +367,9 @@ export const useFormattedInput = ({
     );
   });
   const [status, setStatus] = useState<FormattedInputStatus>('valid');
+  const [caretFlushVersion, setCaretFlushVersion] = useState(0);
+  const pendingCaretPositionRef = useRef<PendingCaretPosition | null>(null);
+  const caretRevisionRef = useRef(0);
   const hasDecimal = rawValue.includes(decimalSeparator);
 
   const onLocaleChange = useEffectEvent((locale: string) => {
@@ -429,6 +438,58 @@ export const useFormattedInput = ({
       ? (formatted.valueWithDecimalTail ?? '')
       : formatted.value;
 
+  const queueCaretPosition = useCallback(
+    (
+      input: HTMLInputElement,
+      start: number,
+      expectedValue: string,
+      forceFlush = false
+    ): void => {
+      const revision = caretRevisionRef.current + 1;
+      caretRevisionRef.current = revision;
+      pendingCaretPositionRef.current = {
+        input,
+        start,
+        end: start,
+        expectedValue,
+        revision,
+      };
+
+      if (forceFlush) {
+        setCaretFlushVersion((version) => version + 1);
+      }
+    },
+    []
+  );
+
+  const applyPendingCaretPosition = useCallback((): void => {
+    const pendingCaretPosition = pendingCaretPositionRef.current;
+
+    if (!pendingCaretPosition) {
+      return;
+    }
+
+    if (pendingCaretPosition.revision !== caretRevisionRef.current) {
+      return;
+    }
+
+    if (
+      pendingCaretPosition.input.value !== pendingCaretPosition.expectedValue
+    ) {
+      return;
+    }
+
+    pendingCaretPosition.input.setSelectionRange(
+      pendingCaretPosition.start,
+      pendingCaretPosition.end
+    );
+    pendingCaretPositionRef.current = null;
+  }, []);
+
+  useLayoutEffect(() => {
+    applyPendingCaretPosition();
+  }, [displayValue, caretFlushVersion, applyPendingCaretPosition]);
+
   const inputHistory = useInputHistory({
     initialValue: displayValue,
   });
@@ -452,16 +513,21 @@ export const useFormattedInput = ({
         );
         setRawValue(newRawValue);
 
-        requestAnimationFrame(() => {
-          const pos = Math.min(
-            previousState.cursorPosition,
-            previousState.value.length
-          );
-          input.setSelectionRange(pos, pos);
-        });
+        const pos = Math.min(
+          previousState.cursorPosition,
+          previousState.value.length
+        );
+        queueCaretPosition(input, pos, previousState.value);
       }
     },
-    [inputHistory, type, decimalSeparator, allowDecimals, maximumFractionDigits]
+    [
+      inputHistory,
+      type,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits,
+      queueCaretPosition,
+    ]
   );
 
   const handleRedo = useCallback(
@@ -483,16 +549,18 @@ export const useFormattedInput = ({
         );
         setRawValue(newRawValue);
 
-        requestAnimationFrame(() => {
-          const pos = Math.min(
-            nextState.cursorPosition,
-            nextState.value.length
-          );
-          input.setSelectionRange(pos, pos);
-        });
+        const pos = Math.min(nextState.cursorPosition, nextState.value.length);
+        queueCaretPosition(input, pos, nextState.value);
       }
     },
-    [inputHistory, type, decimalSeparator, allowDecimals, maximumFractionDigits]
+    [
+      inputHistory,
+      type,
+      decimalSeparator,
+      allowDecimals,
+      maximumFractionDigits,
+      queueCaretPosition,
+    ]
   );
 
   const handleBackspaceAtSeparator = useCallback(
@@ -509,17 +577,17 @@ export const useFormattedInput = ({
           locale,
         }).value;
 
-        const newPosition = positionCursorAfterDigits(
-          input,
+        const newPosition = getCursorPositionAfterAllowedSymbols(
           formattedValue,
           digitsBeforeSeparator - 1,
           allowedSymbols
         );
+        queueCaretPosition(input, newPosition, formattedValue);
 
         inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type, locale, allowedSymbols, inputHistory]
+    [rawValue, type, locale, allowedSymbols, inputHistory, queueCaretPosition]
   );
 
   const handleDeleteAtSeparator = useCallback(
@@ -536,17 +604,17 @@ export const useFormattedInput = ({
           locale,
         }).value;
 
-        const newPosition = positionCursorAfterDigits(
-          input,
+        const newPosition = getCursorPositionAfterAllowedSymbols(
           formattedValue,
           digitsBeforeSeparator,
           allowedSymbols
         );
+        queueCaretPosition(input, newPosition, formattedValue);
 
         inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type, locale, allowedSymbols, inputHistory]
+    [rawValue, type, locale, allowedSymbols, inputHistory, queueCaretPosition]
   );
 
   const handleDeleteAtDigit = useCallback(
@@ -563,17 +631,17 @@ export const useFormattedInput = ({
           locale,
         }).value;
 
-        const newPosition = positionCursorAfterDigits(
-          input,
+        const newPosition = getCursorPositionAfterAllowedSymbols(
           formattedValue,
           digitsBeforeCursor,
           allowedSymbols
         );
+        queueCaretPosition(input, newPosition, formattedValue);
 
         inputHistory.pushState(formattedValue, newPosition, input);
       }
     },
-    [rawValue, type, locale, allowedSymbols, inputHistory]
+    [rawValue, type, locale, allowedSymbols, inputHistory, queueCaretPosition]
   );
 
   const handleKeyDown = useCallback(
@@ -780,21 +848,19 @@ export const useFormattedInput = ({
           ? digitsBeforeCursor + 1
           : digitsBeforeCursor;
 
-      const newPosition = positionCursorAfterDigits(
-        input,
+      const newPosition = getCursorPositionAfterAllowedSymbols(
         formattedValue,
         digitsBeforeCursorAfterFormatting,
         allowedSymbols
       );
+      queueCaretPosition(input, newPosition, formattedValue);
 
       const previousFormattedValue = inputHistory.getCurrentValue();
       if (previousFormattedValue !== formattedValue) {
         inputHistory.pushState(formattedValue, newPosition);
       } else {
         const lastPosition = cursorPosition - 1;
-        requestAnimationFrame(() => {
-          input.setSelectionRange(lastPosition, lastPosition);
-        });
+        queueCaretPosition(input, lastPosition, formattedValue, true);
       }
     },
     [
@@ -806,6 +872,7 @@ export const useFormattedInput = ({
       allowedSymbols,
       disallowedSymbols,
       inputHistory,
+      queueCaretPosition,
     ]
   );
 

@@ -5,14 +5,10 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { dsI18n, headingAsArr } from '@skatteetaten/ds-core-utils';
 import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
-import {
-  NavigationTile,
-  NavigationTileProps,
-} from '@skatteetaten/ds-navigation';
+import { NavigationTile } from '@skatteetaten/ds-navigation';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
-const elementId = 'htmlId';
 const systemIconViewBox = '0 0 24 24';
 const defaultTitle = 'Skatt';
 const defaultDescription =
@@ -66,6 +62,10 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+  },
+  args: {
+    title: defaultTitle,
+    href: '#storybook-root',
   },
 } as Meta<typeof NavigationTile>;
 export default meta;
@@ -122,17 +122,10 @@ const TemplateWithMultipleTilesWitoutGap: StoryFn<typeof NavigationTile> = (
     <NavigationTile {...args} />
   </nav>
 );
-
-const defaultArgs: NavigationTileProps = {
-  title: defaultTitle,
-  href: '#storybook-root',
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLAnchorElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -152,8 +145,7 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -165,26 +157,52 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const link = canvas.getByRole('link');
     await expect(link).toHaveClass('dummyClassname');
-    await expect(link).toHaveAttribute('id', elementId);
+    await expect(link).toHaveAttribute('id', 'htmlId');
     await expect(link).toHaveAttribute('lang', 'nb');
     await expect(link).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    description: defaultDescription,
+    classNames: {
+      container: 'dummyClassname',
+      title: 'dummyClassname',
+      description: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const container = canvas.getByRole('link');
+    const title = canvas.getByText(defaultTitle);
+    const description = canvas.getByText(defaultDescription);
+
+    await expect(container).toHaveClass('dummyClassname');
+    await expect(title).toHaveClass('dummyClassname');
+    await expect(description).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
   render: Template,
   name: 'Defaults (A1, A7)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     href: { table: { disable: false } },
     title: { table: { disable: false } },
@@ -207,7 +225,6 @@ export const WithIcon = {
   render: Template,
   name: 'With Icon (A2, B2)',
   args: {
-    ...defaultArgs,
     svgPath: CalendarSVGpath,
   },
   argTypes: {
@@ -228,7 +245,6 @@ export const WithExternalIcon = {
   render: Template,
   name: 'With External Icon (A6)',
   args: {
-    ...defaultArgs,
     isExternal: true,
   },
   argTypes: {
@@ -252,7 +268,6 @@ export const WithHiddenArrowIcon = {
   render: Template,
   name: 'With Hidden Arrow Icon (A5)',
   args: {
-    ...defaultArgs,
     hideArrowIcon: true,
   },
   argTypes: {
@@ -265,7 +280,6 @@ export const WithDescription = {
   render: Template,
   name: 'With Description (A4)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
   },
   argTypes: {
@@ -277,7 +291,6 @@ export const WithSizeMedium = {
   render: Template,
   name: 'With Size Medium (A1)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
     size: 'medium',
   },
@@ -287,7 +300,6 @@ export const WithSizeLarge = {
   render: Template,
   name: 'With Size Large (A1)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
     size: 'large',
   },
@@ -297,7 +309,6 @@ export const WithSizeExtraLarge = {
   render: Template,
   name: 'With Size ExtraLarge (A1)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
     size: 'extraLarge',
     svgPath: AccountEnkSVGpath,
@@ -308,7 +319,6 @@ export const WithTarget = {
   render: Template,
   name: 'With Target (A8)',
   args: {
-    ...defaultArgs,
     target: '_blank',
   },
   argTypes: {
@@ -329,8 +339,7 @@ export const WithAriaDescribedby = {
   render: Template,
   name: 'With AriaDescribedby (B4)',
   args: {
-    ...defaultArgs,
-    ariaDescribedby: elementId,
+    ariaDescribedby: 'htmlId',
   },
   argTypes: {
     ariaDescribedby: { table: { disable: false } },
@@ -338,14 +347,13 @@ export const WithAriaDescribedby = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('aria-describedby', elementId),
+  play: verifyAttribute('aria-describedby', 'htmlId'),
 } satisfies Story;
 
 export const WithOnClick = {
   render: OnClickTemplate,
   name: 'With onClick (A3 delvis)',
   args: {
-    ...defaultArgs,
     onClick: fn(),
   },
   parameters: {
@@ -364,9 +372,7 @@ export const WithOnClick = {
 export const WithTitleAs = {
   render: TemplateWithAllHeadings,
   name: 'With TitleAs (B3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
@@ -382,7 +388,6 @@ export const WithTilesInColumns = {
   render: TemplateWithMultipleTiles,
   name: 'With Tiles in Columns (A9)',
   args: {
-    ...defaultArgs,
     size: 'extraLarge',
     svgPath: AccountEnkSVGpath,
   },
@@ -390,34 +395,6 @@ export const WithTilesInColumns = {
     size: {
       table: { disable: false },
     },
-  },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    description: defaultDescription,
-    classNames: {
-      container: 'dummyClassname',
-      title: 'dummyClassname',
-      description: 'dummyClassname',
-    },
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const container = canvas.getByRole('link');
-    const title = canvas.getByText(defaultTitle);
-    const description = canvas.getByText(defaultDescription);
-
-    await expect(container).toHaveClass('dummyClassname');
-    await expect(title).toHaveClass('dummyClassname');
-    await expect(description).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
@@ -446,7 +423,6 @@ export const WithSpinner = {
   render: TemplateWithSpinner,
   name: 'With Spinner',
   args: {
-    ...defaultArgs,
     hasSpinner: true,
     description: 'Eksempel på undertittel. Denne kan være litt lengre.',
   },
@@ -465,7 +441,6 @@ export const WithMultitpleTilesWithoutGap = {
   render: TemplateWithMultipleTilesWitoutGap,
   name: 'With Multiple Tiles Without Gap',
   args: {
-    ...defaultArgs,
     description: 'Eksempel på undertittel. Denne kan være litt lengre.',
   },
   play: async ({ canvasElement }): Promise<void> => {

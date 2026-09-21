@@ -1,14 +1,24 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, userEvent, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LabelWithHelp } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { LabelWithHelpProps } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const defaultChildrenText = 'Ledetekst';
+const defaultHelpText =
+  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
+const defaultDescription = 'Kort hjelpetekst';
 
 const meta = {
   component: LabelWithHelp,
@@ -32,7 +42,6 @@ const meta = {
       mapping: SystemSVGPaths,
     },
     hideLabel: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     htmlFor: { table: { disable: true } },
@@ -43,22 +52,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultChildrenText,
+  },
 } satisfies Meta<typeof LabelWithHelp>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultDescription = 'Kort hjelpetekst';
-const defaultHelpText =
-  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
-const defaultChildrenText = 'Ledetekst';
-const defaultArgs: LabelWithHelpProps = {
-  children: defaultChildrenText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLLabelElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -81,7 +84,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -94,9 +96,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -108,11 +108,41 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      label: 'dummyClassname',
+      description: 'dummyClassname',
+      helpText: 'dummyClassname',
+    },
+    description: 'beskrivelse',
+    helpText: 'hjelp',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const label = canvas.getByText(defaultChildrenText);
+    await expect(label).toHaveClass('dummyClassname');
+    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
+
+    await fireEvent.click(canvas.getByRole('button'));
+    const helpText = canvas.getByText('hjelp').parentElement;
+    await expect(helpText).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const Defaults = {
   name: 'Default (FS-A1, FS-A2, FS-A4, FS-B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -126,7 +156,6 @@ export const Defaults = {
 export const WithDescription = {
   name: 'With Description (FS-A3)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
   },
   argTypes: {
@@ -139,21 +168,9 @@ export const WithDescription = {
   },
 } satisfies Story;
 
-export const WithShowRequiredMark = {
-  name: 'With ShowRequiredMark (FS-A4)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithHideLabel = {
   name: 'With HideLabel (FS-A7)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
     helpText: defaultHelpText,
     hideLabel: true,
@@ -175,7 +192,6 @@ export const WithHideLabel = {
 export const WithHelpTextSvgPathAndTitle = {
   name: 'With HelpText HelpSvgPath And TitleHelpSvg (FS-A1, FS-A5 delvis, FS-B2 delvis)',
   args: {
-    ...defaultArgs,
     helpText: defaultHelpText,
     helpSvgPath: WarningSVGpath,
     titleHelpSvg: 'Tooltip',
@@ -202,7 +218,6 @@ export const WithHelpTextSvgPathAndTitle = {
 export const WithLongChildren = {
   name: 'With Long Children',
   args: {
-    ...defaultArgs,
     children: loremIpsumWithoutSpaces,
   },
   argTypes: {
@@ -218,51 +233,23 @@ export const WithLongChildren = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-} satisfies Story;
-
-export const WithCustomClassNames = {
-  name: 'With Custom ClassNames (FA3)',
-  args: {
-    ...defaultArgs,
-    classNames: {
-      label: 'dummyClassname',
-      description: 'dummyClassname',
-      helpText: 'dummyClassname',
-    },
-    description: 'beskrivelse',
-    helpText: 'hjelp',
-  },
-  argTypes: {
-    classNames: {
-      table: { disable: false },
-    },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
+  play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
-
-    const label = canvas.getByText(defaultChildrenText);
-    await expect(label).toHaveClass('dummyClassname');
-    await expect(canvas.getByText('beskrivelse')).toHaveClass('dummyClassname');
-
-    await fireEvent.click(canvas.getByRole('button'));
-    const helpText = canvas.getByText('hjelp').parentElement;
-    await expect(helpText).toHaveClass('dummyClassname');
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
 export const WithDisabled = {
   name: 'With Disabled',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
     disabled: true,
   },

@@ -10,16 +10,10 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import {
-  getModalDismissOnEscDefault,
-  getModalDismissOnOutsideClickDefault,
-  getModalPaddingDefault,
-  getModalVariantDefault,
-} from './defaults';
 import { ModalProps } from './Modal.types';
 
 import styles from './Modal.module.scss';
@@ -27,25 +21,24 @@ import styles from './Modal.module.scss';
 /**
  * Modal
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-modal--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/modal/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/modal)
  */
 export const Modal = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
-  dismissOnEsc = getModalDismissOnEscDefault(),
-  dismissOnOutsideClick = getModalDismissOnOutsideClickDefault(),
-  hideCloseButton,
-  hideTitle,
+  dismissOnEsc = true,
+  dismissOnOutsideClick = true,
+  hideCloseButton = false,
+  hideTitle = false,
   imageSource,
   imageSourceAltText,
-  padding = getModalPaddingDefault(),
+  padding = 'l',
   title,
-  variant = getModalVariantDefault(),
+  variant = 'outline',
   shadowRootNode,
   onClose,
   renderIcon,

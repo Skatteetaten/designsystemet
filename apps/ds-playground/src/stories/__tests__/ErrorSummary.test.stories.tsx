@@ -39,19 +39,20 @@ const meta = {
     },
   },
   tags: ['test'],
+  args: {
+    children: [
+      <ErrorSummary.Error key={'errorSummaryError_1'} referenceId={'id_1'}>
+        {'Husk å fylle ut type varer'}
+      </ErrorSummary.Error>,
+      <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
+        {'Selger du varer og tjenester for egen regning?'}
+      </ErrorSummary.Error>,
+      false,
+    ],
+  },
 } satisfies Meta<typeof ErrorSummary>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultChildren = [
-  <ErrorSummary.Error key={'errorSummaryError_1'} referenceId={'id_1'}>
-    {'Husk å fylle ut type varer'}
-  </ErrorSummary.Error>,
-  <ErrorSummary.Error key={'errorSummaryError_2'} referenceId={'id_2'}>
-    {'Selger du varer og tjenester for egen regning?'}
-  </ErrorSummary.Error>,
-  false,
-];
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -91,9 +92,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -123,7 +122,6 @@ export const WithChildren = {
   name: 'With Children (A1, A2, A3 delvis)',
   args: {
     showErrorSummary: true,
-    children: defaultChildren,
   },
   argTypes: {
     children: { table: { disable: false } },
@@ -141,6 +139,7 @@ export const WithContent = {
     showErrorSummary: true,
     title: 'Inntektsmottaker inneholder 2 feil:',
     content: <Paragraph>{loremIpsum}</Paragraph>,
+    children: null,
   },
   argTypes: {
     content: { table: { disable: false } },
@@ -158,7 +157,6 @@ export const WithChildrenAndContent = {
   name: 'With Children And Content (A1, A3 delvis, A5)',
   args: {
     showErrorSummary: true,
-    children: defaultChildren,
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
   argTypes: {
@@ -171,7 +169,6 @@ export const WithChildrenAndContentMobile = {
   name: 'With Children And Content Mobile',
   args: {
     showErrorSummary: true,
-    children: defaultChildren,
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
   argTypes: {
@@ -189,7 +186,6 @@ export const WithChildrenAndContentBreakpointXs = {
   name: 'With Children And Content Breakpoint Xs',
   args: {
     showErrorSummary: true,
-    children: defaultChildren,
     content: <Paragraph>{loremIpsum}</Paragraph>,
   },
   argTypes: {
@@ -208,7 +204,6 @@ export const WithTitleAs = {
   args: {
     showErrorSummary: true,
     titleAs: 'h1',
-    children: defaultChildren,
   },
   argTypes: {
     titleAs: { table: { disable: false } },
@@ -354,7 +349,7 @@ export const WithFocus = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await userEvent.click(button);
-    const errorSummary = canvas.getAllByRole('generic')[4];
+    const errorSummary = canvas.getAllByRole('generic')[5];
     await waitFor(() => expect(errorSummary).toHaveFocus());
   },
 } satisfies Story;

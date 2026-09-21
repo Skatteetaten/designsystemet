@@ -42,11 +42,12 @@
   "rolepicker.YouCanRepresent": "Du kan representere",
   "topbannerexternalusermenu.AboutMe": "Om meg",
   "topbannerexternalusermenu.AboutTheOrganisation": "Om verksemda",
+  "topbannerexternalusermenu.Inbox": "Innboks",
+  "topbannerexternalusermenu.InboxCountMessage": "{{count}} uopna meldingar",
   "topbannerexternalusermenu.MyPage": "Mi side",
   "topbannerexternalusermenu.Notification": "Varsel",
-  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} ulesne varslar",
   "topbannerexternalusermenu.OnBehalfOf": "På vegner av",
-  "topbannerexternalusermenu.OneNotificationMessage": "1 ulese varsel",
+  "topbannerexternalusermenu.OneInboxMessage": "1 uopna melding",
   "topbannerexternalusermenu.SwitchUser": "Byt brukar",
   "wordinfo.WordExplanation": "ordforklaring"
 }

@@ -5,11 +5,7 @@ import * as MockDate from 'mockdate';
 import { useEffect, useGlobals } from 'storybook/preview-api';
 
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  Languages,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 
 import { category } from './helpers';
 import '@skatteetaten/ds-core-designtokens/index.css';
@@ -139,27 +135,21 @@ const argTypes = {
   className: {
     control: 'select',
     options: ['', 'dummyClassname'],
-    description: 'html class attributt til noden',
     table: {
       type: { summary: 'string' },
       category: category.baseProps,
-      defaultValue: { summary: getCommonClassNameDefault() },
     },
   },
   id: {
     control: 'text',
-    description: 'html id attributt',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   lang: {
     control: 'text',
-    description: 'html lang attributt',
     table: { type: { summary: 'string' }, category: category.baseProps },
   },
   'data-testid': {
-    control: 'text',
-    description: 'html data attributt som brukes for tester',
-    table: { type: { summary: 'string' }, category: category.baseProps },
+    table: { category: category.baseProps },
   },
 } satisfies Preview['argTypes'];
 
@@ -176,6 +166,11 @@ const Spacing = [
 const ScreenReaderText = [
   { title: 'Hidden', value: 'hidden' },
   { title: 'Visible', value: 'visible' },
+];
+
+const Font = [
+  { title: 'Inter', value: 'inter' },
+  { title: 'Systemfont', value: 'system' },
 ];
 
 const clearStyles = (element: HTMLElement): void => {
@@ -211,6 +206,17 @@ const ScreenReaderTextUpdater: Decorator = (Story, context) => {
   return <Story />;
 };
 
+const FontUpdater: Decorator = (Story, context) => {
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.setAttribute('data-font', context.globals.font);
+    return (): void => {
+      root.removeAttribute('data-font');
+    };
+  }, [context.globals.font]);
+  return <Story />;
+};
+
 const globalTypes = {
   locale: {
     name: 'Locale',
@@ -241,6 +247,16 @@ const globalTypes = {
       items: ScreenReaderText,
     },
   },
+  font: {
+    name: 'Font',
+    description: 'Bytt mellom Inter og designsystemets systemfont-stack',
+    defaultValue: Font[0].value,
+    toolbar: {
+      title: 'Font',
+      icon: 'bold',
+      items: Font,
+    },
+  },
 } satisfies Preview['globalTypes'];
 
 const preview = {
@@ -251,6 +267,7 @@ const preview = {
     mockDate,
     SpacingUpdater,
     ScreenReaderTextUpdater,
+    FontUpdater,
   ],
   parameters,
   globalTypes,

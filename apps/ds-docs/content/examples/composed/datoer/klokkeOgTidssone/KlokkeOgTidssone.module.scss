@@ -1,0 +1,13 @@
+.fieldContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-l);
+}
+
+.fieldSelectSmall {
+  flex-basis: 80px;
+}
+
+.timeInput {
+  width: 4rem;
+}

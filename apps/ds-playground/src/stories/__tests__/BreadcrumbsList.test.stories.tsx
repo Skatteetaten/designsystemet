@@ -3,18 +3,6 @@ import { expect, within } from 'storybook/test';
 
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
-const elementId = 'htmlId';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('list')).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
-
 const meta = {
   component: Breadcrumbs.List,
   title: 'Tester/Breadcrumbs/List',
@@ -73,13 +61,19 @@ export const WithRef = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
-  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('list')).toHaveAttribute(
+      'id',
+      'dummyIdForwardedFromRef'
+    );
+  },
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -91,15 +85,13 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('list');
     await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('id', elementId);
+    await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },

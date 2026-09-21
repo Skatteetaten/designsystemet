@@ -1,0 +1,136 @@
+---
+title: Tilpasse komponenter
+description: Designsystemet er laget for å dekke de fleste behov uten tilpasninger. Komponentene har standardverdier som bidrar til helhetlige brukeropplevelser, god tilgjengelighet og lik oppførsel på tvers av løsninger. Når du trenger å gjøre tilpasninger anbefaler vi å følge denne rekkefølgen.
+---
+
+## Start med standard komponent
+
+Begynn med å undersøke om komponenten allerede dekker behovet ditt. Vi forsøker å tilby gode standardvalg slik at de vanligste situasjonene fungerer uten ekstra tilpasninger.
+
+## Bruk props
+
+Mange komponenter tilbyr props for vanlige variasjoner og behov. Dette er den enkleste måten å tilpasse en komponent på. Noen vanlige props:
+
+- _variant_ for å bytte til ny type/variant av komponenten
+- _size_ for størrelsesnivåer
+- _svgPath_ for custom-ikoner, enten fra designsystemet eller egne.
+- _hasSpacing_ for luft under komponenten
+- _canBeManuallyFocused_ for å manuelt kunne sette fokus
+
+Når en prop finnes, er det som regel fordi vi har vurdert behovet som vanlig nok til at det bør støttes direkte.
+
+**Eksempel på variant-prop:**
+
+```tsx
+<Button variant="secondary">Lagre</Button>
+```
+
+## Bruk children der komponenten støtter det
+
+Noen komponenter er laget for å være fleksible og kan inneholde eget innhold. Eksermpler på slike komponenter er Accordion, Alert, Card, Modal, Panel og Table.
+
+```tsx
+<Card>
+  <MyCustomContent />
+</Card>
+```
+
+Når du legger inn eget innhold anbefaler vi at du bruker designtokens for styling.
+
+```css
+.checkIcon {
+  fill: var(--palette-graphite-0);
+}
+```
+
+Andre komponenter er mer låste, både helt eller delvis. Dette er ofte bevisste valg for å ivareta semantikk, universell utforming og konsistent bruk. Eksempler på slike komponenter er Button, Combobox, FileUploader og RoleBanner.
+
+## Bruk designtokens i CSS
+
+Hvis du trenger egen styling anbefaler vi å bygge videre på designtokens. De kan fint blandes med annen css (som vi ikke har tokens for).
+
+```css
+.customIconContainer {
+  display: flex;
+  width: var(--size-extra-large);
+  height: var(--size-extra-large);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: var(--spacing-l);
+  background-color: var(--palette-forest-100);
+  box-shadow: 0 0 0 4px var(--palette-graphite-0);
+  outline: 2px solid var(--palette-forest-100);
+  outline-offset: 2px;
+}
+```
+
+På den måten får løsningen et uttrykk som harmonerer best mulig med resten av designsystemet. Se egen [artikkel om bruke designtokens](/guider/styling/bruke-tokens) for detaljer.
+
+## Overstyr komponenten med CSS
+
+Alle komponenter støtter overstyring via className(s)-prop. For className legges det en css-klasse på komponentens ytterste element, mens for classNames legges klassen på underelementer.
+
+Overstyring med className:
+
+```tsx
+<Button className="myButton">Lagre</Button>
+```
+
+```css
+.myButton {
+  margin-top: var(--spacing-l);
+}
+```
+
+Overstyring med classNames:
+
+```tsx
+<TextField
+  classNames={{
+    errorMessage: 'importantMessage',
+  }}
+/>
+```
+
+```css
+.importantMessage {
+  font-weight: 700;
+}
+```
+
+Formålet er å gjøre mindre justeringer enklere uten at du må lage kompliserte CSS-selektorer. Dette kan være nyttig når du trenger å finjustere enkelte detaljer i en sammensatt komponent.
+
+## Vær bevisst på hva du overstyrer
+
+Små justeringer av spacing og layout er ofte uproblematiske. For eksempel:
+
+```css
+.myTextField {
+  width: 100%;
+}
+```
+
+eller:
+
+```css
+.actions {
+  gap: var(--spacing-m);
+}
+```
+
+Mer omfattende overstyringer av farger, struktur eller interaksjon kan gjøre løsningen mindre konsistent med resten av designsystemet. For eksempel:
+
+```css
+.myButton {
+  background: hotpink;
+}
+```
+
+Slike tilpasninger kan være riktige i spesialtilfeller, men det er viktig å være bevisst på konsekvensene.
+
+## Hvis du må style mye
+
+Hvis du opplever at du må skrive mye CSS for å få en komponent til å fungere, kan det være et signal om at en annen komponent passer bedre, eller at designsystemet mangler funksjonalitet.
+
+Ta gjerne kontakt med designsystem-teamet. Kanskje finnes det allerede en anbefalt løsning, eller kanskje behovet bør støttes direkte i designsystemet.

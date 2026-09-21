@@ -4,11 +4,10 @@ declare const classNames: {
   readonly buttonCell_medium: 'buttonCell_medium';
   readonly buttonCell_large: 'buttonCell_large';
   readonly buttonCell_extraSmall: 'buttonCell_extraSmall';
-  readonly buttonCell_compact: 'buttonCell_compact';
-  readonly expandButton: 'expandButton';
-  readonly expandButton_extraSmall: 'expandButton_extraSmall';
-  readonly expandButton_compact: 'expandButton_compact';
-  readonly expandableLeftContent: 'expandableLeftContent';
+  readonly expandIconButton_extraSmall: 'expandIconButton_extraSmall';
+  readonly expandButtonWithLabel: 'expandButtonWithLabel';
+  readonly expandButtonWithLabel_extraSmall: 'expandButtonWithLabel_extraSmall';
+  readonly expandedContent: 'expandedContent';
   readonly expandedRow: 'expandedRow';
   readonly row_noBorder: 'row_noBorder';
   readonly hideIcon: 'hideIcon';

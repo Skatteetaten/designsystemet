@@ -3,15 +3,7 @@ import { JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
-import {
-  Card,
-  DescriptionList,
-  Divider,
-  dividerSpacingArr,
-  getDividerSpacingBottomDefault,
-  getDividerSpacingTopDefault,
-  getDividerVariantDefault,
-} from '@skatteetaten/ds-content';
+import { Card, DescriptionList, Divider } from '@skatteetaten/ds-content';
 import { ArbeidTrygdPensjonIcon, EditSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -23,34 +15,12 @@ const meta = {
   title: 'Komponenter/Divider',
   argTypes: {
     // Props
-    spacingTop: {
-      options: dividerSpacingArr,
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDividerSpacingTopDefault() },
-      },
-    },
-    spacingBottom: {
-      options: dividerSpacingArr,
-      table: {
-        category: category.props,
-        defaultValue: { summary: getDividerSpacingBottomDefault() },
-      },
-    },
-    variant: {
-      table: {
-        category: category.props,
-
-        defaultValue: { summary: getDividerVariantDefault() },
-      },
-    },
+    spacingTop: { table: { category: category.props } },
+    spacingBottom: { table: { category: category.props } },
+    variant: { table: { category: category.props } },
     // Aria
-    ariaHidden: {
-      control: 'boolean',
-      table: { category: category.aria },
-    },
+    ariaHidden: { control: 'boolean', table: { category: category.aria } },
   },
-  args: {},
 } satisfies Meta<typeof Divider>;
 
 export default meta;

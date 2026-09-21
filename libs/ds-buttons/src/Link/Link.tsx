@@ -1,7 +1,7 @@
 import { useContext, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ExternalIcon, Icon } from '@skatteetaten/ds-icons';
 
 import { LinkProps } from './Link.types';
@@ -12,17 +12,16 @@ import styles from './Link.module.scss';
 /**
  * Link
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-link--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/link/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/link)
  */
 export const Link = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  isExternal,
-  color,
+  isExternal = false,
+  color = 'interactive',
   svgPath,
   href,
   target,
@@ -45,7 +44,7 @@ export const Link = ({
       href={href}
       rel={target === '_blank' ? 'noreferrer' : undefined}
       target={target}
-      data-color={color ?? context?.color}
+      data-color={context?.color ?? color}
       aria-current={ariaCurrent}
       aria-describedby={ariaDescribedby}
       download={download}

@@ -109,9 +109,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -120,6 +118,33 @@ export const WithAttributes = {
     await expect(header).toHaveAttribute('id', 'htmlId');
     await expect(header).toHaveAttribute('lang', 'nb');
     await expect(header).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      logo: 'dummyClassName',
+      childrenAndUserContainer: 'dummyClassName',
+    },
+    children: defaultChildren,
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const header = canvas.getByRole('banner');
+    const logo = header.querySelector('img');
+    await expect(logo).toHaveClass('dummyClassName');
+    const childrenAndUserContainer = header.querySelector(
+      '[class*="childrenAndUserContainer"]'
+    );
+    await expect(childrenAndUserContainer).toHaveClass('dummyClassName');
   },
 } satisfies Story;
 
@@ -326,7 +351,6 @@ export const WithCustomTheme = {
 
 export const WithOneChildMobile = {
   args: {
-    title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: (
@@ -355,7 +379,6 @@ export const WithOneChildMobile = {
 
 export const WithLongDescriptionAndThreeChildrenMobile = {
   args: {
-    title: 'MVA',
     description: 'FOLK OG TRUBADURSERVICE WOODIE GUTHRIE 999 999 999',
     user: 'Etternavnesen Fornavn',
     children: defaultChildren,
@@ -380,7 +403,6 @@ export const WithLongDescriptionAndThreeChildrenMobile = {
 
 export const WithThreeChildrenBreakpointS = {
   args: {
-    title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: defaultChildren,
@@ -405,7 +427,6 @@ export const WithThreeChildrenBreakpointS = {
 
 export const WithThreeChildrenBreakpointM = {
   args: {
-    title: 'MVA',
     description: 'Arbeidsliste',
     user: 'Etternavnesen Fornavn',
     children: defaultChildren,

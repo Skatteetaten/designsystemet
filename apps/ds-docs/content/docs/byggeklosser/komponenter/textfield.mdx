@@ -1,0 +1,76 @@
+---
+title: TextField
+description: TextField brukes når brukeren skal skrive inn korte tekster eller tall. Det er et fleksibelt felt som fungerer godt i skjemaer der informasjonen ikke passer inn i forhåndsdefinerte valg, og hvor fritekst eller tall svarer best på behovet.
+icon: /illustrations/textfield.svg
+---
+
+<Canvas examplesPath="components/textfield" />
+
+## Bruk TextField når
+
+- brukeren skal skrive korte fritekstsvar
+- brukeren skal skrive tall, som beløp eller antall
+- det er enklere for brukeren å skrive informasjon fremfor å velge fra liste
+- svarene ikke følger strengt format, men likevel må kunne valideres
+
+## Unngå TextField når
+
+- teksten skal være formatert (for eksempel Markdown) — bruk da annen komponent
+- valget er begrenset og forutsigbart — bruk [RadioGroup](/byggeklosser/komponenter/radiogroup), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup), [Select](/byggeklosser/komponenter/select) eller [Combobox](/byggeklosser/komponenter/combobox)
+- svaret forventes å være lengre enn én linje — bruk [TextArea](/byggeklosser/komponenter/textarea)
+
+## Hvorfor vi anbefaler dette
+
+- Placeholder erstattes av label og beskrivelse fordi placeholderen forsvinner ved skriving — brukeren må da huske instruksjonen, noe som er krevende og dyrker feil.
+- `disabled` anbefales ikke fordi skjermlesere kan ignorere deaktiverte felt. `readOnly` er et bedre alternativ når feltet ikke skal redigeres, men verdien fortsatt skal sendes med.
+
+## Varianter og når bør du bruke dem
+
+### Read-only
+
+- Feltet er skrivebeskyttet og kan ikke endres.
+- Brukeren kan fortsatt navigere til feltet, markere og kopiere innhold.
+- Innholdet sendes inn med skjema — i motsetning til disabled‑felt.
+
+### Plassering og justering
+
+- [Ledetekst](wordinfo:ledetekst) og beskrivelse skal alltid stå over feltet for god synlighet, også på små skjermer.
+- Unngå at ledeteksten går over flere linjer — bruk beskrivelsesfeltet ved behov.
+- Bruk hjelpetekst via spørsmålstegn‑ikon for mer detaljert veiledning.
+
+### Interaksjon og tilstander
+
+- Autocomplete kan brukes:
+  - På: for personlig informasjon (navn, adresse, søk)
+  - Av: for ikke-personlig informasjon (virksomheter, beløp, datoer)
+- Ulike nettlesere har varierende støtte for autocomplete.
+- Bruk passende `inputmode` som passer typen informasjon (`tel`, `search`, `email`, etc.).
+
+## Tekst
+
+- Ledetekst skal være konsis og meningsfull.
+- Bruk beskrivelse for å forklare detaljer.
+- Hjelpetekst kan brukes for lengre forklaringer.
+- Unngå spesialformuleringer som kan misforstås av brukeren.
+
+## Ikke bruk placeholder-tekst
+
+Placeholder‑tekst skal ikke brukes fordi:
+
+- Teksten forsvinner når brukeren begynner å skrive.
+- Den er ofte usynlig for skjermlesere.
+- Kontrastkravet (minst 4.5:1) gjør at placeholder ser fylt ut og kan forvirre brukeren. All nødvendig informasjon skal ligge i ledetekst og/eller beskrivelse.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Alle felter skal ha label eller aria‑label.
+- Ikke bruk placeholder som eneste informasjonsbærer.
+- Feilmelding vises under feltet og må ha tilstrekkelig kontrast (min. 4.5:1).
+- Read‑only-felt skal være tilgjengelig for skjermlesere.
+- Bruk korrekt inputtype, men vær oppmerksom på klientsidevalidering i enkelte nettlesere.
+
+import { TextField } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={TextField} />

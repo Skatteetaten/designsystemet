@@ -3,10 +3,12 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Link, LinkProps } from '@skatteetaten/ds-buttons';
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -15,24 +17,11 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    color: {
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
     isExternal: { table: { category: category.props } },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     // HTML
-    download: {
-      control: 'boolean',
-      table: { category: category.htmlAttribute },
-    },
+    download: { table: { category: category.htmlAttribute } },
     href: { table: { category: category.htmlAttribute } },
     target: { table: { category: category.htmlAttribute } },
     // Aria

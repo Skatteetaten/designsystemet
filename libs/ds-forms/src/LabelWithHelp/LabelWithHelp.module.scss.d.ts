@@ -1,6 +1,6 @@
 declare const classNames: {
+  readonly container: 'container';
   readonly label: 'label';
-  readonly label_required: 'label_required';
   readonly srOnly: 'srOnly';
 };
 export default classNames;

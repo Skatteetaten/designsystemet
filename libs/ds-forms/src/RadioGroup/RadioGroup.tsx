@@ -1,12 +1,5 @@
 import { useId, JSX, FocusEvent, ChangeEvent } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getHasSpacingDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
-
-import { getRadioGroupVariantDefault } from './defaults';
 import { Radio } from './Radio/Radio';
 import { RadioGroupComponent, RadioGroupProps } from './RadioGroup.types';
 import { RadioGroupContext } from './RadioGroupContext';
@@ -18,13 +11,12 @@ import styles from './RadioGroup.module.scss';
 /**
  * RadioGroup
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-radiogroup--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/radiogroup/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/radiogroup)
  */
-export const RadioGroup = (({
+export const RadioGroup = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -34,30 +26,26 @@ export const RadioGroup = (({
   helpText,
   legend,
   value,
-  selectedValue,
   titleHelpSvg,
-  variant = getRadioGroupVariantDefault(),
+  variant = 'standard',
   ariaDescribedBy,
   defaultValue,
-  disabled,
+  disabled = false,
   form,
   name,
-  readOnly,
-  required,
-  hasSpacing = getHasSpacingDefault(),
-  hideLegend,
-  showRequiredMark,
+  readOnly = false,
+  required = false,
+  hasSpacing = false,
+  hideLegend = false,
   shadowRootNode,
   onBlur: onBlurExternal,
   onChange: onChangeExternal,
   onHelpToggle,
   children,
 }: RadioGroupProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const errorId = `radioErrorId-${useId()}`;
   const uniqueNameId = `radioInputName-${useId()}`;
   const nameId = name ?? uniqueNameId;
-  const controlledValue = value ?? selectedValue;
 
   const variantClassName =
     variant === 'horizontal'
@@ -112,7 +100,6 @@ export const RadioGroup = (({
       form={form}
       legend={legend}
       hideLegend={hideLegend}
-      showRequiredMark={showRequiredMark}
       description={description}
       helpSvgPath={helpSvgPath}
       helpText={helpText}
@@ -125,7 +112,7 @@ export const RadioGroup = (({
           value={{
             defaultValue,
             errorId: errorMessage ? errorId : '',
-            value: controlledValue,
+            value,
             name: nameId,
             hasError: !!errorMessage,
             readOnly,
@@ -148,7 +135,9 @@ export const RadioGroup = (({
       </ErrorMessage>
     </Fieldset>
   );
-}) as RadioGroupComponent;
+};
+
+export default RadioGroup as RadioGroupComponent;
 
 RadioGroup.displayName = 'RadioGroup';
 RadioGroup.Radio = Radio;

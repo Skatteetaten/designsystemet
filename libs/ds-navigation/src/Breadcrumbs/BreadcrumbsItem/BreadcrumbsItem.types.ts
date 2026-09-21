@@ -7,8 +7,7 @@ interface BreadcrumbsItemHTMLAttributes {
 }
 
 export interface BreadcrumbsItemProps
-  extends BreadcrumbsItemHTMLAttributes,
-    BaseProps {
+  extends BreadcrumbsItemHTMLAttributes, BaseProps {
   ref?: Ref<HTMLLIElement>;
   /** Breadcrumbs.Link */
   children: ReactNode;

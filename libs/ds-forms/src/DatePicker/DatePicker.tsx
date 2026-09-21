@@ -12,21 +12,11 @@ import { useTranslation } from 'react-i18next';
 
 import { isValid } from 'date-fns';
 
-import {
-  dsI18n,
-  getCommonAutoCompleteDefault,
-  getCommonClassNameDefault,
-  getCommonFormVariantDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CalendarIcon } from '@skatteetaten/ds-icons';
 
 import { DatePickerProps } from './DatePicker.types';
 import { DatePickerCalendar } from './DatePickerCalendar/DatePickerCalendar';
-import {
-  getDatePickerDateFormat,
-  getDatePickerPlaceholderDefault,
-} from './defaults';
 import { formatDateForInput, parseDateFromInput } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -34,20 +24,22 @@ import { getAriaInvalid } from '../utils';
 
 import styles from './DatePicker.module.scss';
 
+export const getDefaultDatePickerPlaceholder = (): string =>
+  dsI18n.t('ds_forms:datepicker.TypeOrSelect');
+
 /**
  * DatePicker
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-datepicker--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/datepicker/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/datepicker)
  */
 export const DatePicker = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
-  dateFormat = getDatePickerDateFormat(),
+  dateFormat = 'dd.MM.yyyy',
   disabledDates,
   description,
   errorMessage,
@@ -59,17 +51,15 @@ export const DatePicker = ({
   maxDate,
   titleHelpSvg,
   value,
-  variant = getCommonFormVariantDefault(),
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
-  disabled,
+  autoComplete = 'off',
+  disabled = false,
   name,
-  placeholder = getDatePickerPlaceholderDefault(),
-  readOnly,
-  required,
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
+  placeholder = getDefaultDatePickerPlaceholder(),
+  readOnly = false,
+  required = false,
+  hasSpacing = false,
+  hideLabel = false,
   onBlur,
   onChange,
   onFocus,
@@ -77,7 +67,6 @@ export const DatePicker = ({
   onCalendarToggle,
   onSelectDate,
 }: DatePickerProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
 
   const descriptionId = `descId-${useId()}`;
@@ -208,8 +197,6 @@ export const DatePicker = ({
     };
   }, [showCalendar]);
 
-  const isLarge = variant === 'large';
-
   return (
     <div
       className={`${styles.wrapper} ${className} ${classNames?.container ?? ''}`.trim()}
@@ -220,7 +207,6 @@ export const DatePicker = ({
         classNames={classNames}
         htmlFor={datePickerId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
@@ -232,16 +218,14 @@ export const DatePicker = ({
         {label}
       </LabelWithHelp>
       <div
-        className={`${styles.dateContainer} ${label && !hideLabel ? styles.dateContainerMarginTop : ''} ${
+        className={`${styles.dateContainer} ${
           classNames?.dateContainer ?? ''
         }`.trim()}
       >
         <input
           ref={inputRef}
           id={datePickerId}
-          className={`${styles.input} ${
-            isLarge ? styles.input_large : ''
-          }`.trim()}
+          className={styles.input}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
@@ -269,9 +253,7 @@ export const DatePicker = ({
           <button
             ref={calenderButtonRef}
             type={'button'}
-            className={`${styles.calendarButton} ${
-              isLarge ? styles.calendarButton_large : ''
-            }`.trim()}
+            className={styles.calendarButton}
             disabled={disabled}
             aria-expanded={showCalendar}
             onClick={(): void => {
@@ -281,7 +263,6 @@ export const DatePicker = ({
             <CalendarIcon
               className={styles.icon}
               title={t('datepicker.ChooseDate')}
-              size={isLarge ? 'large' : 'medium'}
             />
           </button>
         )}

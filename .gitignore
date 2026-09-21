@@ -65,3 +65,13 @@ build-storybook.log
 
 .claude/worktrees
 .claude/settings.local.json
+
+CONTEXT.md
+
+# ds-docs
+.cache
+.source
+build
+public/build
+.env
+.react-router

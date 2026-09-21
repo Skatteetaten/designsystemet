@@ -1,8 +1,5 @@
 import { useState, useId, JSX, useMemo, useEffect } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
-import { getTabsVariantDefault } from './defaults';
 import { TabsProps, TabsComponent } from './Tabs.types';
 import { TabsContext } from './TabsContext';
 import { TabsList } from './TabsList/TabsList';
@@ -12,20 +9,19 @@ import { TabsTab } from './TabsTab/TabsTab';
 /**
  * Tabs
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-tabs--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/tabs/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/tabs)
  */
-export const Tabs = (({
+export const Tabs = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   defaultValue,
-  hasBorder,
-  isMultiline,
+  hasBorder = false,
+  isMultiline = false,
   value,
-  variant = getTabsVariantDefault(),
+  variant = 'standard',
   onChange,
   children,
 }: TabsProps): JSX.Element => {
@@ -72,7 +68,9 @@ export const Tabs = (({
       </TabsContext.Provider>
     </div>
   );
-}) as TabsComponent;
+};
+
+export default Tabs as TabsComponent;
 
 Tabs.displayName = 'Tabs';
 Tabs.List = TabsList;

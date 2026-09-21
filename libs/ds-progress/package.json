@@ -1,6 +1,6 @@
 {
   "name": "@skatteetaten/ds-progress",
-  "version": "2.10.0",
+  "version": "3.0.0",
   "license": "Apache-2.0",
   "groupId": "no.skatteetaten.aurora",
   "type": "module",
@@ -8,10 +8,10 @@
     "registry": "https://nexus.sits.no/repository/npm-internal/"
   },
   "peerDependencies": {
-    "i18next": "^24 || ^25",
+    "i18next": "^25 || ^26",
     "react": "^19.2.0",
-    "react-i18next": "^15",
-    "@skatteetaten/ds-core-utils": "2.10.0"
+    "react-i18next": "^16 || ^17",
+    "@skatteetaten/ds-core-utils": "3.0.0"
   },
   "scripts": {},
   "dependencies": {},

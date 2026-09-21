@@ -13,18 +13,9 @@ import {
   InlineButton,
   InlineButtonProps,
 } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { ExpandableRowProps } from './TableRowWithIconButton.types';
-import { getIconButtonSize } from './utils';
-import {
-  getTableRowExpandButtonTitleDefault,
-  getTableRowIsExpandedDefault,
-} from '../Table/defaults';
 import { TableDataCell } from '../TableDataCell/TableDataCell';
 
 import styles from './TableRowWithIconButton.module.scss';
@@ -54,7 +45,7 @@ const getScreenReaderText = (
 export const TableRowWithIconButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   onExpandClick,
@@ -65,12 +56,12 @@ export const TableRowWithIconButton = ({
   iconButtonAriaExpanded,
   rowType,
   expandableContent,
-  expandButtonTitle = getTableRowExpandButtonTitleDefault(),
+  expandButtonTitle = dsI18n.t('ds_tables:tablerow.Expandable'),
   expandButtonAriaDescribedby,
   expandButtonProps,
   showExpandButtonTitle,
   shouldInsertExpandAreaMarkers,
-  isExpanded = getTableRowIsExpandedDefault(),
+  isExpanded = false,
   isExpandButtonDisabled,
   hideIconButton,
   children,
@@ -90,8 +81,6 @@ export const TableRowWithIconButton = ({
   }));
 
   const [rowLength, setRowLength] = useState<number>(999);
-
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   useEffect(() => {
     if (buttonRef.current) {
@@ -136,14 +125,13 @@ export const TableRowWithIconButton = ({
     ? styles[`buttonCell_${context?.size}`]
     : '';
 
-  const cellVariantClassName =
-    context?.variant === 'compact' ? styles.buttonCell_compact : '';
+  const expandButtonWithLabelSizeClassName =
+    context?.size === 'extraSmall'
+      ? styles.expandButtonWithLabel_extraSmall
+      : '';
 
-  const expandButtonSizeClassName =
-    context?.size === 'extraSmall' ? styles.expandButton_extraSmall : '';
-
-  const expandButtonVariantClassName =
-    context?.variant === 'compact' ? styles.expandButton_compact : '';
+  const expandIconButtonSizeClassName =
+    context?.size === 'extraSmall' ? styles.expandIconButton_extraSmall : '';
 
   const expandButtonScreenReaderText =
     buttonPosition === 'left' && shouldShowScreenReaderText && rowType
@@ -163,16 +151,14 @@ export const TableRowWithIconButton = ({
         {buttonPosition === 'right' && children}
         <TableDataCell
           className={`${!showExpandButtonTitle ? styles.buttonCell : ''} ${
-            !showExpandButtonTitle
-              ? cellSizeClassName || cellVariantClassName
-              : ''
+            !showExpandButtonTitle ? cellSizeClassName : ''
           }`.trim()}
           alignment={buttonPosition}
         >
           {showExpandButtonTitle ? (
             <InlineButtonWithScreenReaderText
               ref={buttonRef}
-              className={`${styles.expandButton} ${expandButtonSizeClassName || expandButtonVariantClassName}`.trim()}
+              className={`${styles.expandButtonWithLabel} ${expandButtonWithLabelSizeClassName}`.trim()}
               svgPath={svgPath}
               ariaDescribedby={expandButtonAriaDescribedby}
               disabled={isExpandButtonDisabled}
@@ -192,14 +178,14 @@ export const TableRowWithIconButton = ({
           ) : (
             <IconButton
               ref={buttonRef}
-              className={hideIconButton ? styles.hideIcon : ''}
+              className={`${hideIconButton ? styles.hideIcon : ''} ${expandIconButtonSizeClassName}`.trim()}
               svgPath={svgPath}
               title={`${expandButtonTitle} ${expandButtonScreenReaderText ?? ''}`.trim()}
-              size={getIconButtonSize(
-                isDesktop,
-                context?.variant,
-                context?.size
-              )}
+              size={
+                context?.size === 'extraSmall' || context?.size === 'small'
+                  ? 'medium'
+                  : context?.size
+              }
               ariaDescribedby={expandButtonAriaDescribedby}
               ariaExpanded={iconButtonAriaExpanded}
               disabled={isExpandButtonDisabled}
@@ -215,7 +201,7 @@ export const TableRowWithIconButton = ({
         <tr className={`${styles.expandedRow} ${className}`.trim()}>
           <td colSpan={rowLength}>
             <div
-              className={`${buttonPosition === 'left' ? styles.expandableLeftContent : ''} ${
+              className={`${styles.expandedContent} ${
                 classNames?.expandedContent ?? ''
               }`.trim()}
             >

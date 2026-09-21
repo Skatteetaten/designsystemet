@@ -18,10 +18,11 @@ import {
 import { type Business, Modal } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import styles from './RepeterendeFelter.module.css';
-import stylesAsString from './RepeterendeFelter.module.css?raw';
+import stylesAsString from './RepeterendeFelter.module.scss?raw';
 import { includeStylesTransform } from '../../../.storybook/helpers';
 import { withPageLayout } from '../../../.storybook/pagelayout-decorator';
+
+import styles from './RepeterendeFelter.module.scss';
 
 export default {
   title: 'Sidetyper/Ekstern/Repeterende felter',
@@ -196,7 +197,7 @@ export function RepeterendeFelter(): JSX.Element {
         <Heading as={'h1'} hasSpacing>
           {'Skjema eller oppgave'}
         </Heading>
-        <DescriptionList className={styles.desciptionList} hasSpacing>
+        <DescriptionList className={styles.descriptionList} hasSpacing>
           <DescriptionList.Element term={'Virksomhetens navn'}>
             {hoppOgSprettBarnehage.name}
           </DescriptionList.Element>
@@ -245,7 +246,7 @@ export function RepeterendeFelter(): JSX.Element {
                       descriptionDirection={
                         isMobile ? 'vertical' : 'horizontal'
                       }
-                      className={styles.desciptionList}
+                      className={styles.descriptionList}
                     >
                       <DescriptionList.Element term={'Adresse'}>
                         {card.adresse}

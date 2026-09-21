@@ -1,0 +1,53 @@
+---
+title: Checkbox
+description: Checkbox brukes til enkeltstående valg, for eksempel for å bekrefte at brukeren har lest eller forstått informasjon.
+icon: /illustrations/checkbox.svg
+---
+
+<Canvas examplesPath="components/checkbox" />
+
+## Bruk Checkbox når
+
+- du skal be brukeren bekrefte at de har lest eller forstått noe
+- ett enkelt valg skal avkrysses
+
+## Unngå Checkbox når
+
+- brukeren skal velge mellom flere alternativer. Bruk heller [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup).
+- brukeren må velge kun ett av flere alternativer. Bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet.
+
+## Hvorfor vi anbefaler dette
+
+- En Checkbox for seg selv representerer ett enkeltstående ja/nei-valg. Å bruke den når brukeren skal velge mellom flere alternativer, kan gjøre valget uklart for brukere og skjermlesere.
+- Vi skiller tydelig mellom [Checkbox](/byggeklosser/komponenter/checkbox) (bekreftelse), [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) (flervalg) og [RadioGroup](/byggeklosser/komponenter/radiogroup) (enkeltvalg mellom alternativer) for å gjøre samhandlingsmønstrene forutsigbare og konsistente på tvers av løsninger.
+
+## Varianter og når bør du bruke dem
+
+### Plassering og justering
+
+- Bruk komponenten som et enkeltstående element i kontekster der brukeren skal avgi en tydelig bekreftelse.
+- Spørsmål eller [ledetekst](wordinfo:ledetekst) skal ligge i et `legend`‑element dersom det er flere checkboxer i en gruppe (i CheckboxGroup).  
+  For enkeltstående checkbox gjelder dette ikke.
+
+### Interaksjon og tilstander
+
+- En enkelt Checkbox fungerer som en enkeltstående av/på‑handling.
+- Brukeren kan velge eller fjerne avkrysning uten konsekvens for andre elementer.
+
+## Tekst
+
+- Teksten skal tydelig beskrive hva som bekreftes.
+- Bruk fullstendige, klare setninger som gjør det tydelig hva avkrysningen betyr.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Dersom Checkbox opptrer i en gruppe, skal gruppens spørsmål ligge i `legend`.
+- Selv om `legend` skjules visuelt, må det fortsatt formidle kontekst til skjermlesere.
+- Feilmeldinger skal referere eksplisitt til spørsmålet/ledeteksten, f.eks.  
+  «Type virksomhet må fylles ut».
+
+import { Checkbox } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={Checkbox} />

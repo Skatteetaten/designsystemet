@@ -5,7 +5,7 @@ import { userEvent, within } from 'storybook/test';
 
 import { Combobox } from '@skatteetaten/ds-forms';
 
-import { defaultArgs } from './utils/combobox.test.utils';
+import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { ComboboxOptions } from '../../../../../../libs/ds-forms/src/Combobox/ComboboxOptions';
 
@@ -24,7 +24,7 @@ const meta = {
     label: { table: { disable: true } },
     options: { table: { disable: true } },
     placeholder: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     multiple: { table: { disable: true } },
     value: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -58,6 +58,10 @@ const meta = {
   parameters: {
     chromatic: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabel,
+    options: defaultOptions,
+  },
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
@@ -65,9 +69,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Chevron = {
   name: 'Chevron',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: {
       pseudoStates: ['hover', 'focus-visible', 'active'],
@@ -101,20 +103,17 @@ export const Option = {
     );
   },
   parameters: {
+    // ARIA input fields must have an accessible name
     a11y: {
       test: 'off',
     },
-    imageSnapshot: {
-      pseudoStates: ['hover', 'focus-visible'],
-    },
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
   },
 };
 
 export const WithSelectedOption = {
   name: 'With Selected Option',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');

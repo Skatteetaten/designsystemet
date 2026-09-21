@@ -1,0 +1,74 @@
+---
+title: Button
+description: Button brukes til å utføre handlinger på siden, for eksempel i skjemaer og dialogbokser. Knappen skal gjøre det tydelig hva som skjer når brukeren trykker på den.
+
+icon: /illustrations/button.svg
+---
+
+<Canvas examplesPath="components/button" />
+
+## Bruk Button når
+
+- brukeren skal utføre en tydelig handling
+- du lager knapperader i skjema eller dialogbokser
+- du har primær‑ og sekundærhandlinger på en side
+
+## Unngå Button når
+
+- knappen skal stå inni tabeller eller andre områder med begrenset plass — bruk heller [InlineButton](/byggeklosser/komponenter/inlinebutton)
+- du vil fremheve et ikon alene — bruk [IconButton](/byggeklosser/komponenter/iconbutton) i stedet
+
+## Hvorfor vi anbefaler dette
+
+- Vi skiller mellom primær, sekundær, tertiær og advarsel for å gi brukeren tydelige visuelle signaler om hvilken handling som er viktigst. Feil bruk av knappetyper kan gjøre det vanskeligere å ta riktig valg.
+- Vi anbefaler ikke inaktive knapper fordi de mangler en forklaring på hvorfor handlingen ikke kan utføres. En aktiv knapp kombinert med en tydelig feilmelding gir bedre veiledning.
+- Advarselknapper plasseres med avstand fra andre knapper og får ikke fokus som standard. Dette reduserer risikoen for at brukeren utfører utilsiktede eller irreversible handlinger.
+
+## Varianter og når bør du bruke dem
+
+Button har fire varianter. Alle kan brukes med eller uten ikon.
+
+### Primær
+
+Brukes for den viktigste funksjonen på siden — handlingen brukeren primært skal utføre.
+
+### Sekundær
+
+Brukes for handlinger som er mindre sentrale enn primærhandlinger.
+
+### Tertiær
+
+Brukes for funksjoner som er enda mindre sentrale, og som ikke skal konkurrere visuelt med primær og sekundær.
+
+### Advarsel
+
+Brukes for handlinger som er irreversible eller særlig alvorlige. Plasser den med god avstand fra andre knapper, og ikke la den ha fokus som standard.
+
+### Plassering og justering
+
+- Skill tydelig mellom primære og sekundære handlinger.
+- Plasser advarselknapper slik at de ikke trykkes på ved et uhell.
+
+### Interaksjon og tilstander
+
+- Unngå inaktive knapper. Det finnes unntak i enkelte interne løsninger. Bruk heller feilmeldinger når knappen ikke kan utføre handlingen.
+- Dersom brukeren ikke kan gå videre, skal du vise en feilmelding nær knappen i stedet for å deaktivere den.
+
+## Tekst
+
+- Knappeteksten skal beskrive handlingen kort og tydelig.
+- Bruk verb i oppfordringsform (imperativ), som «Send», «Signer», «Endre».
+- Unngå tekst i bare store bokstaver.
+- Start knappeteksten med stor forbokstav og vær konsekvent med begrepsbruk (for eksempel «Neste» eller «Videre»).
+
+## Tilgjengelighet (UU og WCAG)
+
+- Teksten skal være kort og forståelig.
+- Sørg for at det er lett å forstå hva knappen gjør.
+- Følg skrivereglene for knapper slik at språket er klart og tilgjengelig.
+
+import { Button } from '@skatteetaten/ds-buttons';
+
+## Props
+
+<TypeTable of={Button} />

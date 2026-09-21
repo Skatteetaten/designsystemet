@@ -1,0 +1,19 @@
+.dividerCard {
+  width: 18rem;
+}
+
+.flexGrow {
+  flex-grow: 1;
+}
+
+.descriptionList {
+  width: 100%;
+}
+
+.descriptionList :is(dt, dd) {
+  text-align: right;
+}
+
+.descriptionList dt {
+  text-align: left;
+}

@@ -1,4 +1,9 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.srOnly {
+  @include styles.sr-only;
+}
 
 .alert {
   position: relative;
@@ -115,9 +120,7 @@
     }
 
     .content {
-      padding: calc(
-        var(--spacing-s) - 2px
-      ); // kompenserer for økt bredde på rammen
+      padding: calc(var(--spacing-s) - 2px); // kompenserer for økt bredde på rammen
 
       @media (min-width: breakpoints.$breakpoint-xs) {
         padding-left: var(--spacing-m);

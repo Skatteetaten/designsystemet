@@ -4,8 +4,10 @@ import { PopoverPosition, PopoverProps } from '../Popover/Popover.types';
 import { WordInfoContent } from './WordInfoContent/WordInfoContent';
 import { WordInfoTrigger } from './WordInfoTrigger/WordInfoTrigger';
 
-export interface WordInfoProps
-  extends Omit<PopoverProps, 'color' | 'disableAutoDismissOnMobile'> {
+export interface WordInfoProps extends Omit<
+  PopoverProps,
+  'color' | 'disableAutoDismissOnMobile'
+> {
   /** Om popup-boksen er synlig */
   isOpen?: boolean;
   /** Callback når popup-boksen lukkes */

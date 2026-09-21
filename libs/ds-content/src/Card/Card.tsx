@@ -1,32 +1,28 @@
 import { JSX, useId, Children, isValidElement } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { CardComponent, CardProps } from './Card.types';
 import { CardActions } from './CardActions/CardActions';
 import { CardAlert } from './CardAlert/CardAlert';
 import { CardContent } from './CardContent/CardContent';
 import { CardContext } from './CardContext';
 import { CardHeader } from './CardHeader/CardHeader';
-import { getCardColorDefault, getCardSpacingDefault } from './defaults';
 
 import styles from './Card.module.scss';
 
 /**
  * Card
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-card--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/card/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/card)
  */
-export const Card = (({
+export const Card = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  color = getCardColorDefault(),
+  color = 'white',
   ariaLabelledBy,
-  spacing = getCardSpacingDefault(),
+  spacing = 'm',
   children,
 }: CardProps): JSX.Element => {
   const alertHeadingId = useId();
@@ -65,7 +61,9 @@ export const Card = (({
       </Tag>
     </CardContext.Provider>
   );
-}) as CardComponent;
+};
+
+export default Card as CardComponent;
 
 Card.displayName = 'Card';
 

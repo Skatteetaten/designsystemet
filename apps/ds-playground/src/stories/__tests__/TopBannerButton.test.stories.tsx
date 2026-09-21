@@ -11,9 +11,9 @@ import {
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerButton/TopBannerButton';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerButton/TopBannerButton.types';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const defaultButtonText = 'Meny';
 
 const meta = {
   component: TopBannerButton,
@@ -44,20 +44,17 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultButtonText,
+    svgPath: MenuSVGpath,
+  },
 } as Meta<typeof TopBannerButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultButtonText = 'Meny';
-const defaultArgs: TopBannerButtonProps = {
-  children: defaultButtonText,
-  svgPath: MenuSVGpath,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -80,7 +77,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -93,9 +89,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -108,10 +101,9 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
-export const WithClassNames = {
-  name: 'With ClassNames (FA3, Username A2)',
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3, Username A2)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       text: 'dummyClassname',
@@ -126,17 +118,15 @@ export const WithClassNames = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
-    const span = canvas.getByText(defaultButtonText);
+    const text = canvas.getByText(defaultButtonText);
     await expect(button).toHaveClass('dummyClassname');
-    await expect(span).toHaveClass('dummyClassname');
+    await expect(text).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
   name: 'Defaults (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
     svgPath: { table: { disable: false } },
@@ -163,7 +153,6 @@ export const Defaults = {
 export const WithVariantFilled = {
   name: 'Variant Filled (LoginButton A1, A2)',
   args: {
-    ...defaultArgs,
     children: 'Logg inn',
     svgPath: LockOutlineSVGpath,
     variant: 'filled',
@@ -184,7 +173,6 @@ export const WithVariantFilled = {
 export const WithTitle = {
   name: 'With Title (Username A2)',
   args: {
-    ...defaultArgs,
     variant: 'filled',
     svgPath: PersonSVGpath,
     title: 'Title',
@@ -205,9 +193,7 @@ export const WithTitle = {
 
 export const DefaultsOnMobileScreen = {
   name: 'Defaults On Mobile Screen  (LoginButton A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
     svgPath: { table: { disable: false } },
@@ -225,7 +211,6 @@ export const DefaultsOnMobileScreen = {
 export const VariantFilledOnMobileScreen = {
   name: 'Variant Filled On Mobile Screen  (LoginButton A1, A2)',
   args: {
-    ...defaultArgs,
     children: 'Logg inn',
     svgPath: LockOutlineSVGpath,
     variant: 'filled',
@@ -264,7 +249,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (LoginButton A3, Username A4)',
   args: {
-    ...defaultArgs,
     onClick: fn(),
   },
   parameters: {

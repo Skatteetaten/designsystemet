@@ -1,0 +1,80 @@
+---
+title: RolePicker
+description: RolePicker brukes i innloggede publikumstjenester når brukeren skal velge hvem de representerer — privatperson, virksomhet eller verge for andre. Komponenten sikrer at brukeren starter tjenesten i riktig rolle og skaper trygghet rundt hvilket ansvar og hvilke data som tilhører valgt representasjon.
+icon: /illustrations/rolepicker.svg
+---
+
+<Canvas examplesPath="components/rolepicker" />
+
+## Bruk RolePicker når
+
+- brukeren har flere mulige representasjoner (privatperson, virksomheter, vergeroller)
+- brukeren må velge rolle før tjenesten kan starte
+- representasjonsvalg påvirker tilgjengelige data, oppgaver eller tillatelser
+- brukeren skal kunne bytte representasjon i etterkant via toppbanneret
+
+## Unngå RolePicker når
+
+- løsningen er intern
+- brukeren kun har én representasjon (privatperson) og ingen valg trengs
+- valget allerede er tatt tidligere i tjenesteflyten og ikke skal endres
+
+## Hvorfor vi anbefaler dette
+
+- Vi tvinger brukeren til å velge representasjon før de starter tjenesten for å unngå at handlinger utføres på vegne av feil aktør. Det er enklere å velge riktig ved start enn å rette feil i etterkant.
+- Søkevariant vises ved ti eller flere representasjoner for å holde listen navigerbar. En lang liste uten søk er krevende for alle brukere, men særlig for de med hjelpemiddelteknologi.
+- Lukkekrysset skjules ved førstegangsvalg fordi brukeren må ta stilling til representasjonen før de går videre — å la dem avslutte uten valg skaper en udefinert tilstand i tjenesten.
+
+## Varianter og når bør du bruke dem
+
+### Direkte visning
+
+- Brukes når brukeren har færre enn ti representasjoner.
+- Viser alle valgene direkte i en liste uten søk.
+- Egnet når oversikten skal være enkel og rask å forstå.
+
+### Søkevariant
+
+- Brukes når brukeren har ti eller flere representasjoner.
+- Viser liste med mulighet for søk og filtrering.
+- Egnet for profesjonelle brukere, f.eks. regnskapsførere med mange virksomheter.
+
+### Plassering og justering
+
+- Vises automatisk etter innlogging via ID-porten når et representasjonsvalg må tas.
+- Når den vises ved innlogging:
+  - Lukkekryss og avbrytknapp skjules for å sikre at brukeren fullfører valget før de går videre.
+- Kan også åpnes fra toppbanneret når brukeren er inne i løsningen og ønsker å bytte rolle.
+
+### Interaksjon og tilstander
+
+- Listen kan inneholde tre typer virksomheter:
+  - **Aktive virksomheter**
+  - **Avviklede virksomheter**, merket med ikon og tekst
+  - **Underenheter**, merket med innrykk
+- Ved potensielt ugyldige valg (uklar tilgang) vises varselmelding.
+- Hvis sjekk mot tilgang tar mer enn ett sekund:
+  - Spinner vises for å signalisere at systemet jobber.
+- Dersom tilganger ikke kan hentes:
+  - En Alert vises over logg ut/avbryt-knapp.
+- Dersom tjenesten kun er tilgjengelig for virksomheter:
+  - En innebygd feilmelding vises dersom ingen virksomheter finnes.
+
+## Tekst
+
+- Rollene skal presenteres med navn og forståelige betegnelser.
+- Avviklede virksomheter og underenheter skal merkes tydelig.
+- Språket skal være konsist og forklare valg uten juridiske eller tekniske uttrykk.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Opp til fire nivåer med overskrifter kan forekomme, avhengig av om underenheter/avviklede virksomheter listes.
+- Søkefunksjonen varsler skjermleser når resultatlisten oppdateres — både under skriving og ved ferdig søk.
+- Ved visning av utvidet liste settes fokus til siste tilgjengelige valg, slik at brukeren enkelt kan navigere videre med tastatur.
+- Alle valg må være tydelige og ha korrekt semantikk.
+
+import { RolePicker } from '@skatteetaten/ds-overlays';
+
+## Props
+
+<TypeTable of={RolePicker} />

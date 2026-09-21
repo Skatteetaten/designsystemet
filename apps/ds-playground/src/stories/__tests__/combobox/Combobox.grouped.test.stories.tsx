@@ -3,7 +3,7 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import { Combobox, ComboboxOption } from '@skatteetaten/ds-forms';
 
-import { defaultArgs } from './utils/combobox.test.utils';
+import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
 
 // Grupperte test-options
 const groupedOptions: ComboboxOption[] = [
@@ -40,7 +40,7 @@ const meta = {
     label: { table: { disable: true } },
     options: { table: { disable: true } },
     placeholder: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     multiple: { table: { disable: true } },
     value: { table: { disable: true } },
     description: { table: { disable: true } },
@@ -74,6 +74,10 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabel,
+    options: defaultOptions,
+  },
 } satisfies Meta<typeof Combobox>;
 
 export default meta;
@@ -82,7 +86,6 @@ type Story = StoryObj<typeof meta>;
 export const GroupedOptionsRendering = {
   name: 'Grupperte alternativer rendres korrekt',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -113,7 +116,6 @@ export const GroupedOptionsRendering = {
 export const GroupedOptionsAriaLabelledby = {
   name: 'Grupper har aria-labelledby',
   args: {
-    ...defaultArgs,
     id: 'test-grouped',
     options: groupedOptions,
   },
@@ -143,7 +145,6 @@ export const GroupedOptionsAriaLabelledby = {
 export const GroupedOptionsKeyboardNavigation = {
   name: 'Tastaturnavigasjon gjennom grupper',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
   },
   parameters: {
@@ -186,7 +187,6 @@ export const GroupedOptionsKeyboardNavigation = {
 export const GroupedOptionsFiltering = {
   name: 'Filtrering skjuler tomme grupper',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
   },
   parameters: {
@@ -227,7 +227,6 @@ export const GroupedOptionsFiltering = {
 export const MixedGroupedAndUngrouped = {
   name: 'Blandet grupperte og ugrupperte alternativer',
   args: {
-    ...defaultArgs,
     options: mixedOptions,
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -257,7 +256,6 @@ export const MixedGroupedAndUngrouped = {
 export const GroupedOptionsMultipleSelection = {
   name: 'Flervalg med grupperte alternativer',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
     multiple: true,
   },
@@ -296,7 +294,6 @@ export const GroupedOptionsMultipleSelection = {
 export const GroupedOptionsSelectFromGroup = {
   name: 'Velg alternativ fra gruppe',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
   },
   parameters: {
@@ -325,7 +322,6 @@ export const GroupedOptionsSelectFromGroup = {
 export const GroupedOptionsReopenArrowDownFocusesSelectedOption = {
   name: 'Pil ned ved gjenapning fokuserer valgt gruppert alternativ',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
     value: 'bergen',
   },
@@ -356,7 +352,6 @@ export const GroupedOptionsReopenArrowDownFocusesSelectedOption = {
 export const GroupedOptionsVisualSnapshot = {
   name: 'Visuelt snapshot - grupperte alternativer',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
     classNames: { options: 'maxHeight300' },
   },
@@ -373,12 +368,11 @@ export const GroupedOptionsVisualSnapshot = {
   },
 } satisfies Story;
 
-export const GroupedOptionsLargeVariant = {
-  name: 'Large variant med grupperte alternativer',
+export const GroupedOptionsLargeSize = {
+  name: 'Large size med grupperte alternativer',
   args: {
-    ...defaultArgs,
     options: groupedOptions,
-    variant: 'large',
+    size: 'large',
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

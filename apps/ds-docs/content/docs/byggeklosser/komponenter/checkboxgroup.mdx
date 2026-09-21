@@ -1,0 +1,57 @@
+---
+title: CheckboxGroup
+description: CheckboxGroup brukes når brukeren kan velge ett eller flere alternativer. Hver avkrysning er uavhengig av de andre, og det er også et gyldig valg å ikke velge noen.
+icon: /illustrations/checkboxgroup.svg
+---
+
+<Canvas examplesPath="components/checkboxgroup" />
+
+## Bruk CheckboxGroup når
+
+- brukeren skal kunne velge mellom flere uavhengige valg
+- det er et gyldig alternativ for brukeren å ikke krysse av noe
+
+## Unngå CheckboxGroup når
+
+- brukeren kun skal ta ett valg blant flere. Bruk [RadioGroup](/byggeklosser/komponenter/radiogroup) i stedet.
+
+## Hvorfor vi anbefaler dette
+
+- Grupperingen med ledetekst (`legend`-element) sørger for at skjermlesere forstår at valgene hører til samme spørsmål. Uten dette leses hvert enkelt valg opp uten kontekst.
+- Vertikal visning er standard fordi den gir bedre lesbarhet og fungerer bedre på tvers av skjermstørrelser. Mange alternativer på én linje kan være vanskelig å lese, særlig på små skjermer.
+- Det skal være mulig å ikke velge noe. Ikke alle brukere har nødvendigvis et alternativ som passer, og tvungne valg kan føre til feil data.
+
+## Varianter og når bør du bruke dem
+
+### Plassering og justering
+
+- Alle checkboxer i gruppen skal plasseres vertikalt
+- Det skal være mulig å velge null, ett eller flere alternativer.
+
+### Interaksjon og tilstander
+
+- Alle valg er uavhengige av hverandre — avkrysning i én boks påvirker ikke de andre.
+- CheckboxGroup må alltid inneholde underkomponenter (children).
+
+## Tekst
+
+- Spørsmål eller [ledetekst](wordinfo:ledetekst) for gruppen skal stå i et legend‑element.  
+  Dette gir nødvendig kontekst for alle brukere.
+- Selv om `legend` skjules visuelt, må det være semantisk tilgjengelig.
+
+## Tilgjengelighet (UU og WCAG)
+
+- `legend` skal beskrive hva brukeren skal ta stilling til.
+- Feilmeldinger skal henvise til spørsmålet eller ledeteksten, f.eks.:  
+  _«Type virksomhet må fylles ut»_.
+- Det skal være mulig å navigere hele gruppen med tastatur.
+
+import { CheckboxGroup } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={CheckboxGroup} />
+
+### CheckboxGroup.Checkbox
+
+<TypeTable of={CheckboxGroup.Checkbox} />

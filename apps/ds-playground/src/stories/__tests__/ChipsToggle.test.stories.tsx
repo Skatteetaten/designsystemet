@@ -1,9 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { Chips, ChipsToggleProps } from '@skatteetaten/ds-collections';
-
-const elementId = 'htmlId';
+import { Chips } from '@skatteetaten/ds-collections';
 
 const meta = {
   component: Chips.Toggle,
@@ -29,18 +27,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: 'Trondheim',
+  },
 } satisfies Meta<typeof Chips.Toggle>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: ChipsToggleProps = {
-  children: 'Trondheim',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -63,8 +59,7 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -76,15 +71,13 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('button');
     await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('id', elementId);
+    await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },
@@ -92,9 +85,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A2, A4,A5 delvis, A7, B1, B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('button');
@@ -106,7 +97,6 @@ export const WithoutCheckmark = {
   name: 'Without Checkmark (A4)',
   args: {
     showCheckmark: false,
-    ...defaultArgs,
   },
   argTypes: {
     showCheckmark: { table: { disable: false } },
@@ -122,7 +112,6 @@ export const WithSelected = {
   name: 'With Selected (A6, B4)',
   args: {
     isSelected: true,
-    ...defaultArgs,
   },
   argTypes: {
     showCheckmark: { table: { disable: false } },
@@ -139,7 +128,6 @@ export const WithSizeSmall = {
   name: 'With Size Small (A1)',
   args: {
     size: 'small',
-    ...defaultArgs,
   },
   argTypes: {
     size: { table: { disable: false } },

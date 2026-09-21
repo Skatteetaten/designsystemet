@@ -1,0 +1,74 @@
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m) 0;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: auto;
+}
+
+.marginTopM {
+  margin-top: var(--spacing-m);
+}
+
+.marginBottomM {
+  margin-bottom: var(--spacing-m);
+}
+
+.marginRightM {
+  margin-right: var(--spacing-m);
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.address {
+  width: 100%;
+  max-width: 338px;
+}
+
+.postalCode {
+  width: 109px;
+}
+
+.city {
+  width: 100%;
+  max-width: 280px;
+}
+
+.phone {
+  width: 193px;
+}
+
+.preLine {
+  white-space: pre-line;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.wideContent {
+  width: var(--semantic-responsive-wide-content);
+}
+
+.stepList {
+  margin-bottom: var(--spacing-l);
+}
+
+.errorSummaryWrapper {
+  margin-top: var(--spacing-m);
+}

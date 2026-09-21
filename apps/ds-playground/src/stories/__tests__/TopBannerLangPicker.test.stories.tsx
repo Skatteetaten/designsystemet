@@ -8,8 +8,6 @@ import { TopBannerMenu } from '@skatteetaten/ds-layout';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/TopBannerLangPicker';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPickerProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/TopBannerLangPicker.types';
 
 const LangPickerTemplate: StoryFn<typeof TopBannerLangPicker> = (args) => {
   const [openMenuState, setOpenMenu] = useState<TopBannerMenu>('None');
@@ -52,6 +50,12 @@ const meta = {
   parameters: {
     chromatic: { disableSnapshot: false },
   },
+  args: {
+    openMenu: 'None',
+    setOpenMenu: () => {
+      Function.prototype();
+    },
+  },
 } as Meta<typeof TopBannerLangPicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -59,17 +63,10 @@ type Story = StoryObj<typeof meta>;
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const bokmalText = 'Bokmål';
 const englishText = 'English';
-const defaultArgs: TopBannerLangPickerProps = {
-  openMenu: 'None',
-  setOpenMenu: () => {
-    Function.prototype();
-  },
-};
 
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -92,7 +89,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -106,9 +102,7 @@ export const WithAttributes = {
   },
   parameters: {
     chromatic: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -122,9 +116,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (LanguagePicker A1, A2 delvis, A4, A7, B1, B2, B3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -159,7 +151,6 @@ export const Defaults = {
 export const WithoutSami = {
   name: 'Without Sami (LanguagePicker A2 delvis)',
   args: {
-    ...defaultArgs,
     showSami: false,
   },
   argTypes: { showSami: { table: { disable: false } } },
@@ -178,7 +169,6 @@ export const WithoutSami = {
 export const WithLocale = {
   name: 'With Locale (LanguagePicker A7, A4, B2)',
   args: {
-    ...defaultArgs,
     defaultLocale: Languages.Engelsk,
   },
   argTypes: { defaultLocale: { table: { disable: false } } },
@@ -200,9 +190,7 @@ export const WithLocale = {
 
 export const CloseMenuWhenClickOnLangButton = {
   name: 'Close Menu When Click On LangButton (LanguagePicker A4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     chromatic: { disableSnapshot: true },
   },
@@ -229,7 +217,6 @@ export const CloseMenuWhenClickOnLangButton = {
 export const WithKeyboardNavigation = {
   name: 'Change focus when pressing arrow keys or tab (LanguagePicker C1)',
   args: {
-    ...defaultArgs,
     openMenu: 'Lang',
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -257,7 +244,6 @@ const otherLanguagesURL =
 
 export const WithOtherLanguagesLink = {
   args: {
-    ...defaultArgs,
     otherLanguagesURL,
   },
   argTypes: { otherLanguagesURL: { table: { disable: false } } },

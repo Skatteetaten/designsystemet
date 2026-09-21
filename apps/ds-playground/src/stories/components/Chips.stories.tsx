@@ -2,7 +2,7 @@ import { useState, JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Chips, ChipsProps } from '@skatteetaten/ds-collections';
+import { Chips } from '@skatteetaten/ds-collections';
 import { Heading } from '@skatteetaten/ds-typography';
 
 import { category } from '../../../.storybook/helpers';
@@ -30,7 +30,7 @@ const meta = {
       <Chips.Removable key={'osl'}>{'Oslo'}</Chips.Removable>,
     ],
   },
-} satisfies Meta<ChipsProps>;
+} satisfies Meta<typeof Chips>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

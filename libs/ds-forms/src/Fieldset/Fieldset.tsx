@@ -1,7 +1,5 @@
 import { useId, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
-
 import { FieldsetProps } from './Fieldset.types';
 import { Help } from '../LabelWithHelp/Help/Help';
 
@@ -10,13 +8,12 @@ import styles from './Fieldset.module.scss';
 /**
  * Fieldset
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fieldset--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fieldset/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/fieldset)
  */
 export const Fieldset = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -26,11 +23,10 @@ export const Fieldset = ({
   legend,
   titleHelpSvg,
   ariaDescribedBy,
-  disabled,
+  disabled = false,
   form,
-  hasSpacing,
-  hideLegend,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLegend = false,
   onHelpToggle,
   children,
 }: FieldsetProps): JSX.Element => {
@@ -43,20 +39,11 @@ export const Fieldset = ({
     );
   }
 
-  let requiredMarkClassName = '';
-  if (showRequiredMark) {
-    requiredMarkClassName =
-      typeof legend === 'string'
-        ? styles.legend_required
-        : styles.legendWithMarkup_required;
-  }
   const hideLegendClassName = hideLegend ? styles.srOnly : '';
   const noMarginTopContentContainerClassName = hideLegend
     ? styles.contentContainerNoMarginTop
     : '';
-  const legendClassName = `${
-    styles.legend
-  } ${requiredMarkClassName} ${hideLegendClassName} ${
+  const legendClassName = `${styles.legend} ${hideLegendClassName} ${
     classNames?.legend ?? ''
   }`.trim();
 

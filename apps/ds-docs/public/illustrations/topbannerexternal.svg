@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: #cde1f9;
+      }
+
+      .cls-6 {
+        fill: url(#New_Pattern_Swatch_1-3);
+      }
+
+      .cls-7 {
+        fill: url(#New_Pattern_Swatch_1-2);
+      }
+
+      .cls-8 {
+        fill: url(#New_Pattern_Swatch_4-2);
+      }
+
+      .cls-9 {
+        fill: #fff;
+      }
+
+      .cls-10 {
+        fill: #093e61;
+      }
+
+      .cls-2 {
+        stroke: url(#New_Pattern_Swatch_2);
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .cls-11 {
+        fill: #1362ae;
+      }
+
+      .cls-12 {
+        fill: url(#New_Pattern_Swatch_4);
+      }
+
+      .cls-13 {
+        fill: url(#New_Pattern_Swatch_1);
+      }
+
+      .cls-3 {
+        stroke: url(#New_Pattern_Swatch_2-3);
+      }
+
+      .cls-4 {
+        stroke: url(#New_Pattern_Swatch_2-2);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-2925.53 -2366.74) scale(.7)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-5" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1" data-name="New Pattern Swatch 1" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-815.8 -1841.9) scale(1 .79)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-10" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1-2" data-name="New Pattern Swatch 1" patternTransform="translate(-15486.94 -4430.31) rotate(-180) scale(.89 -.5)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_4-2" data-name="New Pattern Swatch 4" patternTransform="translate(-1681.29 -4430.31) scale(.89 .5)" xlink:href="#New_Pattern_Swatch_4"/>
+    <pattern id="New_Pattern_Swatch_2" data-name="New Pattern Swatch 2" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-1672.86 -664.11) scale(.88 1)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-11" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_2-2" data-name="New Pattern Swatch 2" patternTransform="translate(-1702.62 -664.11) scale(.88 1)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_2-3" data-name="New Pattern Swatch 2" patternTransform="translate(-1736.61 -664.11) scale(.88 1)" xlink:href="#New_Pattern_Swatch_2"/>
+    <pattern id="New_Pattern_Swatch_1-3" data-name="New Pattern Swatch 1" patternTransform="translate(-2109.9 -834.68) scale(.85 .97)" xlink:href="#New_Pattern_Swatch_1"/>
+  </defs>
+  <circle class="cls-12" cx="100" cy="100" r="55.44"/>
+  <g>
+    <path class="cls-13" d="M173.24,85.68v30.64H28.76v-30.64h144.47M175.24,83.68H26.76v34.64h148.47v-34.64h0Z"/>
+    <rect class="cls-9" x="24.76" y="81.68" width="148.47" height="34.64"/>
+    <polygon class="cls-7" points="24.76 114.24 173.24 104.24 173.24 114.24 24.76 114.24 24.76 114.24"/>
+    <polygon class="cls-8" points="173.24 114.24 24.76 104.24 24.76 114.24 173.24 114.24 173.24 114.24"/>
+    <line class="cls-2" x1="143.18" y1="94.36" x2="162.31" y2="94.36"/>
+    <line class="cls-4" x1="113.42" y1="94.36" x2="132.55" y2="94.36"/>
+    <line class="cls-3" x1="82.44" y1="94.36" x2="101.56" y2="94.36"/>
+    <rect class="cls-6" x="32.52" y="88.36" width="12" height="12"/>
+    <path class="cls-13" d="M171.24,83.68v30.64H26.76v-30.64h144.47M173.24,81.68H24.76v34.64h148.47v-34.64h0Z"/>
+    <ellipse class="cls-9" cx="38.05" cy="94.36" rx="4" ry="1.86"/>
+  </g>
+</svg>

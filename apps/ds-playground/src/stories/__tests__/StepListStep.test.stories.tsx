@@ -2,10 +2,11 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, waitFor, within } from 'storybook/test';
 
 import { StepList } from '@skatteetaten/ds-collections';
-import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsum } from './testUtils/storybook.testing.utils';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { getDefaultEditButtonText } from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { category } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -60,15 +61,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    stepNumber: 1,
+    title: 'title',
+    children: loremIpsum,
+    onNext: fn(),
+  },
 } as Meta<typeof StepList.Step>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  stepNumber: 1,
-  title: 'title',
-  onNext: fn(),
-};
 const Template: StoryFn<typeof StepList.Step> = (args) => (
   <StepList>
     <StepList.Step {...args} />
@@ -79,7 +81,6 @@ export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLLIElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -103,7 +104,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -116,9 +116,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
 
   play: async ({ canvasElement }): Promise<void> => {
@@ -130,6 +128,28 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  render: Template,
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      content: 'dummyClassname',
+    },
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const step = canvas.getByRole('listitem');
+    const content = step.querySelector('[class*="stepContent"]');
+    await expect(content).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
 export const WithIconTitleAS = {
   render: Template,
   name: 'With icon, titleAs, svgTitle, children (A4)',
@@ -137,10 +157,10 @@ export const WithIconTitleAS = {
     variant: 'active',
     title: 'jeg er en tittel',
     titleAs: 'h2',
-    children: loremIpsum,
     svgPath: TimersandSVGpath,
     svgTitle: 'svg-tittel',
     onEdit: undefined,
+    onNext: undefined,
   },
   argTypes: {
     children: { table: { disable: false } },
@@ -157,21 +177,20 @@ export const WithIconTitleAS = {
     await expect(heading.tagName).toBe('H2');
     const focused = canvasElement.querySelector('[aria-current="step"]');
     await waitFor(async () => {
-      await expect(focused).toHaveFocus();
+      await expect(focused).not.toHaveFocus();
     });
   },
 } satisfies Story;
 
-export const WithShouldAutoFocusWhenActiveFalse = {
+export const WithShouldAutoFocusWhenActiveTrue = {
   render: Template,
-  name: 'With shouldAutoFocusWhenActive False ',
+  name: 'With shouldAutoFocusWhenActive True ',
   args: {
     variant: 'active',
     stepNumber: 13,
     title: 'jeg er en tittel',
     titleAs: 'h2',
-    children: loremIpsum,
-    shouldAutoFocusWhenActive: false,
+    shouldAutoFocusWhenActive: true,
     onEdit: undefined,
   },
   argTypes: {
@@ -179,7 +198,7 @@ export const WithShouldAutoFocusWhenActiveFalse = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const focused = canvasElement.querySelector('[aria-current="step"]');
-    await expect(focused).not.toHaveFocus();
+    await expect(focused).toHaveFocus();
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
@@ -192,7 +211,6 @@ export const WithFullWidthResult = {
   args: {
     variant: 'neutralResult',
     title: 'jeg er en tittel',
-    children: loremIpsum,
     onEdit: undefined,
     hasResultContentFullWidth: true,
   },
@@ -205,10 +223,8 @@ export const WithEditAccessibleDescription = {
   render: Template,
   name: 'With edit button accessible description (B2 delvis)',
   args: {
-    stepNumber: 1,
     variant: 'active',
     title: 'tittel',
-    children: loremIpsum,
     onEdit: fn(),
   },
   argTypes: {
@@ -217,7 +233,7 @@ export const WithEditAccessibleDescription = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const endreButton = canvas.getByRole('button', {
-      name: dsI18n.t('ds_collections:steplist.Edit'),
+      name: getDefaultEditButtonText(),
     });
     expect(endreButton).toHaveAccessibleDescription('tittel');
   },
@@ -230,13 +246,10 @@ export const NextButtonWithSpinner = {
   render: Template,
   name: 'With Spinner In Next Button',
   args: {
-    stepNumber: 1,
     variant: 'active',
     title: 'tittel',
-    children: loremIpsum,
     nextButtonProps: { hasSpinner: true },
     onNext: (): void => console.log('next'),
-    shouldAutoFocusWhenActive: false,
   },
   argTypes: {
     nextButtonProps: { table: { disable: false } },
@@ -247,13 +260,10 @@ export const NextButtonWithDisabled = {
   render: Template,
   name: 'With Disabled Next Button',
   args: {
-    stepNumber: 1,
     variant: 'active',
     title: 'tittel',
-    children: loremIpsum,
     nextButtonProps: { disabled: true },
     onNext: (): void => console.log('next'),
-    shouldAutoFocusWhenActive: false,
   },
   argTypes: {
     nextButtonProps: { table: { disable: false } },

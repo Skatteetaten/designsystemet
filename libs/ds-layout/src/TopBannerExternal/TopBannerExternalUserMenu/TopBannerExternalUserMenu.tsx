@@ -16,21 +16,16 @@ import {
 
 import { InlineButton, Link } from '@skatteetaten/ds-buttons';
 import { Divider } from '@skatteetaten/ds-content';
-import {
-  dsI18n,
-  formatOrganisationNumber,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, formatOrganisationNumber } from '@skatteetaten/ds-core-utils';
 import {
   InfoSquareSVGpath,
-  BellSVGpath,
   PersonSVGpath,
   LogOutSVGpath,
   PersonMoreSVGpath,
+  EmailSVGpath,
 } from '@skatteetaten/ds-icons';
 import { Heading } from '@skatteetaten/ds-typography';
 
-import { getTopBannerExternalUserMenuHostnameDefault } from './defaults';
 import { TopBannerExternalUserMenuProps } from './TopBannerExternalUserMenu.types';
 import { topBannerAnalyticsIds } from '../analyticsIds';
 import { TopBannerUserMenuButton } from '../TopBannerUserMenuButton/TopBannerUserMenuButton';
@@ -43,7 +38,7 @@ import styles from './TopBannerExternalUserMenu.module.scss';
 export const TopBannerExternalUserMenu = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   notificationCount,
@@ -51,8 +46,8 @@ export const TopBannerExternalUserMenu = ({
   onLogOutClick,
   onSwitchUserClick,
   children,
-  hostname = getTopBannerExternalUserMenuHostnameDefault(),
-  hideDefaultLinks,
+  hostname = 'skatt.skatteetaten.no',
+  hideDefaultLinks = false,
 }: TopBannerExternalUserMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
   const arrowLen = arrowRef.current?.offsetWidth ?? 0;
@@ -163,15 +158,15 @@ export const TopBannerExternalUserMenu = ({
                       ref={(node) => {
                         node?.setAttribute(
                           'data-webanalytics-id',
-                          topBannerAnalyticsIds.userMenu.notifications
+                          topBannerAnalyticsIds.userMenu.inbox
                         );
                       }}
                       className={styles.marginRightS}
-                      svgPath={BellSVGpath}
-                      href={`https://${hostname}/web/minside/${user.role === 'virksomhet' ? 'virksomhet' : 'person'}/varsler`}
+                      svgPath={EmailSVGpath}
+                      href={`https://${hostname}/web/minside/innboks/`}
                       ariaDescribedby={'notificationCount'}
                     >
-                      {t('ds_overlays:topbannerexternalusermenu.Notification')}
+                      {t('ds_overlays:topbannerexternalusermenu.Inbox')}
                     </Link>
                   )}
                   {!!notificationCount && notificationCount > 0 && (

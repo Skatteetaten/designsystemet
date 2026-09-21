@@ -3,8 +3,11 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { Tabs } from '@skatteetaten/ds-collections';
 import { BriefcaseSVGpath } from '@skatteetaten/ds-icons';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 
 const meta = {
   component: Tabs.Tab,
@@ -18,28 +21,24 @@ const meta = {
     },
     // Props
     children: { control: 'text', table: { category: category.props } },
-    svgPath: {
-      control: 'select',
-      options: Object.keys(SystemSVGPaths),
-      table: { category: category.props },
-    },
+    svgPath: { ...svgPathDescription },
     value: { control: 'text', table: { category: category.props } },
     // Events
     onClick: { ...htmlEventDescription },
   },
   args: {
-    children: 'TabKnapp',
-    value: 'random',
+    children: 'Person',
+    value: 'tab1',
   },
 } satisfies Meta<typeof Tabs.Tab>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const TabsTabTemplate: StoryFn<typeof Tabs.Tab> = () => (
-  <Tabs defaultValue={'tab1'}>
+const TabsTabTemplate: StoryFn<typeof Tabs.Tab> = (args) => (
+  <Tabs defaultValue={args.value}>
     <Tabs.List key={'list1'}>
-      <Tabs.Tab value={'tab1'}>{'Person'}</Tabs.Tab>
+      <Tabs.Tab {...args} />
       <Tabs.Tab value={'tab2'} svgPath={BriefcaseSVGpath}>
         {'Bedrift'}
       </Tabs.Tab>

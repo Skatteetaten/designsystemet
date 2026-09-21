@@ -8,17 +8,10 @@
   },
   "web": {
     "webapp": {
-      "content": "dist/storybook/ds-playground",
-      "path": "/web/designsystemet/",
+      "content": "dist/ds-docs/build/client",
+      "path": "/designsystemet/",
       "headers": {
         "Cache-Control": "no-cache"
-      },
-      "locations": {
-        "playroom/index.html": {
-          "headers": {
-            "Cache-Control": "no-cache"
-          }
-        }
       }
     }
   }

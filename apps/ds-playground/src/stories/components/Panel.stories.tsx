@@ -3,15 +3,7 @@ import { JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { MegaButton, Link, Button } from '@skatteetaten/ds-buttons';
-import {
-  Panel,
-  getPanelColorDefault,
-  getPanelPaddingDefault,
-  getPanelSpacingDefault,
-  getPanelSubtitleAsDefault,
-  getPanelTitleAsDefault,
-  getPanelVariantDefault,
-} from '@skatteetaten/ds-content';
+import { Panel } from '@skatteetaten/ds-content';
 import { CheckIcon } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
@@ -27,23 +19,11 @@ const meta = {
   argTypes: {
     // Props
     canManuallySetTitleFocus: { table: { category: category.props } },
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
-    color: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelColorDefault() },
-      },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
     hasResponsivePadding: { table: { category: category.props } },
-    headingRef: {
-      table: { category: category.props },
-      control: { disable: true },
-    },
+    headingRef: { control: false, table: { category: category.props } },
     hideGraphicMobile: { table: { category: category.props } },
     hideSubtitle: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
@@ -53,13 +33,7 @@ const meta = {
       table: { category: category.props },
     },
     imageSourceAltText: { table: { category: category.props } },
-    padding: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelPaddingDefault() },
-      },
-    },
+    padding: { control: 'inline-radio', table: { category: category.props } },
     renderIcon: {
       table: { category: category.props },
       control: 'select',
@@ -69,36 +43,15 @@ const meta = {
         CheckIcon: (): JSX.Element => <CheckIcon size={'extraLarge'} />,
       },
     },
-    spacing: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelSpacingDefault() },
-      },
-    },
+    spacing: { control: 'inline-radio', table: { category: category.props } },
     subtitle: { table: { category: category.props } },
     subtitleAs: {
       control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelSubtitleAsDefault() },
-      },
+      table: { category: category.props },
     },
     title: { table: { category: category.props } },
-    titleAs: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelTitleAsDefault() },
-      },
-    },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getPanelVariantDefault() },
-      },
-    },
+    titleAs: { control: 'inline-radio', table: { category: category.props } },
+    variant: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     children: loremIpsum,
@@ -132,7 +85,7 @@ export const Examples: Story = {
           </Paragraph>
           <Paragraph hasSpacing>{'Logg inn:'}</Paragraph>
           <MegaButton>{'Sjekk skatten'}</MegaButton>
-          <Paragraph className={'dummySpacingTop'}>
+          <Paragraph className={'topSpacingL'}>
             {
               'Ser du etter skattemeldingen? Hvis du oppdager feil eller har mottatt nye eller forsinkede oppplysniger, kan du fortsatt '
             }

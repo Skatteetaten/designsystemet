@@ -15,21 +15,10 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  getCommonFormVariantDefault,
-  getCommonAutoCompleteDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, SearchIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getEnableSRNavigationHintDefault,
-  getSearchFieldHasSearchButtonIconDefault,
-  getSearchFieldHideLabelDefault,
-  getSearchFieldIsLoadingDefault,
-} from './defaults';
 import { SearchFieldComponent, SearchFieldProps } from './SearchField.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -41,13 +30,12 @@ import styles from './SearchField.module.scss';
 /**
  * SearchField
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-searchfield--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/searchfield/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/searchfield)
  */
-export const SearchField = (({
+export const SearchField = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -60,25 +48,24 @@ export const SearchField = (({
   label,
   titleHelpSvg,
   searchButtonTitle,
-  isLoading = getSearchFieldIsLoadingDefault(),
+  isLoading = false,
   spinnerLabel,
   spinnerProps,
-  variant = getCommonFormVariantDefault(),
+  size = 'medium',
   ariaDescribedBy,
-  autoComplete = getCommonAutoCompleteDefault(),
+  autoComplete = 'off',
   accessKey,
-  disabled,
+  disabled = false,
   form,
   name,
   placeholder,
-  readOnly,
-  required,
-  showRequiredMark,
+  readOnly = false,
+  required = false,
   value,
-  enableSRNavigationHint = getEnableSRNavigationHintDefault(),
-  hasSearchButtonIcon = getSearchFieldHasSearchButtonIconDefault(),
-  hasSpacing,
-  hideLabel = getSearchFieldHideLabelDefault(),
+  enableSRNavigationHint = true,
+  hasSearchButtonIcon = true,
+  hasSpacing = false,
+  hideLabel = true,
   onBlur,
   onChange,
   onFocus,
@@ -168,7 +155,6 @@ export const SearchField = (({
 
   useEffect(() => {
     updateShowResults();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [disabled, isLoading, results]);
 
   useEffect(() => {
@@ -261,16 +247,14 @@ export const SearchField = (({
     onSearchClick?.(event, currentValue);
   };
 
-  const isLarge = variant === 'large';
-  const isExtraLarge = variant === 'extraLarge';
+  const isLarge = size === 'large';
+  const isExtraLarge = size === 'extraLarge';
   let sizeAttribute: 'medium' | 'large' | 'extraLarge' = 'medium';
   if (isLarge) {
     sizeAttribute = 'large';
   } else if (isExtraLarge) {
     sizeAttribute = 'extraLarge';
   }
-  const hasVisibleLabel = !!label && !hideLabel;
-  const clearButtonSize = variant === 'medium' ? 'extraSmall' : 'small';
   const resolvedClearButtonTitle =
     clearButtonTitle ?? t('searchfield.ClearButtonTitle');
   const resolvedSearchButtonTitle =
@@ -280,9 +264,8 @@ export const SearchField = (({
   const containerClassName = `${styles.topContainer} ${className} ${
     classNames?.container ?? ''
   }`.trim();
-  const searchContainerClassName = `${styles.searchContainer} ${
-    hasVisibleLabel ? styles.searchContainerMarginTop : ''
-  } ${classNames?.searchContainer ?? ''}`.trim();
+  const searchContainerClassName =
+    `${styles.searchContainer} ${classNames?.searchContainer ?? ''}`.trim();
   const inputClassName = `${styles.input} ${classNames?.textbox ?? ''} ${
     showClearButton && !disabled ? styles.inputWithValue : ''
   }`.trim();
@@ -376,7 +359,6 @@ export const SearchField = (({
         helpSvgPath={helpSvgPath}
         helpText={helpText}
         titleHelpSvg={titleHelpSvg}
-        showRequiredMark={showRequiredMark}
         disabled={disabled}
         onHelpToggle={onHelpToggle}
       >
@@ -420,7 +402,7 @@ export const SearchField = (({
           {showClearButton && !disabled && !readOnly && (
             <IconButton
               className={styles.clearButton}
-              size={clearButtonSize}
+              size={'small'}
               svgPath={CancelSVGpath}
               title={resolvedClearButtonTitle}
               onClick={handleClearClick}
@@ -456,7 +438,9 @@ export const SearchField = (({
       </ErrorMessage>
     </div>
   );
-}) as SearchFieldComponent;
+};
+
+export default SearchField as SearchFieldComponent;
 
 SearchField.displayName = 'SearchField';
 SearchField.Result = SearchFieldResult;

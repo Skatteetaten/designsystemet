@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" data-name="Layer 1" viewBox="0 0 200 200">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-8 {
+        fill: #cde1f9;
+      }
+
+      .cls-2 {
+        stroke-dasharray: 3.92 3.92;
+      }
+
+      .cls-2, .cls-9, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-9, .cls-4, .cls-5 {
+        stroke-width: 4px;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        stroke: url(#New_Pattern_Swatch_2);
+      }
+
+      .cls-9 {
+        fill: url(#New_Pattern_Swatch_4);
+        stroke: url(#New_Pattern_Swatch_1-3);
+      }
+
+      .cls-3 {
+        stroke: url(#New_Pattern_Swatch_1);
+      }
+
+      .cls-3, .cls-7 {
+        stroke-width: 10px;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 4.07 4.07;
+      }
+
+      .cls-10 {
+        fill: #093e61;
+      }
+
+      .cls-11 {
+        fill: #1362ae;
+      }
+
+      .cls-6 {
+        stroke: #093e61;
+        stroke-width: 6px;
+      }
+
+      .cls-7 {
+        stroke: url(#New_Pattern_Swatch_1-2);
+      }
+    </style>
+    <pattern id="New_Pattern_Swatch_1" data-name="New Pattern Swatch 1" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-180 -1390.01)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-10" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_2" data-name="New Pattern Swatch 2" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(4923.59 -3037.61) scale(1.86 .8)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-11" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1-2" data-name="New Pattern Swatch 1" patternTransform="translate(-180 -1417.24)" xlink:href="#New_Pattern_Swatch_1"/>
+    <pattern id="New_Pattern_Swatch_4" data-name="New Pattern Swatch 4" x="0" y="0" width="115.45" height="115.45" patternTransform="translate(-9099.72 2319.2) rotate(45) scale(.98)" patternUnits="userSpaceOnUse" viewBox="0 0 115.45 115.45">
+      <g>
+        <rect class="cls-1" width="115.45" height="115.45"/>
+        <rect class="cls-8" width="115.45" height="115.45"/>
+      </g>
+    </pattern>
+    <pattern id="New_Pattern_Swatch_1-3" data-name="New Pattern Swatch 1" patternTransform="translate(-728.13 -954.1)" xlink:href="#New_Pattern_Swatch_1"/>
+  </defs>
+  <line class="cls-3" x1="122.02" y1="74.16" x2="158.61" y2="74.16"/>
+  <line class="cls-3" x1="41.39" y1="74.16" x2="102.62" y2="74.16"/>
+  <g>
+    <polyline class="cls-5" points="108.58 64.58 108.58 62.58 106.58 62.58"/>
+    <line class="cls-4" x1="102.52" y1="62.58" x2="39.49" y2="62.58"/>
+    <polyline class="cls-5" points="37.45 62.58 35.45 62.58 35.45 64.58"/>
+    <line class="cls-2" x1="35.45" y1="68.5" x2="35.45" y2="82.21"/>
+    <polyline class="cls-5" points="35.45 84.17 35.45 86.17 37.45 86.17"/>
+    <line class="cls-4" x1="41.52" y1="86.17" x2="104.55" y2="86.17"/>
+    <polyline class="cls-5" points="106.58 86.17 108.58 86.17 108.58 84.17"/>
+    <line class="cls-2" x1="108.58" y1="80.25" x2="108.58" y2="66.54"/>
+  </g>
+  <line class="cls-7" x1="41.39" y1="46.93" x2="158.61" y2="46.93"/>
+  <polygon class="cls-9" points="84.24 111 72.95 99.71 61.66 111 44.41 111 44.41 165.31 158.91 165.31 158.91 111 84.24 111"/>
+  <line class="cls-6" x1="59.94" y1="130.01" x2="145.29" y2="130.01"/>
+  <line class="cls-6" x1="103.92" y1="145.69" x2="145.29" y2="145.69"/>
+  <line class="cls-6" x1="59.94" y1="145.69" x2="93.91" y2="145.69"/>
+</svg>

@@ -1,0 +1,75 @@
+---
+title: RadioGroup
+description: RadioGroup brukes når brukeren skal velge kun ett alternativ blant et lite antall valg. Den gjør det enkelt å vurdere og sammenligne alternativer på en strukturert måte.
+
+icon: /illustrations/radiogroup.svg
+---
+
+<Canvas examplesPath="components/radiogroup" />
+
+## Bruk RadioGroup når
+
+- brukeren skal velge ett av omtrent 2–5 alternativer
+- valgene er gjensidig utelukkende
+- valget påvirker hva som vises videre (f.eks. neste steg i et skjema)
+- alternativer må presenteres tydelig for sammenligning
+
+## Unngå RadioGroup når
+
+- brukeren kan velge flere alternativer – bruk [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) i stedet
+- det finnes kun ett valg – da bør du bruke [Checkbox](/byggeklosser/komponenter/checkbox)
+- listen blir uoversiktlig fordi den har mange alternativer – vurder om valgene kan deles opp i mindre grupper, eller bruk [Select](/byggeklosser/komponenter/select)
+
+## Hvorfor vi anbefaler dette
+
+- 2–5 alternativer er en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), ikke en hard grense. Få alternativer kan sammenlignes visuelt uten å åpne en liste, mens mange alternativer i et åpent format øker kognitiv belastning og sannsynligheten for feilklikk. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
+- Veiledningen om forhåndsvalg er bevisst nyansert for å balansere effektivitet med brukerautonomi — et automatisk forhåndsvalg kan styre brukeren i feil retning dersom det ikke er gjennomtenkt.
+
+## Varianter og når bør du bruke dem
+
+### Vertikal
+
+- Standardvariant.
+- God for lengre tekster eller beskrivelser.
+- Beskrivende tekst kan ligge under hvert svaralternativ.
+
+### Horisontal
+
+- Brukes når valgene er korte og konsise.
+- Blir automatisk vertikal i mobilvisning.
+- Kan ikke ha beskrivende tekst.
+
+### Plassering og justering
+
+- Plasseres der brukeren må ta et tydelig valg mellom få alternativer.
+- [Legend](wordinfo:legend)‑elementet fungerer som ledetekst for gruppen.
+- Legend kan skjules visuelt, men vil beholdes for skjermleser.
+
+### Interaksjon og tilstander
+
+- Radioknapper lar brukeren velge kun ett alternativ om gangen.
+- Du kan sette en forhåndsvalgt verdi når det finnes en trygg og forventet standard som passer de fleste brukere. Et slikt forhåndsvalg må aldri skjule et viktig valg eller presse brukeren i feil retning. Hvis du er i tvil, start uten forhåndsvalg og la brukeren velge aktivt.
+- Beskrivelsestekster legges direkte under hvert alternativ.
+
+## Tekst
+
+- Svaralternativene skal være korte og lett skannbare.
+- Alle alternativer bør ha samme språklige form med lik setningsstruktur.
+- Bruk tydelige begreper som gjør skillet mellom valgene forståelig.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Spørsmål/ledetekst skal alltid ligge i `[<legend>](wordinfo:legend)`.
+- Feilmeldinger skal referere direkte til ledeteksten (f.eks. «Type virksomhet må fylles ut»).
+- RadioGroup må alltid inneholde faktiske valg (children), selv om det teknisk er mulig å la den være tom.
+- Vertikal visning gir best støtte for beskrivelser og leseflyt.
+
+import { RadioGroup } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={RadioGroup} />
+
+### RadioGroup.Radio
+
+<TypeTable of={RadioGroup.Radio} />

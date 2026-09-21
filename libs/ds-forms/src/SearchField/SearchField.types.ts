@@ -9,23 +9,13 @@ import {
   Ref,
 } from 'react';
 
-import {
-  BaseProps,
-  FormRequiredProps,
-  Prettify,
-  Size,
-} from '@skatteetaten/ds-core-utils';
+import { BaseProps, Prettify, Size } from '@skatteetaten/ds-core-utils';
 import type { SpinnerProps } from '@skatteetaten/ds-progress';
 
 import { LabelWithHelpProps } from '../LabelWithHelp/LabelWithHelp.types';
 import SearchFieldResult from './SearchFieldResult/SearchFieldResult';
 
-export const searchArrSize = [
-  'medium',
-  'large',
-  'extraLarge',
-] as const satisfies readonly Size[];
-export type SearchSize = (typeof searchArrSize)[number];
+export type SearchSize = Extract<Size, 'medium' | 'large' | 'extraLarge'>;
 
 type RequiredSearchFieldHTMLAttributes = Pick<
   ComponentPropsWithoutRef<'input'>,
@@ -37,6 +27,7 @@ type RequiredSearchFieldHTMLAttributes = Pick<
   | 'name'
   | 'placeholder'
   | 'readOnly'
+  | 'required'
   | 'value'
 >;
 
@@ -57,8 +48,7 @@ export interface SearchResult {
 }
 
 interface SearchFieldCommonProps
-  extends SearchFieldPropsHTMLAttributes,
-    BaseProps {
+  extends SearchFieldPropsHTMLAttributes, BaseProps {
   ref?: Ref<HTMLInputElement>;
   classNames?: Prettify<
     {
@@ -104,7 +94,7 @@ interface SearchFieldCommonProps
   /** For å tilpasse størrelse eller farge på spinneren */
   spinnerProps?: Prettify<Partial<Pick<SpinnerProps, 'size' | 'color'>>>;
   /** Definerer stilen til SearchField */
-  variant?: SearchSize;
+  size?: SearchSize;
   /** Kalles ved trykk på knappen for resetting av søkefeltet */
   onClear?: MouseEventHandler<HTMLButtonElement>;
   /** Callback som kalles når hjelpetekst vises/skjules */
@@ -132,9 +122,8 @@ interface SearchFieldCommonProps
   enableSRNavigationHint?: boolean;
 }
 
-export type SearchFieldProps = SearchFieldCommonProps & FormRequiredProps;
+export type SearchFieldProps = SearchFieldCommonProps;
 
-export interface SearchFieldComponent
-  extends FunctionComponent<SearchFieldProps> {
+export interface SearchFieldComponent extends FunctionComponent<SearchFieldProps> {
   Result: typeof SearchFieldResult;
 }

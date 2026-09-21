@@ -14,7 +14,14 @@ type BasePropsHTMLAttributes = Pick<
   'className' | 'id' | 'lang'
 >;
 
-export interface BaseProps extends BasePropsHTMLAttributes {
+export interface BaseProps {
+  /** Html class attributt til noden. */
+  className?: BasePropsHTMLAttributes['className'];
+  /** Html id attributt. */
+  id?: BasePropsHTMLAttributes['id'];
+  /** Html lang attributt. */
+  lang?: BasePropsHTMLAttributes['lang'];
+  /** Html data attributt som brukes for tester. */
   'data-testid'?: string;
 }
 
@@ -43,12 +50,6 @@ export const sizeArr = [
 ] as const;
 export type Size = (typeof sizeArr)[number];
 
-export const formArrSize = [
-  'medium',
-  'large',
-] as const satisfies readonly Size[];
-export type FormSize = (typeof formArrSize)[number];
-
 export const positionArr = [
   'left',
   'right',
@@ -60,7 +61,7 @@ export const positionArr = [
 ] as const;
 export type Position = (typeof positionArr)[number];
 
-export const linkColorArr = ['white'] as const;
+export const linkColorArr = ['interactive', 'white'] as const;
 export type LinkColor = (typeof linkColorArr)[number];
 
 export const statusArr = [
@@ -78,9 +79,6 @@ export type HeadingAs = (typeof headingAsArr)[number];
 export const subheadingAsArr = ['h2', 'h3', 'h4', 'h5', 'h6'] as const;
 export type SubheadingAs = (typeof subheadingAsArr)[number];
 
-export const densityArr = ['standard', 'compact'] as const;
-export type Density = (typeof densityArr)[number];
-
 export const weightArr = ['regular', 'medium', 'bold'] as const;
 export type Weight = (typeof weightArr)[number];
 
@@ -95,16 +93,3 @@ export const spacingArr = [
   'mega',
 ] as const;
 export type Spacing = (typeof spacingArr)[number];
-
-export interface FormRequiredProps {
-  required?: boolean;
-  /**
-   * Om obligatorisk skjemafelt skal markeres med stjerne. Forutsetter at
-   * required er tatt i bruk.
-   *
-   * @deprecated Prop skal fjernes ved lansering av neste major versjon. Les mer
-   *   om mønstre for obligatoriske felt på [stil og
-   *   tone](https://www.skatteetaten.no/stilogtone/monster/interaksjon/obligatoriske-felt/).
-   */
-  showRequiredMark?: boolean;
-}

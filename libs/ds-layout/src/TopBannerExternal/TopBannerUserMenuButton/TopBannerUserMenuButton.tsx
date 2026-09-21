@@ -1,7 +1,7 @@
 import { JSX, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   AccountMultipleIcon,
   BriefcaseIcon,
@@ -20,12 +20,12 @@ import styles from './TopBannerUserMenuButton.module.scss';
 export const TopBannerUserMenuButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   user,
   notificationCount,
-  isMenuOpen,
+  isMenuOpen = false,
   onClick,
 }: TopBannerUserMenuButtonProps): JSX.Element => {
   const { t } = useTranslation(['ds_layout', 'ds_overlays'], { i18n: dsI18n });
@@ -64,7 +64,7 @@ export const TopBannerUserMenuButton = ({
     <TopBannerButton
       ref={ref}
       id={id}
-      className={`${styles.menuButton} ${isMenuOpen ? styles.menuButton_open : ''} ${className}`.trim()}
+      className={`${isMenuOpen ? styles.menuButtonOpen : ''} ${className}`.trim()}
       classNames={
         user.role === 'meg'
           ? undefined
@@ -94,13 +94,10 @@ export const TopBannerUserMenuButton = ({
         <span className={styles.srOnly}>
           &nbsp;
           {notificationCount === 1
-            ? t('ds_overlays:topbannerexternalusermenu.OneNotificationMessage')
-            : t(
-                'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
-                {
-                  count: notificationCount,
-                }
-              )}
+            ? t('ds_overlays:topbannerexternalusermenu.OneInboxMessage')
+            : t('ds_overlays:topbannerexternalusermenu.InboxCountMessage', {
+                count: notificationCount,
+              })}
         </span>
       )}
       <Icon

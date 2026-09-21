@@ -1,11 +1,7 @@
 import { useContext, useId, JSX, KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
 import { CheckboxProps } from './Checkbox.types';
 import { CheckboxContext } from '../CheckboxGroup/CheckboxContext';
@@ -17,13 +13,12 @@ import styles from './Checkbox.module.scss';
 /**
  * Checkbox
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-checkbox--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/checkbox/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/checkbox)
  */
 export const Checkbox = ({
   ref,
   id: idExternal,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -31,23 +26,21 @@ export const Checkbox = ({
   errorMessage,
   checked,
   defaultChecked,
-  disabled,
+  disabled = false,
   form,
   name,
-  readOnly,
-  required,
+  readOnly = false,
+  required = false,
   value,
   ariaDescribedby,
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
+  hasSpacing = false,
+  hideLabel = false,
   onChange,
   onBlur,
   onFocus,
   children,
 }: CheckboxProps): JSX.Element => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
-  useValidateFormRequiredProps({ required, showRequiredMark });
   const context = useContext(CheckboxContext);
   const errorIdExternal = context?.errorId;
 
@@ -56,7 +49,10 @@ export const Checkbox = ({
   const uniqueErrorId = `checkboxErrorId-${useId()}`;
   const errorIdInternal = errorIdExternal ?? uniqueErrorId;
   const descriptionId = `descId-${useId()}`;
-  const hasErrorInternal = errorIdExternal && !checked ? true : !!errorMessage;
+  const isControlled = checked !== undefined;
+  const isChecked = checked ?? defaultChecked ?? false;
+  const hasErrorInternal =
+    errorIdExternal && !isChecked ? true : !!errorMessage;
 
   const ariaDescribedbyInput = [
     description && descriptionId,
@@ -93,8 +89,7 @@ export const Checkbox = ({
           id={inputIdInternal}
           className={styles.checkboxInput}
           data-testid={dataTestId}
-          checked={checked}
-          defaultChecked={defaultChecked}
+          {...(isControlled ? { checked } : { defaultChecked })}
           disabled={disabled}
           form={form}
           name={name}
@@ -118,11 +113,7 @@ export const Checkbox = ({
             classNames?.label ?? ''
           }`.trim()}
         >
-          <span
-            className={
-              !context && showRequiredMark ? styles.checkboxLabel_required : ''
-            }
-          >
+          <span>
             {children}
             {(readOnly || context?.readOnly) && (
               <span

@@ -53,13 +53,9 @@ const meta = {
 } satisfies Meta<typeof DescriptionList>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     'data-testid': '123ID',
     ref: (instance: HTMLDListElement | null): void => {
       if (instance) {
@@ -81,7 +77,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -94,9 +89,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -109,9 +102,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -128,7 +119,6 @@ export const Defaults = {
 export const WithSpacing = {
   name: 'With Spacing (A4)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -142,7 +132,6 @@ export const WithSpacing = {
 export const WithSizeSmallAndBold = {
   name: 'With Size And FontWeight (A2)',
   args: {
-    ...defaultArgs,
     size: 'small',
     termWeight: 'regular',
     descriptionWeight: 'bold',
@@ -166,7 +155,6 @@ export const WithVariantVertial = {
   name: 'With Variant Vertical (A1, A2)',
   render: VerticalTemplate,
   args: {
-    ...defaultArgs,
     variant: 'vertical',
   },
   argTypes: {
@@ -188,7 +176,6 @@ export const WithVariantHorizontal = {
   name: 'With Variant Horizontal (A1, A2, A7)',
   render: HorizontalTemplate,
   args: {
-    ...defaultArgs,
     variant: 'horizontal',
   },
   argTypes: {
@@ -202,7 +189,6 @@ export const WithVariantHorizontal = {
 export const WithIsVerticalOnMobile = {
   name: 'With IsVerticalOnMobile (A8)',
   args: {
-    ...defaultArgs,
     variant: 'horizontal',
     isVerticalOnMobile: true,
   },
@@ -222,7 +208,6 @@ export const WithIsVerticalOnMobile = {
 export const WithHasVerticalDescriptionDirectionOnMobile = {
   name: 'With isDescriptionVerticalOnMobile (A9)',
   args: {
-    ...defaultArgs,
     descriptionDirection: 'horizontal',
     isDescriptionVerticalOnMobile: true,
   },

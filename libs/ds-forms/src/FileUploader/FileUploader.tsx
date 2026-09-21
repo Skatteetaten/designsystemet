@@ -1,6 +1,7 @@
 import {
   ChangeEvent,
   DragEvent,
+  JSX,
   useEffect,
   useId,
   useRef,
@@ -8,12 +9,11 @@ import {
 } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { AttachFileIcon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { getFileUploaderGetSpinnerLabelDefault } from './defaults';
 import {
   FileUploaderComponent,
   FileUploaderProps,
@@ -28,16 +28,20 @@ import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';
 
+export const getDefaultFileIconTitle = (): string =>
+  dsI18n.t('ds_forms:fileuploader.FileIconLabel');
+export const getDefaultInProgressLabel = (): string =>
+  dsI18n.t('ds_forms:fileuploader.InProgressLabel');
+
 /**
  * FileUploader
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-fileuploader--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/fileuploader/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/fileuploader)
  */
-export const FileUploader = (({
+export const FileUploader = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -46,7 +50,7 @@ export const FileUploader = (({
   acceptedFileFormatsDisplay,
   description,
   errorMessage,
-  fileIconTitle,
+  fileIconTitle = getDefaultFileIconTitle(),
   helpSvgPath,
   helpText,
   label,
@@ -54,20 +58,19 @@ export const FileUploader = (({
   uploadResult,
   uploadedFiles,
   invalidCharacterRegexp,
-  spinnerLabel = getFileUploaderGetSpinnerLabelDefault(),
-  hasSpacing,
-  hideLabel,
-  showRequiredMark,
-  shouldNormalizeFileName,
-  multiple,
-  isUploading,
-  isRequired,
+  spinnerLabel = getDefaultInProgressLabel(),
+  hasSpacing = false,
+  hideLabel = false,
+  shouldNormalizeFileName = false,
+  multiple = false,
+  isUploading = false,
+  isRequired = false,
   onFileChange,
   onFileDelete,
   onFileDownload,
   onHelpToggle,
   children: buttonTextExternal,
-}: FileUploaderProps) => {
+}: FileUploaderProps): JSX.Element => {
   const { t } = useTranslation('ds_forms', { i18n: dsI18n });
   const inputRef = useRef<HTMLInputElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -110,6 +113,8 @@ export const FileUploader = (({
   }, [uploadedFiles]);
 
   const id = externalId ?? generatedId;
+  const labelId = `${id}-label`;
+  const buttonTextId = `${id}-button-text`;
 
   const descriptionId = `descId-${useId()}`;
   const errorId = `${useId()}-fileuploader-error`;
@@ -227,9 +232,6 @@ export const FileUploader = (({
 
     setFilesPendingDelete((prevState) => ({ ...prevState, [key]: false }));
   };
-  const concatenatedClassnames = `${styles.container} ${className} ${
-    classNames?.container ?? ''
-  }`.trim();
 
   const ariaDescribedBy = [
     description && descriptionId,
@@ -243,39 +245,40 @@ export const FileUploader = (({
   return (
     <div
       ref={ref}
-      className={concatenatedClassnames}
+      className={`${styles.container} ${className} ${
+        classNames?.container ?? ''
+      }`.trim()}
       lang={lang}
       data-testid={dataTestId}
       data-has-spacing={hasSpacing}
     >
-      {label && (
-        <LabelWithHelp
-          classNames={classNames}
-          htmlFor={id}
-          hideLabel={hideLabel}
-          showRequiredMark={showRequiredMark}
-          description={description}
-          descriptionId={descriptionId}
-          helpSvgPath={helpSvgPath}
-          helpText={helpText}
-          titleHelpSvg={titleHelpSvg}
-          onHelpToggle={onHelpToggle}
-        >
-          {label}
-        </LabelWithHelp>
-      )}
-
+      <LabelWithHelp
+        id={labelId}
+        classNames={classNames}
+        htmlFor={id}
+        hideLabel={hideLabel}
+        description={description}
+        descriptionId={descriptionId}
+        helpSvgPath={helpSvgPath}
+        helpText={helpText}
+        titleHelpSvg={titleHelpSvg}
+        onHelpToggle={onHelpToggle}
+      >
+        {label}
+      </LabelWithHelp>
       <button
         ref={buttonRef}
         type={'button'}
-        id={id}
-        className={`${styles.dropZone} ${label && !hideLabel ? styles.dropZoneMarginTop : ''} ${
+        className={`${styles.dropZone} ${
           errorMessage ? styles.dropZone_error : ''
         } ${isDragging && !isUploading ? styles.dropZone_dragging : ''}`.trim()}
         disabled={isUploading}
+        aria-labelledby={`${labelId} ${buttonTextId}`}
         aria-describedby={
           ariaDescribedBy.trim() !== '' ? ariaDescribedBy : undefined
         }
+        // aria-invalid på button-element gir advarsler i terminal og validatorer, men kan ikke settes på input-elementet da det er satt til hidden. Det fungerer allikevel fint for skjermlesere å løse det på denne måten.
+        aria-invalid={errorMessage ? 'true' : undefined}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
         onDragOver={handleDragOver}
@@ -286,42 +289,38 @@ export const FileUploader = (({
           }
         }}
       >
-        <div className={styles.removePointerEvents}>
-          {isUploading ? (
-            <Spinner
-              classNames={{ title: styles.spinner }}
-              size={'large'}
-              color={'blue'}
-            >
-              {spinnerLabel}
-            </Spinner>
-          ) : (
-            <AttachFileIcon className={styles.icon} size={'large'} />
+        {isUploading ? (
+          <Spinner
+            classNames={{ title: styles.spinner }}
+            size={'large'}
+            color={'interactive'}
+          >
+            {spinnerLabel}
+          </Spinner>
+        ) : (
+          <AttachFileIcon className={styles.icon} size={'large'} />
+        )}
+        <span className={styles.innerText} id={buttonTextId}>
+          {!isUploading && buttonText}
+          {isRequired && (
+            <span className={styles.srOnly}>{t('fileuploader.required')}</span>
           )}
-          <label className={styles.innerLabel} htmlFor={id}>
-            {!isUploading && buttonText}
-            {isRequired && (
-              <span className={styles.srOnly}>
-                {t('fileuploader.required')}
-              </span>
-            )}
-          </label>
-          <input
-            ref={inputRef}
-            data-testid={`${dataTestId}-input`}
-            type={'file'}
-            accept={acceptedFormatsAsCommaSeparatedString}
-            multiple={multiple}
-            hidden
-            onChange={handleFileChange}
-          />
-        </div>
+        </span>
       </button>
+      <input
+        ref={inputRef}
+        id={id}
+        data-testid={dataTestId ? `${dataTestId}-input` : undefined}
+        type={'file'}
+        accept={acceptedFormatsAsCommaSeparatedString}
+        multiple={multiple}
+        hidden
+        onChange={handleFileChange}
+      />
       {acceptedFileFormats && (
         <span id={fileformatsId} className={styles.fileInfo}>
           {acceptedFileFormatsDescription ??
             `${t('fileuploader.FormatLabel')} `}
-
           <span className={styles.fileFormatList}>
             {acceptedFileFormatsDisplay ??
               acceptedFormatsAsCommaSeparatedString}
@@ -343,9 +342,9 @@ export const FileUploader = (({
       >
         {uploadResult?.statusMessage}
       </Alert>
-      {uploadedFiles && (
+      {!!uploadedFiles?.length && (
         <ul className={styles.fileList}>
-          {uploadedFiles?.map((file, index) => {
+          {uploadedFiles.map((file, index) => {
             const isNewFile = newFiles.some(
               (newFile) => newFile.id === file.id
             );
@@ -380,7 +379,9 @@ export const FileUploader = (({
       </div>
     </div>
   );
-}) as FileUploaderComponent;
+};
+
+export default FileUploader as FileUploaderComponent;
 
 FileUploader.useFileUploader = useFileUploader;
 

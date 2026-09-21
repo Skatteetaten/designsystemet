@@ -10,10 +10,10 @@ import {
   within,
 } from 'storybook/test';
 
-import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { getDefaultHelpButtonTitle, dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   DatePicker,
-  getDatePickerPlaceholderDefault,
+  getDefaultDatePickerPlaceholder,
 } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
@@ -31,6 +31,8 @@ const verifyAttribute =
       expect(button).toHaveAttribute(attribute, expectedValue)
     );
   };
+
+const defaultLabelText = 'Fødselsdato';
 
 const today = new Date('2024-01-15');
 const meta = {
@@ -61,12 +63,7 @@ const meta = {
     initialPickerDate: { table: { disable: true }, control: 'date' },
     minDate: { table: { disable: true }, control: 'date' },
     maxDate: { table: { disable: true }, control: 'date' },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     // HTML
     autoComplete: { table: { disable: true } },
     disabled: { table: { disable: true } },
@@ -89,6 +86,9 @@ const meta = {
     mockDate: today,
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabelText,
+  },
 } satisfies Meta<typeof DatePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -96,15 +96,9 @@ type Story = StoryObj<typeof meta>;
 const valueDate = new Date(2024, 1, 1);
 const errorMessageText = 'Fødselsdato er obligatorisk';
 
-const defaultLabelText = 'Fødselsdato';
-const defaultArgs = {
-  label: defaultLabelText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLInputElement | null): void => {
       if (instance) {
         instance.name = 'dummyNameForwardedFromRef';
@@ -123,7 +117,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -138,9 +131,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -157,11 +147,10 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      dateContainer: 'dummyClassnameFormContainer',
+      dateContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -180,23 +169,21 @@ export const WithCustomClassNames = {
     const container = canvasElement.querySelector(`${wrapper} > div`);
     const label = canvas.getByText(defaultLabelText);
 
-    const dateContainer = canvasElement.querySelector(`${wrapper} > div > div`);
+    const dateContainer = canvasElement.querySelector(`${wrapper} > div`);
 
     const errorMessageContainer = canvasElement.querySelector(
       '[id^=datepickerErrorId]>div'
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(dateContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(dateContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2, B2, B5)',
-  args: {
-    ...defaultArgs,
-  },
+  name: 'Defaults (A1, A2, B2, B5)',
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
   },
@@ -211,7 +198,7 @@ export const Defaults = {
     await expect(input).toHaveAttribute('id');
     await expect(input).toHaveAttribute(
       'placeholder',
-      getDatePickerPlaceholderDefault()
+      getDefaultDatePickerPlaceholder()
     );
     await expect(input.tagName).toBe('INPUT');
     await expect(input).not.toBeRequired();
@@ -234,9 +221,7 @@ export const Defaults = {
 
 export const DefaultsWithOpenCalendar = {
   name: 'Defaults With Open Calendar',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
   },
@@ -264,9 +249,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -286,21 +269,9 @@ export const WithAriaDescribedBy = {
   },
 } satisfies Story;
 
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithDisabled = {
   name: 'With Disabled (B7)',
   args: {
-    ...defaultArgs,
     disabled: true,
     value: valueDate,
     helpText: 'Hjelpeknappen skal også være disabled',
@@ -317,7 +288,7 @@ export const WithDisabled = {
     await expect(textbox).toBeDisabled();
     await expect(calendarButton).toBeDisabled();
     const helpButton = canvas.getByRole('button', {
-      name: dsI18n.t('Shared:shared.Help'),
+      name: getDefaultHelpButtonTitle(),
     });
     await expect(helpButton).toBeDisabled();
   },
@@ -326,7 +297,6 @@ export const WithDisabled = {
 export const WithValue = {
   name: 'With Value (B1)',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   argTypes: {
@@ -341,7 +311,6 @@ export const WithValue = {
 export const WithRequired = {
   name: 'With Required (B3)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -358,24 +327,9 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (A1)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithoutErrorMessage = {
   name: 'Without ErrorMessage (A1, A4, A7, B4)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     errorMessage: { table: { disable: false } },
   },
@@ -399,7 +353,6 @@ export const WithoutErrorMessage = {
 export const WithErrorMessage = {
   name: 'With ErrorMessage (A1, A4, A7, B4)',
   args: {
-    ...defaultArgs,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -423,7 +376,6 @@ export const WithErrorMessage = {
 export const WithDescription = {
   name: 'With Description (A1)',
   args: {
-    ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
   argTypes: {
@@ -443,7 +395,6 @@ export const WithDescription = {
 export const WithHelpText = {
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
   },
   argTypes: {
@@ -464,7 +415,6 @@ export const WithHelpText = {
 export const WithHideLabel = {
   name: 'With HideLabel (A1)',
   args: {
-    ...defaultArgs,
     hideLabel: true,
   },
   argTypes: {
@@ -480,7 +430,6 @@ export const WithHideLabel = {
 export const WithAutoCompleteNameAndPlaceholder = {
   name: 'With AutoComplete Name And Placeholder (A2, B1)',
   args: {
-    ...defaultArgs,
     autoComplete: 'given-name',
     name: 'test_name',
     placeholder: 'placeholdertekst',
@@ -502,7 +451,6 @@ export const WithAutoCompleteNameAndPlaceholder = {
 export const WithPlaceholderEmpty = {
   name: 'With Placeholder Empty (A2)',
   args: {
-    ...defaultArgs,
     placeholder: '',
   },
   argTypes: {
@@ -518,7 +466,6 @@ export const WithPlaceholderEmpty = {
 export const WithReadOnly = {
   name: 'With ReadOnly (B6)',
   args: {
-    ...defaultArgs,
     value: valueDate,
     readOnly: true,
   },
@@ -536,7 +483,6 @@ export const WithReadOnly = {
 export const WithDateFormat = {
   name: 'With DateFormat (A8)',
   args: {
-    ...defaultArgs,
     value: valueDate,
     dateFormat: 'yyyy/MM/dd',
   },
@@ -575,7 +521,6 @@ export const WithInitialPickerDate = {
   render: DatesTemplate,
   name: 'With InitialPickerDate (Kalender B2)',
   args: {
-    ...defaultArgs,
     initialPickerDate: new Date('2024-01-31'),
   },
   argTypes: {
@@ -598,7 +543,6 @@ export const WithInitialPickerDate = {
 export const GenerouslyWithFormatFromUser = {
   name: 'Generously With Format From User (A3)',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   argTypes: {},
@@ -651,7 +595,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A6)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onChange: fn(),
@@ -674,7 +617,6 @@ export const WithEventHandlers = {
 export const ClickCalendarButton = {
   name: 'Click CalendarButton On And Off (A1, A5, B5)',
   args: {
-    ...defaultArgs,
     value: valueDate,
     onBlur: fn(),
     onChange: fn(),
@@ -719,7 +661,6 @@ export const WithCalendarToggleEvent = {
   name: 'With onCalendarToggle Event',
   render: WithCalendarToggleEventTemplate,
   args: {
-    ...defaultArgs,
     onCalendarToggle: fn(),
   },
   parameters: {
@@ -776,7 +717,6 @@ export const WithCalendarToggleEvent = {
 export const ClickCalendarDateButton = {
   name: 'Click CalendarDateButton (Kalender A2, A6)',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   parameters: {
@@ -799,7 +739,6 @@ export const ClickCalendarDateButton = {
 export const ClickOutsideCalendar = {
   name: 'Click Outside Calendar (Kalender A7)',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   parameters: {
@@ -825,7 +764,6 @@ export const ClickOutsideCalendar = {
 export const OpenCalendarEscape = {
   name: 'Open Calender Escape ',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   parameters: {
@@ -851,7 +789,6 @@ export const OpenCalendarEscape = {
 export const WithShadowDom = {
   name: 'With ShadowDom',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   argTypes: {
@@ -888,21 +825,25 @@ export const WithShadowDom = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: getDefaultHelpButtonTitle(),
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
 export const HideCalendarOnResizeWidth = {
   name: 'Hide Calendar On Window Resize (Kalender A4)',
   args: {
-    ...defaultArgs,
     value: valueDate,
   },
   parameters: {
@@ -935,7 +876,6 @@ export const HideCalendarOnResizeWidth = {
 export const TabNavigationWithAllDatesDisabled = {
   name: 'Tab Navigation With All Dates Disabled (Calendar Navigation)',
   args: {
-    ...defaultArgs,
     disabledDates: [
       // Disable all dates in January 2024
       ...Array.from({ length: 31 }, (_, i) => new Date(2024, 0, i + 1)),
@@ -1041,7 +981,6 @@ export const WithScrollableContainer = {
   render: TemplateWithScrollableContainer,
   name: 'Inside Scrollable Container',
   args: {
-    ...defaultArgs,
     errorMessage: 'Error',
   },
   parameters: {

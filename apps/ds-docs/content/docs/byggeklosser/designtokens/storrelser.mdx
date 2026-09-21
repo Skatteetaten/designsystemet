@@ -1,0 +1,15 @@
+---
+title: Størrelser
+---
+
+import sizesJson from '@skatteetaten/ds-core-designtokens/designtokens/sizes.json';
+import { TokenTable } from '../../../../app/components/token-table';
+
+<TokenTable
+  caption={'Størrelsestokens'}
+  tokens={Object.fromEntries(
+    Object.entries(sizesJson[':root,\n:host']).filter(
+      ([name]) => !name.includes('semantic')
+    )
+  )}
+/>

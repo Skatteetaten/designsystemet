@@ -1,0 +1,19 @@
+.table {
+  margin-bottom: var(--spacing-l);
+}
+
+.table tr[class*='expandedRow'] > td {
+  background-color: var(--palette-denim-5);
+}
+
+.tag {
+  border: 2px solid var(--palette-denim-70);
+  margin-bottom: var(--spacing-s);
+}
+
+.code {
+  display: inline-block;
+  font-size: var(--font-size-s);
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}

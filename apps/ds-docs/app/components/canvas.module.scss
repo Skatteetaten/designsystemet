@@ -1,0 +1,31 @@
+.canvas {
+  overflow: hidden;
+  border: 1px solid var(--palette-graphite-50);
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+}
+
+.example {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.exampleTabs {
+  border-bottom: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-s) var(--spacing-m);
+  background-color: var(--palette-graphite-5);
+  gap: var(--spacing-s);
+  text-align: right;
+}
+
+.codeSection {
+  margin-bottom: var(--spacing-l);
+}

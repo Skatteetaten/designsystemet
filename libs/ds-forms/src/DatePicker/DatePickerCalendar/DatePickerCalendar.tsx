@@ -13,11 +13,10 @@ import { useTranslation } from 'react-i18next';
 import { addDays, getWeek, isEqual } from 'date-fns';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ArrowBackSVGpath, ArrowForwardSVGpath } from '@skatteetaten/ds-icons';
 
 import { DatePickerCalendarProps } from './DatePickerCalendar.types';
-import { getDatePickerCalendarSelectedDateDefault } from './defaults';
 import {
   findValidYear,
   getCalendarRows,
@@ -33,10 +32,16 @@ import { TextField } from '../../TextField/TextField';
 
 import styles from './DatePickerCalendar.module.scss';
 
+const getDatePickerCalendarSelectedDateDefault = (): Date => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return today;
+};
+
 export const DatePickerCalendar = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   disabledDates,

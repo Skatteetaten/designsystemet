@@ -1,0 +1,33 @@
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.miniNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-m) 0;
+}
+
+.article {
+  width: var(--semantic-responsive-article);
+  margin: auto;
+}
+
+.checkbox {
+  margin: var(--spacing-m) 0 var(--spacing-xl);
+}
+
+.marginBottomXl {
+  margin-bottom: var(--spacing-xl);
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+}

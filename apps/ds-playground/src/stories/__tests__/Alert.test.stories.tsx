@@ -11,6 +11,9 @@ import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 import { SystemSVGPaths } from '../utils/icon.systems';
 import { loremIpsum } from './testUtils/storybook.testing.utils';
 
+const defaultText =
+  'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.';
+
 const meta = {
   component: Alert,
   title: 'Tester/Alert',
@@ -43,23 +46,18 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    showAlert: false,
+    children: defaultText,
+    variant: statusArr[1],
+  },
 } satisfies Meta<typeof Alert>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText =
-  'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.';
-
-const defaultArgs = {
-  showAlert: false,
-  children: defaultText,
-  variant: statusArr[1],
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -82,7 +80,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -96,9 +93,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -113,9 +108,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (B1, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -134,7 +127,6 @@ export const Defaults = {
 export const DefaultsWithMessage = {
   name: 'Defaults With Alert Content (B2)',
   args: {
-    ...defaultArgs,
     showAlert: true,
   },
   argTypes: {
@@ -158,7 +150,6 @@ export const DefaultsWithMessage = {
 export const VariantSuccess = {
   name: 'Variant Success (A1, A3)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     variant: 'success',
   },
@@ -177,7 +168,6 @@ export const VariantSuccess = {
 export const VariantInfo = {
   name: 'Variant Neutral (A1, A3)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     variant: 'info',
   },
@@ -196,7 +186,6 @@ export const VariantInfo = {
 export const VariantWarning = {
   name: 'Variant Warning (A1, A3)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     variant: 'warning',
   },
@@ -215,7 +204,6 @@ export const VariantWarning = {
 export const VariantDanger = {
   name: 'Variant Danger (A1, A3, B4)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     variant: 'danger',
   },
@@ -250,7 +238,6 @@ export const AllVariants = {
   render: TemplateAllVariants,
   name: 'All Variants (A1)',
   args: {
-    ...defaultArgs,
     showAlert: true,
   },
 } satisfies Story;
@@ -259,7 +246,6 @@ export const AllVariantsMobile = {
   render: TemplateAllVariants,
   name: 'All Variants On Small Screen (A1)',
   args: {
-    ...defaultArgs,
     showAlert: true,
   },
   globals: {
@@ -273,7 +259,6 @@ export const AllVariantsWithCloseButtonMobile = {
   render: TemplateAllVariants,
   name: 'All Variants On Small Screen (A1)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     onClose: fn(),
   },
@@ -288,7 +273,6 @@ export const AllLightVariants = {
   render: TemplateAllVariants,
   name: 'All Light Variants',
   args: {
-    ...defaultArgs,
     showAlert: true,
     backgroundBrightness: 'light',
   },
@@ -307,7 +291,6 @@ export const AllLightVariants = {
 export const WithLongText = {
   name: 'With Long Text (A2)',
   args: {
-    ...defaultArgs,
     children: loremIpsum,
     showAlert: true,
   },
@@ -321,7 +304,6 @@ export const WithLongText = {
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A2)',
   args: {
-    ...defaultArgs,
     children:
       'Avvistavkortutsteder.Takontaktmedkortutstederformerinformasjon.Dersomtekstengåroverflerelinjer,såvilikonenebeholdeplasseringensin.',
     showAlert: true,
@@ -341,7 +323,6 @@ export const WithLongTextAndBreaking = {
 export const WithMarkup = {
   name: 'With Markup (A2)',
   args: {
-    ...defaultArgs,
     children: (
       <>
         <Heading as={'h1'} level={4}>
@@ -360,7 +341,6 @@ export const WithMarkup = {
 export const WithCustomIcon = {
   name: 'With Custom Icon (A3)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     svgPath: LockSVGpath,
   },
@@ -374,7 +354,6 @@ export const WithCustomIcon = {
 export const WithCustomSVGPath = {
   name: 'With Custom SVG (A3)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
   },
@@ -388,7 +367,6 @@ export const WithCustomSVGPath = {
 export const WithCloseButton = {
   name: 'With Close Button (A4)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     onClose: fn(),
   },
@@ -400,7 +378,6 @@ export const WithCloseButton = {
 export const WithCloseOnClickButton = {
   name: 'With OnClick Close Button (A4)',
   args: {
-    ...defaultArgs,
     showAlert: true,
   },
   parameters: {
@@ -438,7 +415,6 @@ export const WithCloseOnClickButton = {
 export const WithAriaLiveOff = {
   name: 'With Aria-Live Off (B3)',
   args: {
-    ...defaultArgs,
     showAlert: true,
     ariaLive: 'off',
   },
@@ -453,4 +429,17 @@ export const WithAriaLiveOff = {
     const container = canvas.getAllByRole('generic')[1];
     await expect(container).toHaveAttribute('aria-live', 'off');
   },
+} satisfies Story;
+
+export const InFlexColumnContainer = {
+  render: (args): JSX.Element => {
+    return (
+      <div className={'flex flexColumn gapM'}>
+        <Paragraph>{'Dette er en tekst som ligger over varselet'}</Paragraph>
+        <Alert {...args}>{args.children}</Alert>
+        <Paragraph>{'Dette er en tekst som ligger under varselet'}</Paragraph>
+      </div>
+    );
+  },
+  args: {},
 } satisfies Story;

@@ -1,0 +1,80 @@
+@use '@skatteetaten/ds-core-designtokens/designtokens/breakpoints' as *;
+
+.mainExternal {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  flex: 1;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+}
+
+.article {
+  max-width: var(--semantic-responsive-article);
+  margin: var(--spacing-xl) auto 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskLink {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+
+  @media (min-width: $breakpoint-xs) {
+    font-size: var(--font-size-m);
+  }
+}
+
+.heading {
+  position: relative;
+}
+
+.headingIcon {
+  position: absolute;
+  left: calc(-1 * (var(--size-extra-large) + var(--spacing-l)));
+  display: none;
+  width: var(--size-extra-large);
+  height: var(--size-extra-large);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--palette-graphite-70);
+  border-radius: 50%;
+  background: var(--step-circle-background);
+  color: var(--step-circle-foreground);
+  outline-offset: 2px;
+
+  @media (min-width: $breakpoint-m) {
+    display: flex;
+  }
+}
+
+.marginTopXl {
+  margin-top: var(--spacing-xl);
+}
+
+.marginTopM {
+  margin-top: var(--spacing-m);
+}
+
+.sendInButton {
+  margin: var(--spacing-xxl) 0 var(--spacing-m);
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.panel {
+  margin: auto;
+}
+
+.panelContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s) var(--spacing-l);
+}

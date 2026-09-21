@@ -1,0 +1,62 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+
+.wrapper {
+  max-width: var(--container-s);
+  margin-top: calc(var(--semantic-responsive-internal-container-spacing) * -1);
+}
+
+.card {
+  margin-bottom: var(--spacing-m);
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: grid;
+  margin-bottom: var(--spacing-s);
+  column-gap: var(--spacing-s);
+  grid-template-columns: minmax(0, 1fr) max-content max-content;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &Key {
+    font-weight: var(--font-weight-bold);
+    overflow-wrap: anywhere;
+  }
+
+  &Value {
+    text-align: right;
+  }
+}
+
+.descriptionList dd {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--spacing-s);
+
+  @media (min-width: breakpoints.$breakpoint-s) {
+    justify-content: flex-end;
+  }
+}
+
+.tokenGroupLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--spacing-m);
+}
+
+.icon {
+  display: block;
+  width: 4.5rem;
+}

@@ -2,11 +2,7 @@ import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import {
-  LinkGroup,
-  getLinkGroupVariantDefault,
-} from '@skatteetaten/ds-buttons';
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
+import { LinkGroup } from '@skatteetaten/ds-buttons';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -19,21 +15,9 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    color: {
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
-    variant: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getLinkGroupVariantDefault() },
-      },
-    },
+    variant: { control: 'inline-radio', table: { category: category.props } },
   },
   args: {
     children: [

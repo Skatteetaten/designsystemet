@@ -81,9 +81,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -91,6 +89,33 @@ export const WithAttributes = {
     await expect(spinner).toHaveAttribute('id', 'htmlid');
     await expect(spinner).toHaveClass('dummyClassname');
     await expect(spinner).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: {
+      container: 'dummyClassName',
+      animation: 'dummyClassName',
+      title: 'dummyClassName',
+    },
+    'data-testid': '123ID',
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const spinner = canvas.getByTestId('123ID');
+    await expect(spinner).toHaveClass('dummyClassName');
+    const animation = spinner.firstChild;
+    await expect(animation).toHaveClass('dummyClassName');
+    const title = spinner.lastChild;
+    await expect(title).toHaveClass('dummyClassName');
   },
 } satisfies Story;
 
@@ -166,15 +191,10 @@ export const WithColorsLightBackground = {
   render: (args): JSX.Element => {
     return (
       <>
-        <Spinner
-          className={'bottomSpacingXL'}
-          color={'black'}
-          size={'medium'}
-          {...args}
-        >
+        <Spinner className={'bottomSpacingXL'} {...args}>
           {'Henter innhold'}
         </Spinner>
-        <Spinner color={'blue'} size={'medium'} {...args}>
+        <Spinner color={'interactive'} {...args}>
           {'Henter innhold'}
         </Spinner>
       </>

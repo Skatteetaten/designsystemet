@@ -3,8 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
-import { getSpinnerLabelDefault } from '@skatteetaten/ds-progress';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -19,7 +18,7 @@ const meta = {
     spinnerTitle: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSpinnerLabelDefault() },
+        defaultValue: { summary: getDefaultSpinnerLabel() },
       },
     },
     isExternal: { table: { category: category.props } },
@@ -27,12 +26,7 @@ const meta = {
     accessKey: { table: { category: category.htmlAttribute } },
     disabled: { table: { category: category.htmlAttribute } },
     href: { table: { category: category.htmlAttribute } },
-    type: {
-      table: {
-        category: category.htmlAttribute,
-        defaultValue: { summary: getCommonButtonTypeDefault() },
-      },
-    },
+    type: { table: { category: category.htmlAttribute } },
     // Aria
     ariaDescribedby: { table: { category: category.aria } },
     // Events

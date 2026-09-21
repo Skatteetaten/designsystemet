@@ -1,19 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
-
-const elementId = 'htmlId';
-
-const verifyAttribute =
-  (attribute: string, expectedValue: string) =>
-  async ({ canvasElement }: { canvasElement: HTMLElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByRole('link')).toHaveAttribute(
-      attribute,
-      expectedValue
-    );
-  };
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
 const meta = {
   component: Breadcrumbs.Link,
@@ -30,21 +18,19 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  args: {
+    href: '#storybook-root',
+    children: 'Bedrift og organisasjon',
   },
 } satisfies Meta<typeof Breadcrumbs.Link>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: BreadcrumbsLinkProps = {
-  href: '#storybook-root',
-  children: 'Bedrift og organisasjon',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLAnchorElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -54,17 +40,19 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('link')).toHaveAttribute(
+      'id',
+      'dummyIdForwardedFromRef'
+    );
   },
-  play: verifyAttribute('id', 'dummyIdForwardedFromRef'),
 } satisfies Story;
 
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -75,16 +63,11 @@ export const WithAttributes = {
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
   },
-  parameters: {
-    a11y: {
-      test: 'off',
-    },
-  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('link');
     await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('id', elementId);
+    await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },

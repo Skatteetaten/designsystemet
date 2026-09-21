@@ -2,30 +2,22 @@ import { Children, JSX, useImperativeHandle, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonClassNameDefault,
-  useMediaQuery,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, useMediaQuery } from '@skatteetaten/ds-core-utils';
 import { HorizontalDotsSVGpath } from '@skatteetaten/ds-icons';
 
 import { BreadcrumbsListProps } from './BreadcrumbsList.types';
 import { BreadcrumbsListContext } from './BreadcrumbsListContext';
-import {
-  getBreadcrumbsListShouldCollapseDefault,
-  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
-} from './defaults';
 
 import styles from './BreadcrumbsList.module.scss';
 
 export const BreadcrumbsList = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  shouldCollapse = getBreadcrumbsListShouldCollapseDefault(),
-  showLastItemAsCurrentPage = getBreadcrumbsListShowLastItemAsCurrentPageDefault(),
+  shouldCollapse = true,
+  showLastItemAsCurrentPage = true,
   children,
 }: BreadcrumbsListProps): JSX.Element => {
   const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
@@ -86,8 +78,3 @@ export const BreadcrumbsList = ({
 };
 
 BreadcrumbsList.displayName = 'BreadcrumbsList';
-
-export {
-  getBreadcrumbsListShouldCollapseDefault,
-  getBreadcrumbsListShowLastItemAsCurrentPageDefault,
-};

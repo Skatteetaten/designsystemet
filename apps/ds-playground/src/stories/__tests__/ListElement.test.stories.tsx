@@ -21,15 +21,14 @@ const meta = {
   },
   tags: ['test'],
   parameters: {
-    imageSnapshot: { disableSnapshot: false },
+    imageSnapshot: { disableSnapshot: true },
+  },
+  args: {
+    children: 'Kjenner du behovet til brukeren?',
   },
 } satisfies Meta<typeof List.Element>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {
-  children: 'Kjenner du behovet til brukeren?',
-};
 const Template: StoryFn<typeof List.Element> = (args) => (
   <ul>
     <List.Element {...args} />
@@ -40,7 +39,6 @@ export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLLIElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -49,9 +47,6 @@ export const WithRef = {
   },
   argTypes: {
     ref: { table: { disable: false } },
-  },
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -64,7 +59,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -75,11 +69,6 @@ export const WithAttributes = {
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
-  },
-  parameters: {
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

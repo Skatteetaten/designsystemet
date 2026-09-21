@@ -1,9 +1,8 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { Accordion, AccordionProps } from '@skatteetaten/ds-collections';
+import { Accordion } from '@skatteetaten/ds-collections';
 
-const elementId = 'htmlId';
 const defaultTitle = 'Meg selv';
 const defaultSubtitle = 'Beskrivelse';
 const defaultContent =
@@ -50,9 +49,7 @@ const TemplateWithAllColors: StoryFn<typeof Accordion> = () => {
 
   return (
     <>
-      <Accordion className={'bottomSpacingXL'} color={'none'}>
-        {items}
-      </Accordion>
+      <Accordion className={'bottomSpacingXL'}>{items}</Accordion>
       <Accordion className={'bottomSpacingXL'} color={'burgundy'}>
         {items}
       </Accordion>
@@ -73,16 +70,9 @@ const TemplateWithAllColors: StoryFn<typeof Accordion> = () => {
   );
 };
 
-const defaultArgs: AccordionProps = {
-  children: (
-    <Accordion.Item title={defaultTitle}>{defaultContent}</Accordion.Item>
-  ),
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -105,8 +95,7 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
-    id: elementId,
+    id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -118,15 +107,13 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
     await expect(container).toHaveClass('dummyClassname');
-    await expect(container).toHaveAttribute('id', elementId);
+    await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
   },
@@ -134,34 +121,45 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A2, A4, A7 delvis)',
-  args: defaultArgs,
+  args: {},
 } satisfies Story;
 
 export const WithIconLeft = {
   name: 'With Icon Left (A2)',
   args: {
     iconPosition: 'left',
-    ...defaultArgs,
+  },
+  argTypes: {
+    iconPosition: { table: { disable: false } },
   },
 } satisfies Story;
 
 export const WithAllColorVariants = {
   render: TemplateWithAllColors,
   name: 'With All Color Variants (A1)',
-  args: defaultArgs,
+  args: {},
 } satisfies Story;
 
 export const WithSmall = {
   name: 'Variant Small (A7)',
-  args: { size: 'small', ...defaultArgs },
+  args: { size: 'small' },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
 } satisfies Story;
 
 export const WithMedium = {
   name: 'Variant Medium (A7)',
-  args: { size: 'medium', ...defaultArgs },
+  args: { size: 'medium' },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
 } satisfies Story;
 
 export const WithLarge = {
   name: 'Variant Large (A7)',
-  args: { size: 'large', ...defaultArgs },
+  args: { size: 'large' },
+  argTypes: {
+    size: { table: { disable: false } },
+  },
 } satisfies Story;

@@ -1,17 +1,23 @@
 @use 'libs/ds-core-utils/src/mixins/styles';
 
+.container {
+  margin-bottom: var(--spacing-xs);
+
+  &[data-helptext='true'] {
+    margin-bottom: var(--spacing-xxs);
+  }
+
+  &[data-hidelabel='true'] {
+    margin-bottom: 0;
+  }
+}
+
 .label {
   color: var(--palette-graphite-70);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-input);
   overflow-wrap: anywhere;
-
-  &_required::after {
-    margin-left: var(--spacing-xxs);
-    color: var(--semantic-danger-foreground);
-    content: '*';
-  }
 }
 
 .srOnly {

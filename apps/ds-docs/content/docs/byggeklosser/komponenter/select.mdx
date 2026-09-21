@@ -1,0 +1,71 @@
+---
+title: Select
+description: Select brukes når brukeren skal velge ett alternativ fra en liste med mange valg. Den er spesielt nyttig når tilgjengelig plass er begrenset, og når radioknapper ville blitt for omfattende.
+icon: /illustrations/select.svg
+---
+
+<Canvas examplesPath="components/select" />
+
+## Bruk Select når
+
+- det er omtrent 5–15 alternativer å velge mellom
+- du trenger å vise flere valg på liten plass
+- valget skal presenteres kompakt og brukeren kun kan velge ett alternativ
+
+## Unngå Select når
+
+- du skal navigere mellom sider eller seksjoner
+- brukeren skal velge flere alternativer (velg da [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup) eller annen flervalgskomponent)
+- brukeren trenger oversikt over alle alternativene samtidig — vis dem heller med [RadioGroup](/byggeklosser/komponenter/radiogroup) eller [CheckboxGroup](/byggeklosser/komponenter/checkboxgroup)
+- listen er lang og brukeren har behov for å søke seg frem — bruk [Combobox](/byggeklosser/komponenter/combobox)
+
+## Hvorfor vi anbefaler dette
+
+- Native select brukes for å gi brukerne forutsigbar og tilgjengelig atferd — nettleserens innebygde select har god støtte for skjermlesere og tastatur på alle plattformer.
+- 5–15 alternativer er en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), ikke en hard grense. Med få alternativer bør du heller vise dem alle slik at brukeren kan sammenligne, og med mange alternativer blir en lukket liste tung å navigere. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
+
+## Varianter og når bør du bruke dem
+
+### Standard atferd
+
+Select bruker nettleserens innebygde funksjonalitet.  
+Det gir:
+
+- Native visning som varierer mellom nettlesere
+- Forutsigbar og tilgjengelig atferd for brukeren
+
+### Plassering og justering
+
+- Sorter alternativer i en logisk rekkefølge, f.eks. alfabetisk.
+- Unngå lange setninger som alternativer — hold valgene korte og skannbare.
+
+### Interaksjon og tilstander
+
+- Listen åpner seg i nettleserens egen stil og funksjonalitet.
+- Select kan utvides med grupperte alternativer (optgroup) dersom listen er lang.
+- Brukeren får kun velge ett valg — ingen multiple‑valgstøtte i designsystemets bruksmønster.
+
+## Tekst
+
+- Ledetekst skal alltid brukes og plasseres over feltet.
+- Ledeteksten bør være kort (helst én linje).
+- Hvis Select er plassert inne i en tabell, kan ledeteksten skjules (men skal fortsatt eksistere semantisk).
+
+## Tilgjengelighet (UU og WCAG)
+
+- Select‑komponenten følger systemets native tilgjengelighetsmønster.
+- Sørg for:
+  - tydelig og konsistent ledetekst
+  - logisk sortering
+  - korte og forståelige alternativer
+- Unngå deaktivert tilstand — det kan være vanskelig for brukere å forstå hvorfor feltet ikke kan brukes.
+
+import { Select } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={Select} />
+
+### Select.Option
+
+<TypeTable of={Select.Option} />

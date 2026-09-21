@@ -10,11 +10,17 @@ import {
   within,
 } from 'storybook/test';
 
-import { getSelectPlaceholderDefault, Select } from '@skatteetaten/ds-forms';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { wrapper } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const valueOption1 = 'option1';
+const valueOption2 = 'option2';
+const errorMessageText = 'Ledetekst er obligatorisk';
+const defaultLabelText = 'Ledetekst';
 
 const meta = {
   component: Select,
@@ -43,12 +49,7 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
-    variant: {
-      table: { disable: true },
-      control: 'inline-radio',
-    },
     label: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
@@ -68,32 +69,24 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    label: defaultLabelText,
+    children: [
+      <Select.Option key={'option_1'} value={valueOption1}>
+        {'Test 1'}
+      </Select.Option>,
+      <Select.Option key={'option_2'} value={valueOption2}>
+        {'Test 2'}
+      </Select.Option>,
+    ],
+  },
 } satisfies Meta<typeof Select>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const valueOption1 = 'option1';
-const valueOption2 = 'option2';
-const errorMessageText = 'Ledetekst er obligatorisk';
-
-const defaultLabelText = 'Ledetekst';
-const defaultChildren = [
-  <Select.Option key={'option_1'} value={valueOption1}>
-    {'Test 1'}
-  </Select.Option>,
-  <Select.Option key={'option_2'} value={valueOption2}>
-    {'Test 2'}
-  </Select.Option>,
-];
-const defaultArgs = {
-  label: defaultLabelText,
-  children: defaultChildren,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLSelectElement | null): void => {
       if (instance) {
         instance.name = 'dummyNameForwardedFromRef';
@@ -117,7 +110,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -132,9 +124,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -151,11 +141,10 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       label: 'dummyClassname',
-      selectContainer: 'dummyClassnameFormContainer',
+      selectContainer: 'dummyClassname',
       errorMessage: 'dummyClassname',
     },
     errorMessage: errorMessageText,
@@ -165,6 +154,9 @@ export const WithCustomClassNames = {
       table: { disable: false },
     },
   },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
 
@@ -172,7 +164,7 @@ export const WithCustomClassNames = {
     const label = canvas.getByText(defaultLabelText);
 
     const selectContainer = canvasElement.querySelector(
-      `${wrapper} > div > div`
+      `${wrapper} > div > div > div`
     );
 
     const errorMessageContainer = canvasElement.querySelector(
@@ -180,16 +172,14 @@ export const WithCustomClassNames = {
     );
     await expect(container).toHaveClass('dummyClassname');
     await expect(label).toHaveClass('dummyClassname');
-    await expect(selectContainer).toHaveClass('dummyClassnameFormContainer');
+    await expect(selectContainer).toHaveClass('dummyClassname');
     await expect(errorMessageContainer).toHaveClass('dummyClassname');
   },
 } satisfies Story;
 
 export const Defaults = {
-  name: 'Defaults Variant Medium (A1, A2 delvis, A3, FS-A2, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  name: 'Defaults (A1, A2 delvis, A3, FS-A2, B2)',
+  args: {},
   argTypes: {
     label: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -203,7 +193,7 @@ export const Defaults = {
     await expect(selectNode).toBeInTheDocument();
     await expect(selectNode).toBeEnabled();
     await expect(selectNode).toHaveValue('');
-    await expect(selectNode).toHaveTextContent(getSelectPlaceholderDefault());
+    await expect(selectNode).toHaveTextContent(getDefaultSelectPlaceholder());
     await expect(selectNode).toHaveAttribute('id');
     await expect(selectNode.tagName).toBe('SELECT');
     await expect(selectNode).not.toBeRequired();
@@ -230,9 +220,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -250,44 +238,9 @@ export const WithAriaDescribedBy = {
   },
 } satisfies Story;
 
-export const WithVariantLarge = {
-  name: 'With Variant Large (A1)',
-  args: {
-    ...defaultArgs,
-    variant: 'large',
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithVariantLargeAndLongText = {
-  name: 'With Variant Large And Long Text',
-  args: {
-    ...defaultArgs,
-    hidePlaceholder: true,
-    variant: 'large',
-    children: [
-      <Select.Option key={'option_1'} value={valueOption1}>
-        {'En lang tekst som ikke skal synes bak åpne ikonet'}
-      </Select.Option>,
-    ],
-  },
-  argTypes: {
-    variant: { table: { disable: false } },
-    children: { table: { disable: false } },
-  },
-  globals: {
-    viewport: {
-      value: '--mobile',
-    },
-  },
-} satisfies Story;
-
 export const WithDisabled = {
   name: 'With Disabled (B1, B6)',
   args: {
-    ...defaultArgs,
     disabled: true,
     value: valueOption1,
     helpText: 'Hjelpeknappen skal også være disabled',
@@ -310,7 +263,6 @@ export const WithDisabled = {
 export const WithValue = {
   name: 'With Value',
   args: {
-    ...defaultArgs,
     value: valueOption2,
   },
   argTypes: {
@@ -329,7 +281,6 @@ export const WithValue = {
 export const WithDefaultValue = {
   name: 'With DefaultValue',
   args: {
-    ...defaultArgs,
     defaultValue: valueOption2,
   },
   argTypes: {
@@ -349,7 +300,6 @@ const customPlaceholderText = 'Velg fra listen noe gøy';
 export const WithAutoCompleteNameAndPlaceholder = {
   name: 'With AutoComplete Name And Placeholder (A2 delvis, B1)',
   args: {
-    ...defaultArgs,
     autoComplete: 'given-name',
     name: 'test_name',
     placeholder: customPlaceholderText,
@@ -374,7 +324,6 @@ export const WithAutoCompleteNameAndPlaceholder = {
 export const WithHidePlaceholder = {
   name: 'With HidePlaceholder (A2 delvis)',
   args: {
-    ...defaultArgs,
     hidePlaceholder: true,
   },
   argTypes: {
@@ -390,7 +339,6 @@ export const WithHidePlaceholder = {
 export const WithRequired = {
   name: 'With Required (B1, B4)',
   args: {
-    ...defaultArgs,
     required: true,
   },
   argTypes: {
@@ -407,23 +355,9 @@ export const WithRequired = {
   },
 } satisfies Story;
 
-export const WithRequiredAndMark = {
-  name: 'With Required And Mark (B1, FS-A4 delvis)',
-  args: {
-    ...defaultArgs,
-    required: true,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    required: { table: { disable: false } },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithErrorMessage = {
   name: 'With ErrorMessage (A4 delvis, B5 delvis)',
   args: {
-    ...defaultArgs,
     errorMessage: errorMessageText,
   },
   argTypes: {
@@ -447,7 +381,6 @@ export const WithErrorMessage = {
 export const WithDescription = {
   name: 'With Description (FS-A3)',
   args: {
-    ...defaultArgs,
     description: 'En liten beskrivelse tekst',
   },
   argTypes: {
@@ -467,7 +400,6 @@ export const WithDescription = {
 export const WithHideLabel = {
   name: 'With HideLabel (FS-A7)',
   args: {
-    ...defaultArgs,
     hideLabel: true,
   },
   argTypes: {
@@ -483,7 +415,6 @@ export const WithHideLabel = {
 export const WithHelpText = {
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
   },
   argTypes: {
@@ -525,7 +456,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A3)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onChange: fn(),
@@ -548,14 +478,19 @@ export const WithEventHandlers = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button', {
+      name: getDefaultHelpButtonTitle(),
+    });
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
@@ -574,7 +509,6 @@ export const WithLongInput = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     defaultValue: { table: { disable: false } },
   },
 } satisfies Story;
@@ -594,7 +528,6 @@ export const WithLongPlaceholder = {
     ],
   },
   argTypes: {
-    variant: { table: { disable: false } },
     placeholder: { table: { disable: false } },
   },
 } satisfies Story;

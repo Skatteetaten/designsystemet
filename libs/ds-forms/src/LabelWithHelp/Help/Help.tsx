@@ -2,10 +2,7 @@ import { JSX, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { IconButton } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { CancelSVGpath, HelpSimpleSVGpath } from '@skatteetaten/ds-icons';
 
 import { HelpProps } from './Help.types';
@@ -19,7 +16,7 @@ export const Help = ({
   helpSvgPath,
   hideHelp,
   targetId,
-  titleHelpSvg = getHelpTitleHelpSvgDefault(),
+  titleHelpSvg = getDefaultHelpButtonTitle(),
   disabled,
   onHelpToggle,
   className,
@@ -43,7 +40,6 @@ export const Help = ({
     onHelpToggle?.(false);
   };
 
-  const marginTopClassName = showHelpText ? styles.descriptionMarginTop : '';
   const hideHelpClassName = hideHelp ? styles.srOnly : '';
 
   return (
@@ -54,7 +50,7 @@ export const Help = ({
           className={`${styles.helpButton} ${hideHelpClassName}`.trim()}
           svgPath={svgHelpIcon}
           title={titleHelpSvg}
-          size={'extraSmall'}
+          size={'small'}
           disabled={disabled}
           ariaExpanded={showHelpText}
           ariaDescribedby={targetId}
@@ -81,9 +77,7 @@ export const Help = ({
       {description && (
         <span
           id={descriptionId}
-          className={`${
-            styles.description
-          } ${marginTopClassName} ${hideHelpClassName} ${
+          className={`${styles.description} ${hideHelpClassName} ${
             classNames?.description ?? ''
           }`.trim()}
         >
@@ -95,5 +89,3 @@ export const Help = ({
 };
 
 Help.displayName = 'Help';
-
-export { getHelpTitleHelpSvgDefault };

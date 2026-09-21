@@ -1,0 +1,77 @@
+---
+title: Spinner
+description: Spinner brukes som en visuell indikasjon på at systemet jobber. Den signaliserer at noe er i ferd med å lastes inn, og at brukeren må vente et lite øyeblikk før informasjon eller funksjonalitet blir tilgjengelig.
+icon: /illustrations/spinner.svg
+---
+
+<Canvas examplesPath="components/spinner" />
+
+## Bruk Spinner når
+
+- en handling normalt tar 1–10 sekunder
+- systemet utfører en oppgave som brukeren må vente på (f.eks. lasting av data)
+- du vil vise at en større seksjon laster, f.eks. ved henting av søkeresultater
+
+## Unngå Spinner når
+
+- ventetiden er kortere enn ett sekund
+- ventingen er langvarig — vurder alternative mønstre som progress bar eller informasjonsmelding
+- du vurderer flere spinnere samtidig
+
+## Hvorfor vi anbefaler dette
+
+- Spinner kun for operasjoner over ett sekund for å unngå at lette handlinger oppleves tregere enn de er. Vises spinneren for korte operasjoner, skaper det unødvendig visuell uro.
+- Spinner har innebygget tittel. En spinner uten tekstalternativ er usynlig for skjermlesere — brukeren vet da ikke at systemet jobber, og kan tro at tjenesten har sluttet å fungere.
+- Vi anbefaler kun én spinner av gangen fordi flere samtidige spinnere gir ingen nødvendig informasjon og skaper kaotisk visuell opplevelse.
+
+## Varianter og når bør du bruke dem
+
+### Størrelser
+
+Spinner kommer i tre størrelser:
+
+- **Liten** – typisk brukt nær interaktive elementer.
+- **Medium** – standardvalg.
+- **Stor** – kan brukes ved lasting av større seksjoner.
+
+### Farger
+
+- **Blå (interaktiv)** – brukes der spinner står i sammenheng med en brukerhandling.
+- **Svart** – nøytral variant.
+- **Hvit** – for mørke bakgrunner eller mørk modus.
+
+### Med forklarende tekst
+
+- Tekst kan plasseres under spinneren for lengre beskjeder
+- … eller ved siden av for korte forklaringer  
+  Brukes når brukeren trenger mer kontekst for hvorfor de venter.
+
+### Plassering og justering
+
+- Plasser spinneren i nærheten av det som lastes.
+- Ved lasting av seksjoner: plasser spinneren inni seksjonen eller i forbindelse med en beskrivende tittel, slik at det er tydelig hva som lastes.
+- Unngå at spinneren dekker interaktive elementer som brukeren ikke skal forhindres fra å bruke.
+
+### Interaksjon og tilstander
+
+- Vis spinneren mens data eller prosesser lastes.
+- Ved forsinkelser under ett sekund trenger du vanligvis ikke vise en spinner.
+- Fjern spinneren så snart innlastingen er ferdig.
+- Hvis ventetiden kan bli lengre enn ti sekunder, må du gi brukeren tydelig informasjon om ventetiden. Legg også til rette for at brukeren kan avslutte og komme tilbake senere.
+- Ikke bruk flere visuelle lasteindikatorer samtidig.
+
+## Tekst
+
+Bruk kort og tydelig tekst som forklarer hva som lastes, eller hvorfor brukeren må vente. For eksempel «Laster data …» eller «Henter informasjon …».
+
+## Tilgjengelighet (UU og WCAG)
+
+- Spinneren må ha et tekstalternativ for skjermlesere.
+- Bruk ikke spinner uten en aktiv prosess i bakgrunnen.
+- Bruk forklarende tekst dersom det ikke er tydelig hva som lastes.
+
+import { Spinner } from '@skatteetaten/ds-progress';
+
+## Props
+
+<TypeTable of={Spinner} />

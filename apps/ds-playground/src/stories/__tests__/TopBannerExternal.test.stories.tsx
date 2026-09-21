@@ -60,6 +60,12 @@ const meta = {
     imageSnapshot: { disableSnapshot: false },
     layout: 'fullscreen',
   },
+  args: {
+    // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
+    onLogInClick: undefined,
+    onLogOutClick: undefined,
+    onUserClick: undefined,
+  },
 } satisfies Meta<typeof TopBannerExternal>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -70,13 +76,11 @@ const themeText = dsI18n.t('ds_layout:topbanner.NavAriaLabel');
 const menuText = dsI18n.t('ds_layout:topbannerbutton.Menu');
 const searchText = dsI18n.t('ds_layout:topbanner.Search');
 const skipLinkText = dsI18n.t('ds_layout:topbanner.SkipLinkText');
-
-const defaultArgs: TopBannerExternalProps = {
-  // Uten undefined så blir funksjonene initalisert med mockConstructor i Storybook
-  onLogInClick: undefined,
-  onLogOutClick: undefined,
-  onUserClick: undefined,
-};
+const defaultColumn = (
+  <div className={'dummyClassNameDarkPinkBackground'}>
+    {'Column with pink background'}
+  </div>
+);
 
 export const WithRef = {
   name: 'With Ref (FA1)',
@@ -115,9 +119,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -129,11 +131,34 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames (FA3)',
+  args: {
+    classNames: { columns: 'dummyClassName' },
+    firstColumn: defaultColumn,
+  },
+  argTypes: {
+    classNames: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button', {
+      name: 'Meny',
+    });
+    await userEvent.click(menuButton);
+    const columns = canvas.getByRole('navigation', {
+      name: themeText,
+    });
+    await expect(columns).toHaveClass('dummyClassName');
+  },
+} satisfies Story;
+
 export const WithDefaults = {
   name: 'With Defaults (A3 delvis, B1, B2, Search B3 delvis)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const header = canvas.getByRole('banner');
@@ -156,7 +181,6 @@ export const WithDefaults = {
 export const WithChildren = {
   name: 'With Children (A2)',
   args: {
-    ...defaultArgs,
     children: <TextField label={'Søk'} placeholder={'Søk'} hideLabel />,
   },
   argTypes: {
@@ -176,9 +200,7 @@ export const WithChildren = {
 
 export const SkipLinkFocusedMobileScreen = {
   name: 'SkipLink Focused On Mobile Screen (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--mobile',
@@ -195,9 +217,7 @@ export const SkipLinkFocusedMobileScreen = {
 
 export const SkipLinkFocusedBreakpointXS = {
   name: 'SkipLink Focused On Breakpoint-xs (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-xs',
@@ -214,9 +234,7 @@ export const SkipLinkFocusedBreakpointXS = {
 
 export const SkipLinkFocusedBreakpointS = {
   name: 'SkipLink Focused On Breakpoint-s (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-s',
@@ -233,9 +251,7 @@ export const SkipLinkFocusedBreakpointS = {
 
 export const SkipLinkFocusedBreakpointM = {
   name: 'SkipLink Focused On Breakpoint-m (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-m',
@@ -252,9 +268,7 @@ export const SkipLinkFocusedBreakpointM = {
 
 export const SkipLinkFocusedBreakpointL = {
   name: 'SkipLink Focused On Breakpoint-l (A3)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-l',
@@ -272,7 +286,6 @@ export const SkipLinkFocusedBreakpointL = {
 export const ClickMainMenuOpenAndClose = {
   name: 'Click MainMenu Open And Close (MainMenu A1, A2 delvis, B1, B2, B3)',
   args: {
-    ...defaultArgs,
     firstColumn: (
       <Link href={'#storybook-root'}>
         {'Meny-knapp blir synlig når den har innhold'}
@@ -309,11 +322,7 @@ const TemplateWithFooterOneColumn: StoryFn<TopBannerExternalProps> = (args) => {
       <TopBannerExternal {...args} />
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
-        firstColumn={
-          <div className={'dummyClassNameDarkPinkBackground'}>
-            {'First column with pink background'}
-          </div>
-        }
+        firstColumn={defaultColumn}
       />
     </>
   );
@@ -323,12 +332,7 @@ export const WithOneColumn = {
   render: TemplateWithFooterOneColumn,
   name: 'With One Column (A5, MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -343,12 +347,7 @@ export const WithOneColumnBreakpointS = {
   render: TemplateWithFooterOneColumn,
   name: 'With One Column Breakpoint-s (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
   },
   globals: {
     viewport: {
@@ -368,12 +367,7 @@ export const WithOneColumnBreakpointXS = {
   render: TemplateWithFooterOneColumn,
   name: 'With One Column Breakpoint-xs (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
   },
   globals: {
     viewport: {
@@ -397,16 +391,8 @@ const TemplateWithFooterTwoColumns: StoryFn<TopBannerExternalProps> = (
       <TopBannerExternal {...args} />
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
-        firstColumn={
-          <div className={'dummyClassNameDarkPinkBackground'}>
-            {'First column with pink background'}
-          </div>
-        }
-        secondColumn={
-          <div className={'dummyClassNameDarkPinkBackground'}>
-            {'Second column with pink background'}
-          </div>
-        }
+        firstColumn={defaultColumn}
+        secondColumn={defaultColumn}
       />
     </>
   );
@@ -416,17 +402,8 @@ export const WithTwoColumns = {
   render: TemplateWithFooterTwoColumns,
   name: 'With Two Columns (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
-    secondColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Second column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
+    secondColumn: defaultColumn,
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -441,17 +418,8 @@ export const WithTwoColumnsBreakpointS = {
   render: TemplateWithFooterTwoColumns,
   name: 'With Two Columns Breakpoint-s (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
-    secondColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Second column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
+    secondColumn: defaultColumn,
   },
   globals: {
     viewport: {
@@ -471,17 +439,8 @@ export const WithTwoColumnsBreakpointXS = {
   render: TemplateWithFooterTwoColumns,
   name: 'With Two Columns Breakpoint-xs (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
-    secondColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Second column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
+    secondColumn: defaultColumn,
   },
   globals: {
     viewport: {
@@ -505,21 +464,9 @@ const TemplateWithFooterThreeColumns: StoryFn<TopBannerExternalProps> = (
       <TopBannerExternal {...args} />
       <Footer
         titleFirstColumn={'Om Skatteetaten'}
-        firstColumn={
-          <div className={'dummyClassNameDarkPinkBackground'}>
-            {'First column with pink background'}
-          </div>
-        }
-        secondColumn={
-          <div className={'dummyClassNameDarkPinkBackground'}>
-            {'Second column with pink background'}
-          </div>
-        }
-        thirdColumn={
-          <div className={'dummyClassNameDarkPinkBackground'}>
-            {'Third column with pink background'}
-          </div>
-        }
+        firstColumn={defaultColumn}
+        secondColumn={defaultColumn}
+        thirdColumn={defaultColumn}
       />
     </>
   );
@@ -529,22 +476,9 @@ export const WithThreeColumns = {
   render: TemplateWithFooterThreeColumns,
   name: 'With Three Columns (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
-    secondColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Second column with pink background'}
-      </div>
-    ),
-    thirdColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Third column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
+    secondColumn: defaultColumn,
+    thirdColumn: defaultColumn,
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -559,22 +493,9 @@ export const WithThreeColumnsBreakpointS = {
   render: TemplateWithFooterThreeColumns,
   name: 'With Three Columns Breakpoint-s (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
-    secondColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Second column with pink background'}
-      </div>
-    ),
-    thirdColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Third column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
+    secondColumn: defaultColumn,
+    thirdColumn: defaultColumn,
   },
   globals: {
     viewport: {
@@ -594,22 +515,9 @@ export const WithThreeColumnsBreakpointXS = {
   render: TemplateWithFooterThreeColumns,
   name: 'With Three Columns Breakpoint-xs (MainMenu A1)',
   args: {
-    ...defaultArgs,
-    firstColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'First column with pink background'}
-      </div>
-    ),
-    secondColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Second column with pink background'}
-      </div>
-    ),
-    thirdColumn: (
-      <div className={'dummyClassNamePinkBackground'}>
-        {'Third column with pink background'}
-      </div>
-    ),
+    firstColumn: defaultColumn,
+    secondColumn: defaultColumn,
+    thirdColumn: defaultColumn,
   },
   globals: {
     viewport: {
@@ -779,7 +687,6 @@ export const WithExtraLangs = {
 export const ClickSearchOpen = {
   name: 'Click Search Open',
   args: {
-    ...defaultArgs,
     searchContent: 'hei hei',
     firstColumn: (
       <Link href={'#storybook-root'}>
@@ -797,7 +704,6 @@ export const ClickSearchOpen = {
 export const ClickSearchOpenAndClose = {
   name: 'Click Search Open And Close (Search B2, B1, B3, A2, A1)',
   args: {
-    ...defaultArgs,
     searchContent: 'hei hei',
     firstColumn: (
       <Link href={'#storybook-root'}>
@@ -826,7 +732,6 @@ export const ClickSearchOpenAndClose = {
 export const LangPickerInMenuWhenLoggedInOnMobile = {
   name: 'LangPicker In Menu When Logged In OnMobile ',
   args: {
-    ...defaultArgs,
     searchContent: 'hei hei',
     firstColumn: (
       <Link href={'#storybook-root'}>

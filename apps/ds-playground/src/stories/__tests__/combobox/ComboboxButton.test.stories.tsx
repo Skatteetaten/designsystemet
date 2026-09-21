@@ -14,26 +14,23 @@ const meta = {
     // Props
     isOpen: { table: { disable: true } },
     disabled: { table: { disable: true } },
-    variant: { table: { disable: true } },
+    size: { table: { disable: true } },
     onClick: { table: { disable: true } },
   },
   tags: ['test'],
+  args: {
+    isOpen: false,
+    onClick: fn(),
+  },
 } satisfies Meta<typeof ComboboxButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  isOpen: false,
-  onClick: fn(),
-};
-
 export const DisabledStateHandling = {
   name: 'Disabled state handling',
   args: {
-    ...defaultArgs,
     disabled: true,
-    onClick: fn(),
   },
   play: async ({ args, canvasElement }): Promise<void> => {
     const chevron = canvasElement.querySelector('div[class*="chevronButton"]');

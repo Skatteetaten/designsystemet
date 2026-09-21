@@ -12,8 +12,7 @@ export interface BreadcrumbsProps extends BaseProps {
   children?: ReactNode;
 }
 
-export interface BreadcrumbsComponent
-  extends FunctionComponent<BreadcrumbsProps> {
+export interface BreadcrumbsComponent extends FunctionComponent<BreadcrumbsProps> {
   List: typeof BreadcrumbsList;
   Item: typeof BreadcrumbsItem;
   Link: typeof BreadcrumbsLink;

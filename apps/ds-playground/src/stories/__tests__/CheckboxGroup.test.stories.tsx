@@ -1,13 +1,23 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, userEvent, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
 import { CheckboxGroup } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const defaultLegendText = 'Velg det som passer deg';
+const defaultErrorMessage = 'Velg minst ett av alternativene';
 
 const meta = {
   component: CheckboxGroup,
@@ -36,7 +46,6 @@ const meta = {
     helpText: { table: { disable: true } },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: { table: { disable: true } },
@@ -51,23 +60,24 @@ const meta = {
     htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    legend: defaultLegendText,
+    children: [
+      <CheckboxGroup.Checkbox key={'checkboxGroupOption_1'}>
+        {'Har barn over 16 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkboxGroupOption_2'}>
+        {'Har barn under 12 år'}
+      </CheckboxGroup.Checkbox>,
+      <CheckboxGroup.Checkbox key={'checkboxGroupOption_4'}>
+        {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
+      </CheckboxGroup.Checkbox>,
+    ],
+  },
 } satisfies Meta<typeof CheckboxGroup>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultLegendText = 'Velg det som passer deg';
-const defaultErrorMessage = 'Velg minst ett av alternativene';
-const defaultChildren = [
-  <CheckboxGroup.Checkbox key={'checkboxGroupOption_1'}>
-    {'Har barn over 16 år'}
-  </CheckboxGroup.Checkbox>,
-  <CheckboxGroup.Checkbox key={'checkboxGroupOption_2'}>
-    {'Har barn under 12 år'}
-  </CheckboxGroup.Checkbox>,
-  <CheckboxGroup.Checkbox key={'checkboxGroupOption_4'}>
-    {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
-  </CheckboxGroup.Checkbox>,
-];
 const childrenWithOneChecked = [
   <CheckboxGroup.Checkbox key={'checkboxGroupOption_1'} checked>
     {'Har barn over 16 år'}
@@ -79,16 +89,9 @@ const childrenWithOneChecked = [
     {'Har barn som er 12 år eller eldre og som har særskilt omsorgsbehov'}
   </CheckboxGroup.Checkbox>,
 ];
-
-const defaultArgs = {
-  legend: defaultLegendText,
-  children: defaultChildren,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -111,7 +114,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -126,9 +128,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -144,7 +144,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       legend: 'dummyClassname',
@@ -163,9 +162,6 @@ export const WithCustomClassNames = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -194,9 +190,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1, B5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     legend: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -234,9 +228,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -261,7 +253,6 @@ export const WithAriaDescribedBy = {
 export const LegendWithMarkup = {
   name: 'Legend With Markup (B1)',
   args: {
-    ...defaultArgs,
     legend: (
       <>
         <Heading as={'h1'} level={3}>
@@ -275,35 +266,12 @@ export const LegendWithMarkup = {
   },
   argTypes: {
     legend: { table: { disable: false }, control: { disable: true } },
-  },
-} satisfies Story;
-
-export const LegendWithMarkupAndRequiredMark = {
-  name: 'Legend With Markup and Required Mark (B1)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h1'} level={3}>
-          {'Dette er en Heading i legend'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-        </Paragraph>
-      </>
-    ),
-    showRequiredMark: true,
-  },
-  argTypes: {
-    legend: { table: { disable: false }, control: { disable: true } },
-    showRequiredMark: { table: { disable: false } },
   },
 } satisfies Story;
 
 export const WithHideLegend = {
   name: 'With HideLegend (B1)',
   args: {
-    ...defaultArgs,
     hideLegend: true,
   },
   argTypes: {
@@ -319,7 +287,6 @@ export const WithHideLegend = {
 export const WithDisabled = {
   name: 'With Disabled (A1, B2)',
   args: {
-    ...defaultArgs,
     disabled: true,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -338,7 +305,6 @@ export const WithDisabled = {
 export const WithDisabledAndChecked = {
   name: 'With Disabled And Checked (A1)',
   args: {
-    ...defaultArgs,
     children: childrenWithOneChecked,
     disabled: true,
   },
@@ -347,21 +313,9 @@ export const WithDisabledAndChecked = {
   },
 } satisfies Story;
 
-export const WithRequiredMark = {
-  name: 'With Required Mark (A1, B3)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithError = {
   name: 'With Error (A1, B5)',
   args: {
-    ...defaultArgs,
     errorMessage: defaultErrorMessage,
   },
   argTypes: {
@@ -385,7 +339,6 @@ export const WithError = {
 export const WithHelptext = {
   name: 'With HelpText (A1)',
   args: {
-    ...defaultArgs,
     helpText: 'Vi trenger å vite om du har barn.',
   },
   argTypes: {
@@ -402,7 +355,6 @@ export const WithHelptext = {
 export const WithDescription = {
   name: 'With Description (A1)',
   args: {
-    ...defaultArgs,
     description: 'Vi trenger å vite om du har barn.',
   },
   argTypes: {
@@ -420,21 +372,23 @@ export const WithDescription = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 
 export const WithReadOnly = {
   name: 'With ReadOnly',
   args: {
-    ...defaultArgs,
     children: childrenWithOneChecked,
     readOnly: true,
   },

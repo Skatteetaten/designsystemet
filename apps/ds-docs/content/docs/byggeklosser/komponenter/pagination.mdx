@@ -1,0 +1,68 @@
+---
+title: Pagination
+description: Pagination brukes til å dele opp store mengder innhold i flere sider slik at brukeren ikke blir overveldet. Den gjør det enklere å navigere frem og tilbake i informasjon som tabeller, søkeresultater eller lister.
+icon: /illustrations/pagination.svg
+---
+
+<Canvas examplesPath="components/pagination" />
+
+## Bruk Pagination når
+
+- store mengder relatert innhold må fordeles over flere sider
+- brukeren skal kunne navigere mellom sider i en seksjon
+- søkeresultater deles opp på flere sider
+
+## Unngå Pagination når
+
+- innholdet er uendelig eller kontinuerlig
+- det kun finnes én side med innhold
+
+## Hvorfor vi anbefaler dette
+
+- Paginering fordeler innhold i håndterbare mengder for å redusere kognitiv belastning og lastetid. Å vise for mye innhold på én side gjør det vanskelig å orientere seg.
+- Pagination er like bred som innholdet fordi det gir brukeren et intuitivt når-gjelder-dette-kontekst — plassert løsrevet fra innholdet er det uklart hva som pagineres.
+- Uendelig scroll er et fundamentalt annerledes mønster som krever andre UU-hensyn (f.eks. fokusstyring ved innlasting) og passer ikke inn i Pagination-komponenten.
+
+## Varianter og når bør du bruke dem
+
+Komponenten har ingen visuelle varianter, men er fleksibel og kan justeres med props:
+
+- Antall treff per side (standard er 10).
+- Antall klikkbare sidetall rundt aktiv side (“siblings”).
+- Om tekst på forrige/neste-knapper vises eller skjules.
+- Om sideoppsummeringen vises eller skjules.
+
+### Plassering og justering
+
+- Pagination skal plasseres rett under og være like bred som innholdet den styrer (tabell, søkeresultat).
+- Tilpass antall synlige sidetall etter mengden data og forventet blabruk.
+- På mobil anbefales maks tre synlige sidetall for å spare plass.
+- Skjul komponenten når det ikke finnes flere sider.
+- For tydelighet kan du vise en kort tekst øverst i innholdet der pagination ellers ville vært.
+
+### Interaksjon og tilstander
+
+- Første og siste side vises alltid.
+- Det skal alltid være minst ett klikkbart sidetall ved siden av aktiv side.
+- Fokus skal forbli på valgt element ved tastaturnavigasjon.
+- Skjermleser skal lese opp hva som vises når sidetall endres.
+
+## Tekst
+
+- Hvis du skjuler tekst på forrige/neste-knapper, sjekk at pilikonene alene er tilstrekkelige.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Tastaturfokus skal forbli innenfor komponenten.
+- Endring av sidetall skal annonseres av skjermleser.
+- Piler og sidetall må ha god kontrast mot bakgrunnen.
+
+import { Pagination } from '@skatteetaten/ds-navigation';
+
+## Props
+
+<TypeTable of={Pagination} />
+
+### Pagination.List
+
+<TypeTable of={Pagination.List} />

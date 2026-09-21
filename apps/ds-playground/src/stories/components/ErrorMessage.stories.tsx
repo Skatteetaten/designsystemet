@@ -13,7 +13,7 @@ const meta = {
   title: 'Komponenter/ErrorMessage',
   argTypes: {
     // Props
-    children: { table: { category: category.props } },
+    children: { control: 'text', table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },
     showError: { table: { category: category.props } },
   },

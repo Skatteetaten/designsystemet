@@ -66,8 +66,7 @@ type ButtonAsButton = {
 export type ButtonDiscriminatedProps = ButtonAsLink | ButtonAsButton;
 
 export interface ButtonCommonProps
-  extends ButtonPropsHTMLAttributes,
-    BaseProps {
+  extends ButtonPropsHTMLAttributes, BaseProps {
   /** Tekst på knapp. */
   children: string;
   /**

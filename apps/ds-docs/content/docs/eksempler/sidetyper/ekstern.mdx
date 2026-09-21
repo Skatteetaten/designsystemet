@@ -1,0 +1,101 @@
+---
+title: Sideoppsett for publikum
+description: Her viser vi hvordan du bygger opp en publikumsløsning i Skatteetaten. Du lærer om layout, innholdsplassering og containere.
+---
+
+## Grunnleggende oppsett
+
+En publikumsside består vanligvis av tre hoveddeler:
+
+1. **Header** – Toppdel med logo, navigasjon, innlogging og søk
+2. **Innhold** – Kjerneinnholdet - her som sentrert i én spalte
+3. **Footer** – Bunn med kontaktinfo, lenker og sosiale kanaler
+
+## Hvorfor vi anbefaler denne løsningen
+
+Brukere skal få den samme opplevelsen uansett hvilket Skatteetaten-tjeneste de bruker. Derfor anbefaler vi at alle publikumsløsninger bruker samme layout - med innholdet sentrert i én spalte.
+
+- **Gjenkjennelig** – Du møter samme layout hver gang du bruker en Skatteetaten-tjeneste
+- **Enklere å lese** – En spalte med riktig bredde er bedre for øynene enn tekst som går helt over skjermen
+- **Fleksibel** – Vi kan bruke plassen rundt spalten til visuell framhevning
+- **Fungerer overalt** – Layouten tilpasser seg automatisk på mobil, nettbrett og desktop.
+
+Se også [Skatteetaten sin visuelle identitet](https://www.skatteetaten.no/skattekartet/stilogtone/stil/font/) som dokumenterer denne spaltebredde-approachen.
+
+## Innholdsplassering – bruk av spalte
+
+Du bruker _containere_ når du skal plassere innholdet. En container definerer hvor bredt en del av siden skal være.
+
+De viktigste containerene er:
+
+- **`--semantic-responsive-article`** – For tekst og hovedinnhold
+- **`--semantic-responsive-wide-content`** – For bredere elementer som paneler
+- **`--semantic-responsive-container`** – For hele siden
+
+Mange komponenter har allerede innebygde containere:
+
+- **Panel** – bruker `--semantic-responsive-article` for innholdet
+- **StepList** – stegene justeres med `--semantic-responsive-article`, men stegnummeret kan ligge utenfor spalten
+
+### Kodeeksempel
+
+<Canvas examplesPath="pages/ekstern/layout/standard-sentrert" />
+
+## Bruke luften rundt spalten – visuell framhevning
+
+Du kan bruke plassen rundt spalten til visuell effekt. På den måten kan du trekke oppmerksomhet og variere designet.
+
+**Panel** – Panelet kan strekke seg bredere, mens teksten inni holder seg i spalten. Det gjør at panelet trekker oppmerksomhet.
+
+**StepList** – Stegnummeret kan ligge utenfor spalten, mens teksten holder seg i spalten. Det frigir plass til innholdet i stegene.
+
+**Panel med ikon** – Ikonet kan ligge utenfor spalten, mens teksten holder seg inni. Det fremhever ikonet og gjør at innholdet plasseres ryddig på siden.
+
+## Brekkpunkter vs. Containere – hva er forskjellen?
+
+### Brekkpunkter
+
+Brekkpunkter forteller ved hvilke skjermstørrelser designet skal endre seg. For eksempel kan en tabell gå fra full bredde på desktop til horisontal rulling på mobil, eller skriftstørrelsen kan bli større på ulike skjermstørrelser. Du bruker brekkpunkter i CSS når du skal endre layout, skriftstørrelse eller avstander ut ifra skjermstørrelsen.
+
+### Containere
+
+Containere setter (maks)bredden på innholdet. I publikumsløsningen bruker du vanligvis én spalte, men den kan bli bredere på større skjermer. Noen på noen skjermstørrelse har vi faste bredder, mens for små skjermer bruker vi all plassen vi har tilgengelig.
+
+**Hvor bredt skal innholdet være?**
+
+- `--semantic-responsive-article` – For tekst som skal være lett å lese
+- `--semantic-responsive-wide-content` – For større elementer som paneler eller tabeller
+- `--semantic-responsive-container` – For hele siden
+
+**Eksempel:** En Panel-komponent kan plasseres i en bred containerbredde, men samtidig som teksten inni panelet bruker smalere containerbredde.
+
+## Slik arbeider du i Figma
+
+### Finn maler og halvfabrikata
+
+Vi har publisert maler som du kan kopiere og bruke når du skal designe publikumsløsninger.
+
+[Åpne Figma-maler (kun tilgjengelig for etatens ansatte)](https://www.figma.com/design/xPuAWA9bSZLdK6KeSBypHq/Halvfabrikata?node-id=0-1&t=HPXK0oFUfmRJ3WZJ-1)
+
+### Bruk layout guides for containere
+
+I Figma kan du bruke layout guides som viser containerbredder direkte på artboardene dine. Slik gjør du det:
+
+1. Lag en desktop-frame (f.eks. på 1440px bredde)
+2. Marker framen og gå til Layout grid-egenskapene
+3. Velg forhånddefinert og søk etter Breakpoint-L/1440
+4. Layout guidene viser deg hvor containerbredder starter og slutter
+
+På den måten ser du direkte i Figma hvor innholdet skal plasseres, og hvor du kan bruke plassen rundt spalten til visuell effekt.
+
+### Komponenter har varianter for containerbredder
+
+Mange komponenter har allerede varianter som er tilpasset containerbredder. Når du velger en komponent, se på width-egenskapen – der finner du ofte varianter som er satt opp for standardbredder som `article` og `wide-content`.
+
+## Designtokens for layout
+
+Her finner du mer detaljert informasjon:
+
+- [Brekkpunkter](/byggeklosser/designtokens/brekkpunkter) – Hvilke skjermstørrelser du bruker
+- [Containere](/byggeklosser/designtokens/containere) – Hvor bredt innholdet skal være
+- [Avstander](/byggeklosser/designtokens/avstander) – Mellomrom, margin og padding

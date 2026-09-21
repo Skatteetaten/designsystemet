@@ -4,7 +4,6 @@ import { expect, within } from 'storybook/test';
 import { sizeArr } from '@skatteetaten/ds-core-utils';
 import {
   Icon,
-  IconComponentCommonProps,
   AccountChildSVGpath,
   AndreForholdSVGpath,
 } from '@skatteetaten/ds-icons';
@@ -49,18 +48,15 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    svgPath: AccountChildSVGpath,
+  },
 } satisfies Meta<typeof Icon>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: IconComponentCommonProps = {
-  svgPath: AccountChildSVGpath,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: SVGSVGElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -83,7 +79,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -96,9 +91,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -112,9 +105,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Default - Variant SystemIcon (A1, B1, B5)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     svgPath: {
       table: { disable: false },
@@ -134,7 +125,6 @@ export const Defaults = {
 export const WithVariant = {
   name: 'With Variant ThemeIcon (A1)',
   args: {
-    ...defaultArgs,
     svgPath: AndreForholdSVGpath,
     variant: 'themeIcon',
   },
@@ -157,7 +147,6 @@ export const WithVariant = {
 export const WithCustomSVG = {
   name: 'With Custom SVG (A4)',
   args: {
-    ...defaultArgs,
     svgPath: <path d={'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2Z'} />,
   },
   argTypes: {
@@ -171,7 +160,6 @@ export const WithCustomSVG = {
 export const WithTitle = {
   name: 'With Title (B3)',
   args: {
-    ...defaultArgs,
     title: 'Min custom title beskrivelse',
   },
   argTypes: {
@@ -200,7 +188,6 @@ export const WithTitle = {
 export const WithAriaLabel = {
   name: 'With AriaLabel (B4)',
   args: {
-    ...defaultArgs,
     ariaLabel: 'min custom aria-label beskrivelse',
   },
   argTypes: {
@@ -228,8 +215,6 @@ export const WithAriaLabel = {
 export const SystemIconSizeSmall = {
   name: 'With Size Small - SystemIcon (A2)',
   args: {
-    ...defaultArgs,
-    svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'small',
   },
@@ -246,8 +231,6 @@ export const SystemIconSizeSmall = {
 export const SystemIconSizeMedium = {
   name: 'With Size Medium - SystemIcon (A2)',
   args: {
-    ...defaultArgs,
-    svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'medium',
   },
@@ -264,8 +247,6 @@ export const SystemIconSizeMedium = {
 export const SystemIconSizeLarge = {
   name: 'With Size Large - SystemIcon (A2)',
   args: {
-    ...defaultArgs,
-    svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'large',
   },
@@ -282,8 +263,6 @@ export const SystemIconSizeLarge = {
 export const SystemIconSizeLargePlus = {
   name: 'With Size Large Plus - SystemIcon (A2)',
   args: {
-    ...defaultArgs,
-    svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'largePlus',
   },
@@ -300,8 +279,6 @@ export const SystemIconSizeLargePlus = {
 export const SystemIconSizeExtraLarge = {
   name: 'With Size Extra Large - SystemIcon (A2)',
   args: {
-    ...defaultArgs,
-    svgPath: AccountChildSVGpath,
     variant: 'systemIcon',
     size: 'extraLarge',
   },
@@ -318,7 +295,6 @@ export const SystemIconSizeExtraLarge = {
 export const ThemeIconSizeMedium = {
   name: 'With Size Medium - ThemeIcon (A3)',
   args: {
-    ...defaultArgs,
     svgPath: AndreForholdSVGpath,
     variant: 'themeIcon',
     size: 'medium',
@@ -339,7 +315,6 @@ export const ThemeIconSizeMedium = {
 export const ThemeIconSizeLarge = {
   name: 'With Size Large - ThemeIcon (A3)',
   args: {
-    ...defaultArgs,
     svgPath: AndreForholdSVGpath,
     variant: 'themeIcon',
     size: 'large',

@@ -5,11 +5,7 @@ import { expect, within } from 'storybook/test';
 
 import { headingAsArr } from '@skatteetaten/ds-core-utils';
 import { CompletedSVGpath, Icon } from '@skatteetaten/ds-icons';
-import {
-  Heading,
-  HeadingProps,
-  headingLevelArr,
-} from '@skatteetaten/ds-typography';
+import { Heading, headingLevelArr } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: Heading,
@@ -35,19 +31,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    as: 'h2',
+    children: 'Dette er en heading',
+  },
 } satisfies Meta<typeof Heading>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs: HeadingProps = {
-  as: 'h2',
-  children: 'Dette er en heading',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLHeadingElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -68,7 +61,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -81,9 +73,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -110,9 +100,7 @@ const TemplateWithAllLevels: StoryFn<typeof Heading> = (args) => (
 export const Defaults = {
   render: TemplateWithAllLevels,
   name: 'Defaults All Levels (A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading', { level: 2 });
@@ -126,9 +114,7 @@ export const Defaults = {
 export const DefaultsMobile = {
   render: TemplateWithAllLevels,
   name: 'Defaults All Levels On Small Screen (A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   globals: {
     viewport: {
       value: '--breakpoint-xs',
@@ -140,7 +126,6 @@ export const LevelsWithSpacing = {
   render: TemplateWithAllLevels,
   name: 'With Spacing All Levels (A4)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -154,7 +139,6 @@ export const LevelsWithSpacingMobile = {
   render: TemplateWithAllLevels,
   name: 'With Spacing All Levels On Small Screen (A4)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -182,9 +166,7 @@ const AsTemplate: StoryFn<typeof Heading> = (args) => (
 export const WithAs = {
   render: AsTemplate,
   name: 'With As (B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const headings = canvas.getAllByRole('heading');
@@ -215,7 +197,6 @@ export const WithMarkup = {
   render: TemplateWithMarkup,
   name: 'With Markup And String (A3, B2)',
   args: {
-    ...defaultArgs,
     children: 'Dette er den fineste string headingen uten markup',
   },
   argTypes: {
@@ -229,7 +210,6 @@ export const WithMarkup = {
 export const WithCanBeManuallyFocused: Story = {
   render: (args) => <Heading {...args} />,
   args: {
-    ...defaultArgs,
     canBeManuallyFocused: true,
   },
   argTypes: {
@@ -245,9 +225,7 @@ export const WithCanBeManuallyFocused: Story = {
 } satisfies Story;
 
 export const HeadingWithIcon: Story = {
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: (_args): JSX.Element => {
     return (
       <Heading as={'h1'}>

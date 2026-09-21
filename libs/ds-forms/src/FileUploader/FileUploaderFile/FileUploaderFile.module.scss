@@ -1,12 +1,3 @@
-.fileSpinner {
-  height: calc(var(--semantic-line-height-default) * var(--size-small));
-  margin-right: var(--spacing-xs);
-}
-
-.fileDeleteButton {
-  margin-top: var(--spacing-xxs);
-}
-
 .fileContentRight {
   height: calc(var(--semantic-line-height-default) * var(--size-small));
 }
@@ -140,6 +131,10 @@
     transition:
       transform 0.3s ease,
       opacity 0.3s ease;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   &Icon {

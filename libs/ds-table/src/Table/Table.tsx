@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import { getTableVariantDefault } from './defaults';
+import { defaultTableSize } from './defaults';
 import { TableComponent, TableProps } from './Table.types';
 import { TableContext } from './TableContext';
 import { TableBody } from '../TableBody/TableBody';
@@ -20,23 +20,21 @@ import styles from './Table.module.scss';
 /**
  * Table
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-table--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/table/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/table)
  */
-export const Table = (({
+export const Table = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   caption,
   rowInEditModeId: externalRowInEditModeId,
-  variant = getTableVariantDefault(),
-  size,
+  size = defaultTableSize,
   sortState,
-  canBeManuallyFocused,
-  hasFullWidth,
-  showCaption,
+  canBeManuallyFocused = false,
+  hasFullWidth = false,
+  showCaption = false,
   setSortState,
   children,
 }: TableProps): JSX.Element => {
@@ -56,18 +54,12 @@ export const Table = (({
   }
   const { t } = useTranslation('ds_tables', { i18n: dsI18n });
 
-  const variantClassName = size
-    ? styles[`table_${size}`]
-    : styles[`table_${variant}`];
-  const captionVariantClassName = size
-    ? styles[`tableCaption_${size}`]
-    : styles[`tableCaption_${variant}`];
   const concatenatedClassName = `${styles.table} ${
     hasFullWidth ? styles.table_fullWidth : ''
-  } ${variantClassName} ${className}`.trim();
+  } ${styles[`table_${size}`]} ${className}`.trim();
   const captionClassName = `${styles.tableCaption} ${
     showCaption ? '' : styles.hidden
-  } ${captionVariantClassName}`.trim();
+  } ${styles[`tableCaption_${size}`]}`.trim();
   const wrapperClassName = `${isTableScrollable ? styles.wrapper : ''} ${
     shouldFadeLeft ? styles.wrapper_fadeLeft : ''
   }`.trim();
@@ -138,7 +130,6 @@ export const Table = (({
       value={{
         sortState,
         setSortState,
-        variant,
         size,
         rowInEditModeId,
         setRowInEditModeId: setInternalRowInEditModeId,
@@ -168,7 +159,10 @@ export const Table = (({
       </div>
     </TableContext.Provider>
   );
-}) as TableComponent;
+};
+
+export default Table as TableComponent;
+
 Table.displayName = 'Table';
 Table.Header = TableHeader;
 Table.Header.displayName = 'Table.Header';

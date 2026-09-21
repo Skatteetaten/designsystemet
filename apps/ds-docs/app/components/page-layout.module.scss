@@ -1,0 +1,32 @@
+@use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
+@use 'libs/ds-core-utils/src/mixins/styles' as styles;
+
+.main {
+  width: var(--semantic-responsive-container);
+  box-sizing: border-box;
+  padding: var(--semantic-responsive-container-spacing);
+  margin: 0 auto;
+}
+
+.pageLayout {
+  display: var(--semantic-responsive-internal-container-display);
+  flex-direction: var(--semantic-responsive-internal-container-flex-direction);
+  margin-top: var(--spacing-xl);
+  gap: var(--semantic-responsive-internal-container-spacing);
+}
+
+.aside {
+  width: var(--container-aside-narrow);
+
+  @media (max-width: breakpoints.$breakpoint-m) {
+    display: none;
+  }
+}
+
+.section {
+  flex: 1;
+}
+
+.srOnly {
+  @include styles.sr-only;
+}

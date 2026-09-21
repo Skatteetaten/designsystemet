@@ -1,0 +1,66 @@
+---
+title: MegaButton
+description: MegaButton brukes til tydelige hovedhandlinger som enten står alene på en side eller tar brukeren videre til et nytt område. Den skal skape sterk visuell oppmerksomhet og indikere ett klart primært valg.
+icon: /illustrations/megabutton.svg
+---
+
+<Canvas examplesPath="components/megabutton" />
+
+## Bruk MegaButton når
+
+- du har én hovedhandling som står alene på siden
+- hovedhandlingen skal lede brukeren videre til et nytt område eller en ny tjeneste
+- du vil løfte frem én bestemt handling brukeren skal ta
+
+## Unngå MegaButton når
+
+- handlingen er innsending av skjema — bruk [Button](/byggeklosser/komponenter/button)
+- målet kun er å oppnå mer visuell oppmerksomhet enn en vanlig knapp
+
+## Hvorfor vi anbefaler dette
+
+- MegaButton skiller seg fra vanlig [Button](/byggeklosser/komponenter/button) fordi den er ment for én tydelig primærhandling som trekker ekstra oppmerksomhet («Call to action»). Brukes den til sekundære handlinger, mister den sin signaleffekt.
+- Når MegaButton er en lenke (`<a>`) men rendres som knapp, brukes `role="button"` for å sikre at skjermlesere leser opp riktig interaksjonstype.
+- Vi anbefaler ikke MegaButton til skjemainnsending fordi vanlig [Button](/byggeklosser/komponenter/button) gir bedre kontroll over knappevariant og hierarki i en skjemakontekst.
+
+## Varianter og når bør du bruke dem
+
+MegaButton har to varianter:
+
+### Som lenke (`<a>`)
+
+- Brukes når handlingen skal ta brukeren videre til et nytt område.
+- Skjermlesere vil fortsatt identifisere den som knapp via `role="button"`.
+
+### Som knapp (`<button>`)
+
+- Brukes når hovedhandlingen ligger på samme side.
+
+### Plassering og justering
+
+- Skal brukes når handlingen er tydelig hovedmål for siden.
+- Kan brukes alene eller sammen med et ikon (for eksempel ved eksterne lenker).
+- Fremheves best når den ikke konkurrerer med andre knapper i nærheten.
+
+### Interaksjon og tilstander
+
+- MegaButton endrer HTML‑tag automatisk basert på om du gir den `href`.
+- Når MegaButton peker til en ekstern side og bruker eksternt ikon, leses teksten «Til et annet nettsted» opp av skjermleser automatisk.
+- Klikk skal oppleves som navigasjon eller primærhandling, ikke sekundær støttefunksjon.
+
+## Tekst
+
+- Teksten skal tydelig beskrive hovedhandlingen, for eksempel «Start søknad», «Gå til tjenesten» eller «Bestill time».
+- Unngå abstrakte eller uklare formuleringer.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Når MegaButton er en lenke (`<a>`) brukes `role="button"` for å sikre riktig opplesning.
+- Ved eksterne lenker med ikon vil skjermlesere lese opp «Til et annet nettsted».
+- Ikoner må ha tilstrekkelig kontrast, og tekst må være tydelig og informativ.
+
+import { MegaButton } from '@skatteetaten/ds-buttons';
+
+## Props
+
+<TypeTable of={MegaButton} />

@@ -1,0 +1,100 @@
+---
+title: Tabs
+description: Tabs (arkfaner) brukes for å dele innhold i ulike områder eller seksjoner innenfor samme kontekst. De gjør det enklere for brukeren å skanne informasjon, orientere seg og veksle mellom innhold uten å navigere bort fra siden.
+icon: /illustrations/tabs.svg
+---
+
+<Canvas examplesPath="components/tabs" />
+
+## Bruk Tabs når
+
+- siden inneholder mye innhold som kan deles i logiske seksjoner
+- brukeren trenger å veksle frem og tilbake mellom visninger
+- kun én tematisk seksjon bør vises om gangen for å redusere kognitiv belastning
+
+## Unngå Tabs når
+
+- siden har lite innhold
+- alt innholdet kan vises samlet uten å skape støy
+- du trenger navigasjon mellom sider — Tabs er kun til innhold på samme side
+- sammenligning av innhold på tvers av faner er nødvendig
+
+## Hvorfor vi anbefaler dette
+
+- Faner kun på én øverste linje er standard fordi faner på siden eller i bunnen bryter brukerens forventning og kan skape forvirring om hva som er innhold og hva som er navigasjon.
+- Ikon i faner er dekorativt og skjelt for skjermlesere fordi fanetittelen alene skal bære meningsinnholdet — ikoner uten tekstalternativ er utilgjengelige.
+- Select-fallback på mobil er anbefalt fordi det gir forutsigbar og tilgjengelig atferd uten at flertallet av tabs brytes over flere linjer.
+
+## Varianter og når bør du bruke dem
+
+### Med eller uten kantlinje
+
+- **Uten kantlinje:** Tar mindre visuell plass og trekker mindre oppmerksomhet. Passer derfor godt på de fleste flater og i områder med begrenset plass.
+- **Med kantlinje:** Gir mer struktur og tydelig skille, ofte brukt i mer datatunge flater.
+
+### Størrelser
+
+- **Normal:** Standard og mest brukt.
+- **Small:** Brukes når det er begrenset plass eller i kompakte layout‑situasjoner.
+
+### Plassering og justering
+
+- Tabs skal som hovedregel ligge på én linje.
+- Plasser tabs øverst i innholdsområdet — aldri til venstre, høyre eller nederst.
+- Fane‑titler og rekkefølge skal være faste og forutsigbare.
+- Bruk korte, meningsfulle titler som tydelig beskriver innholdet.
+- Unngå tabs inni tabs — det skaper forvirring og øker kompleksitet.
+
+## Tabs på mobil
+
+Når alle fanene ikke får plass på én linje, bør du bruke én av disse løsningene, i prioritert rekkefølge:
+
+### 1. Bruk Select i stedet for tabs (anbefalt)
+
+- Select gir en forutsigbar og tilgjengelig måte å bytte mellom seksjonene på.
+- Denne løsningen gjør at innholdet tar mindre plass på skjermen.
+
+### 2. La fanene gå over flere linjer
+
+- Bruk denne løsningen bare når Select ikke passer.
+- Flere linjer med tabs kan gjøre det vanskeligere å se hvilke faner som hører sammen, og kan gi en mindre forutsigbar brukeropplevelse.
+
+### Interaksjon og tilstander
+
+- Én fane er alltid valgt.
+- Avansert funksjonalitet (f.eks. å lukke en fane) skal implementeres i innholdsdelen, ikke i tab‑elementet.
+- Unngå uventet dynamisk manipulering av tabs.
+
+## Tekst
+
+- Tab‑titler skal være konsise (ett til få ord).
+- Titler skal tydelig indikere hva som finnes bak fanen.
+- Ikke bruk forkortelser med mindre de er allment forståelige.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Faneinnholdet bør starte med en overskrift for å gi skjermlesere tydelig navigasjonsmål.
+- Tastaturnavigasjon skal følge standardene:
+  - Ett tab‑stopp for tablist
+  - Piltaster høyre/venstre for å bytte fane
+  - Enter eller mellomrom for å aktivere valgt fane
+- Ikoner i faner regnes som pynt og skal ikke leses opp av skjermleser.
+- Sørg for god kontrast og tydelig markering av valgt fane.
+
+import { Tabs } from '@skatteetaten/ds-collections';
+
+## Props
+
+<TypeTable of={Tabs} />
+
+### Tabs.List
+
+<TypeTable of={Tabs.List} />
+
+### Tabs.Panel
+
+<TypeTable of={Tabs.Panel} />
+
+### Tabs.Tab
+
+<TypeTable of={Tabs.Tab} />

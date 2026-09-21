@@ -1,7 +1,7 @@
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
-import { List, ListProps, Paragraph } from '@skatteetaten/ds-typography';
+import { List, Paragraph } from '@skatteetaten/ds-typography';
 
 const meta = {
   component: List,
@@ -27,26 +27,24 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: [
+      <List.Element key={'listElement_1'}>
+        {'Kjenner du behovet til brukeren?'}
+      </List.Element>,
+      <List.Element key={'listElement_2'}>
+        {'Er du sikker på at du kjenner behovet til brukeren?'}
+      </List.Element>,
+      <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>,
+    ],
+  },
 } satisfies Meta<typeof List>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs: ListProps = {
-  children: [
-    <List.Element key={'listElement_1'}>
-      {'Kjenner du behovet til brukeren?'}
-    </List.Element>,
-    <List.Element key={'listElement_2'}>
-      {'Er du sikker på at du kjenner behovet til brukeren?'}
-    </List.Element>,
-    <List.Element key={'listElement_3'}>{'Snakk med andre.'}</List.Element>,
-  ],
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLUListElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -69,7 +67,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -82,9 +79,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -98,9 +93,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant Bullet (A1, B1, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: {
       table: { disable: false },
@@ -118,7 +111,6 @@ export const Defaults = {
 export const VariantNumber = {
   name: 'Variant Number(A1, B1)',
   args: {
-    ...defaultArgs,
     as: 'ol',
   },
   argTypes: {
@@ -137,7 +129,6 @@ export const VariantNumber = {
 export const WithLongTextAndBreaking = {
   name: 'With Long Text And Breaking (A1)',
   args: {
-    ...defaultArgs,
     children: [
       <List.Element key={'listElement_1'}>
         {'Denne listItem har en veldig lang tekst. Så lang at den lange teksten tvinger fram linjeskift med ' +
@@ -161,7 +152,6 @@ export const WithLongTextAndBreaking = {
 export const WithMarkup = {
   name: 'With Markup (A2, B2)',
   args: {
-    ...defaultArgs,
     children: [
       <List.Element key={'listElement_1'}>
         {'Kjenner du behovet til '}
@@ -208,7 +198,6 @@ export const WithSpacing = {
   render: TemplateWithTwoParagraph,
   name: 'With Spacing (A3)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -270,15 +259,12 @@ const TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents: StoryFn<
 export const WithBothVariantsAndAtLeast10NumberItems = {
   render: TemplateWithVariantsAndAtLeast10ItemsAndOtherComponents,
   name: 'With Both Variants And At Least 10 Number Items',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
 } satisfies Story;
 
 export const WithCanBeManuallyFocused: Story = {
   name: 'With Can Receive Focus',
   args: {
-    ...defaultArgs,
     canBeManuallyFocused: true,
   },
   argTypes: {

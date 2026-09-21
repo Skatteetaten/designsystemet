@@ -1,16 +1,8 @@
 import { JSX } from 'react';
 
-import {
-  getCommonButtonTypeDefault,
-  getCommonClassNameDefault,
-} from '@skatteetaten/ds-core-utils';
 import { Icon } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getIconButtonBrightnessDefault,
-  getIconButtonSizeDefault,
-} from './defaults';
 import { IconButtonProps } from './IconButton.types';
 
 import styles from './IconButton.module.scss';
@@ -18,27 +10,26 @@ import styles from './IconButton.module.scss';
 /**
  * IconButton
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-iconbutton--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/iconbutton/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/iconbutton)
  */
 export const IconButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
-  brightness = getIconButtonBrightnessDefault(),
-  size = getIconButtonSizeDefault(),
+  brightness = 'default',
+  size = 'medium',
   spinnerTitle,
   svgPath,
   accessKey,
-  disabled,
+  disabled = false,
   title,
-  type = getCommonButtonTypeDefault(),
+  type = 'button',
   ariaDescribedby,
   ariaExpanded,
-  hasSpinner,
-  isOutlined,
+  hasSpinner = false,
+  isOutlined = false,
   onClick,
   onBlur,
   onFocus,
@@ -65,7 +56,7 @@ export const IconButton = ({
       {!hasSpinner && (
         <Icon
           className={styles.icon}
-          size={size === 'extraSmall' ? 'small' : size}
+          size={size}
           svgPath={svgPath}
           title={title}
         />
@@ -73,8 +64,8 @@ export const IconButton = ({
       {hasSpinner && (
         <Spinner
           className={styles.spinner}
-          color={disabled ? 'black' : 'blue'}
-          size={size === 'extraSmall' ? 'small' : size}
+          color={disabled ? 'black' : 'interactive'}
+          size={size}
           hideTitle
         >
           {spinnerTitle}

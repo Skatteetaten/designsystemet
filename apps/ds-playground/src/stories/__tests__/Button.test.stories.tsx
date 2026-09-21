@@ -4,10 +4,7 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  dsI18n,
-  getCommonButtonTypeDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -62,18 +59,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultButtonText,
+  },
 } satisfies Meta<typeof Button>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  children: defaultButtonText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -92,7 +87,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -108,10 +102,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    // customClassname sin farge gir ikke nok kontrast med knapp i modal ved hover
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -126,9 +116,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults Variant Primary (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -139,14 +127,13 @@ export const Defaults = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
 export const VariantSecondary = {
   name: 'Variant Secondary (A1)',
   args: {
-    ...defaultArgs,
     variant: 'secondary',
   },
   argTypes: {
@@ -159,14 +146,13 @@ export const VariantSecondary = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
 export const VariantTertiary = {
   name: 'Variant Tertiary (A1)',
   args: {
-    ...defaultArgs,
     variant: 'tertiary',
   },
   argTypes: {
@@ -179,13 +165,15 @@ export const VariantTertiary = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
 export const VariantDanger = {
   name: 'Variant Danger (A1)',
-  args: { ...defaultArgs, variant: 'danger' },
+  args: {
+    variant: 'danger',
+  },
   argTypes: {
     variant: { table: { disable: false } },
   },
@@ -196,14 +184,13 @@ export const VariantDanger = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     await expect(button).toBeInTheDocument();
-    await expect(button).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(button).toHaveAttribute('type', 'button');
   },
 } satisfies Story;
 
 export const WithIcon = {
   name: 'With Icon (A3, B3)',
   args: {
-    ...defaultArgs,
     svgPath: SendSVGpath,
   },
   argTypes: {
@@ -223,7 +210,6 @@ export const WithIcon = {
 export const WithLongText = {
   name: 'With Long Text (A1 delvis)',
   args: {
-    ...defaultArgs,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles. ' +
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Her har vi ikke ikon så da skal teksten midtstilles',
@@ -236,7 +222,6 @@ export const WithLongText = {
 export const WithLongTextAndIcon = {
   name: 'With Long Text And Icon (A1 delvis)',
   args: {
-    ...defaultArgs,
     svgPath: SendSVGpath,
     children:
       'Denne knappen har en veldig lang tekst. Så lang at den tvinger fram linjeskift. Tekst skal venstrejusteres. ' +
@@ -251,7 +236,6 @@ export const WithLongTextAndIcon = {
 export const WithDisabled = {
   name: 'With Disabled (B5)',
   args: {
-    ...defaultArgs,
     disabled: true,
   },
   argTypes: {
@@ -269,7 +253,6 @@ export const WithDisabled = {
 export const WithDisabledAndIcon = {
   name: 'With Disabled And Icon (B5)',
   args: {
-    ...defaultArgs,
     svgPath: SendSVGpath,
     disabled: true,
   },
@@ -285,7 +268,6 @@ export const WithDisabledAndIcon = {
 export const WithType = {
   name: 'With Type (B1)',
   args: {
-    ...defaultArgs,
     type: 'submit',
   },
   argTypes: {
@@ -300,7 +282,6 @@ export const WithType = {
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B2)',
   args: {
-    ...defaultArgs,
     ariaDescribedby: 'testid1234',
   },
   argTypes: {
@@ -315,7 +296,6 @@ export const WithAriaDescribedby = {
 export const WithAccesskey = {
   name: 'With Accesskey (B3)',
   args: {
-    ...defaultArgs,
     accessKey: 'j',
   },
   argTypes: {
@@ -354,7 +334,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onClick: fn(),
@@ -448,7 +427,6 @@ export const WithSpinner = {
   render: TemplateWithSpinner,
   name: 'With Spinner (A6)',
   args: {
-    ...defaultArgs,
     hasSpinner: true,
   },
   argTypes: {
@@ -459,7 +437,6 @@ export const WithSpinner = {
 export const WithExternalIcon = {
   name: 'With External Icon (A7, B6)',
   args: {
-    ...defaultArgs,
     isExternal: true,
     children: 'Til altinn.no',
     href: '#',

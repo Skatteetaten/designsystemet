@@ -1,34 +1,31 @@
 import { useEffect, useState, JSX } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
 
-import {
-  getScrollToMainDefault,
-  getVisibilityThresholdDefault,
-  getScrollToTopButtonTextDefault,
-} from './defaults';
 import { ScrollToTopButtonProps } from './ScrollToTopButton.types';
 
 import styles from './ScrollToTopButton.module.scss';
 
+export const getDefaultScrollToTopButtonText = (): string =>
+  dsI18n.t('ds_buttons:scrolltotopbutton.Title');
+
 /**
  * ScrollToTopButton
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-scrolltotopbutton--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/scrolltotopbutton/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/scrolltotopbutton)
  */
 export const ScrollToTopButton = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
   shadowRootNode,
-  visibilityThreshold = getVisibilityThresholdDefault(),
-  scrollToMain = getScrollToMainDefault(),
-  children = getScrollToTopButtonTextDefault(),
+  visibilityThreshold = 1,
+  scrollToMain = true,
+  children = getDefaultScrollToTopButtonText(),
 }: ScrollToTopButtonProps): JSX.Element => {
   const [visible, setVisible] = useState<boolean>(!visibilityThreshold);
   useEffect(() => {

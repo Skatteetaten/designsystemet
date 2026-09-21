@@ -3,13 +3,8 @@ import { useEffect, useState, JSX, useRef } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import {
-  Spinner,
-  getSpinnerColorDefault,
-  getSpinnerLabelDefault,
-  getSpinnerSizeDefault,
-  getSpinnerTitlePositionDefault,
-} from '@skatteetaten/ds-progress';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
+import { Spinner } from '@skatteetaten/ds-progress';
 
 import { category } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
@@ -23,35 +18,13 @@ const meta = {
     children: {
       table: {
         category: category.props,
-        defaultValue: { summary: getSpinnerLabelDefault() },
+        defaultValue: { summary: getDefaultSpinnerLabel() },
       },
     },
-    size: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSpinnerSizeDefault() },
-      },
-    },
-    titlePosition: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSpinnerTitlePositionDefault() },
-      },
-    },
-    color: {
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getSpinnerColorDefault() },
-      },
-    },
-    percentComplete: {
-      table: {
-        category: category.props,
-      },
-    },
+    size: { table: { category: category.props } },
+    titlePosition: { table: { category: category.props } },
+    color: { table: { category: category.props } },
+    percentComplete: { table: { category: category.props } },
     hideTitle: { table: { category: category.props } },
   },
 } satisfies Meta<typeof Spinner>;
@@ -95,7 +68,7 @@ export const Examples: Story = {
             percentComplete={progress}
             className={'bottomSpacingXL'}
             size={'large'}
-            color={'blue'}
+            color={'interactive'}
             titlePosition={'right'}
           />
         )}

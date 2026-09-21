@@ -26,8 +26,7 @@ export interface ErrorSummaryProps extends BaseProps {
   titleAs?: HeadingAs;
 }
 
-export interface ErrorSummaryComponent
-  extends FunctionComponent<ErrorSummaryProps> {
+export interface ErrorSummaryComponent extends FunctionComponent<ErrorSummaryProps> {
   Error: typeof ErrorSummaryError;
   Group: typeof ErrorSummaryGroup;
 }

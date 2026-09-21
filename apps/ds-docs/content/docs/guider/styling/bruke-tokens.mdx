@@ -1,0 +1,151 @@
+---
+title: Bruke designtokens
+description: Designtokens er de minste byggeklossene i designsystemet. De representerer designvalg som farger, avstander, typografi og størrelser, og brukes på tvers av Figma, CSS og komponentbiblioteket.
+---
+
+## Liste med designtokens
+
+En oversikt over alle tilgjengelige tokens, både grunnleggende og semantiske, finner du under byggeklosser:
+
+<LinkGroup hasSpacing>
+  <LinkGroup.Link
+    href="/byggeklosser/designtokens/brekkpunkter"
+    hasSpacing={false}
+  >
+    {'Brekkpunkter'}
+  </LinkGroup.Link>
+  <LinkGroup.Link href="/byggeklosser/designtokens/containere">
+    {'Containere'}
+  </LinkGroup.Link>
+  <LinkGroup.Link href="/byggeklosser/designtokens/font">
+    {'Font'}
+  </LinkGroup.Link>
+  <LinkGroup.Link href="/byggeklosser/designtokens/farger">
+    {'Farger'}
+  </LinkGroup.Link>
+  <LinkGroup.Link href="/byggeklosser/designtokens/storrelser">
+    {'Størrelser'}
+  </LinkGroup.Link>
+  <LinkGroup.Link href="/byggeklosser/designtokens/avstander">
+    {'Avstander'}
+  </LinkGroup.Link>
+</LinkGroup>
+
+## Hvorfor bruke designtokens?
+
+Når du bruker designtokens bygger du på de samme verdiene som resten av designsystemet. Dette bidrar til mer konsistente løsninger og gjør det enklere å vedlikeholde både design og kode over tid.
+
+Designtokens hjelper deg å:
+
+- lage løsninger som oppleves som en del av samme helhet
+- bruke etablerte verdier i stedet for å finne opp egne
+- få bedre samsvar mellom design og kode
+- gjøre løsninger enklere å vedlikeholde
+- bygge egne løsninger som spiller på lag med designsystemet
+
+
+## Designtokens i praksis
+
+Komponentene i designsystemet er bygget med designtokens. Når du bruker en komponent bruker du derfor også designtokens, selv om du ikke ser dem direkte. Dersom du lager egne komponenter eller bygger sammensatte løsninger anbefaler vi at du bruker designtokens fremfor hardkodede verdier.
+
+**Eksempel:**
+
+```css
+.customSection {
+  padding: var(--spacing-m);
+  background: var(--semantic-page-background);
+  color: var(--palette-graphite-100);
+}
+```
+
+## Figma og kode bygger på de samme verdiene
+
+Designtokens finnes både i Figma og i kode. Det gjør det enklere å samarbeide på tvers av fagområder og sørger for at designvalg kan gjenbrukes gjennom hele utviklingsløpet.
+
+## Når bør jeg bruke designtokens?
+
+Bruk designtokens når du:
+
+- lager egne komponenter
+- setter sammen flere komponenter til en løsning
+- trenger spacing, typografi eller farger
+- gjør mindre tilpasninger rundt eksisterende komponenter
+
+## Unngå hardkodede verdier
+
+Før du legger inn egne farger, størrelser eller avstander bør du undersøke om det allerede finnes et passende token.
+
+**Ikke anbefalt:**
+
+```css
+.card {
+  padding: 16px;
+  font-size: 16px;
+}
+```
+
+**Anbefalt:**
+
+```css
+.myCard {
+  padding: var(--spacing-m);
+  font-size: var(--semantic-font-size-default);
+}
+```
+
+## Grunnleggende og semantiske tokens
+
+Designsystemet inneholder både grunnleggende og semantiske tokens. Begge typene representerer designverdier, men de har ulike formål.
+
+### Grunnleggende tokens
+
+Grunnleggende tokens er direkte knyttet til en konkret verdi.
+
+For eksempel: **--palette-azure-70**
+
+Dette tokenet representerer en bestemt farge i paletten. Grunnleggende tokens brukes ofte som fundament for andre tokens og gjør det mulig å bygge opp en konsistent designpalett.
+
+### Semantiske tokens
+
+Semantiske tokens beskriver hva en verdi brukes til.
+
+For eksempel: **--semantic-interactive-main**
+
+Dette tokenet representerer hovedfargen for interaktive elementer.
+
+Et semantisk token er derfor ikke knyttet til en bestemt farge, men til en funksjon eller mening i brukergrensesnittet.
+
+### Hvorfor bruke semantiske tokens?
+
+Når du bygger egne løsninger anbefaler vi å bruke semantiske tokens fremfor grunnleggende tokens der det er mulig.
+
+**For eksempel:**
+
+```css
+.link {
+  color: var(--semantic-interactive-main);
+}
+```
+
+fremfor:
+
+```css
+.link {
+  color: var(--palette-azure-70);
+}
+```
+
+Selv om begge gir samme resultat i dag, uttrykker de to eksemplene forskjellige ting. I det første eksemplet sier du: _«Dette er et interaktivt element.»_ , mens i det andre eksemplet sier du: _«Dette skal være akkurat denne blåfargen.»_
+
+### Fordeler med semantiske tokens
+
+Semantiske tokens gjør det enklere å:
+
+- bruke riktige verdier på riktige steder
+- skape konsistente brukeropplevelser
+- holde komponenter og egne løsninger visuelt i synk
+- endre design uten å oppdatere kode overalt
+
+Dersom designsystemet i fremtiden endrer fargen for interaktive elementer, vil alle steder som bruker --semantic-interactive-main automatisk følge den nye definisjonen.
+
+

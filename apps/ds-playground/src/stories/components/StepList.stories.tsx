@@ -59,8 +59,6 @@ export const Examples: Story = {
             variant={activeStep === 1 ? 'active' : 'passive'}
             title={'Hva holder du på med?'}
             stepNumber={1}
-            //slik at ikke første steg stjeler fokus ved initiell lasting av siden
-            shouldAutoFocusWhenActive={false}
             onEdit={
               activeStep > 1 && activeStep < 5
                 ? (): void => setActiveStep(1)

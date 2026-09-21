@@ -1,0 +1,51 @@
+---
+title: Designsystemet
+description: Her finner du komponenter og eksempler som gjør det enklere å lage gode digitale løsninger for brukerne våre.
+hideToc: true
+---
+
+<PublicImage
+  alt="Illustrasjon av team som lager desigmsystem"
+  src="/images/designsystem.png"
+  width="100%"
+/>
+
+import styles from './index.module.scss';
+
+<nav aria-label={'Kom i gang med designsystemet'} className={styles.navSection}>
+  <NavigationTile
+    title={'Kom i gang med design'}
+    description={'Figma og samarbeid'}
+    href={'/guider/kom-i-gang/for-designere'}
+    size={'medium'}
+  />
+
+<NavigationTile
+  title={'Start med utvikling'}
+  description={'Installasjon og oppsett'}
+  href={'/guider/kom-i-gang/for-utviklere'}
+  size={'medium'}
+/>
+
+<NavigationTile
+  title={'Se alle komponenter'}
+  description={'Kode, eksempler og API'}
+  href={'/byggeklosser/komponenter'}
+  size={'medium'}
+/>
+
+<NavigationTile
+  title={'Bruke designtokens'}
+  description={'Gjenbrukbare designvalg'}
+  href={'/guider/styling/bruke-tokens'}
+  size={'medium'}
+/>
+
+<NavigationTile
+  title={'Se endringslogg'}
+  description={'Versjoner og nyheter'}
+  href={'/guider/endringslogg'}
+  size={'medium'}
+/>
+
+</nav>

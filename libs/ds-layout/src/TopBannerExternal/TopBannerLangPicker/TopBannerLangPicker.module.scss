@@ -4,10 +4,7 @@
 .otherLanguagesLink {
   padding: var(--spacing-s) var(--spacing-m) var(--spacing-s-plus);
   border-top: 1px solid var(--palette-graphite-10);
-  margin-bottom: calc(
-    -1 * var(--spacing-xs)
-  ); // for å kompensere for padding-bottom på listen
-
+  margin-bottom: calc(-1 * var(--spacing-xs)); // for å kompensere for padding-bottom på listen
   background-color: var(--palette-graphite-5);
   white-space: nowrap;
 }

@@ -33,7 +33,6 @@ export interface DescriptionListCommonProps extends BaseProps {
 
 export type DescriptionListProps = DescriptionListCommonProps;
 
-export interface DescriptionListComponent
-  extends FunctionComponent<DescriptionListProps> {
+export interface DescriptionListComponent extends FunctionComponent<DescriptionListProps> {
   Element: typeof DescriptionListElement;
 }

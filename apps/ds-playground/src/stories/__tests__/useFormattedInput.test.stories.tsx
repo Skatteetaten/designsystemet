@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, waitFor, within } from 'storybook/test';
+import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
 
 import { useFormattedInput } from '@skatteetaten/ds-core-utils';
 import { formatNBS } from '@skatteetaten/ds-core-utils';
@@ -178,6 +178,38 @@ export const MaxLengthValidation = {
     // Try to type another digit - should be prevented
     await userEvent.type(textbox, '1');
     await expect(textbox).toHaveValue(formatNBS('12 34 56 78 90')); // Should remain unchanged
+  },
+} satisfies Story;
+
+export const SequentialTypingKeepsCaretAtEnd = {
+  name: 'Sequential Typing Keeps Caret At End',
+  render: (): JSX.Element => (
+    <TestFormattedInput
+      type={'organisationNumber'}
+      label={'Sekvensiell skriving'}
+    />
+  ),
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const textbox = canvas.getByRole('textbox') as HTMLInputElement;
+
+    textbox.focus();
+
+    const values = ['1', '12', '123', '1234', '123 45', '123 456'];
+
+    values.forEach((value) => {
+      fireEvent.change(textbox, {
+        target: {
+          value,
+        },
+      });
+    });
+
+    await expect(textbox).toHaveValue(formatNBS('123 456'));
+    await waitFor(() => {
+      expect(textbox.selectionStart).toBe(7);
+      expect(textbox.selectionEnd).toBe(7);
+    });
   },
 } satisfies Story;
 

@@ -36,18 +36,18 @@
   fill: var(--palette-graphite-0);
 }
 
-.noFocusVisible:focus-visible {
-  outline: none;
-}
-
 .panel {
   padding: var(--spacing-xxl);
   margin: 0 auto var(--spacing-l);
   background-color: var(--palette-forest-10);
   box-shadow:
     inset 0 var(--spacing-xl) 0 0 var(--palette-graphite-0),
-    /* Top shadow */ inset 0 calc(-1 * var(--spacing-xl)) 0 0
-      var(--palette-graphite-0); /* Bottom shadow */
+    /* Top shadow */
+    inset 0 calc(-1 * var(--spacing-xl)) 0 0 var(--palette-graphite-0); /* Bottom shadow */
+
+  h2:focus-visible {
+    outline: none;
+  }
 }
 
 .marginTopM {

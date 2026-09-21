@@ -3,6 +3,9 @@ import { expect, within } from 'storybook/test';
 
 import { Select } from '@skatteetaten/ds-forms';
 
+const optionText = 'Option 1';
+const optionValue = 'option1';
+
 const meta = {
   component: Select.Option,
   title: 'Tester/Select/Option',
@@ -22,6 +25,9 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: optionText,
+  },
 } satisfies Meta<typeof Select.Option>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -30,17 +36,10 @@ const Template: StoryFn<typeof Select.Option> = (args) => (
   <Select.Option {...args} />
 );
 
-const optionText = 'Option 1';
-const optionValue = 'option1';
-const defaultArgs = {
-  children: optionText,
-};
-
 export const WithRef = {
   render: Template,
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLOptionElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -64,7 +63,6 @@ export const WithAttributes = {
   render: Template,
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -77,9 +75,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -95,7 +91,6 @@ export const WithChildrenAndValue = {
   render: Template,
   name: 'With Children And Value',
   args: {
-    ...defaultArgs,
     value: optionValue,
   },
   argTypes: {

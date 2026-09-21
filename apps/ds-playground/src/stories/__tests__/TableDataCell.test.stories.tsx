@@ -26,18 +26,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: 'cake',
+  },
 } satisfies Meta<typeof Table.DataCell>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  children: 'cake',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLTableCellElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -61,7 +59,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -75,9 +72,6 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
-    a11y: {
-      test: 'off',
-    },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -92,7 +86,6 @@ export const WithAttributes = {
 export const WithThAndScope = {
   name: 'With Scope And As th (TableRow B2, TableHeader B1)',
   args: {
-    ...defaultArgs,
     as: 'th',
     scope: 'row',
   },

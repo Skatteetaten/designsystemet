@@ -1,0 +1,82 @@
+---
+title: SearchField
+description: SearchField brukes når brukeren skal søke seg fram til et resultat i løsningen. Det gir rask tilgang til relevant informasjon ved at brukeren kan skrive inn et søk og gå til trefflisten eller et konkret søkeresultat.
+icon: /illustrations/searchfield.svg
+---
+
+<Canvas examplesPath="components/searchfield" />
+
+## Bruk SearchField når
+
+- brukeren skal finne relevant innhold raskt gjennom søk
+- det finnes en resultatside eller oversikt det kan søkes i, for eksempel en kjøretøyoversikt eller personsøk
+- søk er den mest effektive måten å navigere til ønsket innhold
+
+## Unngå SearchField når
+
+- innholdet er så lite at brukeren enkelt kan navigere uten søk
+- du trenger autofullføring i skjema — bruk [TextField](/byggeklosser/komponenter/textfield) med datalist eller passende mønster
+- oppgaven krever filtrering eller sortering fremfor søk
+- feltet er et skjemafelt der brukeren skal søke etter og velge et element, og valget skal bli stående i skjemaet — bruk [Combobox](/byggeklosser/komponenter/combobox) i stedet
+
+## Hvorfor vi anbefaler dette
+
+- Vi skiller mellom SearchField og TextField fordi søk og skjemainput har ulike atferdsmønstre: søk er optimalisert for hurtigoppslag og resultatlister, mens skjemafelt er for datainnsamling.
+- Placeholder begrenses i publikumsløsninger fordi den lett kan forveksles med forhåndsutfylt tekst, og fordi den forsvinner så snart brukeren begynner å skrive.
+- Søk bør lede til en tydelig treffliste som viser søkesultatet. Det gjør det enklere for brukeren å vurdere og velge riktig resultat, også når søket ikke gir treff.
+
+## Varianter og når bør du bruke dem
+
+### Medium
+
+- Typisk brukt i interne løsninger, i toppseksjoner eller ved funksjonelt søk.
+- Kan kombinere med hurtigoppslag.
+
+### Large
+
+- Brukes gjerne på landingssider for interne løsninger.
+- Støtter mer sammensatte hurtigoppslag med tekst og beskrivelser.
+
+### ExtraLarge
+
+- Brukes for globalt søk i publikumsløsninger (f.eks. i TopBannerExternal).
+- Søket tar brukeren til trefflisten på skatteetaten.no.
+
+### Valg av utforming
+
+- Ikon til høyre (forstørrelsesglass) eller knapp med teksten «Søk».
+- Kan inkludere hurtigoppslag som lar brukeren hoppe direkte til et enkelt resultat.
+
+### Plassering og justering
+
+- Søkefelt bør stå der brukeren forventer å søke — ofte i toppbanner, landingssider eller ved omfattende datasett.
+- Standard maksbredde er 400px / 25rem for å unngå unaturlig stor avstand mellom søketeksten og knappen.
+
+### Interaksjon og tilstander
+
+- Klikk på søkeknappen tar brukeren til resultatsiden.
+- Ved «live»-søk tar både listevalg og søkeknappen brukeren til resultatvisning.
+- Hurtigoppslag kan føre direkte til detaljvisning (for eksempel et spesifikt kjøretøy eller en virksomhet).
+- Nullstillingsknapp (kryss) brukes til å nullstille søkestrengen.
+
+## Tekst
+
+- SearchField skal alltid ha en beskrivende label, men den holdes vanligvis skjult.
+- Unngå placeholder‑tekst i publikumsløsninger fordi:
+  - lav kontrast kan oppfattes som forhåndsutfylt informasjon
+  - teksten forsvinner når brukeren skriver, og må derfor gjentas i label
+- Placeholder kan brukes unntaksvis i interne flater hvor plassen er begrenset.
+- Knappeteksten skal være «Søk» når tekstknapp brukes.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Søkefelt trenger en [semantisk](wordinfo:semantisk) label selv når label er visuelt skjult.
+- Ikonet må suppleres med tekst eller aria‑label dersom det er eneste interaksjonselement.
+- Sørg for tydelig kontrast og fokusmarkering.
+- Hurtigoppslag må være navigerbare med tastatur.
+
+import { SearchField } from '@skatteetaten/ds-forms';
+
+## Props
+
+<TypeTable of={SearchField} />

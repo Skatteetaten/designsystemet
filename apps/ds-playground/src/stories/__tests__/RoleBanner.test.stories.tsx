@@ -25,22 +25,20 @@ const meta = {
     imageSnapshot: { disableSnapshot: false },
     htmlValidate: { rules: { 'no-redundant-role': 'off' } },
   },
+  args: {
+    user: {
+      name: 'navn navnerson',
+      role: 'meg',
+      identifier: '123456789',
+    },
+  },
 } satisfies Meta<typeof RoleBanner>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  user: {
-    name: 'navn navnerson',
-    role: 'meg' as const,
-    identifier: '123456789',
-  },
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -50,7 +48,9 @@ export const WithRef = {
   argTypes: {
     ref: { table: { disable: false } },
   },
-  parameters: { imageSnapshot: { disableSnapshot: true } },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getByRole('region');
@@ -61,22 +61,19 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
-    user: {
-      name: 'navn navnerson',
-      role: 'meg',
-      identifier: '123456789',
-    },
   },
   argTypes: {
     id: { table: { disable: false } },
     className: { table: { disable: false } },
     lang: { table: { disable: false } },
     'data-testid': { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -90,9 +87,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -109,10 +104,9 @@ export const Defaults = {
 
 export const AllRoles = {
   name: 'All Role Variants (A2, A5 B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
+    // Landmarks must have a unique aria-label
     a11y: {
       test: 'off',
     },
@@ -148,7 +142,9 @@ export const AllRoles = {
 
     await expect(banners[0]).toHaveAttribute('data-user', 'meg');
     await expect(banners[1]).toHaveAttribute('data-user', 'andre');
+    await expect(banners[1]).toHaveAttribute('data-sticky', 'true');
     await expect(banners[2]).toHaveAttribute('data-user', 'virksomhet');
+    await expect(banners[2]).toHaveAttribute('data-sticky', 'true');
 
     // 'meg' har ingen srOnly-tekst
     const megSrOnly = banners[0].querySelector('[class*="srOnly"]');
@@ -173,8 +169,22 @@ const TemplateWithTallContent: StoryFn<typeof RoleBanner> = (args) => (
   </div>
 );
 
+const TemplateWithTallContentScrolled: StoryFn<typeof RoleBanner> = (args) => (
+  <div className={'height200vh'}>
+    <RoleBanner
+      {...args}
+      ref={(instance: HTMLDivElement | null): void => {
+        if (instance) {
+          instance.setAttribute('data-scrolled', 'true');
+        }
+      }}
+    />
+    <p>{'Innhold under banneret'}</p>
+  </div>
+);
+
 export const MobileAndScrolled = {
-  render: TemplateWithTallContent,
+  render: TemplateWithTallContentScrolled,
   name: 'Mobile Scrolled (A8, A9)',
   args: {
     user: {
@@ -187,13 +197,6 @@ export const MobileAndScrolled = {
     viewport: {
       value: '--mobile',
     },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('region');
-    // Manuelt sette data-scrolled for visuell testing
-    banner.setAttribute('data-scrolled', 'true');
-    await expect(banner).toHaveAttribute('data-scrolled', 'true');
   },
 } satisfies Story;
 
@@ -215,7 +218,7 @@ export const Mobile = {
 } satisfies Story;
 
 export const MobileAndScrolledWithoutSticky = {
-  render: TemplateWithTallContent,
+  render: TemplateWithTallContentScrolled,
   name: 'Mobile Scrolled Without Sticky',
   args: {
     user: {
@@ -230,12 +233,5 @@ export const MobileAndScrolledWithoutSticky = {
     viewport: {
       value: '--mobile',
     },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const banner = canvas.getByRole('region');
-    // Manuelt sette data-scrolled for visuell testing
-    banner.setAttribute('data-scrolled', 'true');
-    await expect(banner).toHaveAttribute('data-scrolled', 'true');
   },
 } satisfies Story;

@@ -25,14 +25,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
-
-  &[data-variant='large'] {
-    padding: var(--spacing-s);
-  }
-
   &::-webkit-calendar-picker-indicator {
     display: none !important;
   }

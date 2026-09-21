@@ -1,0 +1,423 @@
+---
+title: Migreringsguide for versjon 3.0
+description: Denne versjonen inneholder enkelte brytende endringer og oppryddinger i API-et. De fleste endringene kan håndteres med enkle søk-og-erstatt-operasjoner, mens noen få krever manuell oppfølging.
+---
+
+## Endringer som krever kodeendringer
+
+### IconButton: `size="extraSmall"` fjernet
+
+`extraSmall` er ikke lenger en gyldig størrelse for `IconButton`. Gyldige størrelser er nå `small | medium | large`.
+
+**Før:**
+
+```tsx
+<IconButton svgPath={EditSVGpath} size={'extraSmall'} title={'Rediger'} />
+```
+
+**Nå:**
+
+```tsx
+<IconButton svgPath={EditSVGpath} size={'small'} title={'Rediger'} />
+```
+
+### DatePicker, Select, TextField: `variant`-prop fjernet
+
+Vi fjerner størrelsen `large` fra `DatePicker`, `Select` og `TextField`. Prop `variant` er derfor ikke i bruk lengre og fjernes.
+
+**Før:**
+
+```tsx
+<TextField label={'Navn'} variant={'large'} />
+<Select label={'Velg'} variant={'large'}>{/* … */}</Select>
+<DatePicker label={'Dato'} variant={'large'} />
+```
+
+**Nå:**
+
+```tsx
+<TextField label={'Navn'} />
+<Select label={'Velg'}>{/* … */}</Select>
+<DatePicker label={'Dato'} />
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<TextField label={'Navn'} classNames={{ textbox: 'textfield-large' }} />
+```
+
+```css
+.textfield-large {
+  padding: var(--spacing-s);
+}
+```
+
+### SearchField og Combobox: `variant` endret til `size`
+
+**Før:**
+
+```tsx
+<SearchField variant="large" />
+```
+
+**Nå:**
+
+```tsx
+<SearchField size="large" />
+```
+
+### OpenClose: `variant` fjernet — bruk `size`
+
+`variant`-propen på `OpenClose` er fjernet og erstattet med `size`. Det er også lagt til en ny størrelse `medium`.
+
+Mapping fra tidligere verdier:
+
+- `variant="compact"` → `size="small"`
+- `variant="standard"` → `size="large"`
+- (ny) `size="medium"` ligger mellom de to
+
+**Før:**
+
+```tsx
+<OpenClose title={'Mer info'} variant={'standard'}>{content}</OpenClose>
+<OpenClose title={'Mer info'} variant={'compact'}>{content}</OpenClose>
+```
+
+**Nå:**
+
+```tsx
+<OpenClose title={'Mer info'} size={'large'}>{content}</OpenClose>
+<OpenClose title={'Mer info'} size={'small'}>{content}</OpenClose>
+```
+
+### Table: `variant` fjernet — bruk `size`
+
+`variant`-propen på `Table` er fjernet og erstattet med `size`. Gyldige verdier er `extraSmall | small | medium | large`.
+
+**Før:**
+
+```tsx
+<Table caption={'…'} variant={'standard'}>{/* … */}</Table>
+<Table caption={'…'} variant={'compact'}>{/* … */}</Table>
+```
+
+**Nå:**
+
+```tsx
+<Table caption={'…'} size={'medium'}>{/* … */}</Table>
+<Table caption={'…'} size={'small'}>{/* … */}</Table>
+```
+
+### TextField: `thousandSeparator` fjernet
+
+`thousandSeparator`-propen på `TextField` er fjernet. Bruk hook'en `useFormattedInput` fra `@skatteetaten/ds-core-utils` for å formatere tall med tusenskille. Hook'en returnerer `value`, `onChange` (og `onKeyDown` for håndtering av markørposisjon ved sletting).
+
+**Før:**
+
+```tsx
+<TextField
+  label={'Beløp'}
+  thousandSeparator
+  value={value}
+  onChange={(e) => setValue(e.target.value)}
+/>
+```
+
+**Nå:**
+
+```tsx
+import { useFormattedInput } from '@skatteetaten/ds-core-utils';
+import { TextField } from '@skatteetaten/ds-forms';
+
+const credit = useFormattedInput({
+  type: 'number',
+  initialValue: '10000',
+});
+
+<TextField
+  label={'Beløp'}
+  value={credit.value}
+  onChange={credit.onChange}
+  onKeyDown={credit.onKeyDown}
+/>;
+
+`useFormattedInput` støtter også andre formater som `phoneNumber`, `accountNumber`, `personalIdentificationNumber` og `organizationNumber` via `type`.
+
+```
+
+### RadioGroup: `selectedValue` → `value`
+
+Propen `selectedValue` er omdøpt til `value` (for kontrollert state), i tråd med øvrige skjemakomponenter. Bruk `defaultValue` for ukontrollert state.
+
+**Før:**
+
+```tsx
+<RadioGroup
+  legend={'Type virksomhet'}
+  selectedValue={type}
+  onChange={(e) => setType(e.target.value)}
+>
+  <RadioGroup.Radio value={'foretak'}>
+    {'Enkeltpersonsforetak'}
+  </RadioGroup.Radio>
+  <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
+</RadioGroup>
+```
+
+**Nå:**
+
+```tsx
+<RadioGroup
+  legend={'Type virksomhet'}
+  value={type}
+  onChange={(e) => setType(e.target.value)}
+>
+  <RadioGroup.Radio value={'foretak'}>
+    {'Enkeltpersonsforetak'}
+  </RadioGroup.Radio>
+  <RadioGroup.Radio value={'selskap'}>{'Aksjeselskap'}</RadioGroup.Radio>
+</RadioGroup>
+```
+
+### TopBannerExternal: `mobileLogo` fjernet
+
+`mobileLogo` er fjernet fra `TopBannerExternal`.
+
+**Før:**
+
+```tsx
+<TopBannerExternal logo={{ mobileLogo: mobileLogo }} />
+```
+
+**Nå:**
+
+```tsx
+<TopBannerExternal />
+```
+
+### Skjemakomponenter: `showRequiredMark` fjernet
+
+`showRequiredMark`-propen er fjernet fra skjemakomponentene og har ingen erstatning.
+
+Les mer på mønster for obligatoriske felt: [https://www.skatteetaten.no/skattekartet/monstre/interaksjon-sideoppsett/interaksjonsmonstre/obligatoriske-felt/](https://www.skatteetaten.no/skattekartet/monstre/interaksjon-sideoppsett/interaksjonsmonstre/obligatoriske-felt/)
+
+**Før:**
+
+```tsx
+<TextField label={'Navn'} showRequiredMark required />
+<Select label={'Velg'} showRequiredMark required>{/* … */}</Select>
+```
+
+**Nå:**
+
+```tsx
+<TextField label={'Navn'} required />
+<Select label={'Velg'} required>{/* … */}</Select>
+```
+
+### Accordion: `color` har ny default-verdi
+
+Fargen er som før, men default-verdien for `color` er endret fra `none` til `white`.
+
+**Før:**
+
+```tsx
+<Accordion color={'none'}>{...}</Accordion>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Accordion color={'white'}>{...}</Accordion>
+```
+
+### Spinner: `color="blue"` har endret verdi
+
+Fargen er som før, men verdien for `color` er endret fra `blue` til `interactive`.
+
+**Før:**
+
+```tsx
+<Spinner color={'blue'}>{...}</Spinner>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Spinner color={'interactive'}>{...}</Spinner>
+```
+
+### Link/LinkGroup: `color` har endret default-verdi
+
+Fargen er som før, men default-verdien for `color` er endret fra `undefined` til `interactive`.
+
+**Før:**
+
+```tsx
+<Link color={undefined}>{...}</Link>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Link color={'interactive'}>{...}</Link>
+```
+
+## Endrede standardverdier
+
+### OpenClose: `keepMounted` har ny default-verdi
+
+Default-verdien for `keepMounted` er endret fra `false` til `true`. Innholdet forblir nå i DOM-en når `OpenClose` er lukket. Sett propen eksplisitt til `false` dersom innholdet fortsatt skal fjernes fra DOM-en når det skjules.
+
+**Før (innholdet ble fjernet fra DOM-en automatisk):**
+
+```tsx
+<OpenClose title={'Mer info'}>{content}</OpenClose>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<OpenClose title={'Mer info'} keepMounted={false}>
+  {content}
+</OpenClose>
+```
+
+### Footer: `openDefaultLinksInNewTab` har ny default-verdi
+
+Default-verdien for `openDefaultLinksInNewTab` er endret fra `true` til `false`. Standardlenkene i `Footer` åpnes nå i samme fane. Sett propen eksplisitt til `true` om du ønsker tidligere oppførsel.
+
+**Før (åpnet i ny fane automatisk):**
+
+```tsx
+<Footer />
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<Footer openDefaultLinksInNewTab={true} />
+```
+
+### RadioGroup og CheckboxGroup: `hasSpacing` har ny default-verdi
+
+Default-verdien for `hasSpacing` er endret fra `true` til `false`. Sett propen eksplisitt til `true` om du ønsker tidligere oppførsel.
+
+**Før:**
+
+```tsx
+<RadioGroup />
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<RadioGroup hasSpacing />
+```
+
+### StepList: `shouldAutoFocusWhenActive` har ny default-verdi
+
+Default-verdien for `shouldAutoFocusWhenActive` er endret fra `true` til `false`, slik at første steg ikke lenger får uønsket fokus. Når brukeren klikker på Neste-knappen, får neste steg nå automatisk fokus.
+
+**Før:**
+
+```tsx
+<StepList>
+  <StepList.Step shouldAutoFocusWhenActive={false} stepNumber={1} onNext={onNext}>...</StepList.Step>
+  <StepList.Step shouldAutoFocusWhenActive={true} stepNumber={2} onNext={onNext}>...</StepList.Step>
+  <StepList.Step shouldAutoFocusWhenActive={true} stepNumber={3} onNext={onNext}>...</StepList.Step>
+</StepList>
+```
+
+**Nå (for å beholde tidligere oppførsel):**
+
+```tsx
+<StepList>
+  <StepList.Step stepNumber={1} onNext={onNext}>...</StepList.Step>
+  <StepList.Step stepNumber={2} onNext={onNext}>...</StepList.Step>
+  <StepList.Step stepNumber={3} onNext={onNext}>...</StepList.Step>
+</StepList>
+```
+
+## Oppdatering av styling og layout
+
+### Table.Row: lik padding på `expandableContent`
+
+Innholdet i `expandableContent` på `Table.Row` (og `Table.EditableRow`) har nå lik padding hvis expand-knappen er på høyre og venstre side. Tidligere var padding lagt til kun når knappen lå på venstre side. Hvis du har lagt til egen padding når knappen ligger på høyre side for å kompensere, kan denne fjernes.
+
+**Før:**
+
+```tsx
+<Table.Row
+  expandButtonPosition="right"
+  expandableContent={<div style={{ padding: '1rem' }}>{expandedContent}</div>}
+  isExpandable
+>
+  <Table.DataCell>{'…'}</Table.DataCell>
+</Table.Row>
+```
+
+**Nå:**
+
+```tsx
+<Table.Row
+  expandButtonPosition="right"
+  expandableContent={expandedContent}
+  isExpandable
+>
+  <Table.DataCell>{'…'}</Table.DataCell>
+</Table.Row>
+```
+
+### CheckboxGroup og LinkGroup: ingen spacing under siste barn
+
+`CheckboxGroup` og `LinkGroup` har ikke lenger automatisk spacing under siste barn (siste `Checkbox` eller `Link`). Dette gjør det enklere å kontrollere avstand mellom komponenter utenfra. Bruk `hasSpacing` på `CheckboxGroup`/`LinkGroup` for å legge margin under hele gruppen, eller styr avstanden med className.
+
+### ScrollToTopButton: endret plassering
+
+Før var ScrollToTopButton plassert på innsiden av containeren og dekket innholdet på Footeren, nå er knappen plassert på utsiden.
+
+Bruk `classNames.button` for å endre plassering. For eksempel:
+
+```tsx
+<ScrollToTopButton classNames={{ button: 'scrolltotopbutton-position' }} />
+```
+
+```css
+.scrolltotopbutton-position {
+  right: calc(((100vw) - var(--semantic-responsive-container)) / 2);
+  left: auto;
+}
+```
+
+### AccordionItem: className flyttet til ytterste tag.
+
+Tidligere ble `className` satt på det indre `button`-elementet. Propen blir nå applisert på den ytterste `div`-en, slik at `AccordionItem` følger samme mønster som øvrige komponenter i designsystemet og gir en mer forutsigbar styling.
+
+## Oppdatering uten kodeendringer
+
+### FileUploader: obligatorisk ledetekst
+
+Ledeteksten til FileUploader er nå obligatorisk.
+
+I tillegg har FileUploader endret html-struktur, dermed er html-valideringsfeilene borte.
+
+### TypeScript 6/7 og i18next 25/26
+
+Designsystemet støtter nå TypeScript 6 og 7. Peer dependency for `i18next` er oppdatert til `^25 || ^26` og `react-i18next` til `^16 || ^17`
+
+**Oppdater `package.json`:**
+
+```jsonc
+{
+  "devDependencies": {
+    "typescript": "^7.0.0",
+  },
+  "dependencies": {
+    "i18next": "^26.0.0",
+  },
+}
+```
+
+Kjør deretter `npm install` og verifiser at typer fortsatt kompilerer (`npx tsc --noEmit`).

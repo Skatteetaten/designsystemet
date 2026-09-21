@@ -8,10 +8,6 @@
   position: relative;
   display: flex;
   width: 100%;
-
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
 }
 
 .select {
@@ -35,10 +31,6 @@
   outline-offset: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-  &_large {
-    padding: var(--spacing-s) 2.5rem var(--spacing-s) var(--spacing-s);
-  }
 
   &[aria-invalid='true'] {
     box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
@@ -76,11 +68,6 @@
   padding: var(--spacing-xxs);
   fill: var(--palette-azure-70);
   pointer-events: none;
-
-  &_large {
-    right: 0.3125rem;
-    padding: var(--spacing-xs);
-  }
 }
 
 .select:disabled + .selectIcon {

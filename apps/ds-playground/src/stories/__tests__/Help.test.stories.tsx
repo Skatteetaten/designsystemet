@@ -1,16 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, within } from 'storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
-import {
-  dsI18n,
-  getHelpTitleHelpSvgDefault,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n, getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Help } from '../../../../../libs/ds-forms/src/LabelWithHelp/Help/Help';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const defaultHelpText =
+  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
+const defaultDescription = 'En liten beskrivelse';
 
 const meta = {
   component: Help,
@@ -40,10 +41,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultDescription = 'En liten beskrivelse';
-const defaultHelpText =
-  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
-
 export const Defaults = {
   name: 'Defaults',
   play: async ({ canvasElement }): Promise<void> => {
@@ -65,7 +62,7 @@ export const WithHelptext = {
     const helpButton = canvas.getByRole('button');
     await expect(helpButton).toBeInTheDocument();
     await expect(helpButton).toHaveAttribute('aria-expanded', 'false');
-    const helpSvg = canvas.getByLabelText(getHelpTitleHelpSvgDefault(), {
+    const helpSvg = canvas.getByLabelText(getDefaultHelpButtonTitle(), {
       selector: 'svg',
     });
     await expect(helpSvg).toBeInTheDocument();
@@ -107,6 +104,7 @@ export const WithLongHelpTextAndDescription = {
   },
   argTypes: {
     helpText: { table: { disable: false } },
+    description: { table: { disable: false } },
   },
   globals: {
     viewport: {
@@ -210,12 +208,16 @@ export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;
 

@@ -1,10 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { linkColorArr } from '@skatteetaten/ds-core-utils';
 import { BreadcrumbsLinkProps, Breadcrumbs } from '@skatteetaten/ds-navigation';
 
-import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import {
+  category,
+  htmlEventDescription,
+  svgPathDescription,
+} from '../../../.storybook/helpers';
 
 Breadcrumbs.Link.displayName = 'Breadcrumbs.Link';
 
@@ -14,18 +16,8 @@ const meta = {
   argTypes: {
     // Props
     children: { table: { category: category.props } },
-    color: {
-      options: [undefined, ...linkColorArr],
-      control: 'inline-radio',
-      table: {
-        category: category.props,
-      },
-    },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    color: { control: 'inline-radio', table: { category: category.props } },
+    svgPath: { ...svgPathDescription },
     // HTML
     href: { table: { category: category.htmlAttribute } },
     // Aria

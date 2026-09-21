@@ -1,14 +1,8 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 
-import {
-  getDefaultPageSize,
-  getDefaultSibling,
-  getDefaultHidePageSummary,
-  getDefaultHidePrevNextButtonTitle,
-} from './defaults';
 import { PaginationProps, PaginationComponent } from './Pagination.types';
 import { PaginationList } from './PaginationList/PaginationList';
 
@@ -48,25 +42,24 @@ const validPropRanges = ({
 /**
  * Pagination
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-pagination--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/pagination/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/pagination)
  */
-export const Pagination = (({
+export const Pagination = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   currentPage: externalCurrentPage,
   defaultCurrent = 1,
-  sibling = getDefaultSibling(),
-  pageSize = getDefaultPageSize(),
+  sibling = 3,
+  pageSize = 10,
   totalItems,
-  hidePrevNextButtonTitle = getDefaultHidePrevNextButtonTitle(),
-  hidePageSummary = getDefaultHidePageSummary(),
+  hidePrevNextButtonTitle = false,
+  hidePageSummary = false,
   ariaLabel,
   onChange,
-}: PaginationProps) => {
+}: PaginationProps): JSX.Element | null => {
   const { t } = useTranslation('ds_navigation', { i18n: dsI18n });
   const lastPageRef = useRef<HTMLButtonElement>(null);
   const firstPageRef = useRef<HTMLButtonElement>(null);
@@ -134,15 +127,10 @@ export const Pagination = (({
       </ul>
     </nav>
   );
-}) as PaginationComponent;
+};
+
+export default Pagination as PaginationComponent;
 
 Pagination.displayName = 'Pagination';
 Pagination.List = PaginationList;
 Pagination.List.displayName = 'Pagination.List';
-
-export {
-  getDefaultPageSize,
-  getDefaultSibling,
-  getDefaultHidePageSummary,
-  getDefaultHidePrevNextButtonTitle,
-};

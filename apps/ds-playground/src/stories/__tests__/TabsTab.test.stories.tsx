@@ -22,24 +22,21 @@ const meta = {
   tags: ['test'],
   parameters: {
     imageSnapshot: { disableSnapshot: false },
+    // turn off accessibility tests since the tabs.tab component requires a parent component
     a11y: {
-      // turn off accessibility tests since the tabs.tab component requires a parent component to fullfill accessibility requirements
       test: 'off',
     },
+  },
+  args: {
+    children: 'Person',
+    value: 'TabValue',
   },
 } satisfies Meta<typeof Tabs.Tab>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-const defaultArgs = {
-  children: 'Person',
-  value: 'TabValue',
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -63,7 +60,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5, B1)',
   args: {
-    ...defaultArgs,
     className: 'dummyClassname',
     lang: 'nb',
     'data-testid': '123ID',
@@ -87,9 +83,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -106,7 +100,6 @@ export const Defaults = {
 export const WithIcon = {
   name: 'With Icon (A4)',
   args: {
-    ...defaultArgs,
     svgPath: PersonSVGpath,
   },
   parameters: {

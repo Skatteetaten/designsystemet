@@ -6,7 +6,7 @@
 }
 
 @mixin link {
-  padding: var(--spacing-xs) 0;
+  display: inline-block;
   color: var(--semantic-interactive-main);
   font-weight: var(--font-weight-medium);
   text-decoration-color: var(--semantic-interactive-main);

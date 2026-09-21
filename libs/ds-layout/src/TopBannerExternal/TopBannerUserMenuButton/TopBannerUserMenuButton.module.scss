@@ -1,21 +1,19 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/mixins/styles';
 
-.username {
-  &Button {
-    max-width: 4.5rem;
+.usernameButton {
+  max-width: 4.5rem;
 
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      max-width: 6.25rem;
-    }
+  @media (min-width: breakpoints.$breakpoint-xs) {
+    max-width: 6.25rem;
+  }
 
-    @media (min-width: breakpoints.$breakpoint-s) {
-      max-width: 7.5rem;
-    }
+  @media (min-width: breakpoints.$breakpoint-s) {
+    max-width: 7.5rem;
+  }
 
-    @media (min-width: breakpoints.$breakpoint-m) {
-      max-width: 20rem;
-    }
+  @media (min-width: breakpoints.$breakpoint-m) {
+    max-width: 20rem;
   }
 }
 
@@ -53,51 +51,49 @@
   }
 }
 
-.menuButton {
-  &_open {
-    z-index: 1000;
+.menuButtonOpen {
+  z-index: 1000;
+}
+
+.iconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  display: flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--semantic-interactive-main);
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    background: none;
   }
 
-  .iconWrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+  &Svg {
+    fill: var(--palette-graphite-0);
   }
+}
 
-  .userIcon {
-    display: flex;
-    width: 1.75rem;
-    height: 1.75rem;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: var(--semantic-interactive-main);
+.arrowMobile {
+  fill: currentcolor;
 
-    @media (min-width: breakpoints.$breakpoint-m) {
-      background: none;
-    }
-
-    &Svg {
-      fill: var(--palette-graphite-0);
-    }
-  }
-
-  .arrowMobile {
-    fill: currentcolor;
-
-    @media (min-width: breakpoints.$breakpoint-m) {
-      display: none;
-    }
-  }
-
-  .arrowDesktop {
+  @media (min-width: breakpoints.$breakpoint-m) {
     display: none;
+  }
+}
 
-    @media (min-width: breakpoints.$breakpoint-m) {
-      display: inline;
-      fill: currentcolor;
-    }
+.arrowDesktop {
+  display: none;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    display: inline;
+    fill: currentcolor;
   }
 }
 

@@ -1,29 +1,38 @@
-.spacing {
-  padding-bottom: var(--spacing-l);
-}
-
 .descriptionList {
-  --description-list-dd-margin: 0;
-  --description-dd-weight: var(--font-weight-regular);
-  --description-dt-weight: var(--font-weight-bold);
   --description-list-columns: auto-fit;
 
-  display: grid;
   margin: 0;
-  font-size: var(--font-size-m);
-  font-weight: var(--font-weight-regular);
-  gap: var(--spacing-s) var(--spacing-m);
-  line-height: var(--semantic-line-height-default);
 
-  &DescriptionBold {
-    --description-dd-weight: var(--font-weight-bold);
+  &:where([data-size='medium']) {
+    font-size: var(--font-size-m);
   }
 
-  &TermRegular {
+  &[data-size='small'] {
+    font-size: var(--font-size-s);
+  }
+
+  &[data-has-spacing='true'] {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &:where([data-term-weight='bold']) {
+    --description-dt-weight: var(--font-weight-bold);
+  }
+
+  &[data-term-weight='regular'] {
     --description-dt-weight: var(--font-weight-regular);
   }
 
-  &_horizontal {
+  &[data-description-weight='bold'] {
+    --description-dd-weight: var(--font-weight-bold);
+  }
+
+  &:where([data-description-weight='regular']) {
+    --description-dd-weight: var(--font-weight-regular);
+  }
+
+  &:where([data-variant='horizontal']) {
+    display: grid;
     gap: var(--spacing-m) var(--spacing-l);
     grid-template-columns: repeat(
       var(--description-list-columns),
@@ -32,21 +41,17 @@
     line-height: var(--semantic-line-height-article);
   }
 
-  &_vertical {
+  &:where([data-variant='vertical']) {
+    display: grid;
+    gap: var(--spacing-s) var(--spacing-m);
     grid-template-columns: max-content 1fr;
-    grid-template-rows: repeat(auto-fill, 1fr);
     line-height: var(--semantic-line-height-default);
 
-    &Vertical {
-      gap: 0;
-      grid-template-columns: minmax(min-content, 1fr);
-
+    &[data-description-direction='vertical'] {
       --description-list-dd-margin: 0 0 var(--spacing-s);
-    }
-  }
 
-  &_small {
-    font-size: var(--font-size-s);
+      display: block;
+    }
   }
 }
 

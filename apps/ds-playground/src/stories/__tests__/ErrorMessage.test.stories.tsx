@@ -3,6 +3,8 @@ import { expect, within } from 'storybook/test';
 
 import { ErrorMessage } from '@skatteetaten/ds-forms';
 
+const defaultText = 'Feilmelding';
+
 const meta = {
   component: ErrorMessage,
   title: 'Tester/ErrorMessage',
@@ -22,21 +24,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultText,
+  },
 } satisfies Meta<typeof ErrorMessage>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText = 'Feilmelding';
-
-const defaultArgs = {
-  showError: false,
-  children: defaultText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -59,7 +56,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5, B1)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -73,9 +69,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({
     canvasElement,
@@ -94,9 +88,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Default (A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const container = canvas.getAllByRole('generic')[1];
@@ -112,7 +104,6 @@ export const Defaults = {
 export const WithPElement = {
   name: 'With <p>-element (B1)',
   args: {
-    ...defaultArgs,
     showError: true,
   },
   argTypes: {
@@ -137,7 +128,6 @@ export const WithLongText = {
   render: TemplateWithInput,
   name: 'With Long Text (A3)',
   args: {
-    ...defaultArgs,
     showError: true,
     children:
       'Dette blir en veldig lang feilmelding for å teste om du oppfører seg om den skal.',
@@ -153,7 +143,6 @@ export const WithLongTextAndBreaking = {
   render: TemplateWithInput,
   name: 'With Long Text And Breaking',
   args: {
-    ...defaultArgs,
     showError: true,
     children:
       'Detteblirenveldiglangfeilmeldingforåtesteomduoppførersegomdenskal.',

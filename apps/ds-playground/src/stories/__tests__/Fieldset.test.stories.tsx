@@ -1,15 +1,26 @@
 import { JSX } from 'react';
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import {
+  expect,
+  fireEvent,
+  fn,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test';
 
-import { Fieldset, FieldsetProps } from '@skatteetaten/ds-forms';
+import { Fieldset } from '@skatteetaten/ds-forms';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 import { Alert } from '@skatteetaten/ds-status';
-import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
+
+const defaultLegendText = 'Ledetekst';
+const defaultDescription = 'Kort hjelpetekst';
+const defaultHelpText =
+  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
 
 const meta = {
   component: Fieldset,
@@ -34,7 +45,6 @@ const meta = {
     },
     hideLegend: { table: { disable: true } },
     legend: { table: { disable: true } },
-    showRequiredMark: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     disabled: { table: { disable: true } },
@@ -49,23 +59,17 @@ const meta = {
     imageSnapshot: { disableSnapshot: false },
     htmlValidate: { test: 'off' }, //TODO: hvordan håndtere at Help er child av legend og rendrer div som mottar ReactNote
   },
+  args: {
+    legend: defaultLegendText,
+    children: <div>{'Innhold'}</div>,
+  },
 } satisfies Meta<typeof Fieldset>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultDescription = 'Kort hjelpetekst';
-const defaultHelpText =
-  'Vi trenger å vite navnet ditt dersom vi skal kontakte deg senere.';
-const defaultLegendText = 'Ledetekst';
-const defaultArgs: FieldsetProps = {
-  legend: defaultLegendText,
-  children: <div>{'Innhold'}</div>,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLFieldSetElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -88,7 +92,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -103,9 +106,7 @@ export const WithAttributes = {
     form: { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -121,7 +122,6 @@ export const WithAttributes = {
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
-    ...defaultArgs,
     classNames: {
       container: 'dummyClassname',
       legend: 'dummyClassname',
@@ -149,9 +149,7 @@ export const WithCustomClassNames = {
 
 export const Defaults = {
   name: 'Default (FS-A1, FS-A2, FS-A4, A2, A3, B1)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     legend: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -178,9 +176,7 @@ export const WithAriaDescribedBy = {
       </>
     );
   },
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -203,7 +199,6 @@ export const WithAriaDescribedBy = {
 export const WithDescription = {
   name: 'With Description (FS-A3)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
   },
   argTypes: {
@@ -218,46 +213,9 @@ export const WithDescription = {
   },
 } satisfies Story;
 
-export const WithShowRequiredMark = {
-  name: 'With ShowRequiredMark (FS-A4)',
-  args: {
-    ...defaultArgs,
-    showRequiredMark: true,
-  },
-  argTypes: {
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
-export const WithShowRequiredMarkAndLegend = {
-  name: 'With ShowRequiredMark And Legend Contains Markup (FS-A4)',
-  args: {
-    ...defaultArgs,
-    legend: (
-      <>
-        <Heading as={'h1'} level={3}>
-          {'Dette er en Heading i legend'}
-        </Heading>
-        <Paragraph variant={'ingress'}>
-          <em>{'Dette er en italic Paragraph med ingress variant i legend'}</em>
-        </Paragraph>
-      </>
-    ),
-    showRequiredMark: true,
-  },
-  argTypes: {
-    legend: {
-      table: { disable: true },
-      control: { disable: true },
-    },
-    showRequiredMark: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithHideLegend = {
   name: 'With HideLegend (FS-A7)',
   args: {
-    ...defaultArgs,
     description: defaultDescription,
     helpText: defaultHelpText,
     hideLegend: true,
@@ -279,7 +237,6 @@ export const WithHideLegend = {
 export const WithSpacing = {
   name: 'With Spacing (A2)',
   args: {
-    ...defaultArgs,
     hasSpacing: true,
   },
   argTypes: {
@@ -290,7 +247,6 @@ export const WithSpacing = {
 export const WithDisabled = {
   name: 'With Disabled (A4)',
   args: {
-    ...defaultArgs,
     disabled: true,
     helpText: 'Hjelpeknappen skal også være disabled',
   },
@@ -312,7 +268,6 @@ export const WithDisabled = {
 export const WithHelpTextSvgPathAndTitle = {
   name: 'With HelpText HelpSvgPath And TitleHelpSvg (FS-A1, FS-A5 delvis, FS-B2 delvis)',
   args: {
-    ...defaultArgs,
     helpText: defaultHelpText,
     helpSvgPath: WarningSVGpath,
     titleHelpSvg: 'Tooltip',
@@ -337,7 +292,6 @@ export const WithHelpTextSvgPathAndTitle = {
 export const WithLongLegend = {
   name: 'With Long Legend And HelpText And Description',
   args: {
-    ...defaultArgs,
     legend: loremIpsumWithoutSpaces,
     helpText: defaultHelpText,
     description: defaultDescription,
@@ -357,13 +311,16 @@ export const WithLongLegend = {
 export const WithHelpToggleEvent = {
   name: 'With onHelpToggle Event',
   args: {
-    ...defaultArgs,
     helpText: 'Hjelpetekst',
-    onHelpToggle: (isOpen: boolean): void => {
-      alert(isOpen ? 'Hjelpetekst blir vist' : 'Hjelpetekst skjules');
-    },
+    onHelpToggle: fn(),
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const helpButton = canvas.getByRole('button');
+    await fireEvent.click(helpButton);
+    await waitFor(() => expect(args.onHelpToggle).toHaveBeenCalled());
   },
 } satisfies Story;

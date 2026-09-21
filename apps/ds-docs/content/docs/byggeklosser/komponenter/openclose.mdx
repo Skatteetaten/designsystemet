@@ -1,0 +1,66 @@
+---
+title: OpenClose
+description: OpenClose brukes til å vise og skjule utdypende informasjon slik at siden blir enklere å skanne. Kun brukere som trenger detaljene åpner dem, mens andre kan hoppe videre uten visuell støy.
+icon: /illustrations/openclose.svg
+---
+
+<Canvas examplesPath="components/openclose" />
+
+## Bruk OpenClose når
+
+- siden inneholder informasjon som bare enkelte brukere trenger
+- du ønsker å redusere mengden synlig informasjon og samtidig kunne ha den tilgjengelig
+- du vil gi brukeren kontroll over å åpne/lukke detaljer i innholdet
+
+## Unngå OpenClose når
+
+- informasjonen eller handlinger er viktige for alle brukere og må være synlig
+- innholdsmengden er svært liten — vis det heller direkte
+
+## Hvorfor vi anbefaler dette
+
+- OpenClose brukes for innhold som vises enkeltvis, mens Accordion brukes for grupper av seksjoner.
+- Ikonet til venstre gjør det lettere å oppfatte at overskriften kan åpnes og lukkes, særlig for brukere med skjermforstørring og ved lange tekster. En standard plassering gjør også komponenten mer forutsigbar når den brukes flere steder.
+
+## Varianter og når bør du bruke dem
+
+### Stor og liten variant
+
+- **Stor:** Ved lengre tekster eller når innholdet er viktigere.
+- **Liten:** For mindre detaljer eller kompakte flater.
+
+### Ikonplassering
+
+- Ikon til venstre (standard): Best for universell utforming, siden ikonet kommer først i lese- og tabrekkefølge.
+- Ikon til høyre: Tar mindre plass på mobil og gir visuelt renere uttrykk.
+
+### Plassering og justering
+
+- Unngå at mange OpenClose‑elementer står etter hverandre uten klar relevans.
+- Hold åpne/lukk-knappens tekst kort og meningsbærende.
+
+### Interaksjon og tilstander
+
+- Komponentens ikon roteres ved åpning/lukking.
+- Ikonet er dekorativt og skjules for skjermleser — funksjonen ivaretas i koden.
+- Teksten i knappen skal tydelig indikere hva som åpnes/lukkes.
+- Åpne/lukke‑tilstanden kommuniseres semantisk for skjermleser.
+
+## Tekst
+
+- Knappeteksten skal være kort, tydelig og gi brukeren en klar forventning om innholdet.
+- Unngå unødvendige ord som «Vis mer informasjon om …».
+- Bruk klare og selvforklarende begreper.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Standard ikonplassering er til venstre fordi pilen da kommer tydelig frem ved bruk av skjermforstørring, også når overskriften er lang. Det gjør det enklere å oppfatte hvor man kan åpne og lukke innholdet.
+- Det meningsbærende ikonet er skjult for skjermleser fordi funksjonen håndteres [semantisk](wordinfo:semantisk).
+- Sikre god kontrast og tydelige fokusmarkeringer.
+- Teksten må alene fortelle hva som skjer når komponenten åpnes eller lukkes.
+
+import { OpenClose } from '@skatteetaten/ds-collections';
+
+## Props
+
+<TypeTable of={OpenClose} />

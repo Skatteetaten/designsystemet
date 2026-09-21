@@ -1,0 +1,203 @@
+---
+title: Rollebytte og representasjon
+description: Denne eksempelsiden viser hvordan publikumsløsninger kan løse valg, visning og bytte av representasjon ved hjelp av komponentene i designsystemet. Målet er å skape en konsistent opplevelse på tvers av tjenester, redusere behovet for lokale tolkninger og gjøre det enklere å lage gode løsninger med ferdige komponenter.
+---
+
+## Hvorfor vi anbefaler denne løsningen
+
+Mange av Skatteetatens tjenester brukes på vegne av andre enn den som har logget inn, for eksempel:
+
+- en person representerer en virksomhet
+- en person kan ha mange virksomheter å bytte mellom
+- en person er verge for en annen
+
+Når rollebytte og representasjon løses ulikt i ulike tjenester, kan det skape usikkerhet om hvem brukeren handler på vegne av. Målet er ikke bare å gjøre rollebytte mulig, men å gjøre det tydelig hvem brukeren representerer til enhver tid. Designsystemet tilbyr derfor en anbefalt, helhetlig løsning som kan brukes på tvers av tjenester ved å kombinere følgende komponenter:
+
+- [TopBannerExternal](/byggeklosser/komponenter/topbannerexternal)
+- [RolePicker](/byggeklosser/komponenter/rolepicker)
+- [RoleBanner](/byggeklosser/komponenter/rolebanner)
+
+Sammen dekker disse komponentene de vanligste behovene for:
+
+- velge representasjon
+- vise aktiv representasjon
+- bytte representasjon
+
+Dersom tjenesten din har behov som ikke dekkes av denne løsningen, bør det vurderes sammen med designsystemteamet.
+
+## Typisk brukerreise
+
+Hvordan representasjon velges avhenger av brukerens situasjon.
+
+### Brukere med få representasjoner (færre enn 10)
+
+1. Brukeren logger inn som seg selv.
+2. Tjenesten åpnes direkte.
+3. Aktiv representasjon vises i grensesnittet.
+4. Brukeren kan bytte representasjon fra brukermenyen ved behov.
+
+### Brukere med mange representasjoner (10 eller flere)
+
+1. Brukeren logger inn.
+2. Brukeren velger hvem hen skal representere i RolePicker.
+3. Tjenesten åpnes med valgt representasjon.
+4. Aktiv representasjon vises i grensesnittet.
+5. Brukeren kan bytte representasjon ved behov.
+
+### Fullt eksempel (mange representasjoner)
+
+<Canvas examplesPath="composed/representasjon/fullt-eksempel" />
+
+## Velge representasjon
+
+Bruk RolePicker-komponenten når brukeren må velge hvem hen skal representere.
+
+### Når brukeren må velge representasjon
+
+Bruk dette oppsettet når brukeren ikke kan gå videre i tjenesten før representasjon er valgt.
+
+Hvilke valg som vises, avhenger av hvilke data brukeren har tilgang til:
+
+import { Panel } from '@skatteetaten/ds-content';
+import { List } from '@skatteetaten/ds-typography';
+import styles from './bytte-representasjon.module.scss';
+
+<Panel
+  className={styles.maxWidth100}
+  color={'denim'}
+  padding={'m'}
+  spacing={'l'}
+  variant={'filled'}
+  title={'Designsystemet anbefaler'}
+>
+  <List>
+    <List.Element>Åpne representasjonsvelgeren dynamisk og i tråd med brukerflyten.</List.Element>
+    <List.Element>Vis bare representasjonsvelgeren når brukeren har representasjoner å velge mellom.</List.Element>
+    <List.Element>Bruk RolePicker fremfor egne velgere.</List.Element>
+  </List>
+</Panel>
+
+### Få representasjoner
+
+Når brukeren har få representasjoner tilgjengelig, kan alle valgene vises direkte i representasjonsvelgeren, uten å vise søk.
+
+<Canvas examplesPath="composed/representasjon/faa-representasjoner" />
+
+### Mange representasjoner
+
+Når brukeren har mange representasjoner tilgjengelig, skal brukeren kunne søke og filtrere.
+
+<Canvas examplesPath="composed/representasjon/mange-representasjoner" />
+
+<Panel
+  className={styles.maxWidth100}
+  color={'denim'}
+  padding={'m'}
+  spacing={'l'}
+  variant={'filled'}
+  title={'Designsystemet anbefaler'}
+>
+  <List>
+    <List.Element>Bruk innebygd søk fremfor å lage egne søkeløsninger.</List.Element>
+    <List.Element>Vis representasjoner på en konsistent måte på tvers av tjenester.</List.Element>
+  </List>
+</Panel>
+
+## Vise aktiv representasjon
+
+Når brukeren representerer andre enn seg selv, bør aktiv representasjon være synlig gjennom hele tjenesten: Bruk RoleBanner til det.
+
+### Virksomhet
+
+<Canvas examplesPath="composed/representasjon/vise-aktiv-representasjon-virksomhet" />
+
+### Verge
+
+<Canvas examplesPath="composed/representasjon/vise-aktiv-representasjon-verge" />
+
+<Panel
+  className={styles.maxWidth100}
+  color={'denim'}
+  padding={'m'}
+  spacing={'l'}
+  variant={'filled'}
+  title={'Designsystemet anbefaler'}
+>
+  <List>
+    <List.Element>Vis alltid hvem brukeren representerer.</List.Element>
+    <List.Element>La informasjonen være synlig gjennom hele oppgaven.</List.Element>
+    <List.Element>Bruk standardvariantene i RoleBanner.</List.Element>
+  </List>
+</Panel>
+
+### Når skal RoleBanner vises?
+
+Vis alltid RoleBanner når brukeren representerer en virksomhet eller representerer en annen person. Vis normalt _ikke_ RoleBanner når brukeren representerer seg selv.
+
+Unntak: Dersom brukeren ikke kan se hvem som er innlogget gjennom TopBannerExternal eller annen synlig identitetsinformasjon, kan RoleBanner brukes for å gjøre innlogget bruker synlig, da som en nedtonet grå variant.
+
+## Bytte representasjon
+
+Brukeren skal kunne starte rollebytte fra brukermenyen i TopBannerExternal.
+
+### Når brukeren vil bytte representasjon
+
+Brukeren åpner brukermenyen og velger «Bytt bruker» for å åpne representasjonsvelgeren. Hvilke valg som vises der, avhenger av hvilke representasjoner brukeren faktisk kan bytte til.
+
+### Virksomheter og personer med ulike statuser
+
+Brukere kan ha tilgang til ulike typer virksomheter, for eksempel en aktiv virksomhet, en underenhet eller en avviklet virksomhet.
+
+Det samme kan gjelde personer brukeren representerer, for eksempel personer brukeren er verge for og personer som er avdøde.
+
+<Canvas examplesPath="composed/representasjon/ulike-statuser" />
+
+<Panel
+  className={styles.maxWidth100}
+  color={'denim'}
+  padding={'m'}
+  spacing={'l'}
+  variant={'filled'}
+  title={'Designsystemet anbefaler'}
+>
+  <List>
+    <List.Element>Vis virksomheter slik de er definert i komponenten.</List.Element>
+    <List.Element>Ikke lag egne representasjoner av virksomhetsstruktur.</List.Element>
+    <List.Element>Ikke vis avdøde personer fra start, men la brukeren aktivt slå på filteret selv.</List.Element>
+  </List>
+</Panel>
+
+### Manglende tilgang
+
+I enkelte tilfeller kan brukeren velge en [part](wordinfo:part) som ikke har tilgang til tjenesten. Brukeren bør da få tydelig informasjon om hvorfor hen ikke kan fortsette.
+
+I noen tjenester kan det ta litt tid å avklare om en part har tilgang. Da kan det være hensiktsmessig å sjekke tilgang i det øyeblikket brukeren starter på vegne av valgt part, i stedet for å kontrollere alle på forhånd. Hvis svaret kommer raskt og dere vet at en part ikke har tilgang, kan dere også vurdere å ikke vise parten i listen.
+
+<Canvas examplesPath="composed/representasjon/manglende-tilgang" />
+
+### Tjenester som kun er tilgjengelige for én representasjonstype
+
+Noen tjenester er kun tilgjengelige for én representasjonstype.
+
+Eksempel 1: Tjenesten gjelder kun virksomhet, for eksempel merverdiavgift. Hvis brukeren er innlogget som privatperson, må brukeren velge virksomhet før tjenesten starter.
+
+Eksempel 2: Tjenesten gjelder kun privatperson. Hvis brukeren er innlogget på vegne av en virksomhet, må brukeren bytte til seg selv før tjenesten starter.
+
+<Canvas examplesPath="composed/representasjon/tjeneste-med-krav-til-representasjonstype" />
+
+## Ting å verifisere
+
+- RolePicker fungerer med tastatur.
+- Fokus flyttes til riktig sted ved åpning og lukking.
+- RoleBanner er synlig uten å dekke viktig innhold.
+- Rollebytte fungerer på små skjermer.
+- Viktig informasjon skjules ikke bak menyer eller overlays.
+
+## Fremtidige eksempler
+
+Følgende scenarioer er planlagt dokumentert senere:
+
+- regnskapsførere
+- revisorer
+- brukere med svært mange representasjoner
+- ekspertvisning / avansert representasjon

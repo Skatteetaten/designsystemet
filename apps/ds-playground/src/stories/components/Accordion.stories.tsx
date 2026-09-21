@@ -3,12 +3,7 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button, IconButton, Link } from '@skatteetaten/ds-buttons';
-import {
-  Accordion,
-  getAccordionBackgroundColorDefault,
-  getAccordionIconPositionDefault,
-  getAccordionSizeDefault,
-} from '@skatteetaten/ds-collections';
+import { Accordion } from '@skatteetaten/ds-collections';
 import { DescriptionList } from '@skatteetaten/ds-content';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 import {
@@ -44,30 +39,11 @@ const meta = {
   argTypes: {
     // Props
     children: { control: false, table: { category: category.props } },
-    color: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAccordionBackgroundColorDefault() },
-      },
-    },
-    size: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAccordionSizeDefault() },
-      },
-    },
-    iconPosition: {
-      control: 'radio',
-      table: {
-        category: category.props,
-        defaultValue: { summary: getAccordionIconPositionDefault() },
-      },
-    },
+    color: { table: { category: category.props } },
+    size: { table: { category: category.props } },
+    iconPosition: { table: { category: category.props } },
   },
   args: {
-    iconPosition: 'right',
     children: defaultChildren,
   },
 } satisfies Meta<typeof Accordion>;
@@ -82,7 +58,6 @@ export const Preview: Story = {
 export const StandardRightIcon: Story = {
   name: 'Standard med høyreikon',
   args: {
-    iconPosition: 'right',
     children: defaultChildren,
   },
 } satisfies Story;
@@ -180,7 +155,7 @@ export const LeftMenu: Story = {
               <IconButton
                 svgPath={CopySVGpath}
                 title={'Kopier organisasjonsnummeret'}
-                size={'extraSmall'}
+                size={'small'}
                 onClick={() => {
                   navigator.clipboard.writeText('999999999');
                 }}
@@ -261,10 +236,7 @@ export const WorkTask: Story = {
         </DescriptionList>
         <Accordion iconPosition={'left'} className={'bottomSpacingL'}>
           <Accordion.Item title={'Informasjon fra skattemeldingen'}>
-            <Table
-              caption={'Informasjon fra skattemeldingen'}
-              size={'extraSmall'}
-            >
+            <Table caption={'Informasjon fra skattemeldingen'} size={'small'}>
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell scope={'col'}>
@@ -329,7 +301,7 @@ export const WorkTask: Story = {
         <Heading as={'h2'} level={3} hasSpacing>
           {'Valg for saken'}
         </Heading>
-        <RadioGroup legend={'valg for saken'} hideLegend>
+        <RadioGroup legend={'valg for saken'} hasSpacing hideLegend>
           <RadioGroup.Radio>{'Mangler dokumentasjon'}</RadioGroup.Radio>
           <RadioGroup.Radio>{'Opprett nytt krav'}</RadioGroup.Radio>
           <RadioGroup.Radio>{'Godta krav'}</RadioGroup.Radio>

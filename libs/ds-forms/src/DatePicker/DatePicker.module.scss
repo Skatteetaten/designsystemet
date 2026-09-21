@@ -10,10 +10,6 @@
   display: flex;
   width: 100%;
   max-width: 10.25rem;
-
-  &MarginTop {
-    margin-top: var(--spacing-xs);
-  }
 }
 
 .input[aria-invalid='true'] + button.calendarButton {
@@ -48,10 +44,6 @@
   line-height: var(--semantic-line-height-input);
   outline: 0;
   outline-offset: 0;
-
-  &_large {
-    padding: var(--spacing-s);
-  }
 
   &[aria-invalid='true'] {
     box-shadow: inset 0 0 0 2px var(--semantic-danger-foreground);
@@ -105,10 +97,6 @@
 
   & .icon {
     fill: var(--palette-azure-70);
-  }
-
-  &_large {
-    padding: var(--spacing-s);
   }
 
   &:disabled {

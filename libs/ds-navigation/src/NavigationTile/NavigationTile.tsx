@@ -1,7 +1,7 @@
 import { JSX, useEffect, useImperativeHandle, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { dsI18n, getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import {
   ArrowForwardSVGpath,
   ExternalIcon,
@@ -9,11 +9,6 @@ import {
 } from '@skatteetaten/ds-icons';
 import { Spinner } from '@skatteetaten/ds-progress';
 
-import {
-  getNavigationTileHeadingAsDefault,
-  getNavigationTileHideArrowDefault,
-  getNavigationTileSizeDefault,
-} from './defaults';
 import { NavigationTileProps } from './NavigationTile.types';
 
 import styles from './NavigationTile.module.scss';
@@ -21,23 +16,22 @@ import styles from './NavigationTile.module.scss';
 /**
  * NavigationTile
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-navigationtile--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/navigationtile/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/navigationtile)
  */
 export const NavigationTile = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   title,
-  titleAs: TitleTag = getNavigationTileHeadingAsDefault(),
+  titleAs: TitleTag = 'h2',
   classNames,
   description,
-  hasSpinner,
-  isExternal,
-  hideArrowIcon = getNavigationTileHideArrowDefault(),
-  size = getNavigationTileSizeDefault(),
+  hasSpinner = false,
+  isExternal = false,
+  hideArrowIcon = false,
+  size = 'large',
   spinnerTitle,
   svgPath,
   href,
@@ -117,7 +111,7 @@ export const NavigationTile = ({
         {hasSpinner && (
           <Spinner
             className={spinnerClassNames}
-            color={'blue'}
+            color={'interactive'}
             size={size === 'extraLarge' ? 'large' : 'medium'}
             hideTitle
           >
@@ -149,9 +143,3 @@ export const NavigationTile = ({
 };
 
 NavigationTile.displayName = 'NavigationTile';
-
-export {
-  getNavigationTileHeadingAsDefault,
-  getNavigationTileHideArrowDefault,
-  getNavigationTileSizeDefault,
-};

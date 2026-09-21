@@ -5,9 +5,9 @@ import { expect, userEvent, within, waitFor, fn } from 'storybook/test';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPickerButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPickerButton/TopBannerLangPickerButton';
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { TopBannerLangPickerButtonProps } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPickerButton/TopBannerLangPickerButton.types';
 import { ReactComponent as NorwegianFlagIcon } from '../../assets/no-flag.svg';
+
+const buttonText = 'Bokmål';
 
 const meta = {
   component: TopBannerLangPickerButton,
@@ -16,7 +16,6 @@ const meta = {
     // Baseprops
     ref: { table: { disable: true } },
     className: { table: { disable: true } },
-    classNames: { table: { disable: true } },
     id: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
@@ -32,20 +31,17 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
+  args: {
+    flagIcon: <NorwegianFlagIcon />,
+    children: buttonText,
+  },
 } as Meta<typeof TopBannerLangPickerButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const buttonText = 'Bokmål';
-const defaultArgs: TopBannerLangPickerButtonProps = {
-  flagIcon: <NorwegianFlagIcon />,
-  children: buttonText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -65,7 +61,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlid',
     className: 'dummyClassname',
     lang: 'nb',
@@ -78,9 +73,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -94,9 +87,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (LanguagePicker A1, B1, B2, C1 delvis)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     flagIcon: { table: { disable: false } },
     children: { table: { disable: false } },
@@ -121,7 +112,6 @@ export const Defaults = {
 export const WithAriaCurrent = {
   name: 'With AriaCurrent (LanguagePicker A1, B2)',
   args: {
-    ...defaultArgs,
     ariaCurrent: true,
   },
   argTypes: {
@@ -159,7 +149,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (LanguagePicker A4)',
   args: {
-    ...defaultArgs,
     onClick: fn(),
   },
   play: async ({ args, canvasElement }): Promise<void> => {

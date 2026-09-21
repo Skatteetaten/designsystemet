@@ -7,14 +7,9 @@ import {
   useLayoutEffect,
 } from 'react';
 
-import {
-  getCommonClassNameDefault,
-  getCommonFormVariantDefault,
-  useValidateFormRequiredProps,
-} from '@skatteetaten/ds-core-utils';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
 
-import { getSelectPlaceholderDefault } from './defaults';
 import { SelectComponent, SelectProps } from './Select.types';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
@@ -23,16 +18,18 @@ import { SelectOption } from './SelectOption/SelectOption';
 
 import styles from './Select.module.scss';
 
+export const getDefaultSelectPlaceholder = (): string =>
+  dsI18n.t('Shared:shared.ChooseValue');
+
 /**
  * Select
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-select--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/select/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/select)
  */
-export const Select = (({
+export const Select = ({
   ref,
   id: externalId,
-  className = getCommonClassNameDefault(),
+  className = '',
   classNames,
   lang,
   'data-testid': dataTestId,
@@ -42,28 +39,24 @@ export const Select = (({
   helpSvgPath,
   helpText,
   label,
-  placeholder = getSelectPlaceholderDefault(),
+  placeholder = getDefaultSelectPlaceholder(),
   titleHelpSvg,
-  variant = getCommonFormVariantDefault(),
   value,
   ariaDescribedBy,
-  autoComplete,
-  disabled,
+  autoComplete = 'off',
+  disabled = false,
   form,
   name,
-  required,
-  hasSpacing,
-  hideLabel,
-  hidePlaceholder,
-  showRequiredMark,
+  required = false,
+  hasSpacing = false,
+  hideLabel = false,
+  hidePlaceholder = false,
   onBlur,
   onChange,
   onFocus,
   onHelpToggle,
   children,
 }: SelectProps): JSX.Element => {
-  useValidateFormRequiredProps({ required, showRequiredMark });
-
   const selectRef = useRef<HTMLSelectElement>(null);
   useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
 
@@ -71,14 +64,6 @@ export const Select = (({
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
   const selectId = externalId ?? generatedId;
-
-  const isLarge = variant === 'large';
-  const selectClassName = `${styles.select} ${
-    isLarge ? styles.select_large : ''
-  }`.trim();
-  const selectIconClassName = `${styles.selectIcon} ${
-    isLarge ? styles.selectIcon_large : ''
-  }`.trim();
 
   const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
   useLayoutEffect(() => {
@@ -112,7 +97,6 @@ export const Select = (({
         classNames={classNames}
         htmlFor={selectId}
         hideLabel={hideLabel}
-        showRequiredMark={showRequiredMark}
         description={description}
         descriptionId={descriptionId}
         helpSvgPath={helpSvgPath}
@@ -124,14 +108,14 @@ export const Select = (({
         {label}
       </LabelWithHelp>
       <div
-        className={`${styles.selectContainer} ${label && !hideLabel ? styles.selectContainerMarginTop : ''} ${
+        className={`${styles.selectContainer} ${
           classNames?.selectContainer ?? ''
         }`.trim()}
       >
         <select
           ref={selectRef}
           id={selectId}
-          className={selectClassName}
+          className={styles.select}
           data-testid={dataTestId}
           autoComplete={autoComplete}
           disabled={disabled}
@@ -157,7 +141,7 @@ export const Select = (({
           {!hidePlaceholder && <option value={''}>{placeholder}</option>}
           {children}
         </select>
-        <ChevronDownIcon className={selectIconClassName} />
+        <ChevronDownIcon className={styles.selectIcon} />
       </div>
       <ErrorMessage
         id={errorId}
@@ -168,7 +152,9 @@ export const Select = (({
       </ErrorMessage>
     </div>
   );
-}) as SelectComponent;
+};
+
+export default Select as SelectComponent;
 
 Select.displayName = 'Select';
 Select.Option = SelectOption;

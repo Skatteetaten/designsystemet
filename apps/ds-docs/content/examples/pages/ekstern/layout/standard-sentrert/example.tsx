@@ -1,0 +1,217 @@
+import { JSX, useState, useId } from 'react';
+
+import { Link } from '@skatteetaten/ds-buttons';
+import { StepList } from '@skatteetaten/ds-collections';
+import { Card, Panel } from '@skatteetaten/ds-content';
+import { Checkbox, ErrorSummary, RadioGroup } from '@skatteetaten/ds-forms';
+import { InfoIcon } from '@skatteetaten/ds-icons';
+import { Footer, TopBannerExternal } from '@skatteetaten/ds-layout';
+import { Breadcrumbs } from '@skatteetaten/ds-navigation';
+import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
+
+import styles from './ExternalLayout.module.scss';
+
+export default function StandardSentrertLayout(): JSX.Element {
+  const stepId = useId();
+  const [activeStep, setActiveStep] = useState(1);
+  const [step2, setStep2] = useState<string | undefined>(undefined);
+  const [hasStep2Error, setHasStep2Error] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+  const [isConfirmed, setIsConfirmed] = useState(false);
+  const [hasConfirmError, setHasConfirmError] = useState(false);
+  const onNext = (): void => {
+    const nextStep = activeStep + 1;
+    setActiveStep(nextStep);
+  };
+
+  return (
+    <>
+      <TopBannerExternal />
+      <main className={styles.mainContent}>
+        <Breadcrumbs className={styles.marginBottomXL}>
+          <Breadcrumbs.List shouldCollapse>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>{'Breadcrumb 1'}</Breadcrumbs.Link>
+            </Breadcrumbs.Item>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>{'Breadcrumb 2'}</Breadcrumbs.Link>
+            </Breadcrumbs.Item>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>{'Breadcrumb 3'}</Breadcrumbs.Link>
+            </Breadcrumbs.Item>
+            <Breadcrumbs.Item>
+              <Breadcrumbs.Link href={'#'}>{'Breadcrumb 4'}</Breadcrumbs.Link>
+            </Breadcrumbs.Item>
+          </Breadcrumbs.List>
+        </Breadcrumbs>
+        <div className={styles.article}>
+          <Heading as={'h1'} level={2} hasSpacing>
+            {'Eksempel på layout i publikumsløsninger'}
+          </Heading>
+          <Paragraph hasSpacing>
+            {
+              'Layouten er sentret. På større skjermer har man flere containerbredder til rådighet. På mobil er det normalt bare én. Denne teksten ligger i en container med bredden --semantic-responsive-article. Containerbredder er dokumentert på Designtokens-undersiden: '
+            }
+            <Link
+              href={'/designsystemet/byggeklosser/designtokens/containere'}
+              target={'_top'} // Naviger ut av iframen og til hovedsiden
+            >
+              {'Containers'}
+            </Link>
+            {'.'}
+          </Paragraph>
+        </div>
+        <div className={styles.wideContent}>
+          <Panel
+            className={styles.marginBottomXL}
+            variant={'filled'}
+            titleAs={'h2'}
+            title={'Størrelser er en del av komponentene'}
+            renderIcon={(): JSX.Element => <InfoIcon size={'largePlus'} />}
+          >
+            {
+              'Denne Panelen ligger i en container med bredden --semantic-responsive-wide-content. Innholdet i Panel har en innebygd containerbredde på --semantic-responsive-article, for å venstre- og høyrejustere denne teksten med resten av siden.'
+            }
+          </Panel>
+        </div>
+        <StepList className={styles.marginBottomXL}>
+          {activeStep >= 1 && (
+            <StepList.Step
+              id={`${stepId}-1`}
+              variant={activeStep === 1 ? 'active' : 'passive'}
+              title={'StepList har også en innebygd containerbredde'}
+              stepNumber={1}
+              onNext={onNext}
+            >
+              {
+                'Stegene i StepList har fått en bredde på --semantic-responsive-article. Dette gjør at innholdet i stegene er venstre- og høyrejustert med resten av siden.'
+              }
+            </StepList.Step>
+          )}
+
+          {activeStep >= 2 && (
+            <StepList.Step
+              id={`${stepId}-2`}
+              variant={activeStep === 2 ? 'active' : 'passive'}
+              title={'Vil du gå videre?'}
+              stepNumber={2}
+              onEdit={
+                activeStep > 3 && activeStep < 5
+                  ? (): void => setActiveStep(2)
+                  : undefined
+              }
+              onNext={(): void => {
+                if (step2) {
+                  onNext();
+                } else {
+                  setHasStep2Error(true);
+                }
+              }}
+            >
+              {activeStep === 2 ? (
+                <>
+                  <RadioGroup
+                    legend={'Vil du gå videre?'}
+                    errorMessage={
+                      hasStep2Error ? 'Kryss av om du vil gå videre' : undefined
+                    }
+                    hasSpacing
+                    hideLegend
+                    onChange={(e): void => {
+                      setHasStep2Error(false);
+                      setStep2(e.target.value);
+                    }}
+                  >
+                    <RadioGroup.Radio
+                      id={'step2radio'}
+                      value={'ja'}
+                      description={
+                        'Velger du ja, vil du få et positivt resultat'
+                      }
+                    >
+                      {'Ja'}
+                    </RadioGroup.Radio>
+                    <RadioGroup.Radio
+                      value={'nei'}
+                      description={
+                        'Velger du nei, vil du få et nøytralt resultat'
+                      }
+                    >
+                      {'Nei'}
+                    </RadioGroup.Radio>
+                  </RadioGroup>
+                  <Paragraph hasSpacing>
+                    {
+                      'Velger du ingenting og klikker på Neste-knappen, vil du få en feilmelding.'
+                    }
+                  </Paragraph>
+                  <ErrorSummary showErrorSummary={hasStep2Error}>
+                    <ErrorSummary.Error referenceId={'step2radio'}>
+                      {'Vil du gå videre?'}
+                    </ErrorSummary.Error>
+                  </ErrorSummary>
+                </>
+              ) : (
+                <div>{step2}</div>
+              )}
+            </StepList.Step>
+          )}
+
+          {activeStep >= 3 && (
+            <StepList.Step
+              id={`${stepId}-3`}
+              variant={activeStep === 3 ? 'active' : 'passive'}
+              title={'Oppsummering før resultat'}
+              stepNumber={3}
+              nextButtonText={'Send inn'}
+              onNext={(): void => {
+                if (isConfirmed) {
+                  setHasSubmitted(true);
+                } else {
+                  setHasConfirmError(true);
+                }
+              }}
+            >
+              {activeStep === 3 ? (
+                <Card color={'ochre'} className={styles.marginTopS}>
+                  <Card.Content>
+                    <Paragraph hasSpacing>
+                      {'Oppsummering av valget ditt:'}
+                    </Paragraph>
+                    <List hasSpacing>
+                      <List.Element>{'Du har forstått innholdet'}</List.Element>
+                      <List.Element>{`Du vil se et ${step2 === 'ja' ? 'positivt' : 'nøytralt'} resultat`}</List.Element>
+                    </List>
+                    <Checkbox
+                      id={'confirmCheckbox'}
+                      checked={isConfirmed}
+                      errorMessage={
+                        hasConfirmError
+                          ? 'Du må bekrefte at opplysningene stemmer'
+                          : undefined
+                      }
+                      onChange={(e): void => {
+                        setHasConfirmError(false);
+                        setIsConfirmed(e.target.checked);
+                      }}
+                    >
+                      {'Jeg bekrefter at opplysningene ovenfor stemmer'}
+                    </Checkbox>
+                  </Card.Content>
+                </Card>
+              ) : (
+                <div>{'Oppsummering'}</div>
+              )}
+            </StepList.Step>
+          )}
+        </StepList>
+        {hasSubmitted && (
+          <Paragraph className={styles.article}>
+            {'Vis nå en egen side med kvittering'}
+          </Paragraph>
+        )}
+      </main>
+      <Footer />
+    </>
+  );
+}

@@ -18,18 +18,19 @@
   visibility: hidden;
   will-change: transform;
 
-  @media (min-width: breakpoints.$breakpoint-m) {
+  // avvikende brekkpunkt fordi knappen får for lite plass mellom 1024 og 1200 px
+  @media (width >= 1200px) {
     position: fixed;
     z-index: 100;
-    right: calc(((100vw) - var(--semantic-responsive-container)) / 2);
     bottom: 0;
+    left: calc((100vw + var(--semantic-responsive-container)) / 2);
   }
 
   &_visible {
     opacity: 1;
     visibility: visible;
 
-    @media (min-width: breakpoints.$breakpoint-m) {
+    @media (width >= 1200px) {
       bottom: var(--spacing-xl);
     }
   }

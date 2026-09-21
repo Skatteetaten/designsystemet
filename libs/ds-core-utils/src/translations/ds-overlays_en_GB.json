@@ -42,11 +42,12 @@
   "rolepicker.YouCanRepresent": "You can represent",
   "topbannerexternalusermenu.AboutMe": "About me",
   "topbannerexternalusermenu.AboutTheOrganisation": "About the business",
+  "topbannerexternalusermenu.Inbox": "Inbox",
+  "topbannerexternalusermenu.InboxCountMessage": "{{count}} unopened messages",
   "topbannerexternalusermenu.MyPage": "My page",
   "topbannerexternalusermenu.Notification": "Notification",
-  "topbannerexternalusermenu.NotificationCountMessage": "{{count}} unread notifications",
   "topbannerexternalusermenu.OnBehalfOf": "On behalf of",
-  "topbannerexternalusermenu.OneNotificationMessage": "1 unread notification ",
+  "topbannerexternalusermenu.OneInboxMessage": "1 unopened message",
   "topbannerexternalusermenu.SwitchUser": "Switch user",
   "wordinfo.WordExplanation": "word explanation"
 }

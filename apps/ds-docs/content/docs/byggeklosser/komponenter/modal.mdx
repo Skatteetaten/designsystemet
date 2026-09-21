@@ -1,0 +1,77 @@
+---
+title: Modal
+description: Modal brukes for å styre brukerens fokus ved å vise et opphøyd innholdsvindu mens resten av siden tones ned. Den hjelper brukeren å forstå hva som skjer videre i løsningen og sikrer at viktig informasjon ikke overses.
+icon: /illustrations/modal.svg
+---
+
+<Canvas examplesPath="components/modal" />
+
+## Bruk Modal når
+
+- brukeren skal fokusere på én spesifikk oppgave
+- viktig informasjon må fanges opp før brukeren går videre
+- hele tjenesten opplever en kritisk feil som må kommuniseres umiddelbart
+- du må avklare en handling som kan påvirke videre flyt
+
+## Unngå Modal når
+
+- feilmeldingen er knyttet til skjemafelt — bruk [ErrorMessage](/byggeklosser/komponenter/errormessage) i stedet
+- innholdet er komplekst og omfattende
+- brukeren må huske detaljer fra modalen senere i flyten (eller hvis brukeren må huske innholdet fra siden bak modalen for å fullføre oppgaven)
+
+## Hvorfor vi anbefaler dette
+
+- [Fokusfangst](wordinfo:fokusfangst) og [retur av fokus](wordinfo:retur-av-fokus) er de viktigste UU-kravene for modal: uten dem kan tastaturbrukere «rømme» ut til bakgrunnen, som er visuelt utilgjengelig.
+- Modal brukes når brukeren må ta stilling til noe før hen kan gå videre. Ved vanlige feilmeldinger bør en heller bruke en mindre forstyrrende løsning.
+- Vi anbefaler ikke modal for informasjon brukeren må referere til senere, fordi modalen lukkes og innholdet da er borte — bruk heller et kort, panel eller en seksjon på siden.
+
+## Varianter og når bør du bruke dem
+
+### Standard (med ramme)
+
+- Brukes i de fleste tilfeller.
+- Visuelt tydelig og egnet for generelle dialoger.
+
+### Enkel (uten ramme)
+
+- Brukes når rammen tar for mye oppmerksomhet.
+- Egnet når innholdet krever fleksibel presentasjon.
+
+### Plassering og justering
+
+- Modal vises sentrert med dus bakgrunn.
+- Tittel er obligatorisk (kan skjules visuelt, men må alltid finnes for skjermleser).
+- Modal skal ha lukkekryss med mindre brukeren må ta et eksplisitt valg for å gå videre.
+- Autolukking (klikk utenfor eller trykk på ESC) kan deaktiveres ved behov for brukerstyrt bekreftelse.
+
+### Interaksjon og tilstander
+
+- Modal lukkes ved:
+  - klikk utenfor
+  - lukkekryss
+  - avbryt‑knapp
+- Hvis autolukking er skrudd av og lukkekryss fjernet, må brukeren aktivt velge for å gå videre.
+- **Samtykkemodal:** brukes når brukeren er i ferd med å forlate tillatt flyt.
+- **Ventevarsel:** brukes etter inaktivitet (anbefalt etter 20 minutter).
+- Illustrasjoner kan brukes når de styrker oppgaven (ikke som dekor).
+
+## Tekst
+
+- Tittel må være tydelig, kort og forklarende.
+- Innholdet skal være kort, fokusert og enkelt å skanne.
+- Unngå lange og tekniske tekster i modalvinduer.
+- Gi brukeren tydelige valg og konsekvensforståelse.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Tittel leses alltid opp av skjermleser ved åpning.
+- Fokus skal flyttes inn i modalen og ikke kunne forlate den før den lukkes.
+- Etter lukking skal fokus returnere til knappen som åpnet modalen.
+- Hele siden bak modalen skal tones ned og ikke kunne navigeres med tastatur.
+- Sjekk at kontrast og visuell struktur er tilstrekkelig.
+
+import { Modal } from '@skatteetaten/ds-overlays';
+
+## Props
+
+<TypeTable of={Modal} />

@@ -57,7 +57,7 @@ export const Default: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        'ds_overlays:topbannerexternalusermenu.InboxCountMessage',
         { count: args.notificationCount }
       )}`,
     });
@@ -120,7 +120,7 @@ export const WithOneNotification: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.OneNotificationMessage'
+        'ds_overlays:topbannerexternalusermenu.OneInboxMessage'
       )}`,
     });
 
@@ -145,7 +145,7 @@ export const WithMoreThan99Notifications: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        'ds_overlays:topbannerexternalusermenu.InboxCountMessage',
         { count: args.notificationCount }
       )}`,
     });
@@ -159,9 +159,7 @@ export const WithMoreThan99Notifications: Story = {
 };
 
 export const SwitchUser: Story = {
-  args: {
-    onSwitchUserClick: fn(),
-  },
+  args: {},
   parameters: {
     imageSnapshot: { disableSnapshot: true },
   },
@@ -170,7 +168,7 @@ export const SwitchUser: Story = {
 
     const menuButton = canvas.getByRole('button', {
       name: `${userIconTitle} ${defaultUserName} ${menuText} ${dsI18n.t(
-        'ds_overlays:topbannerexternalusermenu.NotificationCountMessage',
+        'ds_overlays:topbannerexternalusermenu.InboxCountMessage',
         { count: args.notificationCount }
       )}`,
     });
@@ -344,12 +342,12 @@ export const WithCustomHostname: Story = {
     await expect(menuButton).toBeInTheDocument();
     await userEvent.click(menuButton);
 
-    const notificationLink = canvas.getByRole('link', {
-      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.Notification'),
+    const inboxLink = canvas.getByRole('link', {
+      name: dsI18n.t('ds_overlays:topbannerexternalusermenu.Inbox'),
     });
-    await expect(notificationLink).toHaveAttribute(
+    await expect(inboxLink).toHaveAttribute(
       'href',
-      'https://test.skatteetaten.no/web/minside/virksomhet/varsler'
+      'https://test.skatteetaten.no/web/minside/innboks/'
     );
   },
 };

@@ -1,0 +1,80 @@
+---
+title: Card
+description: Card (kort) brukes til å gruppere innhold av samme type. Komponenten kan inneholde knapper, tekst, grafikk, ikoner og andre elementer for å presentere informasjon og handlinger på en strukturert og lettfattelig måte.
+icon: /illustrations/card.svg
+---
+
+<Canvas examplesPath="components/card" />
+
+## Bruk Card når
+
+- du skal gruppere opplysninger i skjema, som inntekter, personer eller oppsummeringer
+- du skal vise status knyttet til en samling av opplysninger, inkludert dulting
+- du lager seksjoner i dashboards
+- du skal presentere lister, for eksempel fil-lister
+
+## Unngå Card når
+
+- innholdet er lange tekstblokker eller mye ren tekst — bruk [Panel](/byggeklosser/komponenter/panel) i stedet
+- du skal vise varsler eller feilmeldinger — bruk [Alert](/byggeklosser/komponenter/alert)
+
+## Hvorfor vi anbefaler dette
+
+- Card samler relatert informasjon i en visuell enhet. Det gjør det enklere å se hva som hører sammen og kan redusere kognitiv belastning.
+- Fargevarianter er faste for å sikre konsistens på tvers av løsninger. Friheten til å kombinere bakgrunn og ramme er begrenset for å unngå visuell støy.
+- Vi skiller mellom [Card](/byggeklosser/komponenter/card) (strukturert gruppeinnhold), [Panel](/byggeklosser/komponenter/panel) (fritekstinnhold) og [Alert](/byggeklosser/komponenter/alert) (statusbeskjed) for å gjøre det tydelig hva slags innhold brukeren kan forvente.
+
+## Varianter og når bør du bruke dem
+
+Card har flere fargevarianter:
+
+- Gul (Ochre)
+- Grønn (Forest)
+- Rød (Burgundy)
+- Blå (Denim)
+- Grå (Graphite)
+- Hvit (White)
+
+Bakgrunns- og rammefarge hører sammen og kan ikke velges separat.
+
+### Plassering og justering
+
+- Card kan brukes både enkeltvis og i lister eller grid-strukturer.
+- Innholdet i Card kan settes opp gjennom underkomponentene Header, Content og Actions.
+- Padding kan settes på hele kortet eller per underkomponent.
+- Underkomponentene arver padding fra hovedkomponenten, med mulighet for overstyring.
+
+### Interaksjon og tilstander
+
+Card inneholder en mekanisme for å vise et varsel øverst i kortet. Den kan brukes når man ønsker at brukeren skal gjøres oppmerksom på noe i kortet, for eksempel i forbindelse med dulting. Egenskapen `showAlert` styrer om varselet vises, og `onClose` viser et lukkekryss som kan brukes til å skjule det.
+
+## Tekst
+
+- Bruk tydelige overskrifter og konsis informasjon, slik at kortene er enkle å skanne.
+- Unngå unødvendige detaljer, og sørg for at tittel og beskrivelse henger sammen.
+
+## Tilgjengelighet (UU og WCAG)
+
+- Klar og tydelig struktur bidrar til bedre navigasjon og oppfattelse for brukere av hjelpeteknologi.
+
+import { Card } from '@skatteetaten/ds-content';
+
+## Props
+
+<TypeTable of={Card} />
+
+### Card.Alert
+
+<TypeTable of={Card.Alert} />
+
+### Card.Actions
+
+<TypeTable of={Card.Actions} />
+
+### Card.Content
+
+<TypeTable of={Card.Content} />
+
+### Card.Header
+
+<TypeTable of={Card.Header} />

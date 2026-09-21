@@ -1,0 +1,14 @@
+.buttonModalActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--spacing-m);
+  gap: var(--spacing-m);
+}
+
+.buttonModalActionsGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s);
+}

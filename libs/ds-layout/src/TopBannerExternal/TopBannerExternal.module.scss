@@ -1,6 +1,12 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/mixins/styles';
 
+/* pga skiplink så er det ikke mulig å sette position på header */
+.containerForMainMenu {
+  position: relative;
+  background-color: var(--semantic-page-background);
+}
+
 .topContainer {
   display: flex;
   max-width: var(--semantic-responsive-container);
@@ -16,19 +22,78 @@
     padding-bottom: var(--spacing-s);
     gap: var(--spacing-s);
   }
+}
 
-  .contentContainer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: auto;
-    gap: var(--spacing-xxs);
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  gap: var(--spacing-xxs);
 
-    @media (min-width: breakpoints.$breakpoint-s) {
-      gap: var(--spacing-s);
+  @media (min-width: breakpoints.$breakpoint-s) {
+    gap: var(--spacing-s);
+  }
+}
+
+.mainMenu {
+  position: absolute;
+  z-index: 101;
+  top: 100%;
+  right: 0;
+  left: 0;
+  border-bottom: 2px solid var(--semantic-divider-30);
+  background-color: var(--palette-graphite-5);
+
+  &Search {
+    max-width: 25rem;
+    margin: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      margin: var(--spacing-m) auto var(--spacing-xl);
     }
   }
+
+  &SearchLabel {
+    color: var(--palette-graphite-100);
+    font-size: var(--font-size-l);
+    line-height: var(--semantic-line-height-heading3);
+
+    @media (min-width: breakpoints.$breakpoint-xs) {
+      font-size: var(--font-size-xl);
+    }
+  }
+}
+
+.columns {
+  display: grid;
+  max-width: var(--semantic-responsive-container);
+  padding: var(--semantic-responsive-container-spacing);
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  margin: auto;
+  grid-gap: var(--spacing-xl);
+  grid-template-columns: 1fr;
+
+  @media (min-width: breakpoints.$breakpoint-s) {
+    &Three,
+    &Two {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    grid-template-columns: 1fr 1fr;
+
+    &Three {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+.column {
+  overflow-wrap: anywhere;
 }
 
 .separator {
@@ -52,75 +117,6 @@
     height: 100%;
     background-color: var(--theme-primary);
     clip-path: polygon(0 85%, 100% 0, 100% 100%, 100% 100%);
-  }
-}
-
-/* pga skiplink så er det ikke mulig å sette position på header */
-.containerForMainMenu {
-  position: relative;
-  background-color: var(--semantic-page-background);
-}
-
-.mainMenu {
-  position: absolute;
-  z-index: 101;
-  top: 100%;
-  right: 0;
-  left: 0;
-  border-bottom: 2px solid var(--semantic-divider-30);
-  background-color: var(--palette-graphite-5);
-
-  .columns {
-    display: grid;
-    max-width: var(--semantic-responsive-container);
-    padding: var(--semantic-responsive-container-spacing);
-    padding-top: var(--spacing-xl);
-    padding-bottom: var(--spacing-xl);
-    margin: auto;
-    grid-gap: var(--spacing-xl);
-    grid-template-columns: 1fr;
-
-    @media (min-width: breakpoints.$breakpoint-s) {
-      &Three,
-      &Two {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (min-width: breakpoints.$breakpoint-m) {
-      grid-template-columns: 1fr 1fr;
-
-      &Three {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
-  }
-
-  .column {
-    overflow-wrap: anywhere;
-  }
-
-  &Search {
-    max-width: 25rem;
-    margin: var(--spacing-m) var(--spacing-m) var(--spacing-xl);
-
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      margin: var(--spacing-m) auto var(--spacing-xl);
-    }
-  }
-
-  &SearchSpacing {
-    margin-bottom: var(--spacing-m);
-  }
-
-  &SearchLabel {
-    color: var(--palette-graphite-100);
-    font-size: var(--font-size-l);
-    line-height: var(--semantic-line-height-heading3);
-
-    @media (min-width: breakpoints.$breakpoint-xs) {
-      font-size: var(--font-size-xl);
-    }
   }
 }
 

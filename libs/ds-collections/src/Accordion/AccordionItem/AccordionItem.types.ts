@@ -6,6 +6,7 @@ export interface AccordionItemProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
   classNames?: {
     container?: string;
+    button?: string;
     title?: string;
     subtitle?: string;
     content?: string;
@@ -15,7 +16,7 @@ export interface AccordionItemProps extends BaseProps {
   /** Undertittel */
   subtitle?: string;
   /** Rendrer knappen som heading på gitt nivå */
-  titleAs?: HeadingAs;
+  titleAs?: HeadingAs | 'div';
   /** Er skuffen åpen når siden lastes? (Ukontrollert tilstand) */
   isDefaultExpanded?: boolean;
   /** Er skuffen åpen? (Kontrollert tilstand) */
@@ -30,7 +31,7 @@ export interface AccordionItemProps extends BaseProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   /**
    * Om innholdet skal forbli i DOM når skjult (true) eller fjernes helt
-   * (false). Standard: true
+   * (false).
    */
   keepMounted?: boolean;
   /** Tekst eller markup som vises/skjules. */

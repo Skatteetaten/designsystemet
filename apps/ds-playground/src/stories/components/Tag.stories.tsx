@@ -3,14 +3,9 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { CheckSVGpath, WarningSVGpath } from '@skatteetaten/ds-icons';
-import {
-  Tag,
-  getTagColorDefault,
-  getTagSizeDefault,
-} from '@skatteetaten/ds-status';
+import { Tag } from '@skatteetaten/ds-status';
 
-import { category } from '../../../.storybook/helpers';
-import { SystemSVGPaths } from '../utils/icon.systems';
+import { category, svgPathDescription } from '../../../.storybook/helpers';
 import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
@@ -20,23 +15,9 @@ const meta = {
     // Props
     canBeManuallyFocused: { table: { category: category.props } },
     children: { control: 'text', table: { category: category.props } },
-    color: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTagColorDefault() },
-      },
-    },
-    size: {
-      table: {
-        category: category.props,
-        defaultValue: { summary: getTagSizeDefault() },
-      },
-    },
-    svgPath: {
-      options: Object.keys(SystemSVGPaths),
-      mapping: SystemSVGPaths,
-      table: { category: category.props },
-    },
+    color: { table: { category: category.props } },
+    size: { table: { category: category.props } },
+    svgPath: { ...svgPathDescription },
   },
   args: {
     children: 'Endret',

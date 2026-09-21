@@ -3,8 +3,7 @@ import { FocusEvent, MouseEvent, useState } from 'react';
 import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
-import { IconButton, IconButtonProps } from '@skatteetaten/ds-buttons';
-import { getCommonButtonTypeDefault } from '@skatteetaten/ds-core-utils';
+import { IconButton } from '@skatteetaten/ds-buttons';
 import {
   AttachFileSVGpath,
   BellOutlineSVGpath,
@@ -14,6 +13,7 @@ import {
 
 import { SystemSVGPaths } from '../utils/icon.systems';
 
+const accessibleName = 'dummy tekst accessible name';
 const defaultSVGPath = AttachFileSVGpath;
 const alternativeSVGPathFocus = CircleDownSVGpath;
 const alternativeSVGPathBlur = BellOutlineSVGpath;
@@ -66,21 +66,17 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    svgPath: defaultSVGPath,
+    title: accessibleName,
+  },
 } satisfies Meta<typeof IconButton>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const accessibleName = 'dummy tekst accessible name';
-
-const defaultArgs: IconButtonProps = {
-  svgPath: defaultSVGPath,
-  title: accessibleName,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLButtonElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -99,7 +95,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes(FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'nb',
@@ -112,9 +107,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -128,9 +121,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (A1, B1, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     svgPath: { table: { disable: false } },
     title: { table: { disable: false } },
@@ -141,7 +132,7 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
-    expect(iconButton).toHaveAttribute('type', getCommonButtonTypeDefault());
+    await expect(iconButton).toHaveAttribute('type', 'button');
 
     const svg = iconButton.querySelector('svg');
     await expect(svg).toHaveAttribute('viewBox', '0 0 24 24');
@@ -154,7 +145,6 @@ export const Defaults = {
 export const WithOutline = {
   name: 'With Outline (A1)',
   args: {
-    ...defaultArgs,
     isOutlined: true,
   },
   argTypes: {
@@ -168,7 +158,6 @@ export const WithOutline = {
 export const WithCustomSVGPath = {
   name: 'With Custom SVGPath (A1)',
   args: {
-    ...defaultArgs,
     svgPath: <path d={'M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z'} />,
   },
   argTypes: {
@@ -179,21 +168,9 @@ export const WithCustomSVGPath = {
   },
 } satisfies Story;
 
-export const WithSizeExtraSmall = {
-  name: 'With Size Extra Small (A1)',
-  args: {
-    ...defaultArgs,
-    size: 'extraSmall',
-  },
-  argTypes: {
-    size: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithSizeSmall = {
   name: 'With Size Small (A1)',
   args: {
-    ...defaultArgs,
     size: 'small',
   },
   argTypes: {
@@ -204,7 +181,6 @@ export const WithSizeSmall = {
 export const WithSizeLarge = {
   name: 'With Size Large (A1)',
   args: {
-    ...defaultArgs,
     size: 'large',
   },
   argTypes: {
@@ -212,23 +188,9 @@ export const WithSizeLarge = {
   },
 } satisfies Story;
 
-export const WithSizeExtraSmallAndOutline = {
-  name: 'With Size Extra Small and Outline (A1)',
-  args: {
-    ...defaultArgs,
-    size: 'extraSmall',
-    isOutlined: true,
-  },
-  argTypes: {
-    size: { table: { disable: false } },
-    isOutlined: { table: { disable: false } },
-  },
-} satisfies Story;
-
 export const WithSizeSmallAndOutline = {
   name: 'With Size Small and Outline (A1)',
   args: {
-    ...defaultArgs,
     size: 'small',
     isOutlined: true,
   },
@@ -241,7 +203,6 @@ export const WithSizeSmallAndOutline = {
 export const WithSizeLargeAndOutline = {
   name: 'With Size Large and Outline (A1)',
   args: {
-    ...defaultArgs,
     size: 'large',
     isOutlined: true,
   },
@@ -254,7 +215,6 @@ export const WithSizeLargeAndOutline = {
 export const WithDisabled = {
   name: 'With Disabled (B5)',
   args: {
-    ...defaultArgs,
     disabled: true,
   },
   argTypes: {
@@ -272,7 +232,6 @@ export const WithDisabled = {
 export const WithDisabledAndOutline = {
   name: 'With Disabled And Outline (B5)',
   args: {
-    ...defaultArgs,
     isOutlined: true,
     disabled: true,
   },
@@ -285,7 +244,6 @@ export const WithDisabledAndOutline = {
 export const WithType = {
   name: 'With Type (B1)',
   args: {
-    ...defaultArgs,
     type: 'submit',
   },
   argTypes: {
@@ -300,7 +258,6 @@ export const WithType = {
 export const WithAriaDescribedby = {
   name: 'With AriaDescribedby (B3)',
   args: {
-    ...defaultArgs,
     ariaDescribedby: 'araiDescId',
   },
   argTypes: {
@@ -315,7 +272,6 @@ export const WithAriaDescribedby = {
 export const WithAriaExpanded = {
   name: 'With AriaExpanded (B6)',
   args: {
-    ...defaultArgs,
     ariaExpanded: true,
   },
   argTypes: {
@@ -330,7 +286,6 @@ export const WithAriaExpanded = {
 export const WithAccesskey = {
   name: 'With AccessKey (B4)',
   args: {
-    ...defaultArgs,
     accessKey: 'a',
   },
   argTypes: {
@@ -368,7 +323,6 @@ export const WithEventHandlers = {
   render: EventHandlersTemplate,
   name: 'With EventHandlers (A2 delvis)',
   args: {
-    ...defaultArgs,
     onFocus: fn(),
     onBlur: fn(),
     onClick: fn(),
@@ -395,13 +349,6 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
       <IconButton
         {...args}
         hasSpinner={false}
-        size={'extraSmall'}
-        className={'marginRightM'}
-        isOutlined
-      />
-      <IconButton
-        {...args}
-        hasSpinner={false}
         size={'small'}
         className={'marginRightM'}
         isOutlined
@@ -417,12 +364,6 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
     <div className={'bottomSpacingXL'}>
       <IconButton
         {...args}
-        size={'extraSmall'}
-        className={'marginRightM'}
-        isOutlined
-      />
-      <IconButton
-        {...args}
         size={'small'}
         className={'marginRightM'}
         isOutlined
@@ -434,19 +375,12 @@ const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
       <IconButton
         {...args}
         hasSpinner={false}
-        size={'extraSmall'}
-        className={'marginRightM'}
-      />
-      <IconButton
-        {...args}
-        hasSpinner={false}
         size={'small'}
         className={'marginRightM'}
       />
       <IconButton {...args} hasSpinner={false} className={'marginRightM'} />
       <IconButton {...args} hasSpinner={false} size={'large'} />
     </div>
-    <IconButton {...args} size={'extraSmall'} className={'marginRightM'} />
     <IconButton {...args} size={'small'} className={'marginRightM'} />
     <IconButton {...args} className={'marginRightM'} />
     <IconButton {...args} size={'large'} />
@@ -457,7 +391,6 @@ export const WithSpinner = {
   render: TemplateWithSpinner,
   name: 'With Spinner (A4)',
   args: {
-    ...defaultArgs,
     hasSpinner: true,
   },
   argTypes: {
@@ -468,7 +401,6 @@ export const WithSpinner = {
 export const WithBrightness = {
   name: 'With Brightness (A5)',
   args: {
-    ...defaultArgs,
     brightness: 'light',
   },
   argTypes: {
@@ -487,7 +419,6 @@ export const WithBrightness = {
 export const WithBrightnessAndOutline = {
   name: 'With Brightness And Outline (A5)',
   args: {
-    ...defaultArgs,
     brightness: 'light',
     isOutlined: true,
   },
@@ -508,7 +439,6 @@ export const WithBrightnessAndOutline = {
 export const WithBrightnessAndSpinner = {
   name: 'With Brightness And Spinner (A5)',
   args: {
-    ...defaultArgs,
     brightness: 'light',
     hasSpinner: true,
   },
@@ -526,7 +456,6 @@ export const WithBrightnessAndSpinner = {
 export const WithBrightnessAndDisabled = {
   name: 'With Brightness And Disabled (A5)',
   args: {
-    ...defaultArgs,
     brightness: 'light',
     isOutlined: true,
     disabled: true,

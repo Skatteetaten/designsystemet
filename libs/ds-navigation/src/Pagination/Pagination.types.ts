@@ -65,8 +65,7 @@ type PaginationDiscriminatedProp =
 export type PaginationProps = PaginationCommonProps &
   PaginationDiscriminatedProp;
 
-export interface PaginationComponent
-  extends FunctionComponent<PaginationProps> {
+export interface PaginationComponent extends FunctionComponent<PaginationProps> {
   List: typeof PaginationList;
 }
 

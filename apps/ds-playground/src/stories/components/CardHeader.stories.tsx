@@ -6,34 +6,19 @@ import { category } from '../../../.storybook/helpers';
 
 Card.Header.displayName = 'Card.Header';
 
-const defaultText =
-  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
-
-const defaultArgs = {
-  children: defaultText,
-  rightContent: 'høyrejustert innhold',
-};
-
 const meta = {
   component: Card.Header,
   title: 'Komponenter/Card/Header',
   argTypes: {
     // Props
-    children: {
-      control: 'text',
-      table: { category: category.props },
-    },
-    classNames: {
-      control: false,
-      table: { category: category.props },
-    },
-    rightContent: {
-      control: 'text',
-      table: { category: category.props },
-    },
+    children: { control: 'text', table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
+    rightContent: { control: 'text', table: { category: category.props } },
   },
   args: {
-    ...defaultArgs,
+    children:
+      'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.',
+    rightContent: 'høyrejustert innhold',
   },
 } satisfies Meta<typeof Card.Header>;
 export default meta;

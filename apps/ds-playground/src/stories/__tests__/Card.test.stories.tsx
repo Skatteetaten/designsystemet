@@ -4,6 +4,9 @@ import { expect, within } from 'storybook/test';
 import { Card, cardColorArr } from '@skatteetaten/ds-content';
 import { Heading } from '@skatteetaten/ds-typography';
 
+const defaultText =
+  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
+
 const meta = {
   component: Card,
   title: 'Tester/Card',
@@ -28,21 +31,16 @@ const meta = {
   parameters: {
     imageSnapshot: { disableSnapshot: false },
   },
+  args: {
+    children: defaultText,
+  },
 } satisfies Meta<typeof Card>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultText =
-  'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
-
-const defaultArgs = {
-  children: defaultText,
-};
-
 export const WithRef = {
   name: 'With Ref (FA1)',
   args: {
-    ...defaultArgs,
     ref: (instance: HTMLDivElement | null): void => {
       if (instance) {
         instance.id = 'dummyIdForwardedFromRef';
@@ -65,7 +63,6 @@ export const WithRef = {
 export const WithAttributes = {
   name: 'With Attributes (FA2-5)',
   args: {
-    ...defaultArgs,
     id: 'htmlId',
     className: 'dummyClassname',
     lang: 'en',
@@ -78,9 +75,7 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
+    imageSnapshot: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -94,9 +89,7 @@ export const WithAttributes = {
 
 export const Defaults = {
   name: 'Defaults (B1, B2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   argTypes: {
     children: { table: { disable: false } },
   },
@@ -130,9 +123,7 @@ const TemplateAllColors: StoryFn<typeof Card> = (args) => (
 export const AllColors = {
   render: TemplateAllColors,
   name: 'All Colors (A1, A2)',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
 } satisfies Story;
 
 export const WithAriaLabelledBy = {
@@ -141,7 +132,6 @@ export const WithAriaLabelledBy = {
     ariaLabelledBy: { table: { disable: false } },
   },
   args: {
-    ...defaultArgs,
     ariaLabelledBy: 'dummyId',
   },
   parameters: {
@@ -170,7 +160,6 @@ export const WithAriaLabelledByAndCardAlert = {
   render: TemplateWithAlert,
   name: 'With ariaLabelledBy and Card.Alert',
   args: {
-    ...defaultArgs,
     ariaLabelledBy: 'dummyId',
   },
   play: async ({ canvasElement }): Promise<void> => {

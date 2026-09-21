@@ -215,7 +215,6 @@ export const SkjemaMedSteg = (): JSX.Element => {
             stepNumber={1}
             variant={activeStep === 1 ? 'active' : 'passive'}
             nextButtonProps={{ ariaDescribedby: 'infoNextButton' }}
-            shouldAutoFocusWhenActive={false}
             onNext={handleNextStep}
             onEdit={activeStep > 1 ? (): void => setActiveStep(1) : undefined}
           >
@@ -228,8 +227,9 @@ export const SkjemaMedSteg = (): JSX.Element => {
                 </Paragraph>
                 <RadioGroup
                   legend={'Har du norsk adresse?'}
-                  selectedValue={hasLocalAddress}
+                  value={hasLocalAddress}
                   errorMessage={localAddressErrorMessage}
+                  hasSpacing
                   onBlur={setLocalAddressError}
                   onChange={(e): void => {
                     setLocalAddressErrorMessage('');

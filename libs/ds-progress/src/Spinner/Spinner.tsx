@@ -1,13 +1,7 @@
 import { JSX, useEffect, useId, useState } from 'react';
 
-import { getCommonClassNameDefault } from '@skatteetaten/ds-core-utils';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
-import {
-  getSpinnerColorDefault,
-  getSpinnerTitlePositionDefault,
-  getSpinnerSizeDefault,
-  getSpinnerLabelDefault,
-} from './defaults';
 import { SpinnerProps } from './Spinner.types';
 
 import styles from './Spinner.module.scss';
@@ -15,22 +9,21 @@ import styles from './Spinner.module.scss';
 /**
  * Spinner
  *
- * @see [Storybook](https://skatteetaten.github.io/designsystemet/?path=/docs/komponenter-spinner--docs) - Teknisk dokumentasjon
- * @see [Stil og tone](https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/spinner/) - Brukerveiledning
+ * @see [Dokumentasjon](https://skatteetaten.github.io/designsystemet/byggeklosser/komponenter/spinner)
  */
 export const Spinner = ({
   ref,
   id,
-  className = getCommonClassNameDefault(),
+  className = '',
   lang,
   'data-testid': dataTestId,
   classNames,
-  color = getSpinnerColorDefault(),
-  titlePosition = getSpinnerTitlePositionDefault(),
-  size = getSpinnerSizeDefault(),
-  hideTitle,
+  color = 'black',
+  titlePosition = 'bottom',
+  size = 'medium',
+  hideTitle = false,
   percentComplete,
-  children = getSpinnerLabelDefault(),
+  children = getDefaultSpinnerLabel(),
 }: SpinnerProps): JSX.Element => {
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const generatedId = useId();
@@ -99,7 +92,7 @@ export const Spinner = ({
           } ${classNames?.title ?? ''}`.trim()}
         >
           {isInPercentageMode &&
-            `${getSpinnerLabelDefault()} (${percentComplete} %)`}
+            `${getDefaultSpinnerLabel()} (${percentComplete} %)`}
           {!isInPercentageMode && isRendered && children}
         </span>
       </span>
@@ -117,10 +110,3 @@ export const Spinner = ({
 };
 
 Spinner.displayName = 'Spinner';
-
-export {
-  getSpinnerColorDefault,
-  getSpinnerSizeDefault,
-  getSpinnerTitlePositionDefault,
-  getSpinnerLabelDefault,
-};

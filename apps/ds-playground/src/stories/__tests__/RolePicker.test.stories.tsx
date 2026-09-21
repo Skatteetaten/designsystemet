@@ -280,20 +280,19 @@ const meta = {
   parameters: {
     chromatic: { disableSnapshot: false },
   },
+  args: {
+    me,
+    businesses,
+    people,
+  },
 } satisfies Meta<typeof RolePicker>;
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-  me,
-  businesses,
-  people,
-};
-
 const DefaultTemplate: StoryFn<typeof RolePicker> = (args) => {
   const rolePickerRef = useRef<HTMLDialogElement>(null);
 
-  const handleEntitySelect: OnEntitySelectHandler = async (entity: Entity) => {
+  const handleEntitySelect: OnEntitySelectHandler = async () => {
     rolePickerRef.current?.close();
   };
 
@@ -314,7 +313,7 @@ const DefaultTemplate: StoryFn<typeof RolePicker> = (args) => {
 const ErrorTemplate: StoryFn<typeof RolePicker> = (args) => {
   const rolePickerRef = useRef<HTMLDialogElement>(null);
 
-  const handleEntitySelect: OnEntitySelectHandler = async (entity: Entity) => {
+  const handleEntitySelect: OnEntitySelectHandler = async () => {
     return {
       error:
         'Du har ikke tilgang til skjemaet på vegne av denne personen. Kontakt personen hvis du trenger tilgang.',
@@ -398,11 +397,7 @@ const SlowTemplate: StoryFn<typeof RolePicker> = (args) => {
 
 export const Defaults = {
   name: 'Defaults (A1, A2, A14, B3, B2)',
-  args: {
-    ...defaultArgs,
-    businesses,
-    people,
-  },
+  args: {},
   render: DefaultTemplate,
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
@@ -423,7 +418,6 @@ export const WithAttributes = {
     className: 'dummyClassname',
     lang: 'en',
     'data-testid': '123ID',
-    ...defaultArgs,
   },
   render: DefaultTemplate,
   argTypes: {
@@ -433,9 +427,6 @@ export const WithAttributes = {
     'data-testid': { table: { disable: false } },
   },
   parameters: {
-    a11y: {
-      test: 'off',
-    },
     chromatic: { disableSnapshot: true },
   },
   play: async ({ canvasElement }): Promise<void> => {
@@ -454,7 +445,6 @@ export const WithAttributes = {
 export const WithShowInactiveOrganizations = {
   name: 'With Show Inactive Organizations And Show Less Button (A11, A18, B4)',
   args: {
-    ...defaultArgs,
     people: undefined,
     me: undefined,
     showInactiveBusinesses: true,
@@ -495,10 +485,7 @@ export const WithShowInactiveOrganizations = {
 
 export const WithShowAllClicked = {
   name: 'With Show All Clicked Focus (A12, B4)',
-  args: {
-    ...defaultArgs,
-    businesses,
-  },
+  args: {},
   render: DefaultTemplate,
   argTypes: {
     me: { table: { disable: false } },
@@ -528,7 +515,6 @@ export const WithShowAllClicked = {
 export const WithHideCloseIcon = {
   name: 'With Hide Close Icon (A3)',
   args: {
-    ...defaultArgs,
     hideCloseButton: true,
   },
   render: DefaultTemplate,
@@ -548,7 +534,6 @@ const title = 'Custom title';
 export const WithCustomTitle = {
   name: 'With Custom Title (A4 delvis)',
   args: {
-    ...defaultArgs,
     title,
   },
   render: DefaultTemplate,
@@ -571,7 +556,6 @@ export const WithCustomTitle = {
 export const WithChildren = {
   name: 'With Children (A5)',
   args: {
-    ...defaultArgs,
     people: undefined,
     children: <div>{'Children'}</div>,
   },
@@ -594,7 +578,6 @@ export const WithChildren = {
 export const WithOnlyPeopleSearch = {
   name: 'With Only People Search (A6, A7)',
   args: {
-    ...defaultArgs,
     businesses: undefined,
     people: people11,
   },
@@ -624,7 +607,6 @@ export const WithOnlyPeopleSearch = {
 export const WithOnlyBusinessSearch = {
   name: 'With Only Business Search (A6, A7)',
   args: {
-    ...defaultArgs,
     people: undefined,
   },
   render: DefaultTemplate,
@@ -653,7 +635,6 @@ export const WithOnlyBusinessSearch = {
 export const WithoutSearch = {
   name: 'Without Search (A6)',
   args: {
-    ...defaultArgs,
     businesses: { total: 4, list: businesses.list.slice(1, 3) },
     showSubunits: false,
   },
@@ -687,9 +668,7 @@ export const WithoutSearch = {
 
 export const WithError = {
   name: 'With Error',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: ErrorTemplate,
   argTypes: {
     me: { table: { disable: false } },
@@ -718,7 +697,6 @@ export const WithError = {
 export const WithNoBusinesses = {
   name: 'With No Businesses',
   args: {
-    ...defaultArgs,
     people: undefined,
     me: undefined,
     businesses: { total: 0, list: [] },
@@ -750,9 +728,7 @@ export const WithNoBusinesses = {
 
 export const WithSpinner = {
   name: 'With Spinner',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: SlowTemplate,
   argTypes: {
     me: { table: { disable: false } },
@@ -780,7 +756,6 @@ const businesses10000: Paginated<Business> = {
 export const With10000Businesses = {
   name: 'With 10000 Businesses',
   args: {
-    ...defaultArgs,
     businesses: businesses10000,
     people: undefined,
   },
@@ -800,7 +775,6 @@ export const With10000Businesses = {
 export const WithNoDeletedBusinesses = {
   name: 'With No Deleted Businesses',
   args: {
-    ...defaultArgs,
     businesses: {
       total: 3,
       list: [
@@ -860,7 +834,6 @@ export const WithNoDeletedBusinesses = {
 export const WithNoSubunits = {
   name: 'With No SubUnits',
   args: {
-    ...defaultArgs,
     businesses: {
       total: 2,
       list: [
@@ -919,7 +892,6 @@ const peopleWithDeceased = {
 export const WithDeceasedPeople = {
   name: 'With Deceased People',
   args: {
-    ...defaultArgs,
     businesses: undefined,
     me: undefined,
     people: peopleWithDeceased,
@@ -960,7 +932,6 @@ export const WithDeceasedPeople = {
 export const WithNoDoubleUnitTypes = {
   name: 'With No Double Unit Types',
   args: {
-    ...defaultArgs,
     showSubunits: false,
     people: undefined,
     me: undefined,
@@ -997,7 +968,6 @@ export const WithNoDoubleUnitTypes = {
 export const WithMinimumEntitiesForSearch = {
   name: 'With Minimum Entities For Search (A19)',
   args: {
-    ...defaultArgs,
     minimumEntitiesForSearch: 17, // Det finnes 16 personer/virksomheter i rollevelgeren, så søkefeltet vises ikke
   },
   render: DefaultTemplate,
@@ -1021,7 +991,6 @@ export const WithMinimumEntitiesForSearch = {
 export const WithoutDateOfBirth = {
   name: 'Without Date Of Birth',
   args: {
-    ...defaultArgs,
     businesses: undefined,
     me: { ...me, dateOfBirth: undefined },
     people: peopleWithoutDateOfBirth,
@@ -1036,9 +1005,7 @@ export const WithoutDateOfBirth = {
 
 export const WithCloseError = {
   name: 'With Close Error',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: ErrorTemplate,
   argTypes: {
     me: { table: { disable: false } },
@@ -1080,9 +1047,7 @@ export const WithCloseError = {
 
 export const WithErrorReset = {
   name: 'With Error Reset After Valid Selection',
-  args: {
-    ...defaultArgs,
-  },
+  args: {},
   render: ErrorThenSuccessTemplate,
   parameters: {
     chromatic: {
@@ -1127,7 +1092,7 @@ export const WithErrorReset = {
 export const OnMobile = {
   render: DefaultTemplate,
   name: 'On Mobile',
-  args: { ...defaultArgs },
+  args: {},
   globals: {
     viewport: {
       value: '--mobile',

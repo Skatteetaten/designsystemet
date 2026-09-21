@@ -42,11 +42,12 @@
   "rolepicker.YouCanRepresent": "\tDon sáhtát ovddastit",
   "topbannerexternalusermenu.AboutMe": "Mu birra",
   "topbannerexternalusermenu.AboutTheOrganisation": "Doaimmahusa birra",
+  "topbannerexternalusermenu.Inbox": "Reivebáiki",
+  "topbannerexternalusermenu.InboxCountMessage": "{{count}} dieđu eai leat rahpon",
   "topbannerexternalusermenu.MyPage": "Mu siidui",
   "topbannerexternalusermenu.Notification": "Várrehus",
-  "topbannerexternalusermenu.NotificationCountMessage": "Várrehus, {{count}} ođđa",
   "topbannerexternalusermenu.OnBehalfOf": "Bealis",
-  "topbannerexternalusermenu.OneNotificationMessage": "Várrehus, 1 ođđa",
+  "topbannerexternalusermenu.OneInboxMessage": "1 diehtu ii leat rahpon",
   "topbannerexternalusermenu.SwitchUser": "Molsso geavaheaddji",
   "wordinfo.WordExplanation": "sátnečilgehus"
 }
