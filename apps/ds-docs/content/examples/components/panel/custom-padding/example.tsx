@@ -20,9 +20,7 @@ export default function PanelCustomPaddingStateExample(): JSX.Element {
       </div>
 
       <Panel
-        classNames={{
-          padding: styles.dummyPanelPaddingNoMargin,
-        }}
+        className={styles.maxWidth100}
         title={'Innholdsbredde 100%'}
         hasResponsivePadding
       >

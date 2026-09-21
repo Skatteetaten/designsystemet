@@ -1,0 +1,20 @@
+.addButton {
+  margin-bottom: var(--spacing-l);
+}
+
+.textFieldRow {
+  display: flex;
+  margin-top: var(--spacing-s);
+  margin-bottom: var(--spacing-xl);
+  gap: var(--spacing-m);
+}
+
+.belopTextField {
+  width: 150px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.buttonRow {
+  display: flex;
+  gap: var(--spacing-m);
+}

@@ -20,10 +20,8 @@ export default function ModalConsentExample(): ReactElement {
             'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
           }
         </Paragraph>
-        <div className={'flex'}>
-          <Button className={styles.replaceButton}>
-            {'Erstatt opplysninger'}
-          </Button>
+        <div className={styles.buttonRow}>
+          <Button>{'Erstatt opplysninger'}</Button>
           <Button
             variant={'secondary'}
             onClick={(): void => refModal.current?.close()}

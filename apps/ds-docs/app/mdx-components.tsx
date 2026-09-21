@@ -16,6 +16,8 @@ import {
 } from './components/router-link';
 import { ComponentWithDocgen, TypeTable } from './components/type-table';
 
+import styles from './mdx-components.module.scss';
+
 interface CanvasMdxProps {
   children?: ReactNode;
   examplesPath?: string;
@@ -146,7 +148,9 @@ const components = {
     <List.Element>{children}</List.Element>
   ),
   a: ({ children, href }: { children: string; href?: string }): JSX.Element => (
-    <RouterDsLink href={href || ''}>{children}</RouterDsLink>
+    <RouterDsLink href={href || ''} className={styles.overflowWrap}>
+      {children}
+    </RouterDsLink>
   ),
   img: PublicImage,
   PublicImage,
