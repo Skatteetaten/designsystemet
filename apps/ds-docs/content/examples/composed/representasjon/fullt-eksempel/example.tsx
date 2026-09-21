@@ -35,7 +35,7 @@ import {
   virksomhetLinks,
 } from './data';
 
-import topBannerExternalExampleStyles from './TopBannerExternalExample.module.scss';
+import styles from './TopBannerExternalExample.module.scss';
 
 export default function TopBannerExternalWithUserMenuExample(): ReactElement {
   const modalRef = useRef<HTMLDialogElement>(null);
@@ -63,7 +63,7 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
       <TopBannerExternal
         ref={topBannerRef}
         classNames={{
-          columns: topBannerExternalExampleStyles.columns,
+          columns: styles.columns,
         }}
         firstColumn={
           user ? (
@@ -71,19 +71,13 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
               <Card.Content>
                 <Heading as={'h2'} level={3}>
                   {user.role === 'meg' && (
-                    <FavoriteIcon
-                      className={topBannerExternalExampleStyles.marginRightS}
-                    />
+                    <FavoriteIcon className={styles.marginRightS} />
                   )}
                   {user.role === 'andre' && (
-                    <AccountMultipleIcon
-                      className={topBannerExternalExampleStyles.marginRightS}
-                    />
+                    <AccountMultipleIcon className={styles.marginRightS} />
                   )}
                   {user.role === 'virksomhet' && (
-                    <BriefcaseIcon
-                      className={topBannerExternalExampleStyles.marginRightS}
-                    />
+                    <BriefcaseIcon className={styles.marginRightS} />
                   )}
 
                   {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -91,15 +85,12 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
                 <Paragraph variant={'ingress'}>
                   {'Se, endre og send inn'}
                 </Paragraph>
-                <ul className={topBannerExternalExampleStyles.linkWrapper}>
+                <ul className={styles.linkWrapper}>
                   {(user.role === 'virksomhet'
                     ? virksomhetLinks
                     : loggedInLinks
                   ).map((link, index) => (
-                    <li
-                      key={index}
-                      className={topBannerExternalExampleStyles.marginBottomS}
-                    >
+                    <li key={index} className={styles.marginBottomS}>
                       <Link
                         href={link.href}
                         onClick={(e): void => {
@@ -116,21 +107,15 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
             </Card>
           ) : (
             <>
-              <Heading
-                as={'h2'}
-                level={3}
-                className={topBannerExternalExampleStyles.flex}
-              >
+              <Heading as={'h2'} level={3} className={styles.flex}>
                 <PersonIcon
-                  className={topBannerExternalExampleStyles.marginRightS}
+                  className={styles.marginRightS}
                   size={'largePlus'}
                 />
 
                 {'Min side'}
               </Heading>
-              <Paragraph
-                className={topBannerExternalExampleStyles.marginBottomS}
-              >
+              <Paragraph className={styles.marginBottomS}>
                 {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
               </Paragraph>
               <Button
@@ -147,14 +132,12 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
             <Heading as={'h2'} hasSpacing>
               {'Alle temaer'}
             </Heading>
-            <div className={topBannerExternalExampleStyles.secondColumn}>
+            <div className={styles.secondColumn}>
               <div>
                 <Heading as={'h3'} hasSpacing>
                   <a href={pageLinks.person}>{'For personer'}</a>
                 </Heading>
-                <LinkGroup
-                  className={topBannerExternalExampleStyles.marginBottomXL}
-                >
+                <LinkGroup className={styles.marginBottomXL}>
                   {personLinks.map((link) => (
                     <LinkGroup.Link
                       key={link.text}
@@ -173,9 +156,7 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
                     {'For bedrifter og organisasjoner'}
                   </a>
                 </Heading>
-                <LinkGroup
-                  className={topBannerExternalExampleStyles.marginBottomXL}
-                >
+                <LinkGroup className={styles.marginBottomXL}>
                   {virksomhetLinks.map((link) => (
                     <LinkGroup.Link
                       key={link.text}
@@ -197,11 +178,7 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
                 <Heading as={'h3'} level={4} hasSpacing>
                   <a href={pageLinks.presse}>{'Presse'}</a>
                 </Heading>
-                <Heading
-                  as={'h3'}
-                  level={4}
-                  className={topBannerExternalExampleStyles.marginBottomXL}
-                >
+                <Heading as={'h3'} level={4} className={styles.marginBottomXL}>
                   <a href={pageLinks.samarbeidspartnere}>
                     {'Samarbeidspartner'}
                   </a>
@@ -215,7 +192,7 @@ export default function TopBannerExternalWithUserMenuExample(): ReactElement {
         }
         searchContent={
           <>
-            <Paragraph className={topBannerExternalExampleStyles.marginBottomS}>
+            <Paragraph className={styles.marginBottomS}>
               {'Dette har andre søkt på:'}
             </Paragraph>
             <LinkGroup>

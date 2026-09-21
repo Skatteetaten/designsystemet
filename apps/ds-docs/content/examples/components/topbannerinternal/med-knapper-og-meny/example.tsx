@@ -12,6 +12,8 @@ import {
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
 
+import styles from './med-knapper-og-meny.module.scss';
+
 export default function TopBannerInternalWithButtonsAndMenuExample(): ReactElement {
   const menuRef = useRef<ActionMenuActionsRef>(null);
 
@@ -33,7 +35,7 @@ export default function TopBannerInternalWithButtonsAndMenuExample(): ReactEleme
       </InlineButton>
       <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
         <InlineButton
-          className={'bottomSpacingXS'}
+          className={styles.marginBottomXs}
           svgPath={AddSVGpath}
           onClick={() => {
             menuRef?.current?.close?.();
