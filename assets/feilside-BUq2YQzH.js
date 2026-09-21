@@ -1,0 +1,6 @@
+import{j as e}from"./chunk-62JRHF6Z-B4JvYaBZ.js";let d={title:"Feilside"},r={contents:[],headings:[{id:"innlogget",content:"Innlogget"},{id:"kodeeksempel",content:"Kodeeksempel"},{id:"uinnlogget",content:"Uinnlogget"},{id:"kodeeksempel-1",content:"Kodeeksempel"}]},g=[{depth:2,url:"#innlogget",title:e.jsx(e.Fragment,{children:"Innlogget"})},{depth:3,url:"#kodeeksempel",title:e.jsx(e.Fragment,{children:"Kodeeksempel"})},{depth:2,url:"#uinnlogget",title:e.jsx(e.Fragment,{children:"Uinnlogget"})},{depth:3,url:"#kodeeksempel-1",title:e.jsx(e.Fragment,{children:"Kodeeksempel"})}];function l(t){const n={h2:"h2",h3:"h3",...t.components},{Canvas:o}=n;return o||i("Canvas"),e.jsxs(e.Fragment,{children:[e.jsx(n.h2,{id:"innlogget",children:"Innlogget"}),`
+`,e.jsx(n.h3,{id:"kodeeksempel",children:"Kodeeksempel"}),`
+`,e.jsx(o,{examplesPath:"pages/ekstern/feilside/innlogget"}),`
+`,e.jsx(n.h2,{id:"uinnlogget",children:"Uinnlogget"}),`
+`,e.jsx(n.h3,{id:"kodeeksempel-1",children:"Kodeeksempel"}),`
+`,e.jsx(o,{examplesPath:"pages/ekstern/feilside/uinnlogget"})]})}function c(t={}){const{wrapper:n}=t.components||{};return n?e.jsx(n,{...t,children:e.jsx(l,{...t})}):l(t)}function i(t,n){throw new Error("Expected component `"+t+"` to be defined: you likely forgot to import, pass, or provide it.")}export{c as default,d as frontmatter,r as structuredData,g as toc};
