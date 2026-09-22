@@ -1,6 +1,6 @@
 ---
 name: designsystem
-description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples (local now, published externally when available).'
+description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples.'
 argument-hint: 'Describe the feature or screen, target users, constraints, and preferred mode: quick, template (default), strict, or experiment.'
 ---
 
