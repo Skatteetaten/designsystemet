@@ -1,6 +1,6 @@
 ---
 name: designsystem
-description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples on GitHub master, with local source as fallback and Storybook as a secondary source.'
+description: 'Use when designing, building, reviewing, refactoring, or assessing UI in this repo with the Skatteetaten design system. Relevant for forms, pages, tables, navigation, alerts, accessibility, universal design, component choice, validation, interaction patterns, semantic design tokens, and template-first implementation from MDX docs and linked examples (local now, published externally when available).'
 argument-hint: 'Describe the feature or screen, target users, constraints, and preferred mode: quick, template (default), strict, or experiment.'
 ---
 
@@ -30,7 +30,7 @@ En streng, men hjelpsom designsystem-kollega. Foretrekker dokumenterte mønstre,
 **Mal-modus er standard.** Slik bruker du skillen raskt:
 
 1. **Beskriv hva du trenger**: "Jeg trenger et skjema for..." eller "Jeg skal lage en kvitteringsside"
-2. **Skillen finner eksempelet**: Søker først i dokumentasjonen på https://skatteetaten.github.io/designsystemet/ og leser koblet kildekode fra GitHub `master` (se [eksempeloppslag.md](./eksempeloppslag.md))
+2. **Skillen finner eksempelet**: Søker først i MDX-kilder (GitHub master, publisert på skatteetaten.github.io/designsystemet) og koblede eksempler (se [eksempeloppslag.md](./eksempeloppslag.md))
 3. **Du kopierer og tilpasser**: Tar strukturen fra eksempelet, endrer bare tekst, labels og felt
 4. **Resultat**: Raskere implementasjon, konsistent kvalitet, innebygd tilgjengelighet
 
@@ -72,11 +72,9 @@ Når skillen stopper, gir den alltid:
 
 **Obligatorisk stoppregel ved manglende primærkilder:**
 
-- Hvis MDX-kilder eller koblede eksempler ikke er tilgjengelige fra GitHub
-  `master` eller lokal `/@fs/`-fallback etter live-tilgangssjekk, skal skillen
-  stoppe før kodeforslag.
+- Hvis MDX-kilder eller koblede eksempler ikke er tilgjengelige etter live-tilgangssjekk, skal skillen stoppe før kodeforslag.
 - Skillen skal be brukeren velge eksplisitt mellom:
-  - fikse tilgangen til primærkildene først, eller
+  - starte/fikse lokal docs-tilgang først, eller
   - fortsette midlertidig med sekundærkilder + tydelig merket fallback.
 - Skillen skal ikke gå videre til implementasjon uten at brukeren har valgt en av disse to.
 
@@ -86,19 +84,21 @@ Bruk kildene ut fra hva du trenger å verifisere, ikke som en tung sjekkliste hv
 
 ### Primærkilder først (MDX, eksempler og tokens)
 
-Les MDX og koblede eksempler fra
-`github.com/skatteetaten/designsystemet` på `master`. Bruk lokal Vite `/@fs/`
-bare som fallback eller når brukeren eksplisitt ber om upublisert lokal kode.
+Merk: MDX-kildene finnes på GitHub master og er publisert på skatteetaten.github.io/designsystemet. Begge peker til samme innhold — bruk samme kildeprioritet uansett hvilken av dem du leser fra.
 
 Kildeprioritet for verifisering og eksempelkode:
 
-1. **MDX-kilder og koblede eksempler** via rå repository-filer fra GitHub
-   `master`, med lokal Vite `/@fs/` som fallback – primærkilde for API, mønster,
-   eksempelkode og anbefalt sammensetting
+1. **MDX-kilder og koblede eksempler** via rå repository-filer fra GitHub `master`, med lokal Vite `/@fs/` som fallback – primærkilde for API, mønster, eksempelkode og anbefalt sammensetting
 2. **Semantiske tokens** i [semantic-tokens.md](./semantic-tokens.md) og tilhørende tokenkilder – primærkilde for tokenvalg og semantisk styling
-3. **Storybook** (inkludert API-tabeller via `read_page`) – sekundærkilde for orientering, validering og alternativer
-4. **Stil og tone / designsystemets nettsider** – sekundærkilde for mønsterforståelse og støttekontekst
-5. TypeScript-typedefinisjoner i `node_modules/@skatteetaten/ds-*` – fallback når primærkilder ikke dekker et konkret API-spørsmål
+3. **Skattekartet** – sekundærkilde for mønsterforståelse, stil/tone og praksis (se fulle lenker i "Sekundærkilder for mønster og praksis" under)
+4. TypeScript-typedefinisjoner i `node_modules/@skatteetaten/ds-*` – **kun fallback**, brukes først når primærkilden er bekreftet utilgjengelig (etter live-tilgangssjekk) eller ikke dekker et konkret API-spørsmål
+
+**Regel om source of truth vs. fallback:**
+
+- Dokumentasjonen (MDX-kilder og koblede eksempler) er source of truth for eksempelkode, mønster og anbefalt sammensetting.
+- `node_modules` er fallback, ikke et likeverdig alternativ. Gå aldri direkte til pakkekode i `node_modules` for å finne eksempelkode eller mønster hvis dokumentasjonen er tilgjengelig.
+- `node_modules` kan brukes for å slå opp eksakte prop-navn eller typesignaturer når dokumentasjonen er bekreftet tilgjengelig, men ikke dekker detaljen – ikke som erstatning for å lese dokumenterte eksempler først.
+- Hvis du vurderer å bruke `node_modules`, still deg selv spørsmålet: er dokumentasjonen bekreftet utilgjengelig, eller har jeg bare ikke lett godt nok der ennå?
 
 Regel: Sekundærkilder brukes for orientering og krysssjekk. Fastslå ikke nye props, varianter eller API-støtte uten dekning i primærkilde eller eksplisitt fallback.
 
@@ -106,9 +106,8 @@ Merk: `/examples/`- og `/_source/`-endepunkter returnerer HTML-404, ikke kildeko
 
 Detaljerte oppslag er flyttet til hjelpefiler for å holde denne filen kort og operativ:
 
-- [kildeoppslag.md](./kildeoppslag.md): GitHub `master`-arbeidsflyt, lokal
-  `/@fs/`-fallback, tilgangssjekk og URL-mønstre
-- [eksempeloppslag.md](./eksempeloppslag.md): MDX-indeks, behovstype-tabell og sidetype-/eksempellenker
+- [kildeoppslag.md](./kildeoppslag.md): `/@fs`-arbeidsflyt, lokal tilgangssjekk, URL-mønstre og fallback-regler
+- [eksempeloppslag.md](./eksempeloppslag.md): MDX-indeks, eksempelmal-tabell og sidetype-/eksempellenker
 - [stegvise-skjemaer.md](./stegvise-skjemaer.md): `StepList`-mønster, API-sjekker og dynamiske steg
 
 Hvis primærkilder ikke er tilgjengelige:
@@ -130,27 +129,17 @@ Når du har funnet et dokumentert treff, skal du ikke stoppe ved at komponenten 
 5. Blockquote for sitater
 6. DescriptionList for oppsummeringer og grupper av ikke-interaktive opplysninger
 
-### Autoritative kilder for verifisering
+### Sekundærkilder for mønster og praksis (Skattekartet)
 
-Primærkilder:
+Den fulle kildeprioriteten står i "Primærkilder først" over og i [kildeoppslag.md](./kildeoppslag.md). Skattekartet er Skatteetatens portal for mønster, stil/tone og praksis (tidligere kalt «Stil og tone»), og brukes som følgende sekundærkilder for orientering:
 
-1. MDX-kilder og koblede eksempler fra GitHub `master`, med lokal `/@fs/` som
-   fallback.
-2. Verifiserte tokenkilder, inkludert [semantic-tokens.md](./semantic-tokens.md)
-
-Sekundærkilder:
-
-3. Storybook og komponentenes API: https://skatteetaten.github.io/designsystemet/
-4. Interaksjonsmønstre: https://www.skatteetaten.no/stilogtone/monster/
-5. Bruk, eksempler og designdokumentasjon: https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/
-6. Kom i gang for utviklere: https://www.skatteetaten.no/stilogtone/designsystemet/kom-i-gang/for-utviklere/
+- Interaksjonsmønstre: https://www.skatteetaten.no/skattekartet/monster/
+- Stil og tone: https://www.skatteetaten.no/skattekartet/stilogtone/
+- Praksis, språk og universell utforming: https://www.skatteetaten.no/skattekartet/praksis/
 
 ### Sidetyper og eksempelsider som startpunkt
 
-Når oppgaven gjelder en hel side, en hel flyt eller et større sideoppsett, start
-med MDX-kilder og koblede eksempler fra GitHub `master`. Bruk lokal `/@fs/` som
-fallback og relevante sidetyper og eksempelsider i Storybook som sekundærkilde
-for orientering og alternativer.
+Når oppgaven gjelder en hel side, en hel flyt eller et større sideoppsett, start med MDX-kilder (GitHub master, publisert på skatteetaten.github.io/designsystemet) og koblede eksempler. Bruk relevante sidetyper og eksempelsider som sekundærkilde for orientering og alternativer.
 
 Se [eksempeloppslag.md](./eksempeloppslag.md) for full liste over sidetyper og eksempelsider.
 
@@ -174,6 +163,12 @@ Hvis brukeren ikke spesifiserer modus eksplisitt, velg automatisk etter spørsm�
 - **Eksperiment-modus**: "Eksperimenter med...", "Prototype for...", "Behovet er uklart, hjelp meg utforske...", eller eksplisitt "bruk eksperiment-modus"
 
 **Fallback-regel:** Hvis spørsmålet kan tolkes både som valg og implementasjon, velg alltid mal-modus. Det er bedre å være for strukturert enn for lett.
+
+**Mal-modus og streng modus i samme forespørsel:** Hvis en implementeringsoppgave også nevner tilgjengelighet, a11y eller kvalitet i samme setning (f.eks. "lag et skjema og sørg for at det er tilgjengelig"), er dette ikke et reelt veivalg. Universell utforming er allerede en obligatorisk del av mal-modus (se arbeidsflyt steg 5). Kjør mal-modus uten å stoppe og spørre.
+
+**Mal-modus vs. streng modus som ulik leveranse:** Hvis forespørselen ber om både ny kode og en separat vurdering av eksisterende kode på samme artefakt, er leveransetypen tvetydig (kode vs. tekstlig vurdering). Stopp og still et kort avklaringsspørsmål om hvilken leveranse som er ønsket, i stedet for å gjette.
+
+**Mal-modus vs. eksperiment-modus:** Hvis behovet fremstår uklart eller udefinert, men forespørselen også signaliserer ønske om rask implementasjon, ikke fall tilbake til mal-modus stille. Eksperiment-modus har en obligatorisk godkjenningsport for planen før kode skrives, som mal-modus hopper over — feil valg her har høyere kostnad enn andre modusoverlapp. Stopp og still et kort avklaringsspørsmål om behovet er klart nok til mal-modus, eller om det bør utforskes i eksperiment-modus først.
 
 **Eksperiment-modus:** Når behovet er uklart, udefinert eller ønsket utforsket før implementasjon. Branchen slettes normalt etterpå.
 
@@ -238,12 +233,12 @@ Mal-modus er standard med mindre brukeren ber om noe annet.
 
 I mal-modus skal du:
 
-- finne nærmeste dokumenterte eksempel i MDX-kilder og koblede eksempler fra
-  GitHub `master`, med lokal `/@fs/` som fallback
+- finne nærmeste dokumenterte eksempel i MDX-kilder og koblede eksempler (GitHub master, publisert på skatteetaten.github.io/designsystemet) – dette er source of truth i mal-modus
 - kopiere struktur, komponentvalg og API-bruk fra eksempelet først
 - tilpasse kun det som trengs: tekst, labels, felter, validering, dataflyt og innhold
 - beholde layout, topp/bunn, containere og hovedstruktur i tråd med valgt sidetype
 - unngå nye wrappers, nye abstraheringer eller lokal custom layout hvis et eksempel dekker behovet
+- **ikke gå til `node_modules` for eksempelkode eller mønster i mal-modus.** Sjekk `node_modules` kun hvis dokumentasjonen er bekreftet utilgjengelig etter live-tilgangssjekk, og da som fallback for enkeltdetaljer, ikke som utgangspunkt for malen
 
 Hvis ingen eksempel dekker behovet fullt:
 
@@ -287,8 +282,8 @@ I streng modus skal du:
 2. Velg kandidater.
 
 - **for behovstyper som involverer kombinasjoner av komponenter: sjekk anbefalt helhetsløsning under `helpe-bruker-med` eller `spørre-bruker-om` FØR komponentdokumentasjon**
-  - helhetseksempler definerer hvilke komponenter som alltid hører sammen, og overstyrer det du kan utlede fra enkeltkomponent-dokumentasjon
-  - bruk behovstype-tabellen i [eksempeloppslag.md](./eksempeloppslag.md) for å finne riktig eksempelside raskt
+- helhetseksempler definerer hvilke komponenter som alltid hører sammen, og overstyrer det du kan utlede fra enkeltkomponent-dokumentasjon
+- bruk eksempelmal-tabellen i [eksempeloppslag.md](./eksempeloppslag.md) for å finne riktig eksempelside raskt
 - for side-nivå oppgaver: start med relevant sidetype eller eksempelside som ramme for topp, bunn, containere og hovedstruktur
 - for komponentnivå oppgaver: start med komponentens dokumenterte eksempelkode før lokale varianter
 - for stegvise skjemaer: start med `StepList` og `StepList.Step`; følg [stegvise-skjemaer.md](./stegvise-skjemaer.md) før du vurderer lokale avvik
@@ -299,13 +294,13 @@ I streng modus skal du:
 
 3. Gjør gate-check før endelig valg.
 
-- les "Når bruke komponenten" og "Når ikke bruke komponenten" i ekstern dokumentasjon eller Storybook for komponentene du vurderer
+- les "Når bruke komponenten" og "Når ikke bruke komponenten" i ekstern dokumentasjon for komponentene du vurderer
 - hvis behovet matcher "Når ikke bruke", vurder alternativer før du velger komponenten
 - hvis det er tvil eller gap: ikke implementer uten eksplisitt begrunnelse
 
 4. Verifiser API og mønster.
 
-- slå opp komponentens props, events og API i Storybook eller TypeScript-definisjoner før du foreslår bruk
+- slå opp komponentens props, events og API i MDX-kilder og koblede eksempler først; bruk komponentens `.types.ts`-fil på GitHub master (se [kildeoppslag.md](./kildeoppslag.md)) for eksakte signaturer, og TypeScript-definisjoner i `node_modules` kun som siste fallback når dokumentasjonen er bekreftet utilgjengelig eller ikke dekker detaljen
 - ikke gjett på props, eventnavn eller støttede varianter
 - bruk dokumenterte interaksjonsmønstre for validering, progresjon, tilbakemelding og bekreftelse
 - for stegvise skjemaer: verifiser `StepList`-API og dynamisk stegoppførsel som beskrevet i [stegvise-skjemaer.md](./stegvise-skjemaer.md)
@@ -367,9 +362,7 @@ For rådgivende oppgaver, lever:
 ## Føringer
 
 - mal-modus er standard: bruk dokumentert eksempelkode som utgangspunkt før du lager lokale tilpasninger
-- ved side-nivå UI: start med MDX-kilder og koblede eksempler fra GitHub
-  `master`, med lokal `/@fs/` som fallback; bruk Storybook som sekundærkilde for
-  orientering og alternativer
+- ved side-nivå UI: start med MDX-kilder (GitHub master, publisert på skatteetaten.github.io/designsystemet) og koblede eksempler for orientering og alternativer
 - når designsystemet har en dokumentert innholdskomponent, bruk den foran rå HTML med lokal styling
 - foretrekk `Heading` foran rå `h1`-`h6`, `Paragraph` foran rå `p`, `List` foran rå `ul`/`ol`, `Link` foran rå `a`, `Blockquote` foran rå `blockquote`, og `DescriptionList` foran rå `dl`/`dt`/`dd`
 - bruk kun rå HTML for disse innholdstypene hvis dokumentasjonen eksplisitt krever det eller komponenten ikke dekker behovet
@@ -378,6 +371,8 @@ For rådgivende oppgaver, lever:
 - bruk dokumenterte komponenter før du lager tilpasset UI
 - for stegvise skjemaer: følg [stegvise-skjemaer.md](./stegvise-skjemaer.md) fremfor å beskrive en lokal stepper eller oppdiktet API
 - slå alltid opp API før du foreslår konkrete props eller bruksmønstre
+- dokumentasjonen (MDX-kilder og koblede eksempler) er source of truth; `node_modules` er fallback og skal ikke brukes for eksempelkode eller mønster når dokumentasjonen er tilgjengelig
+- hvis dokumentasjonen er tilgjengelig, skal `node_modules` ikke brukes som førstevalg eller utgangspunkt for mønster, props eller eksempelkode
 - hev aldri støtte for en komponent, et mønster eller et tokennavn uten dokumentasjon
 - ikke fall tilbake til hardkodede verdier hvis et relevant semantisk token dekker behovet
 - ikke foreslå installasjonssteg, importmønstre eller avhengigheter som avviker fra "Kom i gang for utviklere" uten tydelig begrunnelse
@@ -392,7 +387,7 @@ For rådgivende oppgaver, lever:
 - /designsystem Bruk mal-modus. Bytt ut rå `h1` og `p` med dokumenterte designsystem-komponenter, og bruk `Heading` og `Paragraph` uten å endre innholdsstrukturen.
 - /designsystem Bruk mal-modus. Jeg trenger en informasjonsseksjon med overskrift, brødtekst, lenke og punktliste. Finn nærmeste eksempelkode og bruk `Heading`, `Paragraph`, `Link` og `List` i stedet for rå HTML.
 - /designsystem Bruk mal-modus. Jeg trenger en oppsummering før innsending. Bruk `DescriptionList` som utgangspunkt i stedet for rå `dl`/`dt`/`dd`, og tilpass bare innholdet.
-- /designsystem Bruk streng modus. Gå gjennom denne komponenten og pek ut hvor rå `h1`, `p`, `ul`, `ol`, `a`, `blockquote` eller `dl` bør erstattes med `Heading`, `Paragraph`, `List`, `Link`, `Blockquote` eller `DescriptionList`.
+- /designsystem Bruk streng modus. Gå gjennom denne siden og pek ut hvor rå `h1`, `p`, `ul`, `ol`, `a`, `blockquote` eller `dl` bør erstattes med `Heading`, `Paragraph`, `List`, `Link`, `Blockquote` eller `DescriptionList`.
 - /designsystem Bruk mal-modus. Refaktorer denne teksten til designsystem-komponenter, behold semantikken, og unngå lokal typografi-styling når `Heading`, `Paragraph`, `List` eller `Link` dekker behovet.
 - /designsystem Bruk mal-modus. Refaktorer denne CSS-en til semantiske designtokens, fjern hardkodede hex- og pixelverdier, og bruk bare verifiserte tokens eller funksjonelle tokenbeskrivelser.
 - /designsystem Bruk mal-modus. Jeg trenger minimal styling for denne komponenten. Bruk designsystemets tokens for spacing, typografi og farger, og unngå lokale CSS-variabler hvis et definert token finnes.
