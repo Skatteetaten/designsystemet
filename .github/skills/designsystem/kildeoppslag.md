@@ -4,9 +4,7 @@ Denne filen samler detaljerte kilderutiner som er flyttet ut fra SKILL.md.
 
 ## Arbeidsflyt for Canvas-eksempelkode fra GitHub
 
-Les alltid kildekoden fra `master` i
-`github.com/skatteetaten/designsystemet` først. Ikke bruk release-tag, brukerens
-gren eller GitHubs rendret HTML som kildekilde.
+Les alltid kildekoden fra `master` i `github.com/skatteetaten/designsystemet` først. Ikke bruk release-tag, brukerens gren eller GitHubs rendret HTML som kildekilde.
 
 Repository:
 
@@ -17,8 +15,7 @@ ref: master
 ```
 
 Bruk et GitHub-verktøy som kan lese repository-filer når det er tilgjengelig.
-Oppgi alltid `ref: master`. Hvis et slikt verktøy ikke er tilgjengelig, hent den
-rå filen fra:
+Oppgi alltid `ref: master`. Hvis et slikt verktøy ikke er tilgjengelig, hent den rå filen fra:
 
 ```text
 https://raw.githubusercontent.com/skatteetaten/designsystemet/master/[filsti]
@@ -57,6 +54,38 @@ dokumentasjonen, og les den tilhørende `example.tsx`.
 
 Ved rå URL-oppslag må mellomrom og ikke-ASCII-tegn URL-kodes. Et GitHub-verktøy
 for repository-filer er derfor å foretrekke.
+
+## GitHub-kildekode for eksakte prop-/typesignaturer
+
+MDX-filene inneholder ikke prop-tabeller som tekst. Props-seksjonen består kun
+av `<TypeTable of={Komponent} />`, som rendres dynamisk og ikke finnes som
+statisk innhold i selve MDX-filen. For eksakte prop-navn, typer og
+signaturer, hent i stedet komponentens `.types.ts`-fil direkte fra GitHub
+master med samme URL-mønster som over:
+
+```text
+https://raw.githubusercontent.com/skatteetaten/designsystemet/master/libs/[pakke]/src/[Komponentnavn]/[Komponentnavn].types.ts
+```
+
+Eksempel:
+
+```text
+https://raw.githubusercontent.com/skatteetaten/designsystemet/master/libs/ds-forms/src/Combobox/Combobox.types.ts
+```
+
+Komponenter ligger ikke alltid under en `components/`-undermappe. Bruk et
+GitHub-tekstsøk (for eksempel etter `[Komponentnavn].tsx`) for å finne riktig
+pakke og mappe hvis stien er ukjent.
+
+Merk: dette stimønsteret er verifisert på et lite utvalg komponenter
+(Combobox, Alert), ikke bekreftet som universelt for alle pakker. Hvis filen
+ikke finnes på forventet sti, bruk GitHub-tekstsøk for å finne faktisk
+plassering før du konkluderer med at kilden mangler.
+
+Denne kilden er fortsatt GitHub `master` og regnes som primærkilde, ikke
+fallback. Bruk den foran lokal `node_modules`, som kan være utdatert i
+forhold til master. `node_modules` er kun fallback når GitHub-oppslag
+mislykkes (se tilgangssjekk under).
 
 ## Lokal `/@fs/`-fallback
 
@@ -106,6 +135,13 @@ Hvis primærkilder ikke er tilgjengelige:
   om sekundærkilde-fallback er akseptabelt
 - ikke implementer kode etter manglende GitHub- og lokal primærkilde uten et
   eksplisitt valg fra brukeren
+
+**Kjent begrensning:** Enkeltsider på den publiserte docs-siden
+(`skatteetaten.github.io/designsystemet/[sti]`, f.eks. en komponentside) kan gi
+HTTP 404 ved direkte fetch selv om siden fungerer i nettleser, fordi
+innholdet rendres klientside. Rot-siden svarer normalt. Ikke tolk 404 på en
+slik underside som bevis for at siden ikke finnes — bruk GitHub master-MDX
+for å verifisere innhold i stedet.
 
 ## Hurtigreferanse til docs-URL-er
 
