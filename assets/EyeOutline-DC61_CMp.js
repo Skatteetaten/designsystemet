@@ -1,0 +1,1 @@
+import{j as t}from"./chunk-62JRHF6Z-B4JvYaBZ.js";import{I as o}from"./router-link-Bw__wKpt.js";const s=t.jsx("path",{d:"M12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5ZM3.18 12a9.822 9.822 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"});function e(a){return t.jsx(o,{...a,svgPath:s})}export{e as E,s as a};
