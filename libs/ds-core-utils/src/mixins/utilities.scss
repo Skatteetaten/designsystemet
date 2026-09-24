@@ -41,6 +41,18 @@ $spacing-properties: (
   }
 }
 
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -57,16 +69,44 @@ $spacing-properties: (
   flex-direction: column;
 }
 
-.block {
-  display: block;
+.align-items-center {
+  align-items: center;
 }
 
-.inline-block {
-  display: inline-block;
+.align-items-start {
+  align-items: flex-start;
 }
 
-.inline {
-  display: inline;
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-items-stretch {
+  align-items: stretch;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
 }
 
 .width-100 {

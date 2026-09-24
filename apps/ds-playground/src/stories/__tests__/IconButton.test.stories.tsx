@@ -345,22 +345,22 @@ export const WithEventHandlers = {
 
 const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
   <div className={'flex flex-column gap-xl'}>
-    <div className={'flex gap-m'}>
+    <div className={'flex align-items-center gap-m'}>
       <IconButton {...args} hasSpinner={false} size={'small'} isOutlined />
       <IconButton {...args} hasSpinner={false} isOutlined />
       <IconButton {...args} hasSpinner={false} size={'large'} isOutlined />
     </div>
-    <div className={'flex gap-m'}>
+    <div className={'flex align-items-center gap-m'}>
       <IconButton {...args} size={'small'} isOutlined />
       <IconButton {...args} isOutlined />
       <IconButton {...args} size={'large'} isOutlined />
     </div>
-    <div className={'flex gap-m'}>
+    <div className={'flex align-items-center gap-m'}>
       <IconButton {...args} hasSpinner={false} size={'small'} />
       <IconButton {...args} hasSpinner={false} />
       <IconButton {...args} hasSpinner={false} size={'large'} />
     </div>
-    <div className={'flex gap-m'}>
+    <div className={'flex align-items-center gap-m'}>
       <IconButton {...args} size={'small'} />
       <IconButton {...args} />
       <IconButton {...args} size={'large'} />
