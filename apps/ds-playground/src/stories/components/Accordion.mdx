@@ -1,40 +1,13 @@
 import { Canvas, Meta, Primary, Controls } from '@storybook/addon-docs/blocks';
 import * as AccordionStories from './Accordion.stories';
-import { VersionBadge } from '../utils/VersionBadge';
-import { DocIntro } from '../utils/DocIntro';
-import { DocHeaderWrapper } from '../utils/DocHeaderWrapper';
 
 <Meta of={AccordionStories} />
 
-<DocHeaderWrapper componentName={'Accordion'}>
-
 # Accordion
-
-<VersionBadge packageName={'collections'} />
-
-<DocIntro url="https://www.skatteetaten.no/stilogtone/designsystemet/komponenter/accordion/" />
-
-</DocHeaderWrapper>
 
 <Primary />
 
-```tsx
-import { Accordion } from '@skatteetaten/ds-collections';
-```
-
 <Controls />
-
-## Standard med høyreikon
-
-<Canvas of={AccordionStories.StandardRightIcon} />
-
-## Liten med venstreikon
-
-<Canvas of={AccordionStories.SmallLeftIcon} />
-
-## Bakgrunnsfarge
-
-<Canvas of={AccordionStories.BackgroundColor} />
 
 ## Lazy loading av innhold
 

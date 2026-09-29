@@ -6,6 +6,7 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: ErrorSummary.Error,
+  title: 'Komponenter/ErrorSummary/Error',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

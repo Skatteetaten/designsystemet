@@ -405,16 +405,6 @@ a.resetLinkStyling {
   --description-list-dd-align: right;
 }
 
-.docHeaderWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  h1 {
-    margin-bottom: 0;
-  }
-}
-
 .componentIcon {
   width: 11rem;
 
@@ -536,4 +526,8 @@ dl.descriptionListTwoColumns {
   overflow-y: scroll;
   max-height: 100%;
   flex: 1;
+}
+
+.hiddenUserMenuButton {
+  display: none;
 }
