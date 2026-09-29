@@ -1,3 +1,5 @@
-.replaceButton {
-  margin-right: var(--spacing-m);
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
 }

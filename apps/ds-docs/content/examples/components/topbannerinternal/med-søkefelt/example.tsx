@@ -8,6 +8,8 @@ import {
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
 
+import styles from './med-sokefelt.module.scss';
+
 export default function TopBannerInternalWithSearchExample(): ReactElement {
   const menuRef = useRef<ActionMenuActionsRef>(null);
 
@@ -19,7 +21,7 @@ export default function TopBannerInternalWithSearchExample(): ReactElement {
       />
       <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
         <InlineButton
-          className={'bottomSpacingXS'}
+          className={styles.marginBottomXs}
           svgPath={AddSVGpath}
           onClick={() => {
             menuRef?.current?.close?.();

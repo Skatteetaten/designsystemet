@@ -2,6 +2,8 @@ import { type ReactElement, useState } from 'react';
 
 import { SortState, Table } from '@skatteetaten/ds-table';
 
+import styles from './ekspanderbar.module.scss';
+
 export default function TableExpandableExample(): ReactElement {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
@@ -78,9 +80,7 @@ export default function TableExpandableExample(): ReactElement {
             <Table.Row
               key={row.id}
               expandButtonPosition={'right'}
-              expandableContent={
-                <div className={'emptyExpandedTableRow'}></div>
-              }
+              expandableContent={<div className={styles.emptyContent}></div>}
               expandButtonAriaDescribedby={row.id}
               isExpandable
             >

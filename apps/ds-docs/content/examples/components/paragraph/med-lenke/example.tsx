@@ -7,11 +7,11 @@ export default function ParagraphWithLinkStateExample(): JSX.Element {
     <Paragraph>
       {'Dette er et eksempel på et avsnitt med en '}
       <a
-        href={'https://www.skatteetaten.no/stilogtone/'}
+        href={'https://www.skatteetaten.no/skattekartet/'}
         target={'_blank'}
         rel={'noreferrer'}
       >
-        {'lenke til stil og tone'}
+        {'lenke til skattekartet'}
       </a>
       {' og som får designsystemets typografi.'}
     </Paragraph>

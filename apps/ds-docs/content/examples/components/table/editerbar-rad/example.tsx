@@ -3,6 +3,8 @@ import { type ReactElement, type ReactNode, useState } from 'react';
 import { Button } from '@skatteetaten/ds-buttons';
 import { SortState, Table } from '@skatteetaten/ds-table';
 
+import styles from './editerbar-rad.module.scss';
+
 export default function TableEditableRowExample(): ReactElement {
   const [sortState, setSortState] = useState<SortState>({
     direction: 'none',
@@ -81,7 +83,7 @@ export default function TableEditableRowExample(): ReactElement {
             <Table.EditableRow
               key={row.id}
               editableContent={(closeEditing: () => void): ReactNode => (
-                <div className={'emptyExpandedTableRow'}>
+                <div className={styles.emptyContent}>
                   <Button
                     onClick={(): void => {
                       closeEditing();

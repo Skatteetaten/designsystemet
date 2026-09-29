@@ -3,6 +3,8 @@ import { type ReactElement, useState } from 'react';
 import { SaveSVGpath, EditSVGpath } from '@skatteetaten/ds-icons';
 import { Table } from '@skatteetaten/ds-table';
 
+import styles from './custom-ekspander-knapp.module.scss';
+
 export default function TableExpandableWithCustomButtonExample(): ReactElement {
   const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
   const [savingRows, setSavingRows] = useState<Set<string>>(new Set());
@@ -88,9 +90,7 @@ export default function TableExpandableWithCustomButtonExample(): ReactElement {
             <Table.Row
               key={row.id}
               expandButtonPosition={'right'}
-              expandableContent={
-                <div className={'emptyExpandedTableRow'}></div>
-              }
+              expandableContent={<div className={styles.emptyContent}></div>}
               expandButtonAriaDescribedby={row.id}
               expandButtonTitle={isExpanded ? 'Lagre og lukk' : 'Apne oppgave'}
               expandButtonProps={{

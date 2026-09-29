@@ -6,7 +6,7 @@ Designsystemet består av visuelle elementer som bidrar til å kommunisere at Sk
 
 Designsystemet er til for både utviklere og for designere. Designere trenger ikke spesifisere så mye, og utviklere trenger ikke kode så mye.
 
-[Kom i gang](https://www.skatteetaten.no/stilogtone/designsystemet/kom-i-gang/for-utviklere/)
+[Kom i gang](https://skatteetaten.github.io/designsystemet/guider/kom-i-gang/for-utviklere)
 
 ## Thanks
 
