@@ -17,7 +17,6 @@
     max-height: 3.5rem;
 
     .nameWrapper {
-      display: block;
       overflow: hidden;
       max-width: 100%;
       text-overflow: ellipsis;
@@ -28,7 +27,6 @@
       max-height: none;
 
       .nameWrapper {
-        display: inline;
         white-space: normal;
       }
     }
