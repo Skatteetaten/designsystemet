@@ -5,6 +5,7 @@ import {
   useId,
   useImperativeHandle,
   useRef,
+  useState,
   JSX,
   useLayoutEffect,
 } from 'react';
@@ -76,11 +77,16 @@ export const Select = ({
   const descriptionId = `descId-${useId()}`;
   const fieldId = externalId ?? generatedId;
 
+  /* Ved ukontrollert bruk ligger brukerens valg kun i DOM-en til select. Valget
+   * lagres derfor i state slik at det ikke går tapt når readOnly slås på. */
+  const [internalValue, setInternalValue] =
+    useState<SelectProps['value']>(defaultValue);
+
   const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
   useLayoutEffect(() => {
     changePlaceholderColor();
     // eslint-disable-next-line
-  }, [value]);
+  }, [value, isReadOnly]);
 
   const resolvedAriaDescribedBy =
     [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
@@ -88,6 +94,9 @@ export const Select = ({
       .join(' ') || undefined;
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
+    if (value === undefined) {
+      setInternalValue(e.target.value);
+    }
     changePlaceholderColor();
     onChange?.(e);
   };
@@ -107,7 +116,7 @@ export const Select = ({
   };
 
   const getOptionLabel = (): string => {
-    const selected = value ?? defaultValue;
+    const selected = value ?? internalValue;
     /* Bruker ikke falsy-sjekk (!selected) siden 0 kan være en gyldig verdi */
     if (selected === undefined || selected === '') {
       return '';
@@ -167,7 +176,7 @@ export const Select = ({
                 form={form}
                 name={name}
                 value={value}
-                defaultValue={defaultValue}
+                defaultValue={value === undefined ? internalValue : undefined}
               />
             )}
           </>
@@ -184,7 +193,8 @@ export const Select = ({
               name={name}
               required={required}
               value={value}
-              defaultValue={defaultValue}
+              /* internalValue beholder brukerens valg når select mountes på nytt etter readOnly */
+              defaultValue={value === undefined ? internalValue : undefined}
               aria-describedby={resolvedAriaDescribedBy}
               aria-invalid={getAriaInvalid(errorMessage, required)}
               onBlur={onBlur}
