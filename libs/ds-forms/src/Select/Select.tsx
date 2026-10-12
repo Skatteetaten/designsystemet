@@ -76,13 +76,21 @@ export const Select = ({
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
   const fieldId = externalId ?? generatedId;
+  const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
 
   /* Ved ukontrollert bruk ligger brukerens valg kun i DOM-en til select. Valget
-   * lagres derfor i state slik at det ikke går tapt når readOnly slås på. */
+   * lagres derfor i state slik at det ikke går tapt når readOnly slås på/av. */
   const [internalValue, setInternalValue] =
     useState<SelectProps['value']>(defaultValue);
 
-  const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
+  /* Synkroniserer internalValue med det select faktisk viser, f.eks. første
+   * option når hidePlaceholder er satt og verken value eller defaultValue er gitt. */
+  useLayoutEffect(() => {
+    if (value === undefined && selectRef.current) {
+      setInternalValue(selectRef.current.value);
+    }
+  }, [value, isReadOnly]);
+
   useLayoutEffect(() => {
     changePlaceholderColor();
     // eslint-disable-next-line
