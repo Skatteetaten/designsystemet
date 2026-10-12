@@ -19,6 +19,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const valueOption1 = 'option1';
 const valueOption2 = 'option2';
+const childrenOption2 = 'Test 2';
 const errorMessageText = 'Ledetekst er obligatorisk';
 const defaultLabelText = 'Ledetekst';
 
@@ -50,6 +51,7 @@ const meta = {
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
     label: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
@@ -76,7 +78,7 @@ const meta = {
         {'Test 1'}
       </Select.Option>,
       <Select.Option key={'option_2'} value={valueOption2}>
-        {'Test 2'}
+        {childrenOption2}
       </Select.Option>,
     ],
   },
@@ -204,6 +206,7 @@ export const Defaults = {
       '[id^=selectErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(canvas.queryByRole('textbox')).not.toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -427,6 +430,75 @@ export const WithHelpText = {
     });
     await expect(helpButton).toBeInTheDocument();
     await fireEvent.click(helpButton);
+  },
+} satisfies Story;
+
+export const WithReadOnly = {
+  name: 'With ReadOnly',
+  args: {
+    readOnly: true,
+    value: valueOption2,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.queryByRole('combobox')).not.toBeInTheDocument();
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('readonly');
+    await expect(textbox).toHaveValue(childrenOption2);
+  },
+} satisfies Story;
+
+export const WithReadOnlyNameAndForm = {
+  name: 'With ReadOnly Name And Form',
+  args: {
+    readOnly: true,
+    name: 'farge',
+    form: 'form123',
+    value: valueOption2,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+    name: { table: { disable: false } },
+    form: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('textbox')).not.toHaveAttribute('name');
+    const hidden = canvasElement.querySelector(
+      `input[type='hidden'][name='farge']`
+    );
+    await expect(hidden).toHaveValue(valueOption2);
+    await expect(hidden).toHaveAttribute('form', 'form123');
+  },
+} satisfies Story;
+
+export const WithReadOnlyAndDisabled = {
+  name: 'With ReadOnly and Disabled',
+  args: {
+    readOnly: true,
+    disabled: true,
+    value: valueOption2,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+    disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.queryByRole('textbox')).not.toBeInTheDocument();
+    await expect(canvas.queryByRole('combobox')).toBeInTheDocument();
   },
 } satisfies Story;
 

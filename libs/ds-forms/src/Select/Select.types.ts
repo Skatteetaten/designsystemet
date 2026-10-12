@@ -74,6 +74,14 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
   /** Tekst på feilmelding */
   errorMessage?: string;
+  /**
+   * Om Select skal være skrivebeskyttet. Siden select ikke støtter attributtet
+   * readonly, vises et input-felt i stedet. Dette gir følgende forskjeller:
+   * - ref peker til et HTMLInputElement, og elementet har rollen textbox i stedet for combobox.
+   * - onFocus og onBlur har ingen effekt.
+   * - propene aria-invalid og placeholder har ingen effekt
+   */
+  readOnly?: boolean;
 }
 
 export type SelectProps = SelectCommonProps;

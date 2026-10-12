@@ -79,3 +79,17 @@
   background-color: var(--semantic-interactive-background);
   fill: var(--semantic-interactive-foreground);
 }
+
+.textbox {
+  &:read-only {
+    padding: var(--spacing-xs) var(--spacing-s);
+    background-color: transparent;
+    box-shadow: none;
+    outline: 0;
+
+    &:focus-visible {
+      box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+      outline: 1px solid var(--semantic-interactive-main);
+    }
+  }
+}
