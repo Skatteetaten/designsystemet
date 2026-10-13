@@ -83,10 +83,10 @@ const config: StorybookConfig = {
       resolve: {
         alias: [
           {
-            find: '@skatteetaten/ds-core-utils/utilities.scss',
+            find: '@skatteetaten/ds-core-utils/ds-classes.scss',
             replacement: join(
               process.cwd(),
-              'libs/ds-core-utils/src/mixins/utilities.scss'
+              'libs/ds-core-utils/src/mixins/ds-classes.scss'
             ),
           },
           {

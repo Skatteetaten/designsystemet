@@ -1,5 +1,5 @@
 @import 'inter.css';
-@import '@skatteetaten/ds-core-utils/utilities.scss';
+@import '@skatteetaten/ds-core-utils/ds-classes.scss';
 
 :root {
   --storybook-font-family: 'Inter';
