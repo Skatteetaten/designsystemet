@@ -101,6 +101,8 @@ const config: StorybookConfig = {
         nxViteTsPaths(),
         sassDts({
           esmExport: true,
+          // Prettier-oppsett for genererte *.module.scss.d.ts (speiler .oxfmtrc.json)
+          prettierFilePath: path.resolve(__dirname, '.prettierrc.json'),
         }),
       ],
       build: {},
