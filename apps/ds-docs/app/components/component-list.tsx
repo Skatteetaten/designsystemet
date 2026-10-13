@@ -2,10 +2,10 @@ import { JSX, useEffect, useState } from 'react';
 
 import { NavigationTile } from '@skatteetaten/ds-navigation';
 
-import browserCollections from '../../.source/browser';
-import { getPublicUrl } from '../../lib/public-url';
 import { PublicImage } from './public-image';
 import { useRouterLinkClick } from './router-link';
+import browserCollections from '../../.source/browser';
+import { getPublicUrl } from '../../lib/public-url';
 
 import styles from './component-list.module.scss';
 
