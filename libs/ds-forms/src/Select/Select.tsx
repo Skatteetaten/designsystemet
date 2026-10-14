@@ -1,6 +1,7 @@
 import {
   ChangeEvent,
   Children,
+  isValidElement,
   ReactElement,
   useId,
   useImperativeHandle,
@@ -88,7 +89,7 @@ export const Select = ({
     if (value === undefined && selectRef.current) {
       setInternalValue(selectRef.current.value);
     }
-  }, [value, isReadOnly, hidePlaceholder]);
+  }, [value, isReadOnly]);
 
   const resolvedAriaDescribedBy =
     [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
@@ -103,19 +104,19 @@ export const Select = ({
   };
 
   const getOptionLabel = (): string => {
-    const selected = value ?? internalValue;
-    /* Bruker ikke falsy-sjekk (!selected) siden 0 kan være en gyldig verdi */
-    if (selected === undefined || selected === '') {
+    const currentValue = value ?? internalValue;
+    /* Bruker ikke falsy-sjekk (!currentValue) siden 0 kan være en gyldig verdi */
+    if (currentValue === undefined || currentValue === '') {
       return '';
     }
 
-    const options = Children.toArray(
-      children
-    ) as ReactElement<SelectOptionProps>[];
-    const selectedOption = options.find(
-      (option) => String(option.props?.value) === String(selected)
+    const option = Children.toArray(children).find(
+      (child): child is ReactElement<SelectOptionProps> =>
+        isValidElement<SelectOptionProps>(child) &&
+        String(child.props.value) === String(currentValue)
     );
-    return selectedOption?.props.children ?? '';
+
+    return option?.props.children ?? '';
   };
 
   return (
