@@ -76,7 +76,6 @@ export const Select = ({
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
   const fieldId = externalId ?? generatedId;
-  const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
 
   /* Ved ukontrollert bruk ligger brukerens valg kun i DOM-en til select. Valget
    * lagres derfor i state slik at det ikke går tapt når readOnly slås på/av. */
@@ -91,11 +90,6 @@ export const Select = ({
     }
   }, [value, isReadOnly, hidePlaceholder]);
 
-  useLayoutEffect(() => {
-    changePlaceholderColor();
-    // eslint-disable-next-line
-  }, [value, isReadOnly, hidePlaceholder]);
-
   const resolvedAriaDescribedBy =
     [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
       .filter(Boolean)
@@ -105,25 +99,7 @@ export const Select = ({
     if (value === undefined) {
       setInternalValue(e.target.value);
     }
-    changePlaceholderColor();
     onChange?.(e);
-  };
-
-  const changePlaceholderColor = (): void => {
-    const select = selectRef.current;
-    if (!select) {
-      return;
-    }
-
-    if (!hidePlaceholder) {
-      if (select.value.length === 0) {
-        select.style.color = placeholderPaletteGraphite50;
-      } else {
-        select.style.color = '';
-      }
-    } else {
-      select.style.color = '';
-    }
   };
 
   const getOptionLabel = (): string => {
