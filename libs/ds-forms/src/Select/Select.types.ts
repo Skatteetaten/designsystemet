@@ -75,11 +75,12 @@ interface SelectCommonProps extends SelectPropsHTMLAttributes, BaseProps {
   /** Tekst på feilmelding */
   errorMessage?: string;
   /**
-   * Om Select skal være skrivebeskyttet. Siden select ikke støtter attributtet
-   * readonly, vises et input-felt i stedet. Dette gir følgende forskjeller:
-   * - ref peker til et HTMLInputElement, og elementet har rollen textbox i stedet for combobox.
-   * - onFocus og onBlur har ingen effekt.
-   * - propene aria-invalid og placeholder har ingen effekt
+   * Gjør feltet skrivebeskyttet. Siden select ikke støtter attributtet
+   * readonly, rendres et input-element i stedet. Dette innebærer:
+   * - ref refererer til et HTMLInputElement, og har role textbox i stedet for combobox
+   *   ref.current.value gir teksten til valgt option, ikke verdien
+   * - onFocus og onBlur er ikke støttet
+   * - egendefinert tekst for placeholder ignoreres
    */
   readOnly?: boolean;
 }
