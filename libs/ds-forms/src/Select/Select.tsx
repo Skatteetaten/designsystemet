@@ -89,12 +89,12 @@ export const Select = ({
     if (value === undefined && selectRef.current) {
       setInternalValue(selectRef.current.value);
     }
-  }, [value, isReadOnly]);
+  }, [value, isReadOnly, hidePlaceholder]);
 
   useLayoutEffect(() => {
     changePlaceholderColor();
     // eslint-disable-next-line
-  }, [value, isReadOnly]);
+  }, [value, isReadOnly, hidePlaceholder]);
 
   const resolvedAriaDescribedBy =
     [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
@@ -110,16 +110,19 @@ export const Select = ({
   };
 
   const changePlaceholderColor = (): void => {
+    const select = selectRef.current;
+    if (!select) {
+      return;
+    }
+
     if (!hidePlaceholder) {
-      const select = selectRef.current;
-      if (!select) {
-        return;
-      }
       if (select.value.length === 0) {
         select.style.color = placeholderPaletteGraphite50;
       } else {
         select.style.color = '';
       }
+    } else {
+      select.style.color = '';
     }
   };
 
