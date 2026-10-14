@@ -5,6 +5,7 @@ import { LinkGroup } from '@skatteetaten/ds-buttons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import browserCollections from '../../.source/browser';
+import { InlineSurvey } from '../components/inline-survey';
 import { PublicImage } from '../components/public-image';
 import { getMdxComponents } from '../mdx-components';
 import { useRootLoaderData } from '../root';
@@ -20,6 +21,7 @@ interface ClientLoaderProps {
 
 interface DocsContentProps {
   parentTitle: ReactNode | null;
+  path: string;
 }
 
 interface DocsPageProps {
@@ -50,7 +52,7 @@ const toTocTitle = (title: ReactNode): string => {
 
 const docsContentLoader =
   browserCollections.docs.createClientLoader<DocsContentProps>({
-    component({ frontmatter, toc, default: Mdx }, { parentTitle }) {
+    component({ frontmatter, toc, default: Mdx }, { parentTitle, path }) {
       const tocItems =
         frontmatter.tocItems ??
         (toc.filter((item) => item.depth === 2) as TocItem[]);
@@ -107,6 +109,12 @@ const docsContentLoader =
           )}
           <div className={styles.mdxContent}>
             <Mdx components={getMdxComponents()} />
+            {!frontmatter.hideSurvey && (
+              <InlineSurvey
+                key={path}
+                slug={'skatteetaten/designsystemet-skattekartet'}
+              />
+            )}
           </div>
         </div>
       );
@@ -145,7 +153,7 @@ export const DocsPage = ({ path }: DocsPageProps): JSX.Element => {
   const { pageTree } = useRootLoaderData();
   const parentTitle = getParentTitle(pathname, pageTree);
 
-  return <>{docsContentLoader.useContent(path, { parentTitle })}</>;
+  return <>{docsContentLoader.useContent(path, { parentTitle, path })}</>;
 };
 
 export default function Page({

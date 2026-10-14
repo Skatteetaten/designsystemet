@@ -1,0 +1,43 @@
+.survey {
+  --skyra-interface-color: var(--palette-graphite-100);
+  --skyra-action-color: var(--semantic-interactive-main);
+  --skyra-link-color: var(--semantic-interactive-main);
+}
+
+.survey::part(wrapper) {
+  margin-block-start: var(--spacing-l);
+}
+
+.survey::part(button-primary) {
+  padding: var(--spacing-xxs) var(--spacing-m);
+  border: 3px solid var(--semantic-interactive-main);
+  border-radius: 2.75rem;
+  background-color: var(--semantic-page-background);
+  color: var(--semantic-interactive-main);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-buttons);
+  transition: transform 0.15s;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+  }
+
+  &:active {
+    background-color: var(--semantic-interactive-background);
+    transform: translateY(2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:active {
+      transform: none;
+    }
+  }
+}

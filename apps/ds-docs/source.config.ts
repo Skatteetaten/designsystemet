@@ -21,6 +21,7 @@ export const docs = defineDocs({
   docs: {
     schema: pageSchema.extend({
       hideToc: z.boolean().optional(),
+      hideSurvey: z.boolean().optional(),
       tocItems: z
         .array(
           z.object({
