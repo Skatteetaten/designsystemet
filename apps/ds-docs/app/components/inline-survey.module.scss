@@ -1,11 +1,90 @@
 .survey {
+  --skyra-authored-inline-padding: var(--spacing-m) var(--spacing-m) 0
+    var(--spacing-m);
   --skyra-interface-color: var(--palette-graphite-100);
   --skyra-action-color: var(--semantic-interactive-main);
   --skyra-link-color: var(--semantic-interactive-main);
 }
 
 .survey::part(wrapper) {
-  margin-block-start: var(--spacing-l);
+  margin-block-start: var(--spacing-m);
+}
+
+.survey::part(heading) {
+  font-size: var(--font-size-m);
+}
+
+.survey::part(options) {
+  --skyra-bg-color: var(--semantic-page-background);
+  --skyra-text-color: var(--semantic-interactive-main);
+}
+
+.survey::part(button_link),
+.survey::part(button-primary) {
+  align-self: baseline;
+  margin-block-end: var(--spacing-m);
+}
+
+.survey::part(button-chip) {
+  padding: var(--spacing-xxs) var(--spacing-m);
+  border: 3px solid var(--semantic-interactive-main);
+  border-radius: 2.75rem;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--semantic-line-height-buttons);
+  transition: transform 0.15s;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:active {
+      transform: none;
+    }
+  }
+}
+
+.survey::part(button_link) {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--semantic-interactive-main);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--semantic-line-height-buttons);
+  text-decoration: underline;
+
+  &:hover {
+    background-color: var(--semantic-interactive-background);
+    color: var(--semantic-interactive-main);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--semantic-interactive-main);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    background-color: var(--semantic-interactive-foreground);
+    color: var(--palette-graphite-0);
+    transform: translateY(2px);
+    transition: transform 0.15s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:active {
+      transform: none;
+      transition: none;
+    }
+  }
 }
 
 .survey::part(button-primary) {
@@ -30,7 +109,7 @@
 
   &:focus-visible {
     outline: 2px solid var(--semantic-interactive-main);
-    outline-offset: 4px;
+    outline-offset: 2px;
   }
 
   @media (prefers-reduced-motion: reduce) {

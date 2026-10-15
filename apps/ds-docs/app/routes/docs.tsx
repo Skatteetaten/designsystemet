@@ -50,6 +50,35 @@ const toTocTitle = (title: ReactNode): string => {
   return Children.toArray(title).map(toTocTitle).join('');
 };
 
+const observeHeight =
+  (property: '--toc-height' | '--survey-height') =>
+  (element: HTMLElement | null): (() => void) | void => {
+    if (!element) return;
+
+    const layout = element.parentElement;
+    const updateHeight = (): void => {
+      const measuredElement =
+        property === '--toc-height' ? element.querySelector('nav') : element;
+      const height = `${measuredElement?.offsetHeight ?? 0}px`;
+      if (layout?.style.getPropertyValue(property) !== height) {
+        layout?.style.setProperty(property, height);
+      }
+    };
+    updateHeight();
+
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(element);
+    window.addEventListener('resize', updateHeight);
+    window.addEventListener('scroll', updateHeight, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateHeight);
+      window.removeEventListener('scroll', updateHeight);
+      layout?.style.removeProperty(property);
+    };
+  };
+
 const docsContentLoader =
   browserCollections.docs.createClientLoader<DocsContentProps>({
     component({ frontmatter, toc, default: Mdx }, { parentTitle, path }) {
@@ -91,31 +120,41 @@ const docsContentLoader =
           </div>
           {/* skjermleser må ha tidlig tilgang til innholdsfortegnelsen */}
           {showToc && (
-            <nav
-              className={styles.navContent}
-              aria-label={'Innholdsfortegnelse'}
+            <aside
+              ref={observeHeight('--toc-height')}
+              className={styles.sideContent}
             >
-              <Heading as={'h3'} level={4}>
-                {'Innhold'}
-              </Heading>
-              <LinkGroup variant={'anchors'}>
-                {tocItems.map((item) => (
-                  <LinkGroup.Link key={item.url} href={item.url}>
-                    {toTocTitle(item.title)}
-                  </LinkGroup.Link>
-                ))}
-              </LinkGroup>
-            </nav>
+              <nav
+                className={styles.navContent}
+                aria-label={'Innholdsfortegnelse'}
+              >
+                <Heading as={'h3'} level={4}>
+                  {'Innhold'}
+                </Heading>
+                <LinkGroup variant={'anchors'}>
+                  {tocItems.map((item) => (
+                    <LinkGroup.Link key={item.url} href={item.url}>
+                      {toTocTitle(item.title)}
+                    </LinkGroup.Link>
+                  ))}
+                </LinkGroup>
+              </nav>
+            </aside>
           )}
           <div className={styles.mdxContent}>
             <Mdx components={getMdxComponents()} />
-            {!frontmatter.hideSurvey && (
+          </div>
+          {showToc && (
+            <div
+              ref={observeHeight('--survey-height')}
+              className={styles.surveyContent}
+            >
               <InlineSurvey
                 key={path}
                 slug={'skatteetaten/designsystemet-skattekartet'}
               />
-            )}
-          </div>
+            </div>
+          )}
         </div>
       );
     },
