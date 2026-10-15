@@ -631,12 +631,12 @@ export const TwoSelectsOneWithHelpText = {
 const ToggleReadOnlyTemplate: StoryFn<typeof Select> = (args) => {
   const [isReadOnly, setIsReadOnly] = useState(false);
   return (
-    <form>
+    <>
       <Select {...args} readOnly={isReadOnly} hasSpacing />
       <Button onClick={(): void => setIsReadOnly(!isReadOnly)}>
         {'Toggle readOnly'}
       </Button>
-    </form>
+    </>
   );
 };
 
