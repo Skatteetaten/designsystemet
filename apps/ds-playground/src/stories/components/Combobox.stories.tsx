@@ -27,7 +27,7 @@ import {
   category,
   helpSvgPathDescription,
   htmlEventDescription,
-} from '../../../../.storybook/helpers';
+} from '../../../.storybook/helpers';
 
 const meta = {
   title: 'Komponenter/Combobox',

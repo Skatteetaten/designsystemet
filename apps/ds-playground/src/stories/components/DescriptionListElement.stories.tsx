@@ -6,6 +6,7 @@ import { category } from '../../../.storybook/helpers';
 
 const meta = {
   component: DescriptionList.Element,
+  title: 'Komponenter/DescriptionList/Element',
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },

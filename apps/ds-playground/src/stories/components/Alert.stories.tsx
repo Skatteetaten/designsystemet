@@ -9,7 +9,7 @@ import {
   category,
   htmlEventDescription,
   svgPathDescription,
-} from '../../../../.storybook/helpers';
+} from '../../../.storybook/helpers';
 
 const meta = {
   component: Alert,
@@ -41,52 +41,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {
-  tags: ['!dev'],
-} satisfies Story;
-
-export const Info: Story = {
-  name: 'Nøytral',
-  args: {
-    variant: 'info',
-    children:
-      'Disse feltene er låst for redigering fordi du har fått et varsel fra oss',
-  },
-} satisfies Story;
-
-export const Success: Story = {
-  name: 'Suksess',
-  args: {
-    variant: 'success',
-    children: 'Filen ble lastet opp',
-  },
-} satisfies Story;
-
-export const Warning: Story = {
-  name: 'Advarsel',
-  args: {
-    variant: 'warning',
-    children:
-      'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.',
-  },
-} satisfies Story;
-
-export const ErrorAlert: Story = {
-  name: 'Feil',
-  args: {
-    variant: 'error',
-    children:
-      'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.',
-  },
-} satisfies Story;
-
-export const Danger: Story = {
-  name: 'Fare',
-  args: {
-    variant: 'danger',
-    children: 'Strengt fortrolig (Kode 6)',
-  },
-} satisfies Story;
+export const Preview: Story = {} satisfies Story;
 
 export const Static: Story = {
   name: 'Statiske varsler',

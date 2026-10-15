@@ -55,7 +55,12 @@ export const TokenCardList = ({
                   {showPreview && (
                     <div
                       className={styles.preview}
-                      data-token={name}
+                      // eslint-disable-next-line react/forbid-dom-props
+                      style={
+                        name.includes('font-weight')
+                          ? { fontWeight: `var(${name})` }
+                          : { fontSize: `var(${name})` }
+                      }
                       aria-hidden
                     >
                       {'Aa'}

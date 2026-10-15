@@ -7,6 +7,7 @@ import { loremIpsum } from '../__tests__/testUtils/storybook.testing.utils';
 
 export default {
   component: WordInfo.Trigger,
+  title: 'Komponenter/WordInfo/Trigger',
   argTypes: {
     // Props
     children: { table: { category: category.props } },

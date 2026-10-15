@@ -1,7 +1,5 @@
 import { Meta, Canvas, Description } from '@storybook/addon-docs/blocks';
 import * as PanelStoriesDoc from './Panel.stories';
-import { VersionBadge } from '../utils/VersionBadge';
-import { Link } from '../utils/DocIntro';
 import { ReactComponent as PanelPaddingIllustration } from '../../assets/panel-padding-prop.svg';
 import { ReactComponent as PanelPaddingResponsiveIllustration } from '../../assets/panel-has-responsive-padding.svg';
 
@@ -9,14 +7,13 @@ import { ReactComponent as PanelPaddingResponsiveIllustration } from '../../asse
 
 # Panel
 
-<VersionBadge packageName={'content'} />
 
 ## Hvordan bruke padding
 
 Padding kan settes på to måter:
 
 1. Hvis **padding**-prop er brukt så gjelder denne verdien for alle brekkpunkter.
-2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så kan man definere forskjellig padding for hvert av <Link url="/?path=/docs/designtokens-breakpoints--docs">Desginsystemets brekkpunkter</Link>. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er
+2. Hvis **hasResponsivePadding** = true OG valgfritt egendefinert stilsett satt i **classNames** så kan man definere forskjellig padding for hvert av designsystemets brekkpunkter. Stilene satt i **classNames.padding** er mobile-first, dvs. at variablene settes fra minste bredde til største (min-width). Default-verdiene ved bruk av **hasResponsivePadding** er
 
 - --spacing-m i området mellom 0px og --breakpoint-xs.
 - --spacing-xl gjelder fra --breakpoint-xs og oppover.
@@ -79,7 +76,7 @@ width >= breakpoint-l: var(--spacing-xl);
 width >= breakpoint-xl: var(--spacing-xl);
 ```
 
-Man kan bestemme padding-verdier for hver av brekkpunktene vist i pseudokode over. "\*" i CSS-variablene `--panel-padding-*` bruker samme verdier vi finner i listen med brekkpunkt `--breakpoint-*`. Dette er `xs, s, m, l og xl` Se designsystemets <Link url="/?path=/docs/designtokens-breakpoints--docs">brekkpunkter</Link> og <Link url="/?path=/docs/designtokens-spacing--docs">spacing</Link>
+Man kan bestemme padding-verdier for hver av brekkpunktene vist i pseudokode over. "\*" i CSS-variablene `--panel-padding-*` bruker samme verdier vi finner i listen med brekkpunkt `--breakpoint-*`. Dette er `xs, s, m, l og xl`.
 
 Illustrert med med CSS kode:
 
@@ -126,7 +123,7 @@ import styles from './Panel.css';
 
 ## Hvordan bli kvitt luft til venstre og høyre?
 
-Av og til ser vi at man ønsker å fjerne mer luft til høyre og venstre for tekstinnholdet i Panel. Det kontrolleres ikke ved å endre padding-verdier. Hovedinnholdet i Panel har en maks-bredde på `--semantic-responsive-article` (560px) og dette er styrt av Panel-komponentens interne grid-CSS. Det er forskjellig Grid-oppsett hvis Panel bare inneholder tekst, Panel har ikon (prop renderIcon) eller Panel har en illustrasjon (prop imageSource). Les mer om <Link url="https://www.skatteetaten.no/stilogtone/designsystemet/monstre/sideoppsett-publikum/">Sideoppsett Publikumsløsninger på Stil og Tone</Link>
+Av og til ser vi at man ønsker å fjerne mer luft til høyre og venstre for tekstinnholdet i Panel. Det kontrolleres ikke ved å endre padding-verdier. Hovedinnholdet i Panel har en maks-bredde på `--semantic-responsive-article` (560px) og dette er styrt av Panel-komponentens interne grid-CSS. Det er forskjellig Grid-oppsett hvis Panel bare inneholder tekst, Panel har ikon (prop renderIcon) eller Panel har en illustrasjon (prop imageSource). Les mer om <a href="https://www.skatteetaten.no/stilogtone/designsystemet/monstre/sideoppsett-publikum/">Sideoppsett Publikumsløsninger på Stil og Tone</a>
 
 Eksempel på CSS som lar innhold få all tilgjengelig plass i Panel hvis verken `renderIcon` eller `imageSource` er satt
 
