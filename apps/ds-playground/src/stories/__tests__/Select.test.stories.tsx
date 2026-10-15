@@ -10,6 +10,7 @@ import {
   within,
 } from 'storybook/test';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
@@ -626,3 +627,80 @@ const TwoSelects: StoryFn<typeof Select> = () => {
 export const TwoSelectsOneWithHelpText = {
   render: TwoSelects,
 };
+
+const ToggleReadOnlyTemplate: StoryFn<typeof Select> = (args) => {
+  const [isReadOnly, setIsReadOnly] = useState(false);
+  return (
+    <form>
+      <Select {...args} readOnly={isReadOnly} hasSpacing />
+      <Button onClick={(): void => setIsReadOnly(!isReadOnly)}>
+        {'Toggle readOnly'}
+      </Button>
+    </form>
+  );
+};
+
+export const WithUncontrolledToggleReadOnly = {
+  render: ToggleReadOnlyTemplate,
+  name: 'With Uncontrolled Toggle ReadOnly',
+  args: {
+    name: 'frukt',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const toggleReadOnlyBtn = canvas.getByRole('button', {
+      name: 'Toggle readOnly',
+    });
+
+    await userEvent.selectOptions(canvas.getByRole('combobox'), valueOption2);
+
+    // Brukerens valg (kun lagret internt) skal vises og sendes med i readOnly
+    await userEvent.click(toggleReadOnlyBtn);
+    await expect(await canvas.findByRole('textbox')).toHaveValue(
+      childrenOption2
+    );
+    const hiddenInput = canvasElement.querySelector(
+      `input[type='hidden'][name='frukt']`
+    );
+    await expect(hiddenInput).toHaveValue(valueOption2);
+
+    // Brukerens valg skal beholdes når readOnly slås av igjen
+    await userEvent.click(toggleReadOnlyBtn);
+    const select = await canvas.findByRole('combobox');
+    await expect(select).toHaveValue(valueOption2);
+    await expect(canvas.queryByRole('textbox')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithUncontrolledToggleReadOnlyAndHidePlaceholder = {
+  render: ToggleReadOnlyTemplate,
+  name: 'With Uncontrolled Toggle ReadOnly And HidePlaceholder',
+  args: {
+    hidePlaceholder: true,
+  },
+  argTypes: {
+    hidePlaceholder: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const toggleButton = canvas.getByRole('button', {
+      name: 'Toggle readOnly',
+    });
+
+    // Uten defaultValue viser select første option
+    await expect(canvas.getByRole('combobox')).toHaveValue(valueOption1);
+
+    // readOnly skal vise samme option som select viste
+    await userEvent.click(toggleButton);
+    await expect(await canvas.findByRole('textbox')).toHaveValue('Test 1');
+
+    await userEvent.click(toggleButton);
+    await expect(await canvas.findByRole('combobox')).toHaveValue(valueOption1);
+  },
+} satisfies Story;
