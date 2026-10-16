@@ -6,7 +6,7 @@ import { TextField } from '@skatteetaten/ds-forms';
 export default function TextFieldFormattingExample(): ReactElement {
   const bankAccountNumberFormatter = useFormattedInput({
     type: 'bankAccountNumber',
-    initialValue: '1234678910',
+    initialValue: '12346789101',
   });
 
   return (
