@@ -27,6 +27,7 @@ interface UseComboboxSelectionProps {
   inputRef: RefObject<HTMLInputElement | null>;
   onSelectionChange?: ComboboxProps['onSelectionChange'];
   maxSelected?: number;
+  preserveSearch?: boolean;
 }
 
 interface UseComboboxSelectionReturn {
@@ -58,6 +59,8 @@ interface UseComboboxSelectionReturn {
  * @param props.inputRef - Reference to the input element
  * @param props.onSelectionChange - Optional callback for selection changes
  * @param props.maxSelected - Maximum number of selected options (for multiple)
+ * @param props.preserveSearch - Keep search term after selection (multi-select
+ *   only)
  * @returns Object containing selection and removal handlers
  */
 export function useComboboxSelection({
@@ -72,6 +75,7 @@ export function useComboboxSelection({
   inputRef,
   onSelectionChange,
   maxSelected,
+  preserveSearch,
 }: UseComboboxSelectionProps): UseComboboxSelectionReturn {
   const [pendingFocusTarget, setPendingFocusTarget] =
     useState<PendingFocusTarget | null>(null);
@@ -161,6 +165,7 @@ export function useComboboxSelection({
         setPendingFocusTarget,
         onSelectionChange,
         maxSelected,
+        preserveSearch: multiple && preserveSearch,
       });
     },
     [
@@ -174,6 +179,7 @@ export function useComboboxSelection({
       inputRef,
       setPendingFocusTarget,
       maxSelected,
+      preserveSearch,
     ]
   );
 

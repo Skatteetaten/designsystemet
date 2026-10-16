@@ -56,6 +56,7 @@ const ComboboxContent = ({
   options,
   placeholder,
   spinnerProps,
+  preserveSearch = false,
   titleHelpSvg,
   value,
   size = 'medium',
@@ -154,6 +155,7 @@ const ComboboxContent = ({
       inputRef,
       onSelectionChange,
       maxSelected,
+      preserveSearch,
     });
 
   // Use input handlers hook
@@ -174,6 +176,7 @@ const ComboboxContent = ({
       onBlur,
       onFocus,
       value,
+      preserveSearch,
     });
 
   // Memoize keyboard dropdown handler to prevent unnecessary re-creations
@@ -212,14 +215,23 @@ const ComboboxContent = ({
   useEffect(() => {
     if (multiple && Array.isArray(value)) {
       setSelectedValues(getSelectedValuesFromValue(value, options, multiple));
-      setSearchTerm(''); // Keep search field clear in multi-select mode
+      if (!preserveSearch) {
+        setSearchTerm(''); // Keep search field clear in multi-select mode
+      }
     } else if (!multiple && value !== undefined) {
       const selectedOption = options.find((option) => option.value === value);
       setSelectedValues(selectedOption ? [selectedOption] : []);
       // In controlled single mode, update searchTerm when value changes
       setSearchTerm(getSearchTermFromValue(value, options, multiple));
     }
-  }, [value, multiple, options, setSearchTerm, setSelectedValues]);
+  }, [
+    value,
+    multiple,
+    options,
+    setSearchTerm,
+    setSelectedValues,
+    preserveSearch,
+  ]);
 
   const focusedOptionId = getFocusedElementId();
 

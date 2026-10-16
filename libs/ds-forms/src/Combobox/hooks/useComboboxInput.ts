@@ -30,6 +30,7 @@ interface UseComboboxInputProps {
   enabledIndices: number[];
   focusedIndex: number;
   setFocusedIndex: (index: number) => void;
+  preserveSearch?: boolean;
 }
 
 interface UseComboboxInputReturn {
@@ -111,6 +112,8 @@ const getSingleSelectBlurOutcome = ({
  * @param props.closeDropdown - Function to close the dropdown
  * @param props.enabledIndices - Array of indices for non-disabled options
  * @param props.setFocusedIndex - Function to update focused option index
+ * @param props.preserveSearch - Keep search term while focus stays within the
+ *   combobox (multi-select only)
  * @returns Object containing input event handlers
  */
 export function useComboboxInput({
@@ -128,8 +131,10 @@ export function useComboboxInput({
   value,
   setFocusedIndex,
   enabledIndices,
+  preserveSearch,
 }: UseComboboxInputProps): UseComboboxInputReturn {
   const { preventZoom, manageVirtualKeyboard } = useBrowserCompatibility();
+  const shouldPreserveSearch = multiple && preserveSearch;
   /**
    * Handles text input changes and triggers dropdown opening.
    *
@@ -240,7 +245,7 @@ export function useComboboxInput({
           setSearchTerm(nextSearchTerm);
           onInputChange?.(nextSearchTerm);
         }
-      } else {
+      } else if (!shouldPreserveSearch) {
         // For multi-select, we always clear the input on blur.
         setSearchTerm('');
         onInputChange?.('');
@@ -258,6 +263,11 @@ export function useComboboxInput({
           ?.contains(activeElement);
 
         if (!isInCombobox && !isInListbox) {
+          if (shouldPreserveSearch) {
+            // Focus has left the combobox - clear the preserved search term
+            setSearchTerm('');
+            onInputChange?.('');
+          }
           closeDropdown();
         }
       }, 0);
@@ -274,6 +284,7 @@ export function useComboboxInput({
       selectedValues,
       setSearchTerm,
       setSelectedValues,
+      shouldPreserveSearch,
       value,
     ]
   );

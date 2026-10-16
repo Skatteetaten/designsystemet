@@ -262,6 +262,7 @@ const triggerSelectionCallback = (
  *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
+ * @param config.preserveSearch - Keep search term after selection
  */
 const selectMultipleOption = (
   option: ComboboxOption,
@@ -275,6 +276,7 @@ const selectMultipleOption = (
     setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
+    preserveSearch,
   }: {
     selectedValues: ComboboxOption[];
     behavior: SelectionBehavior;
@@ -285,6 +287,7 @@ const selectMultipleOption = (
     setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
+    preserveSearch?: boolean;
   }
 ): void => {
   // Validate selection limits
@@ -313,12 +316,16 @@ const selectMultipleOption = (
 
   // Update state
   setSelectedValues(newSelectedValues);
-  setSearchTerm(''); // Clear search in multi-select mode
+  if (!preserveSearch) {
+    setSearchTerm(''); // Clear search in multi-select mode
+  }
 
   // Handle focus management
   handleSelectionFocus(behavior, setFocusedIndex, inputRef);
 
-  if (!behavior.resetFocusIndex) {
+  // When search is preserved the list stays filtered, so the current
+  // focusedIndex is still valid and no remapping is needed.
+  if (!behavior.resetFocusIndex && !preserveSearch) {
     setPendingFocusTarget?.({ optionValue: option.value });
   }
 
@@ -413,6 +420,8 @@ const selectSingleOption = (
  *   filtering is cleared
  * @param config.onSelectionChange - Optional callback for selection changes
  * @param config.maxSelected - Optional maximum number of selections allowed
+ * @param config.preserveSearch - Keep search term after selection
+ *   (multi-select only)
  */
 export const selectOption = (
   option: ComboboxOption,
@@ -428,6 +437,7 @@ export const selectOption = (
     setPendingFocusTarget,
     onSelectionChange,
     maxSelected,
+    preserveSearch,
   }: {
     multiple: boolean;
     selectedValues: ComboboxOption[];
@@ -440,6 +450,7 @@ export const selectOption = (
     setPendingFocusTarget?: (target: PendingFocusTarget | null) => void;
     onSelectionChange?: ComboboxProps['onSelectionChange'];
     maxSelected?: number;
+    preserveSearch?: boolean;
   }
 ): void => {
   if (multiple) {
@@ -453,6 +464,7 @@ export const selectOption = (
       setPendingFocusTarget,
       onSelectionChange,
       maxSelected,
+      preserveSearch,
     });
   } else {
     selectSingleOption(option, {
