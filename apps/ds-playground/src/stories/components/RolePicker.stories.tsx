@@ -3,6 +3,7 @@ import { JSX, useRef, useState, MouseEvent } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 import { TopBannerExternal, User } from '@skatteetaten/ds-layout';
 import {
   Business,
@@ -12,10 +13,9 @@ import {
   Paginated,
   OnEntitySelectHandler,
 } from '@skatteetaten/ds-overlays';
+import { Alert } from '@skatteetaten/ds-status';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
-import { Alert } from '@skatteetaten/ds-status';
-import { dsI18n, langToLocale } from '@skatteetaten/ds-core-utils';
 
 const me: Person = {
   name: 'Ola Nordmann',
