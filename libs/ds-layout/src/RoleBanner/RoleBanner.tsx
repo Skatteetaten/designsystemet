@@ -69,7 +69,9 @@ export const RoleBanner = ({
           )}
           <span className={styles.bold}>{user.name}</span>
         </span>
-        <span className={styles.bold}>{identifier}</span>
+        <span className={`${styles.bold} ${styles.identifier}`}>
+          {identifier}
+        </span>
       </div>
     </section>
   );
