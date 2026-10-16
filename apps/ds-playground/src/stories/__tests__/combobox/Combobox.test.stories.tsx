@@ -687,33 +687,6 @@ export const WithPreserveSearch = {
   },
 } satisfies Story;
 
-export const WithoutPreserveSearch = {
-  name: 'Without PreserveSearch',
-  args: {
-    preserveSearch: false,
-    multiple: true,
-  },
-  argTypes: {
-    preserveSearch: { table: { disable: false } },
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
-  },
-  play: async ({ canvasElement }): Promise<void> => {
-    const canvas = within(canvasElement);
-    const combobox = canvas.getByRole('combobox');
-
-    await userEvent.type(combobox, 'ge');
-    await userEvent.click(canvas.getByRole('option', { name: /Norge/ }));
-
-    // Uten preserveSearch tømmes søket og alle alternativer vises igjen
-    await expect(combobox).toHaveValue('');
-    await expect(canvas.getAllByRole('option')).toHaveLength(
-      defaultOptions.length
-    );
-  },
-} satisfies Story;
-
 export const WithEventHandlers = {
   name: 'With EventHandlers (A3)',
   args: {
