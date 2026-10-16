@@ -6,7 +6,7 @@ import { expect, userEvent, fireEvent, within, waitFor } from 'storybook/test';
 import { Button } from '@skatteetaten/ds-buttons';
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { TextField } from '@skatteetaten/ds-forms';
+import { Select, TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
@@ -828,6 +828,61 @@ export const WithFormValidationFocusRetention = {
       canvas.getByText('Navnet må være minst 3 tegn')
     ).toBeInTheDocument();
     await expect(closeButton).toHaveFocus();
+  },
+} satisfies Story;
+
+const TemplateWithSelect: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [fruit, setFruit] = useState('');
+
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal {...args} ref={ref}>
+        <Select
+          label={'Fruktsort'}
+          value={fruit}
+          onChange={(e): void => setFruit(e.target.value)}
+        >
+          <Select.Option value={'banan'}>{'Banan'}</Select.Option>
+          <Select.Option value={'eple'}>{'Eple'}</Select.Option>
+          <Select.Option value={'kiwi'}>{'Kiwi'}</Select.Option>
+          <Select.Option value={'pære'}>{'Pære'}</Select.Option>
+          <Select.Option value={'sitron'}>{'Sitron'}</Select.Option>
+        </Select>
+        <Paragraph hasSpacing>{`Valgt frukt: ${fruit || 'ingen'}`}</Paragraph>
+        <Button onClick={(): void => ref.current?.close()}>{'Lukk'}</Button>
+      </Modal>
+    </>
+  );
+};
+
+export const WithSelect = {
+  render: TemplateWithSelect,
+  name: 'With Select',
+  args: {
+    dismissOnOutsideClick: true,
+  },
+  argTypes: {
+    dismissOnOutsideClick: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Åpne modal' }));
+    const modal = canvas.getByRole('dialog');
+    const select = within(modal).getByRole('combobox');
+
+    // Native nedtrekkslister kan rapportere museklikk med koordinater utenfor dialogen
+    const rect = modal.getBoundingClientRect();
+    const outside = { clientX: rect.right + 10, clientY: rect.bottom + 10 };
+    fireEvent.mouseDown(select, outside);
+    fireEvent.mouseUp(select, outside);
+    await expect(modal).toBeVisible();
   },
 } satisfies Story;
 
