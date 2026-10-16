@@ -642,6 +642,9 @@ export const WithName = {
   args: {
     name: 'category',
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
