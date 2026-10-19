@@ -20,6 +20,7 @@
 }
 
 .survey::part(button_link),
+.survey::part(button-link),
 .survey::part(button-primary) {
   align-self: baseline;
   margin-block-end: var(--spacing-m);
@@ -52,15 +53,19 @@
   }
 }
 
-.survey::part(button_link) {
+.survey::part(button_link),
+.survey::part(button-link) {
   padding: 0;
   border: 0;
   background-color: transparent;
   color: var(--semantic-interactive-main);
+  font-family: inherit;
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-medium);
   line-height: var(--semantic-line-height-buttons);
+  text-align: left;
   text-decoration: underline;
+  vertical-align: bottom;
 
   &:hover {
     background-color: var(--semantic-interactive-background);
@@ -91,19 +96,21 @@
   padding: var(--spacing-xxs) var(--spacing-m);
   border: 3px solid var(--semantic-interactive-main);
   border-radius: 2.75rem;
-  background-color: var(--semantic-page-background);
-  color: var(--semantic-interactive-main);
+  background-color: var(--semantic-interactive-main);
+  color: var(--palette-graphite-0);
   font-size: var(--font-size-m);
   font-weight: var(--font-weight-bold);
   line-height: var(--semantic-line-height-buttons);
   transition: transform 0.15s;
 
   &:hover {
-    background-color: var(--semantic-interactive-background);
+    border-color: var(--semantic-interactive-foreground);
+    background-color: var(--semantic-interactive-foreground);
   }
 
   &:active {
-    background-color: var(--semantic-interactive-background);
+    border-color: var(--semantic-interactive-foreground);
+    background-color: var(--semantic-interactive-foreground);
     transform: translateY(2px);
   }
 
