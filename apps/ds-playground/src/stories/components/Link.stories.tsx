@@ -44,23 +44,17 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <>
-        <div className={'exampleSpacing'}>
-          <Link href={'#link'}>
-            {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
-          </Link>
-        </div>
-        <div className={'exampleSpacing'}>
-          <Link href={'#link'} isExternal>
-            {'Kontakte Statens Vegvesen'}
-          </Link>
-        </div>
-        <div className={'exampleSpacing'}>
-          <Link href={'#link'} isExternal>
-            {'Brukerveiledning for bilforhandlere'}
-          </Link>
-        </div>
-      </>
+      <div className={'flex flex-column gap-m'}>
+        <Link href={'#link'}>
+          {'Rettledning til RF-1167 Næringsoppgave 2 for 2020 (pdf)'}
+        </Link>
+        <Link href={'#link'} isExternal>
+          {'Kontakte Statens Vegvesen'}
+        </Link>
+        <Link href={'#link'} isExternal>
+          {'Brukerveiledning for bilforhandlere'}
+        </Link>
+      </div>
     );
   },
 } satisfies Story;

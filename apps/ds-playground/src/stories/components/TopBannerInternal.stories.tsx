@@ -59,7 +59,7 @@ export const Examples: Story = {
     return (
       <>
         <TopBannerInternal
-          className={'bottomSpacingXL'}
+          className={'mb-xl'}
           title={'MVA'}
           description={'Arbeidsliste'}
           logoHref={'/home'}
@@ -76,7 +76,7 @@ export const Examples: Story = {
           </InlineButton>
           <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
             <InlineButton
-              className={'bottomSpacingXS'}
+              className={'mb-xs'}
               svgPath={AddSVGpath}
               onClick={() => {
                 menuRef?.current?.close?.();
@@ -110,7 +110,7 @@ export const Examples: Story = {
           </TopBannerInternal.ActionMenu>
         </TopBannerInternal>
         <TopBannerInternal
-          className={'bottomSpacingXL'}
+          className={'mb-xl'}
           title={'Global Skatt'}
           logoHref={'/home'}
         >
@@ -120,7 +120,7 @@ export const Examples: Story = {
           />
           <TopBannerInternal.ActionMenu menuActionsRef={menuRef}>
             <InlineButton
-              className={'bottomSpacingXS'}
+              className={'mb-xs'}
               svgPath={AddSVGpath}
               onClick={() => {
                 menuRef?.current?.close?.();

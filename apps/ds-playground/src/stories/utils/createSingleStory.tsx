@@ -117,9 +117,7 @@ export function createSingleStory<
                   <>
                     {pseudoStates.map((state: string) => (
                       <div key={state}>
-                        <Paragraph
-                          className={'topSpacingM bottomSpacingS bold'}
-                        >
+                        <Paragraph className={'pb-s bold'}>
                           {state.charAt(0).toUpperCase() + state.slice(1)}
                         </Paragraph>
                         <div data-pseudo-state={state}>{children}</div>

@@ -534,7 +534,7 @@ export const WithLongPlaceholder = {
 
 const TwoSelects: StoryFn<typeof Select> = () => {
   return (
-    <div className={'flex gapS'}>
+    <div className={'flex gap-s'}>
       <Select label={'Fruktsort'} required>
         <Select.Option value={1}>{'Banan'}</Select.Option>
         <Select.Option value={2}>{'Eple'}</Select.Option>

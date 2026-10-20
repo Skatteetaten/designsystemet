@@ -226,7 +226,7 @@ const TemplateAllVariants: StoryFn<typeof Alert> = (args) => (
         <Alert
           {...args}
           key={`messageBar_${index}`}
-          className={'bottomSpacingXL'}
+          className={'mb-xl'}
           variant={variant}
         />
       );
@@ -434,7 +434,7 @@ export const WithAriaLiveOff = {
 export const InFlexColumnContainer = {
   render: (args): JSX.Element => {
     return (
-      <div className={'flex flexColumn gapM'}>
+      <div className={'flex flex-column gap-m'}>
         <Paragraph>{'Dette er en tekst som ligger over varselet'}</Paragraph>
         <Alert {...args}>{args.children}</Alert>
         <Paragraph>{'Dette er en tekst som ligger under varselet'}</Paragraph>

@@ -1,4 +1,5 @@
 @import 'inter.css';
+@import '@skatteetaten/ds-core-utils/ds-classes.scss';
 
 :root {
   --storybook-font-family: 'Inter';
@@ -56,6 +57,11 @@ code {
   font-family: 'CourierLocalWebFont';
 }
 
+/* trenges til titlene i Chromatic-snapshots */
+p.bold {
+  font-weight: var(--font-weight-bold);
+}
+
 .height100vh {
   height: 100vh;
 }
@@ -71,27 +77,6 @@ code {
   background-color: var(--palette-graphite-10);
 }
 
-.width100 {
-  width: 100%;
-}
-
-.exampleSpacing {
-  margin-right: var(--spacing-m);
-  margin-bottom: var(--spacing-m);
-}
-
-.marginRightM {
-  margin-right: var(--spacing-m);
-}
-
-.flex {
-  display: flex;
-}
-
-.block {
-  display: block;
-}
-
 .fileList {
   display: flex;
   flex-direction: column;
@@ -105,38 +90,6 @@ code {
 .introImageContainer {
   margin-bottom: var(--spacing-xl) !important;
   background-color: var(--palette-denim-10);
-}
-
-.topSpacingL {
-  margin-top: var(--spacing-l) !important;
-}
-
-.topSpacingM {
-  margin-top: var(--spacing-m);
-}
-
-.topSpacingS {
-  margin-top: var(--spacing-s);
-}
-
-.topSpacingXs {
-  margin-top: var(--spacing-xs);
-}
-
-.bottomSpacingS {
-  margin-bottom: var(--spacing-s) !important;
-}
-
-.bottomSpacingXL {
-  margin-bottom: var(--spacing-xl);
-}
-
-.bottomSpacingL {
-  margin-bottom: var(--spacing-l);
-}
-
-.bottomSpacingXS {
-  margin-bottom: var(--spacing-xs);
 }
 
 .errorMessageContainer {
@@ -227,41 +180,8 @@ code {
   width: 100%;
 }
 
-.inlineBlock {
-  display: inline-block;
-}
-
 .logoHeight {
   height: 4rem;
-}
-
-.topbannerButtonContainer {
-  display: flex;
-  gap: var(--spacing-s);
-}
-
-.gapS {
-  gap: var(--spacing-s);
-}
-
-.gapXs {
-  gap: var(--spacing-xs);
-}
-
-.gapM {
-  gap: var(--spacing-m);
-}
-
-.gapXl {
-  gap: var(--spacing-xl);
-}
-
-.flexColumn {
-  flex-direction: column;
-}
-
-.dummySpacingLeft {
-  margin-left: var(--spacing-s);
 }
 
 .centerContent {
@@ -281,17 +201,6 @@ a.docs {
   text-decoration-line: underline;
 }
 
-ul.fontSizeM {
-  list-style-type: none;
-  li {
-    font-size: var(--font-size-m);
-  }
-}
-
-p.fontSizeM {
-  font-size: var(--font-size-m);
-}
-
 .semantic-article {
   max-width: var(--semantic-responsive-article);
   margin: auto;
@@ -302,20 +211,8 @@ p.fontSizeM {
   margin: auto;
 }
 
-.semantic-article.bottom-spacing {
-  margin-bottom: var(--spacing-l);
-}
-
 .container-aside {
   width: var(--container-aside);
-}
-
-.marginRightS {
-  margin-right: var(--spacing-s);
-}
-
-.marginLeftL {
-  margin-left: var(--spacing-l);
 }
 
 .accordionWorkTaskExample {
@@ -326,10 +223,6 @@ p.fontSizeM {
 
 dl.gridEqualColumns {
   grid-template-columns: 1fr 1fr;
-}
-
-p.bold {
-  font-weight: var(--font-weight-bold);
 }
 
 .borderLeftBlack {
@@ -353,26 +246,13 @@ svg.blueIcon {
   fill: var(--semantic-interactive-main);
 }
 
-.paddingXS {
-  padding: var(--spacing-xs);
-}
-
 .cardWidth {
   width: 254px;
   min-width: 254px;
 }
 
-a.resetLinkStyling {
-  padding: 0;
+a.resetLineHeight {
   line-height: var(--semantic-line-height-default);
-}
-
-.flexWrap {
-  flex-wrap: wrap;
-}
-
-.flexGrow {
-  flex-grow: 1;
 }
 
 .blueBackground {
@@ -403,14 +283,6 @@ a.resetLinkStyling {
 
 .descriptionList {
   --description-list-dd-align: right;
-}
-
-.componentIcon {
-  width: 11rem;
-
-  @media only screen and (max-width: 480px) {
-    display: none;
-  }
 }
 
 dl.descriptionListTwoColumns {
@@ -452,13 +324,6 @@ dl.descriptionListTwoColumns {
 
 .tabIndexNoOutline:focus {
   outline: none;
-}
-
-.interactiveColor.interactiveColor {
-  color: var(--semantic-interactive-main);
-}
-.interactiveColor:hover {
-  color: var(--semantic-page-background);
 }
 
 .light {
@@ -503,6 +368,7 @@ dl.descriptionListTwoColumns {
 .containerQuerySlider {
   width: 100%;
   max-width: 400px;
+  margin-bottom: var(--spacing-s);
 }
 
 .maxHeight300 {

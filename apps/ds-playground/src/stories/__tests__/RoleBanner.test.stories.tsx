@@ -113,13 +113,11 @@ export const AllRoles = {
     htmlValidate: { test: 'off' },
   },
   render: (): JSX.Element => (
-    <>
+    <div className={'flex flex-column gap-xl'}>
       <RoleBanner
-        className={'bottomSpacingXL'}
         user={{ name: 'Ola Nordmann', role: 'meg', identifier: '010199 12345' }}
       />
       <RoleBanner
-        className={'bottomSpacingXL'}
         user={{
           name: 'Kari Hansen',
           role: 'andre',
@@ -133,7 +131,7 @@ export const AllRoles = {
           identifier: '999 888 777',
         }}
       />
-    </>
+    </div>
   ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

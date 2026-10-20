@@ -5,22 +5,6 @@
   list-style-type: none;
 }
 
-.marginBottomXL {
-  margin-bottom: var(--spacing-xl);
-}
-
-.marginBottomS {
-  margin-bottom: var(--spacing-s);
-}
-
-.marginRightS {
-  margin-right: var(--spacing-s);
-}
-
-.flex {
-  display: flex;
-}
-
 @media (min-width: $breakpoint-m) {
   .columns {
     grid-template-columns: 1fr 2fr;

@@ -41,7 +41,7 @@ export const Examples: Story = {
           <Card.Header>
             <Heading as={'h3'}>{'Utregning'}</Heading>
           </Card.Header>
-          <Card.Content classNames={{ children: 'flexGrow' }}>
+          <Card.Content classNames={{ children: 'width-100' }}>
             <DescriptionList
               className={'descriptionList'}
               descriptionWeight={'regular'}
@@ -86,7 +86,7 @@ export const ThemeExample: Story = {
         <Paragraph hasSpacing>
           {'Delestrek brukt som dekorelement og skjult for skjermleser'}
         </Paragraph>
-        <div className={'flex gapM'}>
+        <div className={'flex gap-m'}>
           <ArbeidTrygdPensjonIcon size={'extraLarge'} />
           <Heading as={'h1'} level={2}>
             {'Arbeid, trygd og pensjon'}

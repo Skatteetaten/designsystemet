@@ -64,7 +64,7 @@ export const Example: Story = {
     const [isOpen, setIsOpen] = useState(false);
     return (
       <>
-        <div className={'flex gapS'}>
+        <div className={'flex gap-s'}>
           <Heading id={h2Id} as={'h2'}>
             {'Disse tingene må du huske på før du henter skattekortet'}
           </Heading>
@@ -88,7 +88,7 @@ export const Example: Story = {
           }
         </Paragraph>
 
-        <div className={'flex gapS'}>
+        <div className={'flex gap-s'}>
           <Heading id={h3Id} as={'h3'}>
             {'Disse tingene må du huske på før du henter skattekortet'}
           </Heading>
@@ -140,7 +140,7 @@ export const Example: Story = {
                     <Popover.Trigger
                       ariaDescribedby={filesId}
                       size={'small'}
-                      className={'dummySpacingLeft'}
+                      className={'ml-s'}
                     />
                     <Popover.Content>
                       {
@@ -170,7 +170,7 @@ export const Example: Story = {
           </Table.Body>
         </Table>
 
-        <div className={'flex gapS'}>
+        <div className={'flex gap-s'}>
           <Heading id={controlledId} as={'h2'}>
             {'Controlled Popover'}
           </Heading>
@@ -182,7 +182,7 @@ export const Example: Story = {
           >
             <Popover.Trigger
               ariaDescribedby={controlledId}
-              className={'dummySpacingLeft'}
+              className={'ml-s'}
               onClick={() => setIsOpen(!isOpen)}
             />
             <Popover.Content>

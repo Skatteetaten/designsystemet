@@ -59,9 +59,9 @@ export const Examples: Story = {
     return (
       <>
         <Checkbox
-          className={'exampleSpacing'}
           errorMessage={errorMessage}
           checked={checked}
+          hasSpacing
           required
           onBlur={handleChange}
           onChange={(): void => {

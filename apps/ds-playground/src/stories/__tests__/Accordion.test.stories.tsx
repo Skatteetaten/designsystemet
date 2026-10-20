@@ -48,25 +48,15 @@ const TemplateWithAllColors: StoryFn<typeof Accordion> = () => {
   ];
 
   return (
-    <>
-      <Accordion className={'bottomSpacingXL'}>{items}</Accordion>
-      <Accordion className={'bottomSpacingXL'} color={'burgundy'}>
-        {items}
-      </Accordion>
-      <Accordion className={'bottomSpacingXL'} color={'denim'}>
-        {items}
-      </Accordion>
+    <div className={'flex flex-column gap-xl'}>
+      <Accordion>{items}</Accordion>
+      <Accordion color={'burgundy'}>{items}</Accordion>
+      <Accordion color={'denim'}>{items}</Accordion>
 
-      <Accordion className={'bottomSpacingXL'} color={'forest'}>
-        {items}
-      </Accordion>
-      <Accordion className={'bottomSpacingXL'} color={'graphite'}>
-        {items}
-      </Accordion>
-      <Accordion className={'bottomSpacingXL'} color={'ochre'}>
-        {items}
-      </Accordion>
-    </>
+      <Accordion color={'forest'}>{items}</Accordion>
+      <Accordion color={'graphite'}>{items}</Accordion>
+      <Accordion color={'ochre'}>{items}</Accordion>
+    </div>
   );
 };
 

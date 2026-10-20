@@ -56,10 +56,9 @@ export const Preview: Story = {} satisfies Story;
 export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
-      <>
-        <div>
+      <div className={'flex flex-column gap-m'}>
+        <div className={'flex gap-m'}>
           <IconButton
-            className={'exampleSpacing'}
             svgPath={PrintSVGpath}
             size={'small'}
             title={'Skriv ut'}
@@ -71,9 +70,8 @@ export const Examples: Story = {
             title={'Skriv ut'}
           />
         </div>
-        <div>
+        <div className={'flex gap-m'}>
           <IconButton
-            className={'exampleSpacing'}
             svgPath={PrintSVGpath}
             size={'medium'}
             title={'Skriv ut'}
@@ -85,9 +83,8 @@ export const Examples: Story = {
             title={'Skriv ut'}
           />
         </div>
-        <div>
+        <div className={'flex gap-m'}>
           <IconButton
-            className={'exampleSpacing'}
             svgPath={PrintSVGpath}
             size={'large'}
             title={'Skriv ut'}
@@ -99,7 +96,7 @@ export const Examples: Story = {
             title={'Skriv ut'}
           />
         </div>
-      </>
+      </div>
     );
   },
 } satisfies Story;

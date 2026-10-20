@@ -1,5 +1,3 @@
-import type { JSX } from 'react';
-
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
@@ -25,12 +23,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {
-  decorators: [
-    (Story): JSX.Element => (
-      <div className={'bottomSpacingXL'}>
-        <Story />
-      </div>
-    ),
-  ],
-} satisfies Story;
+export const Preview: Story = {} satisfies Story;

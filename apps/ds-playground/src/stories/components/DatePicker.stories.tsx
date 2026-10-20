@@ -173,7 +173,7 @@ export const DatoOgKlokkeslett: Story = {
     }
 
     return (
-      <div className={'flex gapM'}>
+      <div className={'flex gap-m'}>
         <DatePicker
           label={'Dato (dd.mm.åååå)'}
           value={date}

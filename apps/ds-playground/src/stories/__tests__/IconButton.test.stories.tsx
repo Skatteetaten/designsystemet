@@ -344,47 +344,28 @@ export const WithEventHandlers = {
 } satisfies Story;
 
 const TemplateWithSpinner: StoryFn<typeof IconButton> = (args) => (
-  <>
-    <div className={'bottomSpacingXL'}>
-      <IconButton
-        {...args}
-        hasSpinner={false}
-        size={'small'}
-        className={'marginRightM'}
-        isOutlined
-      />
-      <IconButton
-        {...args}
-        hasSpinner={false}
-        className={'marginRightM'}
-        isOutlined
-      />
+  <div className={'flex flex-column gap-xl'}>
+    <div className={'flex align-items-center gap-m'}>
+      <IconButton {...args} hasSpinner={false} size={'small'} isOutlined />
+      <IconButton {...args} hasSpinner={false} isOutlined />
       <IconButton {...args} hasSpinner={false} size={'large'} isOutlined />
     </div>
-    <div className={'bottomSpacingXL'}>
-      <IconButton
-        {...args}
-        size={'small'}
-        className={'marginRightM'}
-        isOutlined
-      />
-      <IconButton {...args} className={'marginRightM'} isOutlined />
+    <div className={'flex align-items-center gap-m'}>
+      <IconButton {...args} size={'small'} isOutlined />
+      <IconButton {...args} isOutlined />
       <IconButton {...args} size={'large'} isOutlined />
     </div>
-    <div className={'bottomSpacingXL'}>
-      <IconButton
-        {...args}
-        hasSpinner={false}
-        size={'small'}
-        className={'marginRightM'}
-      />
-      <IconButton {...args} hasSpinner={false} className={'marginRightM'} />
+    <div className={'flex align-items-center gap-m'}>
+      <IconButton {...args} hasSpinner={false} size={'small'} />
+      <IconButton {...args} hasSpinner={false} />
       <IconButton {...args} hasSpinner={false} size={'large'} />
     </div>
-    <IconButton {...args} size={'small'} className={'marginRightM'} />
-    <IconButton {...args} className={'marginRightM'} />
-    <IconButton {...args} size={'large'} />
-  </>
+    <div className={'flex align-items-center gap-m'}>
+      <IconButton {...args} size={'small'} />
+      <IconButton {...args} />
+      <IconButton {...args} size={'large'} />
+    </div>
+  </div>
 );
 
 export const WithSpinner = {

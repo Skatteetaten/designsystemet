@@ -105,7 +105,7 @@ export const Defaults = {
 } satisfies Story;
 
 const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
-  <div className={'topbannerButtonContainer'}>
+  <div className={'flex gap-s'}>
     {userRoleArr.map((role, index) => {
       const name =
         role === 'andre'
@@ -114,7 +114,6 @@ const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
       return (
         <TopBannerUserButton
           key={`user_${index}`}
-          className={'bottomSpacingXL'}
           {...args}
           user={{ role, name }}
         />

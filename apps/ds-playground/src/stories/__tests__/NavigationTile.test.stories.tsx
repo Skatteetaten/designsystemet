@@ -92,7 +92,7 @@ const OnClickTemplate: StoryFn<typeof NavigationTile> = (args) => {
 };
 
 const TemplateWithAllHeadings: StoryFn<typeof NavigationTile> = (args) => (
-  <nav className={'flex flexColumn gapXs'}>
+  <nav className={'flex flex-column gap-xs'}>
     {headingAsArr.map((headingLevel, item) => {
       return (
         <NavigationTile
@@ -107,7 +107,7 @@ const TemplateWithAllHeadings: StoryFn<typeof NavigationTile> = (args) => (
 );
 
 const TemplateWithMultipleTiles: StoryFn<typeof NavigationTile> = (args) => (
-  <nav className={'flex gapS'}>
+  <nav className={'flex gap-s'}>
     <NavigationTile {...args} />
     <NavigationTile {...args} />
   </nav>
@@ -399,24 +399,19 @@ export const WithTilesInColumns = {
 } satisfies Story;
 
 const TemplateWithSpinner: StoryFn<typeof NavigationTile> = (args) => (
-  <>
+  <div className={'flex flex-column gap-xl'}>
     <NavigationTile
       {...args}
-      className={'bottomSpacingXL'}
       size={'extraLarge'}
       onClick={(e): void => e.preventDefault()}
     />
-    <NavigationTile
-      {...args}
-      className={'bottomSpacingXL'}
-      onClick={(e): void => e.preventDefault()}
-    />
+    <NavigationTile {...args} onClick={(e): void => e.preventDefault()} />
     <NavigationTile
       {...args}
       size={'medium'}
       onClick={(e): void => e.preventDefault()}
     />
-  </>
+  </div>
 );
 
 export const WithSpinner = {

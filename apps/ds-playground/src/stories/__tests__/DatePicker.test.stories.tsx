@@ -958,7 +958,7 @@ export const TabNavigationWithAllDatesDisabled = {
 } satisfies Story;
 
 const TemplateWithScrollableContainer: StoryFn<typeof DatePicker> = (args) => (
-  <div className={'flex gapS'}>
+  <div className={'flex gap-s'}>
     <aside className={'container-aside'}>
       <p>
         {

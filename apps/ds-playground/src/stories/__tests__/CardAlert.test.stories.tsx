@@ -111,7 +111,6 @@ const TemplateAllVariants: StoryFn<typeof Card> = (args) => (
           title={'Merknad'}
           {...args}
           key={`card_${index}`}
-          className={'bottomSpacingXL'}
           variant={variant}
         >
           <Card.Content>{args.children}</Card.Content>

@@ -84,8 +84,8 @@ export const Examples: Story = {
             }
           </Paragraph>
           <Paragraph hasSpacing>{'Logg inn:'}</Paragraph>
-          <MegaButton>{'Sjekk skatten'}</MegaButton>
-          <Paragraph className={'topSpacingL'}>
+          <MegaButton className={'mb-l'}>{'Sjekk skatten'}</MegaButton>
+          <Paragraph>
             {
               'Ser du etter skattemeldingen? Hvis du oppdager feil eller har mottatt nye eller forsinkede oppplysniger, kan du fortsatt '
             }
@@ -154,7 +154,7 @@ export const PanelPadding = {
   render: (args): JSX.Element => {
     return (
       <>
-        <div className={'semantic-article bottom-spacing'}>
+        <div className={'semantic-article mb-l'}>
           <Heading as={'h1'} level={3}>
             {'Tekst utenfor Panel'}
           </Heading>

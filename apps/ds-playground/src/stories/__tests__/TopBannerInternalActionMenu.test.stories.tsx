@@ -108,7 +108,7 @@ export const WithImperativeActions = {
         </TopBannerInternal.ActionMenu>
         <InlineButton
           brightness={'light'}
-          className={'marginLeftL'}
+          className={'ml-l'}
           onClick={() => actionsRef?.current?.open?.()}
         >
           {'Åpne'}

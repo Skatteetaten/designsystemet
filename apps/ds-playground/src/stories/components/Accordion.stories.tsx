@@ -67,7 +67,7 @@ export const LeftMenu: Story = {
               {'Stødig Sjappe 1'}
             </DescriptionList.Element>
             <DescriptionList.Element term={'Organisasjons-\nnummer'}>
-              <span className={'marginRightS'}>{'999 999 999'}</span>
+              <span className={'mr-s'}>{'999 999 999'}</span>
               <IconButton
                 svgPath={CopySVGpath}
                 title={'Kopier organisasjonsnummeret'}
@@ -150,7 +150,7 @@ export const WorkTask: Story = {
             {'Under arbeid'}
           </DescriptionList.Element>
         </DescriptionList>
-        <Accordion iconPosition={'left'} className={'bottomSpacingL'}>
+        <Accordion iconPosition={'left'} className={'mb-l'}>
           <Accordion.Item title={'Informasjon fra skattemeldingen'}>
             <Table caption={'Informasjon fra skattemeldingen'} size={'small'}>
               <Table.Header>
@@ -222,8 +222,10 @@ export const WorkTask: Story = {
           <RadioGroup.Radio>{'Opprett nytt krav'}</RadioGroup.Radio>
           <RadioGroup.Radio>{'Godta krav'}</RadioGroup.Radio>
         </RadioGroup>
-        <Button className={'exampleSpacing'}>{'Bekreft og fortsett'}</Button>
-        <Button variant={'secondary'}>{'Avbryt'}</Button>
+        <div className={'flex flex-wrap gap-m mb-s'}>
+          <Button>{'Bekreft og fortsett'}</Button>
+          <Button variant={'secondary'}>{'Avbryt'}</Button>
+        </div>
       </div>
     );
   },

@@ -99,8 +99,8 @@ export const Samtykkemodal: Story = {
               'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
             }
           </Paragraph>
-          <div className={'flex'}>
-            <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+          <div className={'flex flex-wrap gap-m'}>
+            <Button>{'Erstatt opplysninger'}</Button>
             <Button
               variant={'tertiary'}
               onClick={(): void => refModal.current?.close()}
@@ -160,7 +160,7 @@ export const Ventevarsel: Story = {
       <>
         <Button
           variant={'secondary'}
-          className={'bottomSpacingXL'}
+          className={'mb-xl'}
           onClick={(): void => refModalWait.current?.showModal()}
         >
           {'Vis ventevarsel'}
@@ -242,16 +242,17 @@ export const Feilmeldingsmodal: Story = {
             {'Hvis du fortsatt har problemer kan du '}
             <a href={'#link'}>{'kontakte oss'}</a>
           </Paragraph>
-          <Button
-            className={'exampleSpacing'}
-            svgPath={UpdateSVGpath}
-            onClick={(): void => refModalFeil.current?.close()}
-          >
-            {'Last inn siden på nytt'}
-          </Button>
-          <Button variant={'secondary'} href={'#'}>
-            {'Gå til forsiden'}
-          </Button>
+          <div className={'flex flex-wrap gap-m'}>
+            <Button
+              svgPath={UpdateSVGpath}
+              onClick={(): void => refModalFeil.current?.close()}
+            >
+              {'Last inn siden på nytt'}
+            </Button>
+            <Button variant={'secondary'} href={'#'}>
+              {'Gå til forsiden'}
+            </Button>
+          </div>
         </Modal>
       </>
     );

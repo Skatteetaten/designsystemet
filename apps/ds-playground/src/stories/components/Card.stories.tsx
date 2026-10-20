@@ -57,7 +57,7 @@ export const Examples: Story = {
   name: 'Skjemakort',
   render: (_args): JSX.Element => {
     return (
-      <div className={'containerS flex flexColumn gapS'}>
+      <div className={'containerS flex flex-column gap-s'}>
         <Card color={'graphite'}>
           <Card.Header
             rightContent={
@@ -152,7 +152,7 @@ export const FileListExample: Story = {
             classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <FileIcon className={'paddingXS'} size={'small'} />
+            <FileIcon className={'p-xs'} size={'small'} />
             {'mine-hus-og-hoteller.zip'}
           </Card.Content>
         </Card>
@@ -162,8 +162,8 @@ export const FileListExample: Story = {
             classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <FileIcon className={'blueIcon paddingXS'} size={'small'} />
-            <Link className={'resetLinkStyling'} href={'#'}>
+            <FileIcon className={'blueIcon p-xs'} size={'small'} />
+            <Link className={'resetLineHeight'} href={'#'}>
               {'mine-hus-og-hoteller.zip'}
             </Link>
           </Card.Content>
@@ -174,7 +174,7 @@ export const FileListExample: Story = {
             classNames={{ children: 'flex' }}
             rightContent={<IconButton title={'Lukk'} svgPath={CancelSVGpath} />}
           >
-            <WarningIcon className={'dangerIcon paddingXS'} size={'small'} />
+            <WarningIcon className={'dangerIcon p-xs'} size={'small'} />
             {'carlos-santana_smooth-featuring-rob-thomas.mp3'}
           </Card.Content>
         </Card>
@@ -197,7 +197,7 @@ export const AlertExample: Story = {
           }
         </Paragraph>
 
-        <div className={'flex flexWrap gapS'}>
+        <div className={'flex flex-wrap gap-s'}>
           <Card className={'cardWidth'} ariaLabelledBy={'card-heading-1'}>
             <Card.Alert
               variant={'info'}

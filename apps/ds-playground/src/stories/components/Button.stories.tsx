@@ -56,18 +56,12 @@ export const Examples: Story = {
   render: (_args): JSX.Element => {
     return (
       <>
-        <Button className={'exampleSpacing'}>{'Send inn skjema'}</Button>
-        <Button className={'exampleSpacing'} variant={'secondary'}>
-          {'Avbryt'}
-        </Button>
-        <div>
-          <Button className={'exampleSpacing'} variant={'tertiary'}>
-            {'Logg inn'}
-          </Button>
+        <Button className={'mr-m'}>{'Send inn skjema'}</Button>
+        <Button variant={'secondary'}>{'Avbryt'}</Button>
+        <div className={'my-m'}>
+          <Button variant={'tertiary'}>{'Logg inn'}</Button>
         </div>
-        <Button className={'exampleSpacing'} variant={'danger'}>
-          {'Slett'}
-        </Button>
+        <Button variant={'danger'}>{'Slett'}</Button>
       </>
     );
   },

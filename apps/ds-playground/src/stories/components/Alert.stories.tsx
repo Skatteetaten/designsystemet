@@ -65,7 +65,7 @@ export const Static: Story = {
             ' når varselet allerede er synlig når siden lastes, eller når varselet er en fast del av innholdet på siden eller i skjemaet. Innholdet er fortsatt tilgjengelig for skjermleserbrukere når de navigerer til varselet, men det blir ikke lest opp automatisk.'
           }
         </Paragraph>
-        <div className={'flex flexColumn gapXl'}>
+        <div className={'flex flex-column gap-xl'}>
           <Alert variant={'info'} ariaLive={'off'} showAlert>
             {
               'Vi jobber med å utvikle denne siden, og du vil kunne se flere av sakene dine etter hvert.'
@@ -108,7 +108,7 @@ export const Dynamic: Story = {
             ' når varselet vises eller endres dynamisk, for eksempel etter at brukeren har gjort et valg, lagret noe eller det har skjedd en endring på siden. Meldingen blir da lest opp av skjermleser på et passende tidspunkt.'
           }
         </Paragraph>
-        <div className={'flex flexColumn gapXl'}>
+        <div className={'flex flex-column gap-xl'}>
           <Alert variant={'success'} showAlert>
             {'Filen ble lastet opp'}
           </Alert>

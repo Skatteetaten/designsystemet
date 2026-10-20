@@ -102,10 +102,7 @@ export const Examples: Story = {
               <>
                 <span>{'navn'}</span>
                 <Popover>
-                  <Popover.Trigger
-                    className={'dummySpacingLeft'}
-                    size={'small'}
-                  />
+                  <Popover.Trigger className={'ml-s'} size={'small'} />
                   <Popover.Content>
                     {
                       'Et navn er en betegnelse eller tittel som brukes for å identifisere en person, et sted, en ting eller et konsept.'

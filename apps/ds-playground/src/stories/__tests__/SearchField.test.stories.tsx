@@ -833,7 +833,7 @@ export const WithSpinnerProps = {
 
 const TwoSearchFields: StoryFn<typeof SearchField> = () => {
   return (
-    <div className={'flex gapS'}>
+    <div className={'flex gap-s'}>
       <SearchField label={'Søk etter grønnsaker'} hideLabel={false} />
       <SearchField
         label={'Søk etter grønnsaker'}

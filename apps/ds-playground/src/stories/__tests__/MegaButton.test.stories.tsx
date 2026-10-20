@@ -339,7 +339,7 @@ export const WithEventHandlers = {
 
 const TemplateWithSpinner: StoryFn<typeof MegaButton> = (args) => (
   <>
-    <div className={'bottomSpacingXL'}>
+    <div className={'mb-xl'}>
       <MegaButton>{defaultMegaButtonText}</MegaButton>
     </div>
     <MegaButton {...args}>{defaultMegaButtonText}</MegaButton>

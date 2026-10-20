@@ -77,7 +77,7 @@ export const Defaults = {
 } satisfies Story;
 
 const TemplateAllColors: StoryFn<typeof Popover> = (args) => (
-  <div className={'flex gapS centerContent'}>
+  <div className={'centerContent gap-s'}>
     <Popover color={'white'} position={'bottomEnd'} isOpen {...args}>
       <Popover.Trigger size={'small'} />
       <Popover.Content>{args.children}</Popover.Content>

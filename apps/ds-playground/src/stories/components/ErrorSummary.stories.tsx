@@ -70,13 +70,12 @@ export const Examples: Story = {
           required
         />
         <TextField
-          className={'bottomSpacingXL'}
+          className={'mb-xl'}
           id={'input_dager'}
           label={'Antall dager i Norge i perioden/inntekståret'}
           errorMessage={
             state.hasError ? 'Antall dager må fylles ut.' : undefined
           }
-          hasSpacing
           required
         />
         <ErrorSummary
@@ -127,19 +126,19 @@ export const WithContainerQuery: Story = {
           {'Slik aktiverer du container queries'}
         </Heading>
 
-        <Paragraph className={'bottomSpacingS'}>
+        <Paragraph>
           {
             'Sett CSS-egenskapen container-type: inline-size på et parent-element:'
           }
         </Paragraph>
 
-        <pre className={'bottomSpacingS'}>
+        <pre>
           {`.error-summary-wrapper {
   container-type: inline-size;
 }`}
         </pre>
 
-        <Paragraph className={'bottomSpacingS'}>
+        <Paragraph className={'pb-s'}>
           {
             'Komponenten responderer på følgende breakpoints og tilpasser padding, ikon-størrelse og layout:'
           }
@@ -155,14 +154,14 @@ export const WithContainerQuery: Story = {
           {'Interaktiv demo'}
         </Heading>
 
-        <Paragraph className={'bottomSpacingS'}>
+        <Paragraph>
           {'Juster bredden for å se hvordan layouten endrer seg:'}
         </Paragraph>
 
         <pre>{`Bredde på container: ${width}px`}</pre>
 
         <input
-          className={'bottomSpacingS containerQuerySlider'}
+          className={'containerQuerySlider'}
           max={800}
           min={200}
           type={'range'}
