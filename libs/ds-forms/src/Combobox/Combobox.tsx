@@ -5,6 +5,7 @@ import {
   useState,
   memo,
   type JSX,
+  type MouseEvent,
 } from 'react';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
@@ -233,6 +234,18 @@ const ComboboxContent = ({
     preserveSearch,
   ]);
 
+  // Mobile: chip buttons don't take focus on tap, so keep focus in the input to avoid clearing the preserved search term.
+  const handleChipsMouseDown = (e: MouseEvent<HTMLDivElement>): void => {
+    if (
+      multiple &&
+      preserveSearch &&
+      document.activeElement === inputRef.current &&
+      (e.target as HTMLElement).closest('button')
+    ) {
+      e.preventDefault();
+    }
+  };
+
   const focusedOptionId = getFocusedElementId();
 
   // Chevron should reflect actual open state, except during delayed min-search hint flow.
@@ -277,7 +290,10 @@ const ComboboxContent = ({
         onClick={!disabled ? handleContainerClick : undefined}
         onKeyDown={!disabled ? handleContainerKeyDown : undefined}
       >
-        <div className={styles.inputContentArea}>
+        <div
+          className={styles.inputContentArea}
+          onMouseDown={handleChipsMouseDown}
+        >
           <ComboboxSelectedOptions
             className={classNames?.inputList}
             multiple={multiple}
