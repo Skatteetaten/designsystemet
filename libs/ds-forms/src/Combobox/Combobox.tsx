@@ -234,7 +234,8 @@ const ComboboxContent = ({
     preserveSearch,
   ]);
 
-  // Mobile: chip buttons don't take focus on tap, so keep focus in the input to avoid clearing the preserved search term.
+  // Mobile: chip buttons don't take focus on tap, so keep focus in the input
+  // to avoid clearing the preserved search term.
   const handleChipsMouseDown = (e: MouseEvent<HTMLDivElement>): void => {
     if (
       multiple &&
