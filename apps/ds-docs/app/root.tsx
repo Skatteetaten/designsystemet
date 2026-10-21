@@ -59,6 +59,8 @@ export function Layout({ children }: { children: ReactNode }): JSX.Element {
           name={'viewport'}
           content={'width=device-width, initial-scale=1'}
         />
+        <script src={getPublicUrl('/skyra-config.js')} />
+        <script src={'https://survey.skyra.no/skyra-survey.js'} />
         <Meta />
         <Links />
       </head>
