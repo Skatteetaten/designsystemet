@@ -3,7 +3,7 @@ import type { JSX } from 'react';
 import { Link } from '@skatteetaten/ds-buttons';
 import { Heading, List, Paragraph } from '@skatteetaten/ds-typography';
 
-import illustration from '../../assets/designsystem_illustrasjon.png';
+import illustration from '../assets/designsystem_illustrasjon.png';
 
 export const IntroductionGenerator = (): JSX.Element => {
   return (
@@ -45,7 +45,9 @@ export const IntroductionGenerator = (): JSX.Element => {
           'Denne siden er av teknisk karakter. Designmønster, språk og universell utforming er dokumentert på Skatteetatens Stil og Tone-underside: '
         }
         <Link
-          href={'https://www.skatteetaten.no/stilogtone/designsystemet/'}
+          href={
+            'https://www.skatteetaten.no/skattekartet/stilogtone/designsystemet/'
+          }
           target={'_blank'}
         >
           {'Stil og tone: Designe og utvikle'}

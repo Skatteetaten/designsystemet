@@ -25,6 +25,7 @@
     @extend %focus;
 
     background-color: var(--semantic-interactive-foreground);
+    color: var(--palette-graphite-0);
   }
 
   &:focus-visible:hover {

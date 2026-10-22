@@ -7,6 +7,7 @@ import LinkMeta from './Link.stories';
 
 const meta = {
   component: Link,
+  title: 'Komponenter/Footer/Link',
   argTypes: {
     ...LinkMeta.argTypes,
     color: { table: { disable: true } },

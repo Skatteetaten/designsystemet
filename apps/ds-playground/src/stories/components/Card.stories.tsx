@@ -190,113 +190,121 @@ export const AlertExample: Story = {
     const headingRef = useRef<HTMLHeadingElement>(null);
 
     return (
-      <div className={'flex flexWrap gapS'}>
-        <Card className={'cardWidth'} ariaLabelledBy={'card-heading-1'}>
-          <Card.Alert
-            variant={'info'}
-            title={'Informasjon'}
-            titleAs={'h3'}
-            onClose={(): void => headingRef?.current?.focus()}
-          >
-            <Paragraph>
-              {'Denne tingen kan du kanskje kikke litt på:'}
-            </Paragraph>
-            <Link href={'#'}>{'Navn på et annet kort'}</Link>
-          </Card.Alert>
-          <Card.Header>
-            <Heading
-              ref={headingRef}
-              id={'card-heading-1'}
-              as={'h3'}
-              canBeManuallyFocused
-            >
-              {'Andre inntekter'}
-            </Heading>
-          </Card.Header>
-          <Card.Content>
-            <DescriptionList>
-              <DescriptionList.Element term={'Beløp'}>
-                {'654 321'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-          <Card.Actions>
-            <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-          </Card.Actions>
-        </Card>
+      <>
+        <Paragraph hasSpacing>
+          {
+            'Pass på å sette riktig heading-nivå i Card.Alert. Vanligvis vil dette være samme nivå som hovedheading i Card. Når Card.Alert lukkes må man huske å sette fokus. Vanligvis kan fokus settes til hovedheading i Card.'
+          }
+        </Paragraph>
 
-        <Card className={'cardWidth'} ariaLabelledBy={'card-heading-2'}>
-          <Card.Alert
-            variant={'warning'}
-            title={'Merknad'}
-            titleAs={'h3'}
-            onClose={(): void => headingRef?.current?.focus()}
-          >
-            <Paragraph>
-              {
-                'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
-              }
-            </Paragraph>
-            <Link href={'#'}>{'Navn på et annet kort'}</Link>
-          </Card.Alert>
-          <Card.Header>
-            <Heading
-              ref={headingRef}
-              id={'card-heading-2'}
-              as={'h3'}
-              canBeManuallyFocused
+        <div className={'flex flexWrap gapS'}>
+          <Card className={'cardWidth'} ariaLabelledBy={'card-heading-1'}>
+            <Card.Alert
+              variant={'info'}
+              title={'Informasjon'}
+              titleAs={'h3'}
+              onClose={(): void => headingRef?.current?.focus()}
             >
-              {'Andre inntekter'}
-            </Heading>
-          </Card.Header>
-          <Card.Content>
-            <DescriptionList>
-              <DescriptionList.Element term={'Beløp'}>
-                {'654 321'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-          <Card.Actions>
-            <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-          </Card.Actions>
-        </Card>
+              <Paragraph>
+                {'Denne tingen kan du kanskje kikke litt på:'}
+              </Paragraph>
+              <Link href={'#'}>{'Navn på et annet kort'}</Link>
+            </Card.Alert>
+            <Card.Header>
+              <Heading
+                ref={headingRef}
+                id={'card-heading-1'}
+                as={'h3'}
+                canBeManuallyFocused
+              >
+                {'Andre inntekter'}
+              </Heading>
+            </Card.Header>
+            <Card.Content>
+              <DescriptionList>
+                <DescriptionList.Element term={'Beløp'}>
+                  {'654 321'}
+                </DescriptionList.Element>
+              </DescriptionList>
+            </Card.Content>
+            <Card.Actions>
+              <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
+            </Card.Actions>
+          </Card>
 
-        <Card className={'cardWidth'} ariaLabelledBy={'card-heading-3'}>
-          <Card.Alert
-            variant={'danger'}
-            title={'Å nei, ikke bra!'}
-            titleAs={'h3'}
-            onClose={(): void => headingRef?.current?.focus()}
-          >
-            <Paragraph>
-              {
-                'Nå bør du fikse på dette kortet for å unngå at [annet kort] blir feil.'
-              }
-            </Paragraph>
-            <Link href={'#'}>{'Navn på et annet kort'}</Link>
-          </Card.Alert>
-          <Card.Header>
-            <Heading
-              ref={headingRef}
-              id={'card-heading-3'}
-              as={'h3'}
-              canBeManuallyFocused
+          <Card className={'cardWidth'} ariaLabelledBy={'card-heading-2'}>
+            <Card.Alert
+              variant={'warning'}
+              title={'Merknad'}
+              titleAs={'h3'}
+              onClose={(): void => headingRef?.current?.focus()}
             >
-              {'Andre inntekter'}
-            </Heading>
-          </Card.Header>
-          <Card.Content>
-            <DescriptionList>
-              <DescriptionList.Element term={'Beløp'}>
-                {'654 321'}
-              </DescriptionList.Element>
-            </DescriptionList>
-          </Card.Content>
-          <Card.Actions>
-            <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
-          </Card.Actions>
-        </Card>
-      </div>
+              <Paragraph>
+                {
+                  'Nå har vi gjort en endring i et annet kort som påvirker dette kortet.'
+                }
+              </Paragraph>
+              <Link href={'#'}>{'Navn på et annet kort'}</Link>
+            </Card.Alert>
+            <Card.Header>
+              <Heading
+                ref={headingRef}
+                id={'card-heading-2'}
+                as={'h3'}
+                canBeManuallyFocused
+              >
+                {'Andre inntekter'}
+              </Heading>
+            </Card.Header>
+            <Card.Content>
+              <DescriptionList>
+                <DescriptionList.Element term={'Beløp'}>
+                  {'654 321'}
+                </DescriptionList.Element>
+              </DescriptionList>
+            </Card.Content>
+            <Card.Actions>
+              <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
+            </Card.Actions>
+          </Card>
+
+          <Card className={'cardWidth'} ariaLabelledBy={'card-heading-3'}>
+            <Card.Alert
+              variant={'danger'}
+              title={'Å nei, ikke bra!'}
+              titleAs={'h3'}
+              onClose={(): void => headingRef?.current?.focus()}
+            >
+              <Paragraph>
+                {
+                  'Nå bør du fikse på dette kortet for å unngå at [annet kort] blir feil.'
+                }
+              </Paragraph>
+              <Link href={'#'}>{'Navn på et annet kort'}</Link>
+            </Card.Alert>
+            <Card.Header>
+              <Heading
+                ref={headingRef}
+                id={'card-heading-3'}
+                as={'h3'}
+                canBeManuallyFocused
+              >
+                {'Andre inntekter'}
+              </Heading>
+            </Card.Header>
+            <Card.Content>
+              <DescriptionList>
+                <DescriptionList.Element term={'Beløp'}>
+                  {'654 321'}
+                </DescriptionList.Element>
+              </DescriptionList>
+            </Card.Content>
+            <Card.Actions>
+              <InlineButton svgPath={EditSVGpath}>{'Endre'}</InlineButton>
+            </Card.Actions>
+          </Card>
+        </div>
+      </>
     );
   },
 } satisfies Story;

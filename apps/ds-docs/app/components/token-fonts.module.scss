@@ -46,62 +46,6 @@
   font-size: var(--semantic-font-size-default);
   font-weight: var(--semantic-font-weight-default);
   line-height: 1;
-
-  &[data-token='--font-size-reference'] {
-    font-size: var(--font-size-reference);
-  }
-
-  &[data-token='--font-size-xxs'] {
-    font-size: var(--font-size-xxs);
-  }
-
-  &[data-token='--font-size-xs'] {
-    font-size: var(--font-size-xs);
-  }
-
-  &[data-token='--font-size-s'] {
-    font-size: var(--font-size-s);
-  }
-
-  &[data-token='--font-size-m'] {
-    font-size: var(--font-size-m);
-  }
-
-  &[data-token='--font-size-l'] {
-    font-size: var(--font-size-l);
-  }
-
-  &[data-token='--font-size-xl'] {
-    font-size: var(--font-size-xl);
-  }
-
-  &[data-token='--font-size-xxl'] {
-    font-size: var(--font-size-xxl);
-  }
-
-  &[data-token='--font-size-mega'] {
-    font-size: var(--font-size-mega);
-  }
-
-  &[data-token='--semantic-font-size-default'] {
-    font-size: var(--semantic-font-size-default);
-  }
-
-  &[data-token='--font-weight-regular'] {
-    font-weight: var(--font-weight-regular);
-  }
-
-  &[data-token='--font-weight-medium'] {
-    font-weight: var(--font-weight-medium);
-  }
-
-  &[data-token='--font-weight-bold'] {
-    font-weight: var(--font-weight-bold);
-  }
-
-  &[data-token='--semantic-font-weight-default'] {
-    font-weight: var(--semantic-font-weight-default);
-  }
 }
 
 .name {

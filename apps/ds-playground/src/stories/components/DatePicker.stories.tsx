@@ -73,7 +73,7 @@ const meta = {
     onSelectDate: { ...htmlEventDescription },
   },
   args: {
-    label: 'Fødselsdato',
+    label: 'Dato (dd.mm.åååå)',
   },
 } satisfies Meta<typeof DatePicker>;
 
@@ -81,7 +81,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {
-  tags: ['!dev'],
   render: (args): JSX.Element => {
     const [, setArgs] = useArgs();
     /* Fordi date control konverterer datoen til et UNIX-tidsstempel når verdien endres,
@@ -107,22 +106,6 @@ export const Preview: Story = {
     return <DatePicker {...args} onSelectDate={handleSelectDate} />;
   },
 } satisfies Story;
-
-export const Enkeltdato: Story = {
-  render: (_args): JSX.Element => {
-    const [value, setValue] = useState<Date | null>(null);
-
-    return (
-      <DatePicker
-        label={'Dato (dd.mm.åååå)'}
-        value={value}
-        required
-        onSelectDate={setValue}
-      />
-    );
-  },
-} satisfies Story;
-Enkeltdato.parameters = exampleParameters;
 
 export const MedMinOgMaxDato: Story = {
   name: 'Med min- og maxdato',

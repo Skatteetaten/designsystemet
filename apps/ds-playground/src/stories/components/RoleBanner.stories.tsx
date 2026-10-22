@@ -1,21 +1,13 @@
 import { JSX } from 'react';
 
-import { linkTo } from '@storybook/addon-links';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Link } from '@skatteetaten/ds-buttons';
 import { formatNationalIdentityNumber } from '@skatteetaten/ds-core-utils';
 import { RoleBanner, TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import stylesAsString from './RoleBannerExample.module.scss?raw';
 import { category } from '../../../.storybook/helpers';
-import {
-  exampleParameters,
-  exampleParametersWithStylesInCode,
-} from '../utils/stories.utils';
-
-import styles from './RoleBannerExample.module.scss';
+import { exampleParameters } from '../utils/stories.utils';
 
 const meta = {
   component: RoleBanner,
@@ -39,33 +31,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Preview: Story = {} satisfies Story;
 
-export const Examples: Story = {
-  render: (args): JSX.Element => {
-    return (
-      <>
-        <Paragraph hasSpacing>
-          {'Velg "logg inn" i '}
-          <Link
-            href={'#'}
-            onClick={(e) => {
-              e.preventDefault();
-              linkTo('Sidetyper/Ekstern/Skjema Med Steg', 'Skjema Med Steg')();
-            }}
-          >
-            {'skjema med steg'}
-          </Link>
-          {' for å se eksempel i kontekst.'}
-        </Paragraph>
-        <RoleBanner {...args} />
-      </>
-    );
-  },
-  parameters: exampleParameters,
-} satisfies Story;
-
 export const ExampleWithTopBannerExternalMegSelv: Story = {
   name: 'Rollebanner for meg selv i skjemamodus',
   render: (_args): JSX.Element => {
+    // .hiddenUserMenuButton {
+    //   display: none;
+    // }
     return (
       <>
         <TopBannerExternal
@@ -73,7 +44,7 @@ export const ExampleWithTopBannerExternalMegSelv: Story = {
           onLogOutClick={() => alert('du logget ut')}
         >
           <TopBannerExternal.UserMenu
-            className={styles.hiddenUserMenuButton}
+            className={'hiddenUserMenuButton'}
             user={{ role: 'meg' }}
           />
         </TopBannerExternal>
@@ -91,12 +62,14 @@ export const ExampleWithTopBannerExternalMegSelv: Story = {
     );
   },
 } satisfies Story;
-ExampleWithTopBannerExternalMegSelv.parameters =
-  exampleParametersWithStylesInCode(stylesAsString);
+ExampleWithTopBannerExternalMegSelv.parameters = exampleParameters;
 
 export const ExampleWithTopBannerExternalAndre: Story = {
   name: 'Rollebanner for andre i skjemamodus',
   render: (_args): JSX.Element => {
+    // .hiddenUserMenuButton {
+    //   display: none;
+    // }
     return (
       <>
         <TopBannerExternal
@@ -104,7 +77,7 @@ export const ExampleWithTopBannerExternalAndre: Story = {
           onLogOutClick={() => alert('du logget ut')}
         >
           <TopBannerExternal.UserMenu
-            className={styles.hiddenUserMenuButton}
+            className={'hiddenUserMenuButton'}
             user={{ role: 'meg' }}
           />
         </TopBannerExternal>
@@ -122,5 +95,4 @@ export const ExampleWithTopBannerExternalAndre: Story = {
     );
   },
 } satisfies Story;
-ExampleWithTopBannerExternalAndre.parameters =
-  exampleParametersWithStylesInCode(stylesAsString);
+ExampleWithTopBannerExternalAndre.parameters = exampleParameters;
