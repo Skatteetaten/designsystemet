@@ -10,6 +10,7 @@ import {
   within,
 } from 'storybook/test';
 
+import { Button } from '@skatteetaten/ds-buttons';
 import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
@@ -19,6 +20,7 @@ import { SystemSVGPaths } from '../utils/icon.systems';
 
 const valueOption1 = 'option1';
 const valueOption2 = 'option2';
+const childrenOption2 = 'Test 2';
 const errorMessageText = 'Ledetekst er obligatorisk';
 const defaultLabelText = 'Ledetekst';
 
@@ -50,6 +52,7 @@ const meta = {
     hideLabel: { table: { disable: true } },
     hidePlaceholder: { table: { disable: true } },
     label: { table: { disable: true } },
+    readOnly: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML
     autoComplete: { table: { disable: true } },
@@ -76,7 +79,7 @@ const meta = {
         {'Test 1'}
       </Select.Option>,
       <Select.Option key={'option_2'} value={valueOption2}>
-        {'Test 2'}
+        {childrenOption2}
       </Select.Option>,
     ],
   },
@@ -204,6 +207,7 @@ export const Defaults = {
       '[id^=selectErrorId]'
     );
     await expect(errorMessageContainer).toBeInTheDocument();
+    await expect(canvas.queryByRole('textbox')).not.toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -430,6 +434,75 @@ export const WithHelpText = {
   },
 } satisfies Story;
 
+export const WithReadOnly = {
+  name: 'With ReadOnly',
+  args: {
+    readOnly: true,
+    value: valueOption2,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible'] },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.queryByRole('combobox')).not.toBeInTheDocument();
+    const textbox = canvas.getByRole('textbox');
+    await expect(textbox).toHaveAttribute('readonly');
+    await expect(textbox).toHaveValue(childrenOption2);
+  },
+} satisfies Story;
+
+export const WithReadOnlyNameAndForm = {
+  name: 'With ReadOnly Name And Form',
+  args: {
+    readOnly: true,
+    name: 'farge',
+    form: 'form123',
+    value: valueOption2,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+    name: { table: { disable: false } },
+    form: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByRole('textbox')).not.toHaveAttribute('name');
+    const hidden = canvasElement.querySelector(
+      `input[type='hidden'][name='farge']`
+    );
+    await expect(hidden).toHaveValue(valueOption2);
+    await expect(hidden).toHaveAttribute('form', 'form123');
+  },
+} satisfies Story;
+
+export const WithReadOnlyAndDisabled = {
+  name: 'With ReadOnly and Disabled',
+  args: {
+    readOnly: true,
+    disabled: true,
+    value: valueOption2,
+  },
+  argTypes: {
+    readOnly: { table: { disable: false } },
+    disabled: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.queryByRole('textbox')).not.toBeInTheDocument();
+    await expect(canvas.queryByRole('combobox')).toBeInTheDocument();
+  },
+} satisfies Story;
+
 const EventHandlersTemplate: StoryFn<typeof Select> = (args) => {
   const [labelText, setLabelText] = useState('Tester events');
   return (
@@ -554,3 +627,80 @@ const TwoSelects: StoryFn<typeof Select> = () => {
 export const TwoSelectsOneWithHelpText = {
   render: TwoSelects,
 };
+
+const ToggleReadOnlyTemplate: StoryFn<typeof Select> = (args) => {
+  const [isReadOnly, setIsReadOnly] = useState(false);
+  return (
+    <>
+      <Select {...args} readOnly={isReadOnly} hasSpacing />
+      <Button onClick={(): void => setIsReadOnly(!isReadOnly)}>
+        {'Toggle readOnly'}
+      </Button>
+    </>
+  );
+};
+
+export const WithUncontrolledToggleReadOnly = {
+  render: ToggleReadOnlyTemplate,
+  name: 'With Uncontrolled Toggle ReadOnly',
+  args: {
+    name: 'frukt',
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const toggleReadOnlyBtn = canvas.getByRole('button', {
+      name: 'Toggle readOnly',
+    });
+
+    await userEvent.selectOptions(canvas.getByRole('combobox'), valueOption2);
+
+    // Brukerens valg (kun lagret internt) skal vises og sendes med i readOnly
+    await userEvent.click(toggleReadOnlyBtn);
+    await expect(await canvas.findByRole('textbox')).toHaveValue(
+      childrenOption2
+    );
+    const hiddenInput = canvasElement.querySelector(
+      `input[type='hidden'][name='frukt']`
+    );
+    await expect(hiddenInput).toHaveValue(valueOption2);
+
+    // Brukerens valg skal beholdes når readOnly slås av igjen
+    await userEvent.click(toggleReadOnlyBtn);
+    const select = await canvas.findByRole('combobox');
+    await expect(select).toHaveValue(valueOption2);
+    await expect(canvas.queryByRole('textbox')).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithUncontrolledToggleReadOnlyAndHidePlaceholder = {
+  render: ToggleReadOnlyTemplate,
+  name: 'With Uncontrolled Toggle ReadOnly And HidePlaceholder',
+  args: {
+    hidePlaceholder: true,
+  },
+  argTypes: {
+    hidePlaceholder: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const toggleButton = canvas.getByRole('button', {
+      name: 'Toggle readOnly',
+    });
+
+    // Uten defaultValue viser select første option
+    await expect(canvas.getByRole('combobox')).toHaveValue(valueOption1);
+
+    // readOnly skal vise samme option som select viste
+    await userEvent.click(toggleButton);
+    await expect(await canvas.findByRole('textbox')).toHaveValue('Test 1');
+
+    await userEvent.click(toggleButton);
+    await expect(await canvas.findByRole('combobox')).toHaveValue(valueOption1);
+  },
+} satisfies Story;

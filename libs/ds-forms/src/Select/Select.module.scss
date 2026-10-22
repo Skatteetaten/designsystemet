@@ -59,6 +59,15 @@
     box-shadow: inset 0 0 0 2px var(--semantic-interactive-foreground);
     outline: 2px solid var(--semantic-interactive-background);
   }
+
+  &:has(option[value='']:checked) {
+    color: var(--palette-graphite-50);
+  }
+
+  // Unngå at listen får samme farge som placeholder i enkelte nettlesere på Windows
+  option {
+    color: var(--semantic-page-foreground);
+  }
 }
 
 .selectIcon {
@@ -78,4 +87,18 @@
   border-left: none;
   background-color: var(--semantic-interactive-background);
   fill: var(--semantic-interactive-foreground);
+}
+
+.textbox {
+  &:read-only {
+    padding: var(--spacing-xs) var(--spacing-s);
+    background-color: transparent;
+    box-shadow: none;
+    outline: 0;
+
+    &:focus-visible {
+      box-shadow: inset 0 0 0 2px var(--semantic-interactive-main);
+      outline: 1px solid var(--semantic-interactive-main);
+    }
+  }
 }

@@ -33,6 +33,7 @@ const meta = {
     hideLabel: { table: { category: category.props } },
     hidePlaceholder: { table: { category: category.props } },
     label: { table: { category: category.props } },
+    readOnly: { table: { category: category.props } },
     titleHelpSvg: {
       table: {
         category: category.props,

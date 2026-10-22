@@ -75,8 +75,4 @@
       outline: 1px solid var(--semantic-interactive-main);
     }
   }
-
-  &_large:read-only:not(:disabled) {
-    padding: var(--spacing-s);
-  }
 }

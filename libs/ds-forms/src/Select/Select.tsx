@@ -1,8 +1,12 @@
 import {
   ChangeEvent,
+  Children,
+  isValidElement,
+  ReactElement,
   useId,
   useImperativeHandle,
   useRef,
+  useState,
   JSX,
   useLayoutEffect,
 } from 'react';
@@ -15,6 +19,7 @@ import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 import { getAriaInvalid } from '../utils';
 import { SelectOption } from './SelectOption/SelectOption';
+import { SelectOptionProps } from './SelectOption/SelectOption.types';
 
 import styles from './Select.module.scss';
 
@@ -40,6 +45,7 @@ export const Select = ({
   helpText,
   label,
   placeholder = getDefaultSelectPlaceholder(),
+  readOnly,
   titleHelpSvg,
   value,
   ariaDescribedBy,
@@ -57,34 +63,60 @@ export const Select = ({
   onHelpToggle,
   children,
 }: SelectProps): JSX.Element => {
+  const isReadOnly = readOnly && !disabled;
   const selectRef = useRef<HTMLSelectElement>(null);
-  useImperativeHandle(ref, () => selectRef?.current as HTMLSelectElement);
+  const inputRef = useRef<HTMLInputElement>(null);
+  useImperativeHandle(
+    ref,
+    () =>
+      (isReadOnly ? inputRef.current : selectRef.current) as HTMLSelectElement,
+    [isReadOnly]
+  );
 
   const errorId = `selectErrorId-${useId()}`;
   const generatedId = `selectId-${useId()}`;
   const descriptionId = `descId-${useId()}`;
-  const selectId = externalId ?? generatedId;
+  const fieldId = externalId ?? generatedId;
 
-  const placeholderPaletteGraphite50 = 'var(--palette-graphite-50)';
+  /* Ved ukontrollert bruk ligger brukerens valg kun i DOM-en til select. Valget
+   * lagres derfor i state slik at det ikke går tapt når readOnly slås på/av. */
+  const [internalValue, setInternalValue] =
+    useState<SelectProps['value']>(defaultValue);
+
+  /* Synkroniserer internalValue med det select faktisk viser, f.eks. første
+   * option når hidePlaceholder er satt og verken value eller defaultValue er gitt. */
   useLayoutEffect(() => {
-    changePlaceholderColor();
-    // eslint-disable-next-line
-  }, [value]);
+    if (value === undefined && selectRef.current) {
+      setInternalValue(selectRef.current.value);
+    }
+  }, [value, isReadOnly]);
+
+  const resolvedAriaDescribedBy =
+    [ariaDescribedBy, description && descriptionId, errorMessage && errorId]
+      .filter(Boolean)
+      .join(' ') || undefined;
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
-    changePlaceholderColor();
+    if (value === undefined) {
+      setInternalValue(e.target.value);
+    }
     onChange?.(e);
   };
 
-  const changePlaceholderColor = (): void => {
-    if (!hidePlaceholder) {
-      const select = selectRef.current as HTMLSelectElement;
-      if (select.value.length === 0) {
-        select.style.color = placeholderPaletteGraphite50;
-      } else {
-        select.style.color = '';
-      }
+  const getOptionLabel = (): string => {
+    const currentValue = value ?? internalValue;
+    /* Bruker ikke falsy-sjekk (!currentValue) siden 0 kan være en gyldig verdi */
+    if (currentValue === undefined || currentValue === '') {
+      return '';
     }
+
+    const option = Children.toArray(children).find(
+      (child): child is ReactElement<SelectOptionProps> =>
+        isValidElement<SelectOptionProps>(child) &&
+        String(child.props.value) === String(currentValue)
+    );
+
+    return option?.props.children ?? '';
   };
 
   return (
@@ -95,7 +127,7 @@ export const Select = ({
     >
       <LabelWithHelp
         classNames={classNames}
-        htmlFor={selectId}
+        htmlFor={fieldId}
         hideLabel={hideLabel}
         description={description}
         descriptionId={descriptionId}
@@ -112,36 +144,57 @@ export const Select = ({
           classNames?.selectContainer ?? ''
         }`.trim()}
       >
-        <select
-          ref={selectRef}
-          id={selectId}
-          className={styles.select}
-          data-testid={dataTestId}
-          autoComplete={autoComplete}
-          disabled={disabled}
-          form={form}
-          name={name}
-          required={required}
-          value={value}
-          defaultValue={defaultValue}
-          aria-describedby={
-            [
-              ariaDescribedBy,
-              description && descriptionId,
-              errorMessage && errorId,
-            ]
-              .filter(Boolean)
-              .join(' ') || undefined
-          }
-          aria-invalid={getAriaInvalid(errorMessage, required)}
-          onBlur={onBlur}
-          onChange={handleChange}
-          onFocus={onFocus}
-        >
-          {!hidePlaceholder && <option value={''}>{placeholder}</option>}
-          {children}
-        </select>
-        <ChevronDownIcon className={styles.selectIcon} />
+        {isReadOnly ? (
+          <>
+            <input
+              ref={inputRef}
+              id={fieldId}
+              data-testid={dataTestId}
+              className={`${styles.select} ${styles.textbox}`}
+              form={form}
+              required={required}
+              value={getOptionLabel()}
+              aria-describedby={resolvedAriaDescribedBy}
+              aria-invalid={getAriaInvalid(errorMessage, required)}
+              readOnly
+            />
+            {name && (
+              <input
+                type={'hidden'}
+                form={form}
+                name={name}
+                value={value}
+                defaultValue={value === undefined ? internalValue : undefined}
+              />
+            )}
+          </>
+        ) : (
+          <>
+            <select
+              ref={selectRef}
+              id={fieldId}
+              data-testid={dataTestId}
+              className={styles.select}
+              autoComplete={autoComplete}
+              disabled={disabled}
+              form={form}
+              name={name}
+              required={required}
+              value={value}
+              /* internalValue beholder brukerens valg når select mountes på nytt etter readOnly */
+              defaultValue={value === undefined ? internalValue : undefined}
+              aria-describedby={resolvedAriaDescribedBy}
+              aria-invalid={getAriaInvalid(errorMessage, required)}
+              onBlur={onBlur}
+              onChange={handleChange}
+              onFocus={onFocus}
+            >
+              {!hidePlaceholder && <option value={''}>{placeholder}</option>}
+              {children}
+            </select>
+            <ChevronDownIcon className={styles.selectIcon} />
+          </>
+        )}
       </div>
       <ErrorMessage
         id={errorId}
