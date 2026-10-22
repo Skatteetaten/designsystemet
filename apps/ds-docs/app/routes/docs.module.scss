@@ -35,8 +35,7 @@
   @include styles.sr-only;
 
   @media (min-width: breakpoints.$breakpoint-m) {
-    position: sticky;
-    top: var(--spacing-l);
+    position: static;
     display: block;
     overflow: visible;
     width: max-content;
@@ -44,9 +43,33 @@
     height: auto;
     margin: 0;
     clip: auto;
-    grid-area: nav;
-    place-self: start start;
     white-space: normal;
+  }
+}
+
+.sideContent {
+  min-width: 0;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    position: sticky;
+    top: var(--spacing-s);
+    max-width: 16rem;
+    grid-area: nav;
+    padding-block-end: calc(var(--survey-height, 0px) + var(--spacing-mega));
+    place-self: start start;
+  }
+}
+
+.surveyContent {
+  min-width: 0;
+
+  @media (min-width: breakpoints.$breakpoint-m) {
+    position: sticky;
+    top: calc(var(--spacing-s) + var(--toc-height, 0px) + var(--spacing-mega));
+    width: 16rem;
+    grid-area: nav;
+    margin-block-start: calc(var(--toc-height, 0px) + var(--spacing-mega));
+    place-self: start start;
   }
 }
 
