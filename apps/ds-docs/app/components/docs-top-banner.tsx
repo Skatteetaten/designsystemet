@@ -28,7 +28,7 @@ const skatteKartetLinks = [
     text: 'Vår praksis',
   },
   {
-    href: 'https://www.skatteetaten.no/skattekartet/innhold/',
+    href: 'https://www.skatteetaten.no/skattekartet/monstre/',
     text: 'Mønstre og maler',
   },
   {
