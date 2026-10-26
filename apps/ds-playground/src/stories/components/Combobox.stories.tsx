@@ -53,6 +53,7 @@ const meta = {
     maxSelected: { table: { category: category.props } },
     minSearchLength: { table: { category: category.props } },
     multiple: { table: { category: category.props } },
+    preserveSearch: { table: { category: category.props } },
     spinnerLabel: {
       table: { category: category.props },
       defaultValue: { summary: getDefaultSpinnerLabel() },

@@ -2,8 +2,8 @@ declare const classNames: {
   readonly content: 'content';
   readonly roleBanner: 'roleBanner';
   readonly nameWrapper: 'nameWrapper';
-  readonly identifier: 'identifier';
   readonly roleBannerIcon: 'roleBannerIcon';
+  readonly identifier: 'identifier';
   readonly bold: 'bold';
   readonly srOnly: 'srOnly';
 };

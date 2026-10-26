@@ -92,6 +92,11 @@ interface ComboboxCommonProps extends ComboboxPropsHTMLAttributes, BaseProps {
   placeholder?: string;
   /** Kalles når hjelpeteksten vises/skjules */
   onHelpToggle?: LabelWithHelpProps['onHelpToggle'];
+  /**
+   * Beholder søketeksten som er skrevet slik at flere verdier kan velges uten
+   * at søketeksten fjernes. Har kun effekt når multiple er true.
+   */
+  preserveSearch?: boolean;
 }
 
 interface SingleComboboxProps extends ComboboxCommonProps {
