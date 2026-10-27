@@ -78,6 +78,8 @@ export * from './FavoriteOutline';
 export * from './File';
 export * from './FileOutline';
 export * from './Filter';
+export * from './Folder';
+export * from './FolderOutline';
 export * from './Folkeregister';
 export * from './FolkeregisterOutline';
 export * from './FormatAlignLeft';
