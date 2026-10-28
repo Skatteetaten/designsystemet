@@ -5,6 +5,7 @@ import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
+import { MenuSVGpath, CircleDownSVGpath } from '@skatteetaten/ds-icons';
 import {
   ActionMenuActionsRef,
   TopBannerInternal,
@@ -20,6 +21,8 @@ const meta = {
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     menuActionsRef: { table: { disable: true } },
+    menuLabel: { table: { disable: true } },
+    svgPath: { table: { disable: true } },
   },
   args: {
     children: 'Menu Content',
@@ -86,8 +89,17 @@ export const WithDefaults = {
   args: {},
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const menuButton = canvas.getByRole('button');
+    const menuButton = canvas.getByRole('button', {
+      name: dsI18n.t('ds_layout:topbannerbutton.Menu'),
+    });
+    await expect(menuButton).toBeInTheDocument();
+    const svg = menuButton.querySelector('svg');
+    await expect(svg).not.toBeNull();
+    const path = svg?.querySelector('path');
+    await expect(path).not.toBeNull();
+    await expect(path).toHaveAttribute('d', MenuSVGpath.props.d);
     await fireEvent.click(menuButton);
+    await expect(canvas.getByText('Menu Content')).toBeInTheDocument();
   },
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
@@ -139,5 +151,42 @@ export const WithImperativeActions = {
     await expect(menuContent).not.toBeInTheDocument();
     await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
     await expect(menuButton).toHaveFocus();
+  },
+} satisfies Story;
+
+export const WithCustomMenuLabel = {
+  name: 'With Custom Menu Label',
+  args: {
+    menuLabel: 'Custom Menu',
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button', { name: 'Custom Menu' });
+    await expect(menuButton).toBeInTheDocument();
+    await fireEvent.click(menuButton);
+    const menuContent = canvas.getByText('Menu Content');
+    await expect(menuContent).toBeInTheDocument();
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
+
+export const WithCustomSvgPath = {
+  name: 'With Custom SVG Path',
+  args: {
+    svgPath: <path d={CircleDownSVGpath.props.d} />,
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    const svg = menuButton.querySelector('svg');
+    await expect(svg).not.toBeNull();
+    const path = svg?.querySelector('path');
+    await expect(path).not.toBeNull();
+    await expect(path).toHaveAttribute('d', CircleDownSVGpath.props.d);
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
   },
 } satisfies Story;

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
-import { category } from '../../../.storybook/helpers';
+import { category, menuSvgPathDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
@@ -11,6 +11,13 @@ const meta = {
     // Props
     children: { control: 'text', table: { category: category.props } },
     menuActionsRef: { control: false, table: { category: category.props } },
+    menuLabel: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'Meny' },
+      },
+    },
+    svgPath: { ...menuSvgPathDescription },
   },
   args: {
     children: 'Menu Content',

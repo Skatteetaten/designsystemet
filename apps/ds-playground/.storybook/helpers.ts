@@ -30,6 +30,15 @@ export const helpSvgPathDescription: Partial<ArgTypes> = {
   },
 };
 
+export const menuSvgPathDescription: Partial<ArgTypes> = {
+  options: Object.keys(SystemSVGPaths),
+  mapping: SystemSVGPaths,
+  table: {
+    category: category.props,
+    defaultValue: { summary: 'MenuSVGpath' },
+  },
+};
+
 export const includeStylesTransform =
   (stylesAsString: string) =>
   (code: string): string => {

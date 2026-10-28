@@ -32,6 +32,8 @@ export const TopBannerInternalActionMenu = ({
   lang,
   'data-testid': dataTestId,
   menuActionsRef,
+  menuLabel,
+  svgPath,
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
@@ -87,13 +89,13 @@ export const TopBannerInternalActionMenu = ({
         data-testid={dataTestId}
         {...getReferenceProps()}
         ref={mergedButtonRef}
-        svgPath={MenuSVGpath}
+        svgPath={svgPath ?? MenuSVGpath}
         brightness={'light'}
         onClick={() => {
           setOpen(!isOpen);
         }}
       >
-        {t('topbannerbutton.Menu')}
+        {menuLabel ?? t('topbannerbutton.Menu')}
       </InlineButton>
       {isOpen && (
         <FloatingFocusManager
