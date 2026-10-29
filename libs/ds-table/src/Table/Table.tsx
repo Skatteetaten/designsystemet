@@ -39,7 +39,6 @@ export const Table = ({
   children,
 }: TableProps): JSX.Element => {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const srTimeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const [isTableScrollable, setIsTableScrollable] = useState<boolean>(false);
   const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
@@ -114,15 +113,14 @@ export const Table = ({
   }, []);
 
   useEffect(() => {
-    if (srTimeoutId.current) {
-      clearTimeout(srTimeoutId.current);
-    }
     setShouldShowSRText(true);
-
-    srTimeoutId.current = setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       setShouldShowSRText(false);
-      srTimeoutId.current = undefined;
     }, 3000);
+
+    return (): void => {
+      clearTimeout(timeoutId);
+    };
   }, [sortState]);
 
   return (
