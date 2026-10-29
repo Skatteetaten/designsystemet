@@ -135,27 +135,29 @@ export const Table = ({
         setRowInEditModeId: setInternalRowInEditModeId,
       }}
     >
-      <div
-        ref={wrapperRef}
-        className={wrapperClassName}
-        tabIndex={isTableScrollable ? 0 : undefined}
-      >
-        <table
-          ref={ref}
-          id={id}
-          className={concatenatedClassName}
-          lang={lang}
-          data-testid={dataTestId}
-          tabIndex={canBeManuallyFocused ? -1 : undefined}
+      <div className={wrapperClassName}>
+        <div
+          ref={wrapperRef}
+          className={isTableScrollable ? styles.scrollContainer : undefined}
+          tabIndex={isTableScrollable ? 0 : undefined}
         >
-          <caption className={captionClassName}>{caption}</caption>
-          {children}
-        </table>
-        {sortState && (
-          <div className={styles.hidden} aria-live={'polite'}>
-            {getScreenReaderSortDirectionText(shouldShowSRText, sortState, t)}
-          </div>
-        )}
+          <table
+            ref={ref}
+            id={id}
+            className={concatenatedClassName}
+            lang={lang}
+            data-testid={dataTestId}
+            tabIndex={canBeManuallyFocused ? -1 : undefined}
+          >
+            <caption className={captionClassName}>{caption}</caption>
+            {children}
+          </table>
+          {sortState && (
+            <div className={styles.hidden} aria-live={'polite'}>
+              {getScreenReaderSortDirectionText(shouldShowSRText, sortState, t)}
+            </div>
+          )}
+        </div>
       </div>
     </TableContext.Provider>
   );

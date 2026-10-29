@@ -1,32 +1,33 @@
 @use 'libs/ds-core-utils/src/mixins/styles';
 
+// Fade-effekten legges som et lag over tabellen i stedet for mask-image,
+// fordi mask-image også klipper innhold som skal vises utenfor tabellen (f.eks. Popover).
 .wrapper {
-  // stylelint-disable-next-line property-no-vendor-prefix
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgb(0 0 0 / 100%) 80%,
-    rgb(0 0 0 / 0%)
-  );
-  mask-image: linear-gradient(
-    to right,
-    rgb(0 0 0 / 100%) 80%,
-    rgb(0 0 0 / 20%)
-  );
-  overflow-x: auto;
+  position: relative;
 
-  &_fadeLeft {
-    // stylelint-disable-next-line property-no-vendor-prefix
-    -webkit-mask-image: linear-gradient(
-      to left,
-      rgb(0 0 0 / 100%) 80%,
-      rgb(0 0 0 / 0%)
+  &::after {
+    position: absolute;
+    background: linear-gradient(
+      to right,
+      transparent 80%,
+      var(--semantic-page-background)
     );
-    mask-image: linear-gradient(
+    content: '';
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &_fadeLeft::after {
+    background: linear-gradient(
       to left,
-      rgb(0 0 0 / 100%) 80%,
-      rgb(0 0 0 / 20%)
+      transparent 80%,
+      var(--semantic-page-background)
     );
   }
+}
+
+.scrollContainer {
+  overflow-x: auto;
 }
 
 .table {

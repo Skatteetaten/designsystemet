@@ -1,6 +1,7 @@
 declare const classNames: {
   readonly wrapper: 'wrapper';
   readonly wrapper_fadeLeft: 'wrapper_fadeLeft';
+  readonly scrollContainer: 'scrollContainer';
   readonly table: 'table';
   readonly tableCaption: 'tableCaption';
   readonly tableCaption_small: 'tableCaption_small';
