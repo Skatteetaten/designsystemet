@@ -1,4 +1,4 @@
-import { JSX, ReactNode } from 'react';
+import { JSX, ReactNode, useState } from 'react';
 
 import { Heading } from '@skatteetaten/ds-typography';
 
@@ -14,6 +14,7 @@ export const PageLayout = ({
   children: ReactNode;
 }): JSX.Element => {
   const { pageTree } = useRootLoaderData();
+  const [filterValue, setFilterValue] = useState('');
 
   return (
     <main className={styles.main}>
@@ -23,7 +24,11 @@ export const PageLayout = ({
       </Heading>
       <div className={styles.pageLayout}>
         <aside className={styles.aside} aria-label={'Sidemeny'}>
-          <Navigation pageTree={pageTree} />
+          <Navigation
+            pageTree={pageTree}
+            filterValue={filterValue}
+            onFilterChange={setFilterValue}
+          />
         </aside>
         <section className={styles.section} aria-label={'Hovedinnhold'}>
           {children}
