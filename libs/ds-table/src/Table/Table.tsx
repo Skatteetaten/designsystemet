@@ -17,6 +17,23 @@ import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
 
+const isTransparent = (color: string): boolean =>
+  color === '' || color === 'transparent' || /^rgba\(.*,\s*0\)$/.test(color);
+
+const findBackgroundColor = (
+  element: Element | null | undefined
+): string | undefined => {
+  let current = element;
+  while (current) {
+    const color = getComputedStyle(current).backgroundColor;
+    if (!isTransparent(color)) {
+      return color;
+    }
+    current = current.parentElement;
+  }
+  return undefined;
+};
+
 /**
  * Table
  *
@@ -38,6 +55,7 @@ export const Table = ({
   setSortState,
   children,
 }: TableProps): JSX.Element => {
+  const fadeWrapperRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const srTimeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
@@ -113,6 +131,22 @@ export const Table = ({
     };
   }, []);
 
+  /* Fade-laget må ha samme farge som tabellen. */
+  useEffect(() => {
+    const fadeWrapper = fadeWrapperRef.current;
+    if (!isTableScrollable || !fadeWrapper) {
+      return;
+    }
+    const color = findBackgroundColor(
+      wrapperRef.current?.querySelector('table')
+    );
+    if (color) {
+      fadeWrapper.style.setProperty('--table-fade-color', color);
+    } else {
+      fadeWrapper.style.removeProperty('--table-fade-color');
+    }
+  }, [isTableScrollable]);
+
   useEffect(() => {
     if (srTimeoutId.current) {
       clearTimeout(srTimeoutId.current);
@@ -135,7 +169,7 @@ export const Table = ({
         setRowInEditModeId: setInternalRowInEditModeId,
       }}
     >
-      <div className={wrapperClassName}>
+      <div ref={fadeWrapperRef} className={wrapperClassName}>
         <div
           ref={wrapperRef}
           className={isTableScrollable ? styles.scrollContainer : undefined}

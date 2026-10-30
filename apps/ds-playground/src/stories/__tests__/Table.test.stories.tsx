@@ -184,9 +184,9 @@ const TemplateScroll: StoryFn<typeof Table> = (args) => {
   );
 };
 
-export const WithScrollbar = {
+export const WithScrollbarAndFadeEffect = {
   render: TemplateScroll,
-  name: 'With Scroll (A5)',
+  name: 'With Scroll And Fade Effect (A5)',
   parameters: {
     // color contrast issue
     a11y: {

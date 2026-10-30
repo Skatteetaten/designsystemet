@@ -1,7 +1,7 @@
 @use 'libs/ds-core-utils/src/mixins/styles';
 
 // Fade-effekten legges som et lag over tabellen i stedet for mask-image,
-// fordi mask-image også klipper innhold som skal vises utenfor tabellen (f.eks. Popover).
+// fordi mask-image klipper innhold som skal vises utenfor tabellen (slik som Popover).
 .wrapper {
   position: relative;
 
@@ -10,7 +10,7 @@
     background: linear-gradient(
       to right,
       transparent 80%,
-      var(--semantic-page-background)
+      var(--table-fade-color, var(--semantic-page-background))
     );
     content: '';
     inset: 0;
@@ -21,7 +21,7 @@
     background: linear-gradient(
       to left,
       transparent 80%,
-      var(--semantic-page-background)
+      var(--table-fade-color, var(--semantic-page-background))
     );
   }
 }
