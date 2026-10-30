@@ -29,6 +29,8 @@ type PageNode = Extract<PageTreeNode, { type: 'page' }>;
 interface NavigationProps {
   pageTree: Root;
   filterPage?: PageTreeFilter;
+  filterValue: string;
+  onFilterChange: (value: string) => void;
   onNavigate?: () => void;
 }
 
@@ -253,10 +255,11 @@ const renderFolderSection = (
 export const Navigation = ({
   pageTree,
   filterPage = (): boolean => true,
+  filterValue,
+  onFilterChange,
   onNavigate,
 }: NavigationProps): JSX.Element => {
-  const { key: locationKey, pathname } = useLocation();
-  const [filterValue, setFilterValue] = useState('');
+  const { pathname } = useLocation();
   const isFiltering = filterValue.trim().length > 0;
   const filteredPageTree = filterPageTree(
     pageTree,
@@ -268,16 +271,12 @@ export const Navigation = ({
     }
   };
 
-  useEffect(() => {
-    setFilterValue('');
-  }, [locationKey]);
-
   return (
     <div className={styles.navCard} onClick={handleNavigationClick}>
       <Heading as={'h2'} className={styles.srOnly}>
         {'Sidemeny'}
       </Heading>
-      <NavigationFilter value={filterValue} onChange={setFilterValue} />
+      <NavigationFilter value={filterValue} onChange={onFilterChange} />
       {filteredPageTree.children.filter(isFolderNode).map((folder) => (
         <Fragment key={String(folder.$id)}>
           {renderFolderSection(folder, pathname, isFiltering)}

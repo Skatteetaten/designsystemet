@@ -38,6 +38,7 @@ const meta = {
     helpSvgPath: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
     spinnerProps: { table: { disable: true } },
+    preserveSearch: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML attributes
     accessKey: { table: { disable: true } },
@@ -648,6 +649,41 @@ export const WithName = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute('name', 'category');
+  },
+} satisfies Story;
+
+export const WithPreserveSearch = {
+  name: 'With PreserveSearch',
+  args: {
+    preserveSearch: true,
+    multiple: true,
+  },
+  argTypes: {
+    preserveSearch: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+
+    // "ge" treffer Norge og Sverige, men ikke Danmark
+    await userEvent.type(combobox, 'ge');
+    await expect(canvas.getAllByRole('option')).toHaveLength(2);
+
+    // Søket og filtreringen skal beholdes etter hvert valg
+    await userEvent.click(canvas.getByRole('option', { name: /Norge/ }));
+    await expect(combobox).toHaveValue('ge');
+    await expect(canvas.getAllByRole('option')).toHaveLength(2);
+
+    await userEvent.click(canvas.getByRole('option', { name: /Sverige/ }));
+    await expect(combobox).toHaveValue('ge');
+    await expect(canvas.getAllByRole('option')).toHaveLength(2);
+
+    // Må teste at søket faktisk blir tømt når brukeren tabber ut av comboboxen
+    await userEvent.tab();
+    await waitFor(() => expect(combobox).toHaveValue(''));
   },
 } satisfies Story;
 
