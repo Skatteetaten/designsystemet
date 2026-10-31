@@ -283,6 +283,48 @@ export const WithVerticalAlignment = {
   },
 } satisfies Story;
 
+const TemplateLongSortableHeader: StoryFn<typeof Table> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell
+          className={'dummyWidth200'}
+          sortKey={'lang'}
+          isSortable
+        >
+          {'lang tekst som går over flere linjer'}
+        </Table.HeaderCell>
+        <Table.HeaderCell sortKey={'kort'} isSortable>
+          {'kort'}
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.DataCell>{'lang'}</Table.DataCell>
+        <Table.DataCell>{'kort'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
+export const WithLongSortableHeader = {
+  render: TemplateLongSortableHeader,
+  name: 'With Long Sortable Header (TableHeaderCell)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const getHeaderCell = (text: string): HTMLElement =>
+      canvas.getByRole('columnheader', { name: new RegExp(`^${text}`) });
+
+    await expect(getComputedStyle(getHeaderCell('long')).verticalAlign).toBe(
+      'bottom'
+    );
+    await expect(getComputedStyle(getHeaderCell('short')).verticalAlign).toBe(
+      'bottom'
+    );
+  },
+} satisfies Story;
+
 const editableContent = (): ReactNode => (
   <div className={'emptyExpandedTableRow'}>{'Rediger innhold'}</div>
 );

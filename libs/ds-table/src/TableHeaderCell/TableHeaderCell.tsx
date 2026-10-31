@@ -101,7 +101,7 @@ export const TableHeaderCell = ({
           disabled={isSortDisabled}
           onClick={handleOnSort}
         >
-          {children}
+          <span className={styles.headerCellSortButtonText}>{children}</span>
           <Icon
             svgPath={sortIcon}
             className={styles.headerCellSortButtonIcon}
