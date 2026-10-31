@@ -106,6 +106,10 @@ p.bold {
   border-right: solid 1px var(--semantic-divider-30);
 }
 
+.tallTableRow {
+  height: 120px;
+}
+
 .scrollTableWrapper {
   width: 320px;
   display: inline-block;

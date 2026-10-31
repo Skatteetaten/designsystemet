@@ -241,6 +241,48 @@ export const WithFullWidthAndTextAlignment = {
   },
 } satisfies Story;
 
+const TemplateVerticalAlignment: StoryFn<typeof Table> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell scope={'col'}>{'default'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'top'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'middle'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'bottom'}</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row className={'tallTableRow'}>
+        <Table.DataCell>{'default'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'top'}>{'top'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'middle'}>{'middle'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'bottom'}>{'bottom'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
+export const WithVerticalAlignment = {
+  render: TemplateVerticalAlignment,
+  name: 'With Vertical Alignment (TableDataCell)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const getCell = (text: string): HTMLElement =>
+      canvas.getByRole('cell', { name: text });
+
+    await expect(getComputedStyle(getCell('default')).verticalAlign).toBe(
+      'top'
+    );
+    await expect(getComputedStyle(getCell('top')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(getCell('middle')).verticalAlign).toBe(
+      'middle'
+    );
+    await expect(getComputedStyle(getCell('bottom')).verticalAlign).toBe(
+      'bottom'
+    );
+  },
+} satisfies Story;
+
 const editableContent = (): ReactNode => (
   <div className={'emptyExpandedTableRow'}>{'Rediger innhold'}</div>
 );

@@ -16,6 +16,7 @@ const meta = {
     'data-testid': { table: { disable: true } },
     // Props
     alignment: { table: { disable: true } },
+    verticalAlignment: { table: { disable: true } },
     as: { table: { disable: true } },
     colSpan: { table: { disable: true } },
     rowSpan: { table: { disable: true } },

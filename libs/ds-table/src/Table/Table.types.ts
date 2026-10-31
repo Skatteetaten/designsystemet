@@ -20,6 +20,8 @@ export type TableCellAs = (typeof tableCellAsArr)[number];
 
 export type TextAlignment = Extract<Position, 'left' | 'right' | 'center'>;
 
+export type VerticalAlignment = 'top' | 'middle' | 'bottom';
+
 export type sortDirection = 'none' | 'ascending' | 'descending';
 export interface SortState {
   /** Stigende eller synkende sortering */
