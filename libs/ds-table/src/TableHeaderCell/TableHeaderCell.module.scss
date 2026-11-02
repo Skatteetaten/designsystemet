@@ -30,7 +30,7 @@
     &Text {
       min-width: 0;
       flex: 0 1 auto;
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
       text-align: var(--text-align);
     }
 

@@ -267,17 +267,15 @@ export const WithVerticalAlignment = {
   name: 'With Vertical Alignment (TableDataCell)',
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const getCell = (text: string): HTMLElement =>
+    const cells = (text: string): HTMLElement =>
       canvas.getByRole('cell', { name: text });
 
-    await expect(getComputedStyle(getCell('default')).verticalAlign).toBe(
-      'top'
-    );
-    await expect(getComputedStyle(getCell('top')).verticalAlign).toBe('top');
-    await expect(getComputedStyle(getCell('middle')).verticalAlign).toBe(
+    await expect(getComputedStyle(cells('default')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(cells('top')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(cells('middle')).verticalAlign).toBe(
       'middle'
     );
-    await expect(getComputedStyle(getCell('bottom')).verticalAlign).toBe(
+    await expect(getComputedStyle(cells('bottom')).verticalAlign).toBe(
       'bottom'
     );
   },
@@ -313,13 +311,13 @@ export const WithLongSortableHeader = {
   name: 'With Long Sortable Header (TableHeaderCell)',
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const getHeaderCell = (text: string): HTMLElement =>
-      canvas.getByRole('columnheader', { name: new RegExp(`^${text}`) });
 
-    await expect(getComputedStyle(getHeaderCell('long')).verticalAlign).toBe(
+    const langTekstButton = canvas.getByRole('button', { name: /lang/ });
+    await expect(getComputedStyle(langTekstButton).verticalAlign).toBe(
       'bottom'
     );
-    await expect(getComputedStyle(getHeaderCell('short')).verticalAlign).toBe(
+    const kortTekstButton = canvas.getByRole('button', { name: /kort/ });
+    await expect(getComputedStyle(kortTekstButton).verticalAlign).toBe(
       'bottom'
     );
   },
