@@ -8,6 +8,7 @@
   max-width: var(--container-s);
   border: 1px solid var(--border-color);
   background-color: var(--background-color);
+  color: var(--semantic-page-foreground);
 
   &_forest {
     --background-color: var(--semantic-success-background);
