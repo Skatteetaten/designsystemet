@@ -1,5 +1,4 @@
 import { useEffect, useImperativeHandle, useRef, useState, JSX } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import {
   arrow,
@@ -22,6 +21,9 @@ import { TopBannerInternalActionMenuProps } from './TopBannerInternalActionMenu.
 
 import styles from './TopBannerInternalActionMenu.module.scss';
 
+export const getDefaultMenuLabel = (): string =>
+  dsI18n.t('ds_layout:topbannerbutton.Menu');
+
 /* eslint-disable react-compiler/react-compiler */
 
 /* eslint-disable react/forbid-dom-props */
@@ -32,8 +34,8 @@ export const TopBannerInternalActionMenu = ({
   lang,
   'data-testid': dataTestId,
   menuActionsRef,
-  menuLabel,
-  svgPath,
+  menuLabel = getDefaultMenuLabel(),
+  svgPath = MenuSVGpath,
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
@@ -65,8 +67,6 @@ export const TopBannerInternalActionMenu = ({
   const { refs, floatingStyles, middlewareData } = floatingData;
   const { getFloatingProps, getReferenceProps } = interactions;
 
-  const { t } = useTranslation('ds_layout', { i18n: dsI18n });
-
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mergedButtonRef = useMergeRefs([refs.setReference, buttonRef, ref]);
 
@@ -89,13 +89,13 @@ export const TopBannerInternalActionMenu = ({
         data-testid={dataTestId}
         {...getReferenceProps()}
         ref={mergedButtonRef}
-        svgPath={svgPath ?? MenuSVGpath}
+        svgPath={svgPath}
         brightness={'light'}
         onClick={() => {
           setOpen(!isOpen);
         }}
       >
-        {menuLabel ?? t('topbannerbutton.Menu')}
+        {menuLabel}
       </InlineButton>
       {isOpen && (
         <FloatingFocusManager
