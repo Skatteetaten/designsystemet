@@ -134,7 +134,7 @@ export const ExampleWithRolePicker: Story = {
       PERSON_SKATT = 'https://www.skatteetaten.no/person/skatt/',
       PERSON_AVGIFTER = 'https://www.skatteetaten.no/person/avgifter/',
       PERSON_FOLKEREGISTER = 'https://www.skatteetaten.no/person/folkeregister/',
-      PERSON_UTENLANDSK = 'https://www.skatteetaten.no/person/utenlandsk/',
+      PERSON_TIL_FRA_NORGE = 'https://www.skatteetaten.no/person/til-fra-norge/',
       PERSON_BETALING_OG_INNKREVING = 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
       PERSON_FORSIDE = 'https://www.skatteetaten.no/person/',
       VIRKSOMHET_SKATT = 'https://www.skatteetaten.no/bedrift-og-organisasjon/skatt/',
@@ -226,8 +226,8 @@ export const ExampleWithRolePicker: Story = {
         text: 'Folkeregisteret',
       },
       {
-        href: LenkerUinnlogget.PERSON_UTENLANDSK,
-        text: 'Utenlandsk',
+        href: LenkerUinnlogget.PERSON_TIL_FRA_NORGE,
+        text: 'Til og fra Norge',
       },
       {
         href: LenkerUinnlogget.PERSON_BETALING_OG_INNKREVING,
@@ -572,7 +572,7 @@ export const ExampleWithUserMenu: Story = {
       PERSON_SKATT = 'https://www.skatteetaten.no/person/skatt/',
       PERSON_AVGIFTER = 'https://www.skatteetaten.no/person/avgifter/',
       PERSON_FOLKEREGISTER = 'https://www.skatteetaten.no/person/folkeregister/',
-      PERSON_UTENLANDSK = 'https://www.skatteetaten.no/person/utenlandsk/',
+      PERSON_TIL_FRA_NORGE = 'https://www.skatteetaten.no/person/til-fra-norge/',
       PERSON_BETALING_OG_INNKREVING = 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
       PERSON_FORSIDE = 'https://www.skatteetaten.no/person/',
       VIRKSOMHET_SKATT = 'https://www.skatteetaten.no/bedrift-og-organisasjon/skatt/',
@@ -664,8 +664,8 @@ export const ExampleWithUserMenu: Story = {
         text: 'Folkeregisteret',
       },
       {
-        href: LenkerUinnlogget.PERSON_UTENLANDSK,
-        text: 'Utenlandsk',
+        href: LenkerUinnlogget.PERSON_TIL_FRA_NORGE,
+        text: 'Til og fra Norge',
       },
       {
         href: LenkerUinnlogget.PERSON_BETALING_OG_INNKREVING,
