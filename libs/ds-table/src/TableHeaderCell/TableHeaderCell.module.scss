@@ -27,13 +27,6 @@
     text-align: var(--text-align);
     vertical-align: bottom;
 
-    &Text {
-      min-width: 0;
-      flex: 0 1 auto;
-      overflow-wrap: anywhere;
-      text-align: var(--text-align);
-    }
-
     &Icon {
       flex-shrink: 0;
       padding-left: var(--spacing-s);

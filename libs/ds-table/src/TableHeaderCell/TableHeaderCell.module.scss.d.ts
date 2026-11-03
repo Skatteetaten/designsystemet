@@ -2,7 +2,6 @@ declare const classNames: {
   readonly headerCell: 'headerCell';
   readonly headerCell_noPadding: 'headerCell_noPadding';
   readonly headerCellSortButton: 'headerCellSortButton';
-  readonly headerCellSortButtonText: 'headerCellSortButtonText';
   readonly headerCellSortButtonIcon: 'headerCellSortButtonIcon';
   readonly headerCell_left: 'headerCell_left';
   readonly headerCell_right: 'headerCell_right';
