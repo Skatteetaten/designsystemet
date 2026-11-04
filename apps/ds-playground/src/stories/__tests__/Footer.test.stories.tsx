@@ -7,6 +7,7 @@ import { GaveArvSVGpath, Icon } from '@skatteetaten/ds-icons';
 import { Footer } from '@skatteetaten/ds-layout';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 import logo from '../../assets/ske-logo-horizontal-white.png';
 
 const meta = {
@@ -132,6 +133,26 @@ export const WithAttributes = {
     await expect(footer).toHaveClass('dummyClassname');
     await expect(footer).toHaveAttribute('lang', 'nb');
     await expect(footer).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(dsI18n.t('Shared:shared.ContactUs'))
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('img', {
+          name: dsI18n.t('Shared:shared.SkeLogoImageText'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

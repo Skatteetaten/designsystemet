@@ -4,7 +4,10 @@ import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 import { dsI18n, getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
-import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsumWithoutSpaces,
+} from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Help } from '../../../../../libs/ds-forms/src/LabelWithHelp/Help/Help';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -46,6 +49,21 @@ export const Defaults = {
   play: async ({ canvasElement }): Promise<void> => {
     const helpButton = canvasElement.querySelector('button');
     await expect(helpButton).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { helpText: defaultHelpText },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('Shared:shared.Help'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

@@ -2,8 +2,11 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const defaultText =
   'Gruppering av opplysninger i skjema, for eksempel inntekter, personer eller oppsummeringer.';
@@ -89,6 +92,20 @@ export const WithAttributes = {
     await expect(cardNote).toHaveClass('dummyClassname');
     await expect(cardNote).toHaveAttribute('lang', 'en');
     await expect(cardNote).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('Shared:shared.Close'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

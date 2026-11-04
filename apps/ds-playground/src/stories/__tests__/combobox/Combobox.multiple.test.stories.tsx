@@ -4,6 +4,7 @@ import { expect, userEvent, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 
+import { testLanguageChange } from '../testUtils/storybook.testing.utils';
 import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
 
 const meta = {
@@ -77,6 +78,26 @@ export const Defaults = {
     const chevron = canvasElement.querySelector('div[class*="chevronButton"]');
     await expect(chevron).toBeInTheDocument();
     await expect(chevron).toHaveAttribute('aria-hidden', 'true');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { maxSelected: 3 },
+  parameters: { chromatic: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('combobox'));
+    await userEvent.click(canvas.getByRole('option', { name: 'Norge' }));
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(
+          dsI18n.t('ds_forms:combobox.SelectedOfTotalSingular', {
+            selected: 1,
+            total: 3,
+          })
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

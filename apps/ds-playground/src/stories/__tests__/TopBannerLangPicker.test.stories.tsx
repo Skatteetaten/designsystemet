@@ -6,6 +6,7 @@ import { expect, userEvent, within } from 'storybook/test';
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
 import { TopBannerMenu } from '@skatteetaten/ds-layout';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLangPicker } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLangPicker/TopBannerLangPicker';
 
@@ -111,6 +112,21 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(dsI18n.t('ds_layout:topbannerbutton.Menu'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

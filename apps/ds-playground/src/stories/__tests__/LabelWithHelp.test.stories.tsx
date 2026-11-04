@@ -8,9 +8,13 @@ import {
   within,
 } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { WarningSVGpath } from '@skatteetaten/ds-icons';
 
-import { loremIpsumWithoutSpaces } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsumWithoutSpaces,
+} from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { LabelWithHelp } from '../../../../../libs/ds-forms/src/LabelWithHelp/LabelWithHelp';
 import { SystemSVGPaths } from '../utils/icon.systems';
@@ -105,6 +109,21 @@ export const WithAttributes = {
     await expect(label).toHaveClass('dummyClassname');
     await expect(label).toHaveAttribute('lang', 'nb');
     await expect(label).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { helpText: defaultHelpText },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('Shared:shared.Help'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

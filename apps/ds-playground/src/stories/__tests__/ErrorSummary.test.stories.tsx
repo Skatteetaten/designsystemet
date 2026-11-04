@@ -4,10 +4,14 @@ import { StoryFn, Meta, StoryObj } from '@storybook/react-vite';
 import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ErrorSummary, TextField } from '@skatteetaten/ds-forms';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { loremIpsum } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsum,
+} from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const meta = {
@@ -102,6 +106,21 @@ export const WithAttributes = {
     await expect(errorSummary).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { showErrorSummary: true },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('heading', {
+          name: dsI18n.t('ds_forms:errorsummary.Title', { errorAmount: 2 }),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

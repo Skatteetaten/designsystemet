@@ -9,6 +9,8 @@ import {
 } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const defaultMegaButtonText = 'Klikk her';
 
 const verifyAttribute =
@@ -102,6 +104,19 @@ export const WithAttributes = {
     await expect(megaButton).toHaveAttribute('id', 'htmlId');
     await expect(megaButton).toHaveAttribute('lang', 'nb');
     await expect(megaButton).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { isExternal: true, href: '#' },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByLabelText(dsI18n.t('ds_buttons:shared.ExternalIcon'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

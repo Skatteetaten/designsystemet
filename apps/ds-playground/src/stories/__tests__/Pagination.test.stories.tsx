@@ -15,6 +15,8 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Pagination } from '@skatteetaten/ds-navigation';
 import { List } from '@skatteetaten/ds-typography';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: Pagination,
   title: 'Tester/Pagination',
@@ -94,6 +96,34 @@ export const WithAttributes = {
     await expect(nav).toHaveClass('dummyClassname');
     await expect(nav).toHaveAttribute('lang', 'nb');
     await expect(nav).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { defaultCurrent: 2, totalItems: 70 },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('navigation', {
+          name: dsI18n.t('ds_navigation:pagination.WrapperAriaLabel'),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_navigation:pagination.PreviousButtonTitle'),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_navigation:pagination.NextButtonTitle'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

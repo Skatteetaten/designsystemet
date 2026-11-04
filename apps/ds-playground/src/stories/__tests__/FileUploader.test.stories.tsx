@@ -20,7 +20,10 @@ import {
   TextField,
 } from '@skatteetaten/ds-forms';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { helpSvgPathDescription } from '../../../.storybook/helpers';
 
 const meta = {
@@ -135,6 +138,29 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: {
+    uploadedFiles: [{ name: 'test.pdf' }],
+    onFileDelete: (): boolean => true,
+  },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(
+          dsI18n.t('ds_forms:fileuploader.AddSingleLabel')
+        )
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_forms:fileuploader.DeleteLabel'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

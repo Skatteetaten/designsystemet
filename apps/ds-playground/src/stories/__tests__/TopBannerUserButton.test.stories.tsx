@@ -3,6 +3,7 @@ import { expect, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -82,6 +83,26 @@ export const WithAttributes = {
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(dsI18n.t('ds_layout:topbannerbutton.Myself'))
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByTitle(
+          dsI18n.t('ds_layout:topbannerbutton.MyselfTitle')
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

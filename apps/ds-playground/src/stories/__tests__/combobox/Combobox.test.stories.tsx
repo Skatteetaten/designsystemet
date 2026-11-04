@@ -8,6 +8,7 @@ import { Combobox } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
 import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
+import { testLanguageChange } from '../testUtils/storybook.testing.utils';
 
 const meta = {
   component: Combobox,
@@ -115,6 +116,26 @@ export const WithAttributes = {
     const combobox = canvas.getByRole('combobox');
     await expect(combobox).toHaveAttribute('id', 'combobox-id');
     await expect(combobox).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { chromatic: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('combobox'));
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByPlaceholderText(
+          dsI18n.t('ds_forms:combobox.TypeOrSelect')
+        )
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByText(
+          dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

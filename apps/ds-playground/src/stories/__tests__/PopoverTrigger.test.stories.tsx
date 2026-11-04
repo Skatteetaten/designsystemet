@@ -3,10 +3,12 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Popover } from '@skatteetaten/ds-overlays';
 
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Popover.Trigger,
@@ -94,6 +96,20 @@ export const WithAttributes = {
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'en');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('Shared:shared.Help'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

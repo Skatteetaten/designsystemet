@@ -1,7 +1,10 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.HeaderCell,
@@ -94,6 +97,20 @@ export const WithAttributes = {
     await expect(dataCell).toHaveAttribute('id', 'htmlId');
     await expect(dataCell).toHaveAttribute('lang', 'nb');
     await expect(dataCell).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  args: { isSortable: true, sortKey: 'column' },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByTitle(dsI18n.t('ds_tables:table.Sortable'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

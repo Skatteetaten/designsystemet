@@ -9,8 +9,11 @@ import {
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const caption = 'tabellcaption';
 const meta = {
@@ -131,6 +134,20 @@ export const WithAttributes = {
     await expect(table).toHaveAttribute('id', 'htmlId');
     await expect(table).toHaveAttribute('lang', 'nb');
     await expect(table).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  args: { sortState: { sortKey: 'category', direction: 'ascending' } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(dsI18n.t('ds_tables:table.SortedAscending'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

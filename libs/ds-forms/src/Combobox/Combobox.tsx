@@ -7,6 +7,7 @@ import {
   type JSX,
   type MouseEvent,
 } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -74,6 +75,7 @@ const ComboboxContent = ({
   onSelectionChange,
   maxSelected,
 }: Readonly<ComboboxProps>): JSX.Element => {
+  useTranslation('ds_forms', { i18n: dsI18n });
   const { safeFocus } = useBrowserCompatibility();
   const resolvedSize = multiple ? 'large' : size;
   const allOptionsInOrder = getOptionsInGroupOrder(options);

@@ -6,6 +6,8 @@ import { expect, fireEvent, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Breadcrumbs } from '@skatteetaten/ds-navigation';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: Breadcrumbs,
   title: 'Tester/Breadcrumbs',
@@ -95,6 +97,20 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('navigation', {
+          name: dsI18n.t('ds_navigation:breadcrumbs.NavAriaLabel'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

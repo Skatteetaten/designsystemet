@@ -10,6 +10,7 @@ import {
   JSX,
   useLayoutEffect,
 } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { ChevronDownIcon } from '@skatteetaten/ds-icons';
@@ -63,6 +64,7 @@ export const Select = ({
   onHelpToggle,
   children,
 }: SelectProps): JSX.Element => {
+  useTranslation('Shared', { i18n: dsI18n });
   const isReadOnly = readOnly && !disabled;
   const selectRef = useRef<HTMLSelectElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);

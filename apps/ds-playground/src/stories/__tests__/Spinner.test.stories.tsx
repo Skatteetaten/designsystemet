@@ -3,7 +3,10 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { Spinner } from '@skatteetaten/ds-progress';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Spinner,
@@ -89,6 +92,20 @@ export const WithAttributes = {
     await expect(spinner).toHaveAttribute('id', 'htmlid');
     await expect(spinner).toHaveClass('dummyClassname');
     await expect(spinner).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(getDefaultSpinnerLabel())
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

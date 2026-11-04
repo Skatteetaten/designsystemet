@@ -1,7 +1,12 @@
+import { JSX } from 'react';
+
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.Sum,
@@ -76,6 +81,25 @@ export const WithAttributes = {
     await expect(sum).toHaveClass('dummyClassname');
     await expect(sum).toHaveAttribute('id', 'htmlId');
     await expect(sum).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: (args): JSX.Element => (
+    <Table caption={'testtabell'}>
+      <Table.Sum {...args} />
+    </Table>
+  ),
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('rowheader', {
+          name: dsI18n.t('ds_tables:tablesum.Sum'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

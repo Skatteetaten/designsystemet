@@ -6,6 +6,8 @@ import { expect, fireEvent, fn, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: Table.Row,
   title: 'Tester/Table/Row',
@@ -99,6 +101,22 @@ export const WithAttributes = {
     await expect(row).toHaveAttribute('id', 'htmlId');
     await expect(row).toHaveAttribute('lang', 'nb');
     await expect(row).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  args: { isExpandable: true },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: `${dsI18n.t('ds_tables:tablerow.Expandable')} ${dsI18n.t('ds_tables:tablerow.ExpandButtonScreenReaderText')}`,
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

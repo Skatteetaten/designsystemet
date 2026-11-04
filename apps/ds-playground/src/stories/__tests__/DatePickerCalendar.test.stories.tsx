@@ -3,6 +3,7 @@ import { expect, fireEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { DatePickerCalendar } from '../../../../../libs/ds-forms/src/DatePicker/DatePickerCalendar/DatePickerCalendar';
 
@@ -102,6 +103,23 @@ export const WithAttributes = {
     await expect(calendar).toHaveClass('dummyClassname');
     await expect(calendar).toHaveAttribute('lang', 'en');
     await expect(calendar).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByLabelText(dsI18n.t('ds_forms:datepicker.Year'))
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByLabelText(
+          dsI18n.t('ds_forms:datepicker.SelectMonth')
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
