@@ -128,13 +128,21 @@
     }
 
     .closeButton {
-      top: 0.25rem;
-      right: 0.25rem;
+      top: var(--spacing-xs);
+      right: var(--spacing-xs);
 
       --icon-button-icon-color: var(--palette-graphite-0);
 
-      &:hover {
+      &:hover:not(:active) {
         --icon-button-icon-color: var(--palette-graphite-100);
+      }
+
+      @media (min-width: breakpoints.$breakpoint-xs) {
+        --icon-button-icon-color: var(--palette-graphite-100);
+
+        &:active {
+          --icon-button-icon-color: var(--palette-graphite-0);
+        }
       }
     }
   }
