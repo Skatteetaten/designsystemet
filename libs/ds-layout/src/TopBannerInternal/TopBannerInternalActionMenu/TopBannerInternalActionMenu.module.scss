@@ -3,6 +3,7 @@
 .arrow {
   position: absolute;
   z-index: -1;
+  top: calc(var(--size-large) / -2 - 1px);
   width: var(--size-large);
   height: var(--size-large);
   border: 1px solid var(--palette-graphite-70);
@@ -14,8 +15,15 @@
 
 .menu {
   z-index: 100;
+  min-width: calc(var(--size-large) * 2);
   padding: var(--spacing-s);
   border: 1px solid var(--palette-graphite-70);
   background-color: var(--palette-graphite-0);
   color: var(--palette-graphite-100);
+
+  &[data-placement^='top'] .arrow {
+    top: auto;
+    bottom: calc(var(--size-large) / -2);
+    transform: rotate(225deg);
+  }
 }

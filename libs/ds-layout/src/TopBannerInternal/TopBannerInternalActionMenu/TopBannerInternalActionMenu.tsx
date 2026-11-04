@@ -39,10 +39,6 @@ export const TopBannerInternalActionMenu = ({
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
   const arrowRef = useRef<HTMLDivElement>(null);
-  const arrowLen = arrowRef.current?.offsetWidth ?? 0;
-  // +6 for at pilen skal ligge på utsiden av outline på knappen
-  const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2 + 6;
-
   const [isOpen, setOpen] = useState<boolean>(false);
 
   const floatingData = useFloating<HTMLButtonElement>({
@@ -53,10 +49,20 @@ export const TopBannerInternalActionMenu = ({
     placement: 'bottom-start',
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
+      offset(({ rects }) => ({
+        // +6 for at pilen skal ligge på utsiden av outline på knappen
+        mainAxis: (Math.SQRT2 * (arrowRef.current?.offsetWidth ?? 0)) / 2 + 6,
+        alignmentAxis: Math.max(
+          -32,
+          (rects.reference.width - rects.floating.width) / 2
+        ),
+      })),
       flip(),
       shift(),
-      arrow({ element: arrowRef }),
+      arrow(() => ({
+        element: arrowRef,
+        padding: (arrowRef.current?.offsetWidth ?? 0) / 2,
+      })),
     ],
   });
 
@@ -64,7 +70,7 @@ export const TopBannerInternalActionMenu = ({
     ancestorScroll: true,
   });
   const interactions = useInteractions([dismiss]);
-  const { refs, floatingStyles, middlewareData } = floatingData;
+  const { refs, floatingStyles, middlewareData, placement } = floatingData;
   const { getFloatingProps, getReferenceProps } = interactions;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -110,16 +116,16 @@ export const TopBannerInternalActionMenu = ({
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
+            data-placement={placement}
           >
             {children}
-
             <div
               ref={arrowRef}
               style={{
                 left: middlewareData.arrow?.x,
-                top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
               }}
               className={`${styles.arrow}`.trim()}
+              aria-hidden
             ></div>
           </div>
         </FloatingFocusManager>
