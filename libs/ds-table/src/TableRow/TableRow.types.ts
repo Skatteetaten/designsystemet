@@ -44,7 +44,7 @@ export interface TableRowProps extends BaseProps {
   >;
   /** Avgjør om raden kan utvides */
   isExpandable?: boolean;
-  /** Brukes til å styre ekspandert tilstand utenfor komponenten */
+  /** Er raden utvidet? (Kontrollert tilstand) */
   isExpanded?: boolean;
   /** Callback når raden utvides */
   onExpand?: () => void;

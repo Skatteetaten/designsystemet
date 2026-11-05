@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from 'react';
+import { MouseEvent, JSX, useEffect, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within, waitFor, fn } from 'storybook/test';
@@ -512,5 +512,108 @@ export const WithKeepMountedFalse = {
     // Content should still be in DOM but hidden when keepMounted=true
     content = canvas.queryByText(defaultContent);
     await expect(content).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithControlledIsExpandedOnMount = {
+  name: 'With Controlled IsExpanded On Mount',
+  args: {
+    isExpanded: true,
+  },
+  argTypes: {
+    isExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText(defaultContent)).toBeVisible();
+  },
+} satisfies Story;
+
+export const WithControlledIsExpandedChangedAfterMount = {
+  render: function Render(args): JSX.Element {
+    const [isExpanded, setIsExpanded] = useState(false);
+    useEffect(() => {
+      setIsExpanded(true);
+    }, []);
+    return <OpenClose {...args} isExpanded={isExpanded} />;
+  },
+  name: 'With Controlled IsExpanded Changed After Mount',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await waitFor(() => expect(canvas.getByText(defaultContent)).toBeVisible());
+  },
+} satisfies Story;
+
+export const WithControlledIsExpandedNotClosedByClick = {
+  name: 'With Controlled IsExpanded Not Closed By Click',
+  args: {
+    isExpanded: true,
+    onClick: fn(),
+  },
+  argTypes: {
+    isExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await fireEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalledTimes(1);
+    await expect(canvas.getByText(defaultContent)).toBeVisible();
+    await fireEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalledTimes(2);
+    await expect(canvas.getByText(defaultContent)).toBeVisible();
+  },
+} satisfies Story;
+
+export const WithControlledIsExpandedFalseNotOpenedByClick = {
+  name: 'With Controlled IsExpanded False Not Opened By Click',
+  args: {
+    isExpanded: false,
+    onClick: fn(),
+  },
+  argTypes: {
+    isExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    await fireEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalledTimes(1);
+    await expect(canvas.getByText(defaultContent)).not.toBeVisible();
+  },
+} satisfies Story;
+
+export const WithUncontrolledToggle = {
+  name: 'With Uncontrolled Toggle',
+  args: {
+    isDefaultExpanded: true,
+  },
+  argTypes: {
+    isDefaultExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+    const content = canvas.getByText(defaultContent);
+    await expect(content).toBeVisible();
+    await fireEvent.click(button);
+    await expect(content).not.toBeVisible();
+    await fireEvent.click(button);
+    await expect(content).toBeVisible();
   },
 } satisfies Story;

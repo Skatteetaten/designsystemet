@@ -40,19 +40,20 @@ export const CardAlert = ({
   titleAs = 'h3',
   variant = 'warning',
   svgPath,
-  showAlert: showAlertExternal = true,
+  // Bevisst uten default: undefined betyr ukontrollert (intern tilstand).
+  showAlert: showAlertExternal,
   onClose,
   children,
 }: CardAlertProps): JSX.Element | null => {
   const { t } = useTranslation('Shared', { i18n: dsI18n });
-  const [showAlertInternal, setShowAlertInternal] =
-    useState<boolean>(showAlertExternal);
+  const [showAlertInternal, setShowAlertInternal] = useState<boolean>(true);
+  const showAlert = showAlertExternal ?? showAlertInternal;
 
   const { alertHeadingId } = useContext(CardContext);
 
   const resolvedSvgPath = svgPath ?? getCardAlertDefaultSvgPath(variant);
 
-  if (!showAlertInternal) {
+  if (!showAlert) {
     return null;
   }
 
