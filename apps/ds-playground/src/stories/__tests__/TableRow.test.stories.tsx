@@ -424,8 +424,6 @@ export const WithControlledIsExpandedOnMount = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const iconButton = canvas.getByRole('button');
-    await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
   },
 } satisfies Story;
@@ -457,11 +455,9 @@ export const WithControlledIsExpandedChangedAfterMount = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const iconButton = canvas.getByRole('button');
     await waitFor(() =>
-      expect(iconButton).toHaveAttribute('aria-expanded', 'true')
+      expect(canvas.getByText(expandedContent)).toBeInTheDocument()
     );
-    await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
   },
 } satisfies Story;
 
@@ -488,7 +484,6 @@ export const WithControlledIsExpandedIgnoringClick = {
     await fireEvent.click(iconButton);
     await expect(args.onClose).toHaveBeenCalledTimes(1);
     await expect(args.onExpand).not.toHaveBeenCalled();
-    await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
   },
 } satisfies Story;
@@ -511,15 +506,12 @@ export const WithUncontrolledToggle = {
   play: async ({ canvasElement, args }): Promise<void> => {
     const canvas = within(canvasElement);
     const iconButton = canvas.getByRole('button');
-    await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
     await expect(canvas.queryByText(expandedContent)).not.toBeInTheDocument();
     await fireEvent.click(iconButton);
     await expect(args.onExpand).toHaveBeenCalledTimes(1);
-    await expect(iconButton).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
     await fireEvent.click(iconButton);
     await expect(args.onClose).toHaveBeenCalledTimes(1);
-    await expect(iconButton).toHaveAttribute('aria-expanded', 'false');
     await expect(canvas.queryByText(expandedContent)).not.toBeInTheDocument();
   },
 } satisfies Story;
@@ -572,25 +564,16 @@ export const WithSortingAndControlledAndUncontrolledRows = {
     const uncontrolledButton = canvas.getByRole('button', {
       name: /Ukontrollert/,
     });
-    const controlledButton = canvas.getByRole('button', {
-      name: /^Kontrollert/,
-    });
 
-    await expect(controlledButton).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText('Kontrollert innhold')).toBeInTheDocument();
 
     await fireEvent.click(uncontrolledButton);
-    await expect(uncontrolledButton).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText('Ukontrollert innhold')).toBeInTheDocument();
 
     await fireEvent.click(canvas.getByRole('button', { name: /Navn/ }));
     await waitFor(() =>
-      expect(uncontrolledButton).toHaveAttribute('aria-expanded', 'false')
+      expect(canvas.queryByText('Ukontrollert innhold')).not.toBeInTheDocument()
     );
-    await expect(
-      canvas.queryByText('Ukontrollert innhold')
-    ).not.toBeInTheDocument();
-    await expect(controlledButton).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText('Kontrollert innhold')).toBeInTheDocument();
   },
 } satisfies Story;

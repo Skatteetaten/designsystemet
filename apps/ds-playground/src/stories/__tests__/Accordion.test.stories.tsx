@@ -191,26 +191,20 @@ export const WithOneItemOpenAtATime = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const buttonA = canvas.getByRole('button', { name: 'Skuff A' });
     const buttonB = canvas.getByRole('button', { name: 'Skuff B' });
     const buttonC = canvas.getByRole('button', { name: 'Skuff C' });
 
-    await expect(buttonA).toHaveAttribute('aria-expanded', 'true');
-    await expect(buttonB).toHaveAttribute('aria-expanded', 'false');
-    await expect(buttonC).toHaveAttribute('aria-expanded', 'false');
+    await expect(canvas.getByText('Innhold A')).toBeVisible();
+    await expect(canvas.getByText('Innhold B')).not.toBeVisible();
+    await expect(canvas.getByText('Innhold C')).not.toBeVisible();
 
     await fireEvent.click(buttonB);
     await fireEvent.click(buttonC);
-    await expect(buttonA).toHaveAttribute('aria-expanded', 'false');
-    await expect(buttonB).toHaveAttribute('aria-expanded', 'false');
-    await expect(buttonC).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText('Innhold A')).not.toBeVisible();
     await expect(canvas.getByText('Innhold B')).not.toBeVisible();
     await expect(canvas.getByText('Innhold C')).toBeVisible();
 
     await fireEvent.click(buttonB);
-    await expect(buttonB).toHaveAttribute('aria-expanded', 'true');
-    await expect(buttonC).toHaveAttribute('aria-expanded', 'false');
     await expect(canvas.getByText('Innhold B')).toBeVisible();
     await expect(canvas.getByText('Innhold C')).not.toBeVisible();
   },

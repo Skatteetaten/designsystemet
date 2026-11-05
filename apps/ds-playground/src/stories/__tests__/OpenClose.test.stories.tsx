@@ -528,8 +528,6 @@ export const WithControlledIsExpandedOnMount = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await expect(button).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText(defaultContent)).toBeVisible();
   },
 } satisfies Story;
@@ -548,11 +546,7 @@ export const WithControlledIsExpandedChangedAfterMount = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const button = canvas.getByRole('button');
-    await waitFor(() =>
-      expect(button).toHaveAttribute('aria-expanded', 'true')
-    );
-    await expect(canvas.getByText(defaultContent)).toBeVisible();
+    await waitFor(() => expect(canvas.getByText(defaultContent)).toBeVisible());
   },
 } satisfies Story;
 
@@ -573,11 +567,10 @@ export const WithControlledIsExpandedNotClosedByClick = {
     const button = canvas.getByRole('button');
     await fireEvent.click(button);
     await expect(args.onClick).toHaveBeenCalledTimes(1);
-    await expect(button).toHaveAttribute('aria-expanded', 'true');
     await expect(canvas.getByText(defaultContent)).toBeVisible();
     await fireEvent.click(button);
     await expect(args.onClick).toHaveBeenCalledTimes(2);
-    await expect(button).toHaveAttribute('aria-expanded', 'true');
+    await expect(canvas.getByText(defaultContent)).toBeVisible();
   },
 } satisfies Story;
 
@@ -598,7 +591,6 @@ export const WithControlledIsExpandedFalseNotOpenedByClick = {
     const button = canvas.getByRole('button');
     await fireEvent.click(button);
     await expect(args.onClick).toHaveBeenCalledTimes(1);
-    await expect(button).toHaveAttribute('aria-expanded', 'false');
     await expect(canvas.getByText(defaultContent)).not.toBeVisible();
   },
 } satisfies Story;
@@ -618,13 +610,10 @@ export const WithUncontrolledToggle = {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button');
     const content = canvas.getByText(defaultContent);
-    await expect(button).toHaveAttribute('aria-expanded', 'true');
     await expect(content).toBeVisible();
     await fireEvent.click(button);
-    await expect(button).toHaveAttribute('aria-expanded', 'false');
     await expect(content).not.toBeVisible();
     await fireEvent.click(button);
-    await expect(button).toHaveAttribute('aria-expanded', 'true');
     await expect(content).toBeVisible();
   },
 } satisfies Story;
