@@ -19,7 +19,7 @@ export interface CardAlertCommonProps extends BaseProps {
   svgPath?: ReactElement<SVGPathElement>;
   /** Innholdet i komponenten. */
   children: ReactNode;
-  /** Om innholdet skal vises */
+  /** Om varselet skal vises (Kontrollert tilstand) */
   showAlert?: boolean;
   /** Callback til lukk-knapp */
   onClose?: () => void;

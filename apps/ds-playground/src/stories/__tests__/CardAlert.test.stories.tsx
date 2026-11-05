@@ -1,5 +1,7 @@
+import { JSX, useEffect, useState } from 'react';
+
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { expect, userEvent, waitFor, within } from 'storybook/test';
+import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
 import { Card, CardAlertVariant } from '@skatteetaten/ds-content';
 import { SkattetrekkSVGpath } from '@skatteetaten/ds-icons';
@@ -168,5 +170,45 @@ export const WithCloseButtonPseudoStates = {
   args: {},
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+} satisfies Story;
+
+export const WithControlledShowAlertNotHiddenByClose = {
+  name: 'With Controlled ShowAlert Not Hidden By Close',
+  args: {
+    showAlert: true,
+    onClose: fn(),
+  },
+  argTypes: {
+    showAlert: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ args, canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(args.onClose).toHaveBeenCalledTimes(1);
+    await expect(canvas.getByText(defaultText)).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithControlledShowAlertChangedAfterMount = {
+  render: function Render(args): JSX.Element {
+    const [showAlert, setShowAlert] = useState(false);
+    useEffect(() => {
+      setShowAlert(true);
+    }, []);
+    return <Card.Alert {...args} showAlert={showAlert} />;
+  },
+  name: 'With Controlled ShowAlert Changed After Mount',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await waitFor(() =>
+      expect(canvas.getByText(defaultText)).toBeInTheDocument()
+    );
   },
 } satisfies Story;
