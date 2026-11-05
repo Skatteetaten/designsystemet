@@ -1,17 +1,19 @@
-import { JSX } from 'react';
+import { JSX, useState } from 'react';
 
 import { Button } from '@skatteetaten/ds-buttons';
 import { Card } from '@skatteetaten/ds-content';
 import { Heading } from '@skatteetaten/ds-typography';
 
 export default function CardWithAlertStateExample(): JSX.Element {
+  const [showAlert, setShowAlert] = useState(true);
+
   return (
     <Card color={'white'} spacing={'m'}>
       <Card.Alert
         variant={'warning'}
         title={'Frist nærmer seg'}
-        showAlert
-        onClose={() => undefined}
+        showAlert={showAlert}
+        onClose={() => setShowAlert(false)}
       >
         {
           'Fristen for å levere er 30. april. Sørg for at alle opplysninger er riktige.'

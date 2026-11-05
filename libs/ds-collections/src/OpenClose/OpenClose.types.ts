@@ -21,7 +21,7 @@ export interface OpenCloseProps extends BaseProps {
   titleAs?: HeadingAs | 'div';
   /** Størrelse */
   size?: OpenCloseSize;
-  /** Om innholdet skal vises */
+  /** Om innholdet skal vises (Kontrollert tilstand) */
   isExpanded?: boolean;
   /** Om innholdet skal vises når siden lastes? (Ukontrollert tilstand) */
   isDefaultExpanded?: boolean;

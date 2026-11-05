@@ -21,7 +21,8 @@ export const OpenClose = ({
   titleAs: HeadingTag = 'div',
   size = 'large',
   iconPosition = 'left',
-  isExpanded: isExpandedExternal = false,
+  // Bevisst uten default: undefined betyr ukontrollert (intern tilstand).
+  isExpanded: isExpandedExternal,
   isDefaultExpanded = false,
   isOnClickOnlyFiredOnOpen = false,
   showUnderline = true,
@@ -32,7 +33,7 @@ export const OpenClose = ({
   const [isExpandedInternal, setIsExpandedInternal] =
     useState<boolean>(isDefaultExpanded);
 
-  const isExpanded = isExpandedExternal || isExpandedInternal;
+  const isExpanded = isExpandedExternal ?? isExpandedInternal;
 
   const hasIconRight = iconPosition === 'right';
 
