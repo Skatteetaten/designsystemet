@@ -1,7 +1,6 @@
 import { useEffect, useImperativeHandle, useRef, useState, JSX } from 'react';
 
 import {
-  arrow,
   autoUpdate,
   flip,
   FloatingFocusManager,
@@ -46,23 +45,15 @@ export const TopBannerInternalActionMenu = ({
     onOpenChange: (open) => {
       setOpen(open);
     },
-    placement: 'bottom-start',
+    placement: 'bottom',
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset(({ rects }) => ({
+      offset(() => ({
         // +6 for at pilen skal ligge på utsiden av outline på knappen
         mainAxis: (Math.SQRT2 * (arrowRef.current?.offsetWidth ?? 0)) / 2 + 6,
-        alignmentAxis: Math.max(
-          -32,
-          (rects.reference.width - rects.floating.width) / 2
-        ),
       })),
       flip(),
       shift(),
-      arrow(() => ({
-        element: arrowRef,
-        padding: (arrowRef.current?.offsetWidth ?? 0) / 2,
-      })),
     ],
   });
 
@@ -70,7 +61,7 @@ export const TopBannerInternalActionMenu = ({
     ancestorScroll: true,
   });
   const interactions = useInteractions([dismiss]);
-  const { refs, floatingStyles, middlewareData, placement } = floatingData;
+  const { refs, floatingStyles, placement } = floatingData;
   const { getFloatingProps, getReferenceProps } = interactions;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -119,14 +110,7 @@ export const TopBannerInternalActionMenu = ({
             data-placement={placement}
           >
             {children}
-            <div
-              ref={arrowRef}
-              style={{
-                left: middlewareData.arrow?.x,
-              }}
-              className={`${styles.arrow}`.trim()}
-              aria-hidden
-            ></div>
+            <div ref={arrowRef} className={`${styles.arrow}`.trim()}></div>
           </div>
         </FloatingFocusManager>
       )}

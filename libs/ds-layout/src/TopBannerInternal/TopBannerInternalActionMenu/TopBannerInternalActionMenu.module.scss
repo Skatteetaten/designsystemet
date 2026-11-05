@@ -4,13 +4,14 @@
   position: absolute;
   z-index: -1;
   top: calc(var(--size-large) / -2 - 1px);
+  left: 50%;
   width: var(--size-large);
   height: var(--size-large);
   border: 1px solid var(--palette-graphite-70);
   border-right-color: transparent;
   border-bottom-color: transparent;
   background-color: var(--palette-graphite-0);
-  transform: rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .menu {
@@ -24,6 +25,6 @@
   &[data-placement^='top'] .arrow {
     top: auto;
     bottom: calc(var(--size-large) / -2);
-    transform: rotate(225deg);
+    transform: translateX(-50%) rotate(225deg);
   }
 }
