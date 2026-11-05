@@ -1,4 +1,5 @@
 import { useEffect, useImperativeHandle, useRef, useState, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import {
   autoUpdate,
@@ -37,6 +38,7 @@ export const TopBannerInternalActionMenu = ({
   svgPath = MenuSVGpath,
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
+  useTranslation('ds_layout', { i18n: dsI18n });
   const arrowRef = useRef<HTMLDivElement>(null);
   const [isOpen, setOpen] = useState<boolean>(false);
 
