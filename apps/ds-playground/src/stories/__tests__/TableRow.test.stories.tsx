@@ -1,10 +1,10 @@
-import { JSX } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
-import { expect, fireEvent, fn, within } from 'storybook/test';
+import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { Table } from '@skatteetaten/ds-table';
+import { SortState, Table } from '@skatteetaten/ds-table';
 
 import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
@@ -420,5 +420,178 @@ export const WithScreenReaderTextOnlyOnFirstRowOfEachType = {
     await expect(secondEditButton).toHaveAccessibleName(
       dsI18n.t('ds_tables:tablerow.Editable')
     );
+  },
+} satisfies Story;
+
+const expandedContent = 'Ekstra innhold';
+
+export const WithControlledIsExpandedOnMount = {
+  render: Template,
+  name: 'With Controlled IsExpanded On Mount',
+  args: {
+    isExpandable: true,
+    isExpanded: true,
+    expandableContent: expandedContent,
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    isExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithControlledIsExpandedChangedAfterMount = {
+  render: function Render(): JSX.Element {
+    const [isExpanded, setIsExpanded] = useState(false);
+    useEffect(() => {
+      setIsExpanded(true);
+    }, []);
+    return (
+      <Table caption={'testtabell'}>
+        <Table.Body>
+          <Table.Row
+            expandableContent={expandedContent}
+            isExpanded={isExpanded}
+            isExpandable
+          >
+            <Table.DataCell as={'th'}>{'Cake'}</Table.DataCell>
+            <Table.DataCell>{'3,000'}</Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    );
+  },
+  name: 'With Controlled IsExpanded Changed After Mount',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await waitFor(() =>
+      expect(canvas.getByText(expandedContent)).toBeInTheDocument()
+    );
+  },
+} satisfies Story;
+
+export const WithControlledIsExpandedIgnoringClick = {
+  render: Template,
+  name: 'With Controlled IsExpanded Not Closed By Click',
+  args: {
+    isExpandable: true,
+    isExpanded: true,
+    expandableContent: expandedContent,
+    onClose: fn(),
+    onExpand: fn(),
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+    isExpanded: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const iconButton = canvas.getByRole('button');
+    await fireEvent.click(iconButton);
+    await expect(args.onClose).toHaveBeenCalledTimes(1);
+    await expect(args.onExpand).not.toHaveBeenCalled();
+    await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithUncontrolledToggle = {
+  render: Template,
+  name: 'With Uncontrolled Toggle',
+  args: {
+    isExpandable: true,
+    expandableContent: expandedContent,
+    onClose: fn(),
+    onExpand: fn(),
+  },
+  argTypes: {
+    isExpandable: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement, args }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const iconButton = canvas.getByRole('button');
+    await expect(canvas.queryByText(expandedContent)).not.toBeInTheDocument();
+    await fireEvent.click(iconButton);
+    await expect(args.onExpand).toHaveBeenCalledTimes(1);
+    await expect(canvas.getByText(expandedContent)).toBeInTheDocument();
+    await fireEvent.click(iconButton);
+    await expect(args.onClose).toHaveBeenCalledTimes(1);
+    await expect(canvas.queryByText(expandedContent)).not.toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithSortingAndControlledAndUncontrolledRows = {
+  render: function Render(): JSX.Element {
+    const [sortState, setSortState] = useState<SortState>({
+      direction: 'none',
+    });
+    return (
+      <Table
+        caption={'testtabell'}
+        sortState={sortState}
+        setSortState={setSortState}
+      >
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell as={'td'} />
+            <Table.HeaderCell scope={'col'} sortKey={'name'} isSortable>
+              {'Navn'}
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row
+            expandableContent={'Ukontrollert innhold'}
+            expandButtonTitle={'Ukontrollert'}
+            isExpandable
+          >
+            <Table.DataCell>{'Cake'}</Table.DataCell>
+          </Table.Row>
+          <Table.Row
+            expandableContent={'Kontrollert innhold'}
+            expandButtonTitle={'Kontrollert'}
+            isExpandable
+            isExpanded
+          >
+            <Table.DataCell>{'Muffin'}</Table.DataCell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    );
+  },
+  name: 'With Sorting And Controlled And Uncontrolled Rows',
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const uncontrolledButton = canvas.getByRole('button', {
+      name: /Ukontrollert/,
+    });
+
+    await expect(canvas.getByText('Kontrollert innhold')).toBeInTheDocument();
+
+    await fireEvent.click(uncontrolledButton);
+    await expect(canvas.getByText('Ukontrollert innhold')).toBeInTheDocument();
+
+    await fireEvent.click(canvas.getByRole('button', { name: /Navn/ }));
+    await waitFor(() =>
+      expect(canvas.queryByText('Ukontrollert innhold')).not.toBeInTheDocument()
+    );
+    await expect(canvas.getByText('Kontrollert innhold')).toBeInTheDocument();
   },
 } satisfies Story;

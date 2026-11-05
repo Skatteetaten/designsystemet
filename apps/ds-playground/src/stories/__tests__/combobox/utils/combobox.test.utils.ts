@@ -13,6 +13,18 @@ export const defaultOptions = [
 
 export const defaultLabel = 'Velg land';
 
+/** 1200 nesten like alternativer for å teste filtrering og rendering av store lister */
+export const largeOptions = ['bolig', 'formue', 'gjeld', 'pensjon'].flatMap(
+  (category) =>
+    Array.from({ length: 300 }, (_, index) => {
+      const number = String(index + 1).padStart(3, '0');
+      return {
+        label: `Skatteinfo om ${category} ${number}`,
+        value: `${category}-${number}`,
+      };
+    })
+);
+
 export const wrapper = '.docs-story > div';
 
 export const ProgrammaticFocusTemplate: StoryFn<typeof Combobox> = () => {

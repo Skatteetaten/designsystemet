@@ -20,7 +20,8 @@ export const AccordionItem = ({
   subtitle,
   titleAs: Tag = 'div',
   isDefaultExpanded = false,
-  isExpanded: isExpandedExternal = false,
+  // Bevisst uten default: undefined betyr ukontrollert (intern tilstand).
+  isExpanded: isExpandedExternal,
   keepMounted = true,
   svgPath,
   onClick,
@@ -37,7 +38,7 @@ export const AccordionItem = ({
     setIsExpandedInternal(!isExpanded);
   };
 
-  const isExpanded = isExpandedExternal || isExpandedInternal;
+  const isExpanded = isExpandedExternal ?? isExpandedInternal;
 
   const shouldDisplayCustomIcon = iconPosition === 'right' && !!svgPath;
 

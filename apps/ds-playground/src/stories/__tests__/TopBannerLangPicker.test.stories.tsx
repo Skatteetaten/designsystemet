@@ -255,8 +255,7 @@ export const WithKeyboardNavigation = {
   },
 } satisfies Story;
 
-const otherLanguagesURL =
-  'https://www.skatteetaten.no/person/utenlandsk/skal-du-arbeide-i-norge/film_no/';
+const otherLanguagesURL = 'https://www.skatteetaten.no/other-languages/';
 
 export const WithOtherLanguagesLink = {
   args: {

@@ -129,8 +129,8 @@ export const personLinks = [
     text: 'Folkeregisteret',
   },
   {
-    href: 'https://www.skatteetaten.no/person/utenlandsk/',
-    text: 'Utenlandsk',
+    href: 'https://www.skatteetaten.no/person/til-fra-norge/',
+    text: 'Til og fra Norge',
   },
   {
     href: 'https://www.skatteetaten.no/person/betaling-og-innkreving/',
