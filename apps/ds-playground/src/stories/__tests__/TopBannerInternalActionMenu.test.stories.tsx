@@ -218,7 +218,7 @@ const expectMenuPosition = async (
     } else {
       await expect(Math.abs(menuCenter - buttonCenter)).toBeLessThan(1);
     }
-    await expect(Math.abs(arrowCenter - menuCenter)).toBeLessThan(1);
+    await expect(Math.abs(arrowCenter - buttonCenter)).toBeLessThan(1);
     await expect(arrowRect.left).toBeGreaterThan(menuRect.left);
     await expect(arrowRect.right).toBeLessThan(menuRect.right);
     if (placement === 'top') {
@@ -265,9 +265,6 @@ export const WithWideContent = {
 export const WithWideContentAtLeftEdge = {
   name: 'With Wide Content At Left Edge',
   args: WithWideContent.args,
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
   play: (context): Promise<void> => expectMenuPosition(context, true),
 } satisfies Story;
 
@@ -279,9 +276,6 @@ export const WithWideContentAtRightEdge = {
       <TopBannerInternal.ActionMenu {...args} />
     </div>
   ),
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
   play: (context): Promise<void> => expectMenuPosition(context, true),
 } satisfies Story;
 
@@ -296,8 +290,5 @@ export const WithMenuAboveButton = {
       <TopBannerInternal.ActionMenu {...args} />
     </div>
   ),
-  parameters: {
-    imageSnapshot: { disableSnapshot: true },
-  },
   play: (context): Promise<void> => expectMenuPosition(context, false, 'top'),
 } satisfies Story;

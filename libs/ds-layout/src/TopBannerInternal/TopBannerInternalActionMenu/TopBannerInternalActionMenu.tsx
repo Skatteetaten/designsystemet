@@ -2,6 +2,7 @@ import { useEffect, useImperativeHandle, useRef, useState, JSX } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
+  arrow,
   autoUpdate,
   flip,
   FloatingFocusManager,
@@ -56,6 +57,10 @@ export const TopBannerInternalActionMenu = ({
       })),
       flip(),
       shift(),
+      arrow(() => ({
+        element: arrowRef,
+        padding: (arrowRef.current?.offsetWidth ?? 0) / 2,
+      })),
     ],
   });
 
@@ -63,7 +68,7 @@ export const TopBannerInternalActionMenu = ({
     ancestorScroll: true,
   });
   const interactions = useInteractions([dismiss]);
-  const { refs, floatingStyles, placement } = floatingData;
+  const { refs, floatingStyles, middlewareData, placement } = floatingData;
   const { getFloatingProps, getReferenceProps } = interactions;
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -112,7 +117,13 @@ export const TopBannerInternalActionMenu = ({
             data-placement={placement}
           >
             {children}
-            <div ref={arrowRef} className={`${styles.arrow}`.trim()}></div>
+            <div
+              ref={arrowRef}
+              className={`${styles.arrow}`.trim()}
+              style={{
+                left: middlewareData.arrow?.x,
+              }}
+            ></div>
           </div>
         </FloatingFocusManager>
       )}

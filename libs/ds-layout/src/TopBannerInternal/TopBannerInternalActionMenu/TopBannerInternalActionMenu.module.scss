@@ -11,7 +11,7 @@
   border-right-color: transparent;
   border-bottom-color: transparent;
   background-color: var(--palette-graphite-0);
-  transform: translateX(-50%) rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .menu {
@@ -25,6 +25,6 @@
   &[data-placement^='top'] .arrow {
     top: auto;
     bottom: calc(var(--size-large) / -2);
-    transform: translateX(-50%) rotate(225deg);
+    transform: rotate(225deg);
   }
 }
