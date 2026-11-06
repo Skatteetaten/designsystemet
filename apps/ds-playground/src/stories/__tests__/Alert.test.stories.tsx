@@ -364,6 +364,41 @@ export const WithCloseButton = {
   },
 } satisfies Story;
 
+export const VariantDangerWithCloseButton = {
+  name: 'Variant Danger With Close Button',
+  args: {
+    showAlert: true,
+    variant: 'danger',
+    onClose: fn(),
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+} satisfies Story;
+
+export const VariantDangerWithCloseButtonMobile = {
+  name: 'Variant Danger With Close Button On Small Screen',
+  args: {
+    showAlert: true,
+    variant: 'danger',
+    onClose: fn(),
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+} satisfies Story;
+
 export const WithCloseOnClickButton = {
   name: 'With OnClick Close Button (A4)',
   args: {
