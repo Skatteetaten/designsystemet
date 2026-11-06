@@ -137,8 +137,16 @@
         --icon-button-icon-color: var(--palette-graphite-100);
       }
 
+      &:focus-visible::before {
+        --icon-button-outline-color: var(--palette-graphite-0);
+      }
+
       @media (min-width: breakpoints.$breakpoint-xs) {
         --icon-button-icon-color: var(--palette-graphite-100);
+
+        &:focus-visible::before {
+          --icon-button-outline-color: var(--semantic-interactive-main);
+        }
 
         &:active {
           --icon-button-icon-color: var(--palette-graphite-0);
