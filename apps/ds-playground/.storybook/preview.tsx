@@ -133,7 +133,7 @@ const argTypes = {
   },
   className: {
     control: 'select',
-    options: ['', 'dummyClassname'],
+    options: ['', 'dummyClassname', 'dummyBigCell'],
     table: {
       type: { summary: 'string' },
       category: category.baseProps,

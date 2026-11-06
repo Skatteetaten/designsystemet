@@ -1,18 +1,23 @@
 .headerCell {
   --text-align: left;
+  --justify-content: flex-start;
   --table-header-border-width: 2px;
 
   border-bottom: solid 2px var(--semantic-divider-100);
   font-weight: var(--font-weight-bold);
   text-align: var(--text-align);
-  vertical-align: top;
+  vertical-align: bottom;
 
   &_noPadding {
     padding: 0;
   }
 
   &SortButton {
+    display: flex;
     width: 100%;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: var(--justify-content);
     border: none;
     background: none;
     color: inherit;
@@ -20,9 +25,10 @@
     font: inherit;
     outline: inherit;
     text-align: var(--text-align);
-    vertical-align: top;
+    vertical-align: bottom;
 
     &Icon {
+      flex-shrink: 0;
       padding-left: var(--spacing-s);
       fill: var(--semantic-interactive-main);
       vertical-align: text-top;
@@ -63,14 +69,17 @@
 
   &_left {
     --text-align: left;
+    --justify-content: flex-start;
   }
 
   &_right {
     --text-align: right;
+    --justify-content: flex-end;
   }
 
   &_center {
     --text-align: center;
+    --justify-content: center;
   }
 
   &_row {

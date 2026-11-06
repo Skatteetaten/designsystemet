@@ -149,7 +149,7 @@ export const WithDisabled = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const dataCell = canvas.getByText('columnheader');
-    await expect(dataCell).toBeDisabled();
+    const sortButton = canvas.getByRole('button', { name: /columnheader/ });
+    await expect(sortButton).toBeDisabled();
   },
 } satisfies Story;

@@ -241,6 +241,88 @@ export const WithFullWidthAndTextAlignment = {
   },
 } satisfies Story;
 
+const TemplateVerticalAlignment: StoryFn<typeof Table> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell scope={'col'}>{'default'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'top'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'middle'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'bottom'}</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row className={'tallTableRow'}>
+        <Table.DataCell>{'default'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'top'}>{'top'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'middle'}>{'middle'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'bottom'}>{'bottom'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
+export const WithVerticalAlignment = {
+  render: TemplateVerticalAlignment,
+  name: 'With Vertical Alignment (TableDataCell)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const cells = (text: string): HTMLElement =>
+      canvas.getByRole('cell', { name: text });
+
+    await expect(getComputedStyle(cells('default')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(cells('top')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(cells('middle')).verticalAlign).toBe(
+      'middle'
+    );
+    await expect(getComputedStyle(cells('bottom')).verticalAlign).toBe(
+      'bottom'
+    );
+  },
+} satisfies Story;
+
+const TemplateLongSortableHeader: StoryFn<typeof Table> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell
+          className={'dummyWidth200'}
+          sortKey={'lang'}
+          isSortable
+        >
+          {'lang tekst som går over flere linjer'}
+        </Table.HeaderCell>
+        <Table.HeaderCell sortKey={'kort'} isSortable>
+          {'kort'}
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.DataCell>{'lang'}</Table.DataCell>
+        <Table.DataCell>{'kort'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
+export const WithLongSortableHeader = {
+  render: TemplateLongSortableHeader,
+  name: 'With Long Sortable Header (TableHeaderCell)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const langTekstButton = canvas.getByRole('button', { name: /lang/ });
+    await expect(getComputedStyle(langTekstButton).verticalAlign).toBe(
+      'bottom'
+    );
+    const kortTekstButton = canvas.getByRole('button', { name: /kort/ });
+    await expect(getComputedStyle(kortTekstButton).verticalAlign).toBe(
+      'bottom'
+    );
+  },
+} satisfies Story;
+
 const editableContent = (): ReactNode => (
   <div className={'emptyExpandedTableRow'}>{'Rediger innhold'}</div>
 );

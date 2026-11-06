@@ -14,6 +14,7 @@ export const TableDataCell = ({
   'data-testid': dataTestId,
   as: Tag = 'td',
   alignment = 'left',
+  verticalAlignment = 'top',
   colSpan,
   rowSpan,
   scope,
@@ -23,10 +24,11 @@ export const TableDataCell = ({
   const size = context?.size ?? defaultTableSize;
   const sizeClassName = styles[`dataCell_${size}`];
   const alignmentClassName = styles[`dataCell_${alignment}`];
+  const verticalAlignmentClassName = styles[`dataCell_${verticalAlignment}`];
 
   const concatenatedClassName = `${
     styles.dataCell
-  } ${sizeClassName} ${alignmentClassName} ${
+  } ${sizeClassName} ${alignmentClassName} ${verticalAlignmentClassName} ${
     rowSpan ? styles.dataCell_rowspan : ''
   } ${className}`.trim();
 
