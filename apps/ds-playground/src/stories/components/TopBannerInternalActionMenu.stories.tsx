@@ -2,7 +2,9 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
-import { category } from '../../../.storybook/helpers';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { getDefaultMenuLabel } from '../../../../../libs/ds-layout/src/TopBannerInternal/TopBannerInternalActionMenu/TopBannerInternalActionMenu';
+import { category, svgPathDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
@@ -10,8 +12,21 @@ const meta = {
   argTypes: {
     // Props
     children: { control: 'text', table: { category: category.props } },
-    menuActionsRef: { control: false, table: { category: category.props } },
     classNames: { control: false, table: { category: category.props } },
+    menuActionsRef: { control: false, table: { category: category.props } },
+    menuLabel: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDefaultMenuLabel() },
+      },
+    },
+    svgPath: {
+      ...svgPathDescription,
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'MenuSVGpath' },
+      },
+    },
   },
   args: {
     children: 'Menu Content',
