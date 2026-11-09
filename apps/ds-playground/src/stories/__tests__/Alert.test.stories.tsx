@@ -252,30 +252,18 @@ const TemplateAllVariants: StoryFn<typeof Alert> = (args) => (
   </>
 );
 
-export const AllVariants = {
+export const AllVariantsWithCloseButton = {
   render: TemplateAllVariants,
-  name: 'All Variants (A1)',
+  name: 'All Variants With Close Button (A1)',
   args: {
     showAlert: true,
-  },
-} satisfies Story;
-
-export const AllVariantsMobile = {
-  render: TemplateAllVariants,
-  name: 'All Variants On Small Screen (A1)',
-  args: {
-    showAlert: true,
-  },
-  globals: {
-    viewport: {
-      value: '--mobile',
-    },
+    onClose: fn(),
   },
 } satisfies Story;
 
 export const AllVariantsWithCloseButtonMobile = {
   render: TemplateAllVariants,
-  name: 'All Variants On Small Screen (A1)',
+  name: 'All Variants With Close Button On Small Screen (A1)',
   args: {
     showAlert: true,
     onClose: fn(),
@@ -287,12 +275,13 @@ export const AllVariantsWithCloseButtonMobile = {
   },
 } satisfies Story;
 
-export const AllLightVariants = {
+export const AllLightVariantsWithCloseButton = {
   render: TemplateAllVariants,
-  name: 'All Light Variants',
+  name: 'All Light Variants With Close Button',
   args: {
     showAlert: true,
     backgroundBrightness: 'light',
+    onClose: fn(),
   },
   globals: {
     backgrounds: {
@@ -390,6 +379,41 @@ export const WithCloseButton = {
   },
   parameters: {
     imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+} satisfies Story;
+
+export const VariantDangerWithCloseButton = {
+  name: 'Variant Danger With Close Button',
+  args: {
+    showAlert: true,
+    variant: 'danger',
+    onClose: fn(),
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+} satisfies Story;
+
+export const VariantDangerWithCloseButtonMobile = {
+  name: 'Variant Danger With Close Button On Small Screen',
+  args: {
+    showAlert: true,
+    variant: 'danger',
+    onClose: fn(),
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
   },
 } satisfies Story;
 
