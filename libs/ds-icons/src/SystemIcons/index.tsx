@@ -69,6 +69,7 @@ export * from './Duplicate';
 export * from './Earth';
 export * from './Edit';
 export * from './Email';
+export * from './EmailFilled';
 export * from './Error';
 export * from './ErrorOutline';
 export * from './ExcelFile';
