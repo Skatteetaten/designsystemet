@@ -9,6 +9,9 @@ export interface ActionMenuActionsRef {
 
 export interface TopBannerInternalActionMenuProps extends BaseProps {
   ref?: Ref<HTMLButtonElement>;
+  classNames?: {
+    menuContent?: string;
+  };
   /** Ref som eksponerer funksjoner for å åpne/lukke menyen. */
   menuActionsRef?: Ref<ActionMenuActionsRef>;
   /** Innhold i komponenten */

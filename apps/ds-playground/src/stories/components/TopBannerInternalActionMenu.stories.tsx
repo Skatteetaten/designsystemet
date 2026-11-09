@@ -11,6 +11,7 @@ const meta = {
     // Props
     children: { control: 'text', table: { category: category.props } },
     menuActionsRef: { control: false, table: { category: category.props } },
+    classNames: { control: false, table: { category: category.props } },
   },
   args: {
     children: 'Menu Content',

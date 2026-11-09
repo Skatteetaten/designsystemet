@@ -29,6 +29,7 @@ export const TopBannerInternalActionMenu = ({
   ref,
   id,
   className = '',
+  classNames,
   lang,
   'data-testid': dataTestId,
   menuActionsRef,
@@ -104,7 +105,7 @@ export const TopBannerInternalActionMenu = ({
           initialFocus={-1}
         >
           <div
-            className={styles.menu}
+            className={`${styles.menu} ${classNames?.menuContent ?? ''}`.trim()}
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
