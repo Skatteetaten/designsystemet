@@ -10,6 +10,8 @@ import {
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: TopBannerInternal.ActionMenu,
   title: 'Tester/TopBannerInternal/ActionMenu',
@@ -78,6 +80,23 @@ export const WithAttributes = {
   },
   parameters: {
     imageSnapshot: { disableSnapshot: true },
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_layout:topbannerbutton.Menu'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

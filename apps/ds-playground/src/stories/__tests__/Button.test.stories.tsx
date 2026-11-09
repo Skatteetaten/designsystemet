@@ -8,6 +8,7 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SendSVGpath } from '@skatteetaten/ds-icons';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const defaultButtonText = 'Klikk her';
 
@@ -111,6 +112,19 @@ export const WithAttributes = {
     await expect(button).toHaveAttribute('lang', 'nb');
     await expect(button).toHaveAttribute('data-testid', '123ID');
     await expect(button).toHaveAttribute('form', 'formid123');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { isExternal: true, href: '#' },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByLabelText(dsI18n.t('ds_buttons:shared.ExternalIcon'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

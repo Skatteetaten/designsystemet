@@ -3,6 +3,7 @@ import { expect, fireEvent, userEvent, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerSkipLink } from '../../../../../libs/ds-layout/src/TopBannerSkipLink/TopBannerSkipLink';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
@@ -79,6 +80,20 @@ export const WithAttributes = {
     await expect(skipLink).toHaveAttribute('lang', 'nb');
     await expect(skipLink).toHaveAttribute('data-testid', '123ID');
     skipLink.focus();
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('link', {
+          name: dsI18n.t('ds_layout:topbanner.SkipLinkText'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

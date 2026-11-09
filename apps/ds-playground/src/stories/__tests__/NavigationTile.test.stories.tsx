@@ -8,6 +8,7 @@ import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { NavigationTile } from '@skatteetaten/ds-navigation';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const systemIconViewBox = '0 0 24 24';
 const defaultTitle = 'Skatt';
@@ -166,6 +167,20 @@ export const WithAttributes = {
     await expect(link).toHaveAttribute('id', 'htmlId');
     await expect(link).toHaveAttribute('lang', 'nb');
     await expect(link).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  args: { isExternal: true },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByLabelText(dsI18n.t('ds_buttons:shared.ExternalIcon'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

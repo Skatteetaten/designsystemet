@@ -2,9 +2,13 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, waitFor, within } from 'storybook/test';
 
 import { StepList } from '@skatteetaten/ds-collections';
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TimersandSVGpath } from '@skatteetaten/ds-icons';
 
-import { loremIpsum } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsum,
+} from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { getDefaultEditButtonText } from '../../../../../libs/ds-collections/src/StepList/StepListStep/StepListStep';
 import { category } from '../../../.storybook/helpers';
@@ -125,6 +129,33 @@ export const WithAttributes = {
     await expect(stepList).toHaveAttribute('id', 'htmlid');
     await expect(stepList).toHaveClass('dummyClassname');
     await expect(stepList).toHaveAttribute('lang', 'nb');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  args: {
+    title: 'Step',
+    stepNumber: 1,
+    variant: 'active',
+    onNext: (): void => undefined,
+    onEdit: (): void => undefined,
+  },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_collections:steplist.Next'),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_collections:steplist.Edit'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

@@ -3,10 +3,14 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Popover } from '@skatteetaten/ds-overlays';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
-import { loremIpsum } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsum,
+} from './testUtils/storybook.testing.utils';
 
 const defaultText =
   'Avvist av kortutsteder. Ta kontakt med kortutsteder for mer informasjon.';
@@ -91,6 +95,20 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('Shared:shared.Close'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

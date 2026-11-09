@@ -1,4 +1,5 @@
 import { Children, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
@@ -24,6 +25,7 @@ export const TableSum = ({
   sumText = getDefaultTableSumText(),
   children,
 }: TableSumProps): JSX.Element => {
+  useTranslation('ds_tables', { i18n: dsI18n });
   const concatenatedClassName = `${styles.sum} ${
     hasTopSeparator ? styles.sum_topSeparator : ''
   }`.trim();

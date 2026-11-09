@@ -6,6 +6,8 @@ import { expect, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RoleBanner } from '@skatteetaten/ds-layout';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: RoleBanner,
   title: 'Tester/RoleBanner',
@@ -82,6 +84,20 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('id', 'htmlId');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('region', {
+          name: dsI18n.t('ds_layout:rolebanner.AriaLabel'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

@@ -17,7 +17,11 @@ import {
 } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { loremIpsum, wrapper } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsum,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
@@ -141,6 +145,25 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(textbox).toHaveAttribute('data-testid', '123ID');
     await expect(textbox).toHaveAttribute('autocomplete', 'off');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByPlaceholderText(
+          dsI18n.t('ds_forms:datepicker.TypeOrSelect')
+        )
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_forms:datepicker.ChooseDate'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

@@ -19,11 +19,11 @@ import {
   FileUploaderProps,
   UploadedFile,
 } from './FileUploader.types';
+import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
 import { useFileUploader } from './useFileUploader';
 import { useFileUploaderAccessibilityAnnouncer } from './useFileUploaderAccessibilityAnnouncer';
 import { getFiles, isChangeEvent, normalize } from './utils';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
-import { FileUploaderFile } from './FileUploaderFile/FileUploaderFile';
 import { LabelWithHelp } from '../LabelWithHelp/LabelWithHelp';
 
 import styles from './FileUploader.module.scss';

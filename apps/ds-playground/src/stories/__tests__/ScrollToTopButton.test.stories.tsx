@@ -8,7 +8,10 @@ import {
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { ExternalLayout } from '@skatteetaten/ds-core-utils';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 
 const defaultButtonText = 'Til toppen';
@@ -108,6 +111,23 @@ export const WithAttributes = {
       `${wrapper} > div > div:nth-child(2)`
     );
     await expect(container).toHaveClass('dummyClassname');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: getDefaultScrollToTopButtonText(),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

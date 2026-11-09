@@ -1,11 +1,13 @@
-import { useState, FocusEvent, ChangeEvent } from 'react';
+import { useState, FocusEvent, ChangeEvent, JSX } from 'react';
 
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 
 import {
+  testLanguageChange,
   loremIpsum,
   loremIpsumWithoutSpaces,
 } from './testUtils/storybook.testing.utils';
@@ -105,6 +107,23 @@ export const WithAttributes = {
     await expect(input).toHaveAttribute('id', 'htmlId');
     await expect(input).toHaveAttribute('data-testid', '123ID');
     await expect(input).toHaveAttribute('form', 'formid123');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: (args): JSX.Element => (
+    <RadioGroup legend={'radio example'} readOnly>
+      <RadioGroup.Radio {...args} />
+    </RadioGroup>
+  ),
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(`, ${dsI18n.t('Shared:shared.ReadOnly')}`)
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

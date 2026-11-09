@@ -18,6 +18,7 @@ import { Modal } from '@skatteetaten/ds-overlays';
 import { Alert } from '@skatteetaten/ds-status';
 
 import {
+  testLanguageChange,
   coolString,
   loremIpsum,
   wrapper,
@@ -148,6 +149,21 @@ export const WithAttributes = {
     await expect(textbox).toHaveAttribute('data-testid', '123ID');
     await expect(textbox).toHaveAttribute('form', 'formid123');
     await expect(textbox).toHaveAttribute('autocomplete', 'off');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { characterLimit: 50 },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(
+          dsI18n.t('ds_forms:textarea.TotalCharactersLimit', { ant: 50 })
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

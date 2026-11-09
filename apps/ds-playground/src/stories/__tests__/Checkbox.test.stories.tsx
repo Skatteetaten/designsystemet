@@ -3,7 +3,10 @@ import { ChangeEvent, FocusEvent, useState } from 'react';
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Checkbox } from '@skatteetaten/ds-forms';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const verifyAttribute =
   (attribute: string, expectedValue: string) =>
@@ -106,6 +109,19 @@ export const WithAttributes = {
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(inputNode).toHaveAttribute('data-testid', '123ID');
     await expect(inputNode).toHaveAttribute('form', '123form');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { readOnly: true },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(`, ${dsI18n.t('Shared:shared.ReadOnly')}`)
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

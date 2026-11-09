@@ -4,6 +4,8 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta: Meta<typeof TopBannerExternal.UserMenu> = {
   title: 'Tester/TopBannerExternal/UserMenu',
   component: TopBannerExternal.UserMenu,
@@ -82,6 +84,34 @@ export const Default: Story = {
     await expect(notificationAmount).toBeInTheDocument();
   },
 };
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: new RegExp(dsI18n.t('ds_layout:topbannerbutton.Menu')),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('link', {
+          name: dsI18n.t('ds_overlays:topbannerexternalusermenu.MyPage'),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_overlays:topbannerexternalusermenu.SwitchUser'),
+        })
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
 
 export const WithNoNotifications: Story = {
   name: 'No Notifications',

@@ -11,11 +11,14 @@ import {
 } from 'storybook/test';
 
 import { Button } from '@skatteetaten/ds-buttons';
-import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const valueOption1 = 'option1';
@@ -138,6 +141,20 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'nb');
     await expect(selectNode).toHaveAttribute('form', 'form123');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('option', {
+          name: dsI18n.t('Shared:shared.ChooseValue'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

@@ -1,6 +1,7 @@
 import { JSX, useEffect, useId, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
+import { dsI18n, getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 import { SpinnerProps } from './Spinner.types';
 
@@ -25,6 +26,7 @@ export const Spinner = ({
   percentComplete,
   children = getDefaultSpinnerLabel(),
 }: SpinnerProps): JSX.Element => {
+  useTranslation('ds_progress', { i18n: dsI18n });
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const generatedId = useId();
   const titleId = `title-${id ?? generatedId}`;

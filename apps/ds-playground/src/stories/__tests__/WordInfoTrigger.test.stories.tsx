@@ -6,6 +6,7 @@ import { expect, fn, userEvent, waitFor, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { WordInfo } from '@skatteetaten/ds-overlays';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 import { category, htmlEventDescription } from '../../../.storybook/helpers';
 
 const meta = {
@@ -89,6 +90,21 @@ export const WithAttributes = {
     await expect(button).toHaveClass('dummyClassname');
     await expect(button).toHaveAttribute('lang', 'en');
     await expect(button).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(
+          dsI18n.t('ds_overlays:wordinfo.WordExplanation'),
+          { exact: false }
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
