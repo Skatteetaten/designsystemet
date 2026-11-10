@@ -20,6 +20,7 @@ const meta = {
     children: { control: 'text', table: { disable: true } },
     id: { table: { disable: true } },
     className: { table: { disable: true } },
+    classNames: { table: { disable: true } },
     lang: { table: { disable: true } },
     'data-testid': { table: { disable: true } },
     menuActionsRef: { table: { disable: true } },
@@ -310,4 +311,31 @@ export const WithMenuAboveButton = {
     </div>
   ),
   play: (context): Promise<void> => expectMenuPosition(context, false, 'top'),
+} satisfies Story;
+
+export const WithCustomClassNames = {
+  name: 'With Custom ClassNames',
+  args: {
+    classNames: {
+      button: 'dummyClassname',
+      children: 'dummyClassname',
+    },
+    children: 'Menu Content',
+  },
+  argTypes: {
+    classNames: {
+      table: { disable: false },
+    },
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const menuButton = canvas.getByRole('button');
+    await expect(menuButton).toHaveClass('dummyClassname');
+    await fireEvent.click(menuButton);
+    const menuContent = canvasElement.querySelector('[data-placement]');
+    await expect(menuContent).toHaveClass('dummyClassname');
+  },
 } satisfies Story;
