@@ -34,6 +34,10 @@
     border-left-color: var(--palette-denim-70);
   }
 
+  &:where([data-border-color='burgundy']) {
+    border-left-color: var(--palette-burgundy-50);
+  }
+
   strong {
     font-weight: var(--font-weight-bold);
   }

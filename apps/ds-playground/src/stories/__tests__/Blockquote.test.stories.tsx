@@ -159,6 +159,7 @@ const TemplateAllColors: StoryFn<BlockquoteProps> = (args) => (
     <Blockquote {...args} borderColor={'ochre'} hasSpacing />
     <Blockquote {...args} borderColor={'graphite'} hasSpacing />
     <Blockquote {...args} borderColor={'denim'} hasSpacing />
+    <Blockquote {...args} borderColor={'burgundy'} hasSpacing />
   </>
 );
 
