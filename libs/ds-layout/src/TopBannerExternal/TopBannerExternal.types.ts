@@ -119,6 +119,10 @@ export interface TopBannerExternalProps extends BaseProps, searchProps {
    * språkmenyen.
    */
   otherLanguagesURL?: string;
+  /** Kan brukes til å tydeliggjøre at man er i testmiljø */
+  isUnderConstruction?: boolean;
+  /** Tekst i konstruksjonsbåndet */
+  constructionBandTitle?: string;
 }
 export interface TopBannerExternalComponent extends FunctionComponent<TopBannerExternalProps> {
   UserMenu: typeof TopBannerExternalUserMenu;

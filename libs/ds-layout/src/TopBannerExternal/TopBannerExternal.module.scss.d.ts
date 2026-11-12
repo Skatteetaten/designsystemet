@@ -13,5 +13,7 @@ declare const classNames: {
   readonly separatorLeft: 'separatorLeft';
   readonly separatorRight: 'separatorRight';
   readonly srOnly: 'srOnly';
+  readonly constructionBand: 'constructionBand';
+  readonly constructionBandTitle: 'constructionBandTitle';
 };
 export default classNames;
