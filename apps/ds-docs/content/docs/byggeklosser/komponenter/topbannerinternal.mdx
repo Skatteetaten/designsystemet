@@ -84,7 +84,11 @@ icon: /illustrations/topbannerinternal.svg
 - Navigasjonselementer og menyer skal være tilgjengelige via tastatur.
 - Logo kan skjules visuelt på mobil, men må fortsatt ha semantisk alt‑tekst dersom den er synlig.
 
-import { TopBannerInternal } from '@skatteetaten/ds-layout';
+import {
+	defaultMenuSvgPath,
+	getDefaultMenuLabel,
+	TopBannerInternal,
+} from '@skatteetaten/ds-layout';
 
 ## Props
 
@@ -92,4 +96,10 @@ import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
 ### TopBannerInternal.ActionMenu
 
-<TypeTable of={TopBannerInternal.ActionMenu} />
+<TypeTable
+	of={TopBannerInternal.ActionMenu}
+	defaultValues={{
+		menuLabel: getDefaultMenuLabel(),
+		svgPath: defaultMenuSvgPath.name,
+	}}
+/>

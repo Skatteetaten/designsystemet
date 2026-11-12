@@ -68,7 +68,11 @@ Brukes for handlinger som er irreversible eller særlig alvorlige. Plasser den m
 - Følg skrivereglene for knapper slik at språket er klart og tilgjengelig.
 
 import { Button } from '@skatteetaten/ds-buttons';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 ## Props
 
-<TypeTable of={Button} />
+<TypeTable
+	of={Button}
+	defaultValues={{ spinnerTitle: getDefaultSpinnerLabel() }}
+/>

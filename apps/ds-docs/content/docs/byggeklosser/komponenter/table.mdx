@@ -87,7 +87,7 @@ Alle tabeller kan:
   - beholder fokus ved sortering
 - Sjekk tastaturnavigasjon for interaksjonselementer i tabellen.
 
-import { Table } from '@skatteetaten/ds-table';
+import { getDefaultTableSumText, Table } from '@skatteetaten/ds-table';
 
 ## Props
 
@@ -119,4 +119,7 @@ import { Table } from '@skatteetaten/ds-table';
 
 ### Table.Sum
 
-<TypeTable of={Table.Sum} />
+<TypeTable
+	of={Table.Sum}
+	defaultValues={{ sumText: getDefaultTableSumText() }}
+/>

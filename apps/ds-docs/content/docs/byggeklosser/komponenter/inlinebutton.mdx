@@ -65,7 +65,11 @@ InlineButton finnes i følgende varianter:
 - Bruk aktiv knapp med feilmelding som alternativ til inaktiv knapp.
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 ## Props
 
-<TypeTable of={InlineButton} />
+<TypeTable
+	of={InlineButton}
+	defaultValues={{ spinnerTitle: getDefaultSpinnerLabel() }}
+/>

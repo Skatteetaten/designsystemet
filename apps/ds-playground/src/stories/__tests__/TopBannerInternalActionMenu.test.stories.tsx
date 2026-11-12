@@ -5,9 +5,10 @@ import { expect, fireEvent, userEvent, waitFor, within } from 'storybook/test';
 
 import { InlineButton } from '@skatteetaten/ds-buttons';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { MenuSVGpath, CircleDownSVGpath } from '@skatteetaten/ds-icons';
+import { CircleDownSVGpath } from '@skatteetaten/ds-icons';
 import {
   ActionMenuActionsRef,
+  defaultMenuSvgPath,
   TopBannerInternal,
 } from '@skatteetaten/ds-layout';
 
@@ -116,7 +117,7 @@ export const WithDefaults = {
     await expect(svg).not.toBeNull();
     const path = svg?.querySelector('path');
     await expect(path).not.toBeNull();
-    await expect(path).toHaveAttribute('d', MenuSVGpath.props.d);
+    await expect(path).toHaveAttribute('d', defaultMenuSvgPath.svgPath.props.d);
     await fireEvent.click(menuButton);
     await expect(canvas.getByText('Menu Content')).toBeInTheDocument();
   },

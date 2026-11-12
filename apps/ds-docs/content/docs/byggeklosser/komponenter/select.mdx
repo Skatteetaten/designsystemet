@@ -60,11 +60,18 @@ Det gir:
   - korte og forståelige alternativer
 - Unngå deaktivert tilstand — det kan være vanskelig for brukere å forstå hvorfor feltet ikke kan brukes.
 
-import { Select } from '@skatteetaten/ds-forms';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={Select} />
+<TypeTable
+	of={Select}
+	defaultValues={{
+		titleHelpSvg: getDefaultHelpButtonTitle(),
+		placeholder: getDefaultSelectPlaceholder(),
+	}}
+/>
 
 ### Select.Option
 

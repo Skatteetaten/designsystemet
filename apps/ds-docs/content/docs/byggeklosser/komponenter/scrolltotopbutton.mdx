@@ -61,8 +61,14 @@ Komponenten har ingen egne visuelle varianter, men kan tilpasses med props og pl
 - Kontrastkrav må oppfylles.
 - Scroll-animasjon skal ikke skape bevegelse som oppleves ubehagelig — bruk moderat hastighet.
 
-import { ScrollToTopButton } from '@skatteetaten/ds-buttons';
+import {
+	getDefaultScrollToTopButtonText,
+	ScrollToTopButton,
+} from '@skatteetaten/ds-buttons';
 
 ## Props
 
-<TypeTable of={ScrollToTopButton} />
+<TypeTable
+	of={ScrollToTopButton}
+	defaultValues={{ children: getDefaultScrollToTopButtonText() }}
+/>

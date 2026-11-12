@@ -58,8 +58,12 @@ Størrelsen ExtraLarge brukes normalt på landingssider.
 - Lenketeksten må være unik for hver tile.
 - Ikonet skal være dekorativt og skjules for skjermleser.
 
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { NavigationTile } from '@skatteetaten/ds-navigation';
 
 ## Props
 
-<TypeTable of={NavigationTile} />
+<TypeTable
+	of={NavigationTile}
+	defaultValues={{ spinnerTitle: getDefaultSpinnerLabel() }}
+/>

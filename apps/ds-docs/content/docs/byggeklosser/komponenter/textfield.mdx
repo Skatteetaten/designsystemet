@@ -69,8 +69,12 @@ Placeholder‑tekst skal ikke brukes fordi:
 - Read‑only-felt skal være tilgjengelig for skjermlesere.
 - Bruk korrekt inputtype, men vær oppmerksom på klientsidevalidering i enkelte nettlesere.
 
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { TextField } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={TextField} />
+<TypeTable
+	of={TextField}
+	defaultValues={{ titleHelpSvg: getDefaultHelpButtonTitle() }}
+/>

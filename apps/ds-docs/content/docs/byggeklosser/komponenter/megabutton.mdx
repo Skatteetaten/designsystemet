@@ -60,7 +60,11 @@ MegaButton har to varianter:
 - Ikoner må ha tilstrekkelig kontrast, og tekst må være tydelig og informativ.
 
 import { MegaButton } from '@skatteetaten/ds-buttons';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 ## Props
 
-<TypeTable of={MegaButton} />
+<TypeTable
+	of={MegaButton}
+	defaultValues={{ spinnerTitle: getDefaultSpinnerLabel() }}
+/>
