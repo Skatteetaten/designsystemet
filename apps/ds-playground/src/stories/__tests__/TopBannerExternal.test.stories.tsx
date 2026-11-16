@@ -11,7 +11,10 @@ import {
   TopBannerExternalHandle,
 } from '@skatteetaten/ds-layout';
 
-import { testLanguageChange } from './testUtils/storybook.testing.utils';
+import {
+  loremIpsum,
+  testLanguageChange,
+} from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-logo.svg';
 import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
 import { ReactComponent as FlagPlaceholder } from '../../assets/Flag_placeholder.svg';
@@ -786,5 +789,17 @@ export const LangPickerInMenuWhenLoggedInOnMobile = {
     await expect(
       canvas.getByRole('button', { name: 'Bokmål Meny' })
     ).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithConstructionBandAndCustomTitle = {
+  name: 'With Constructionband And Custom Title',
+  argTypes: {
+    isUnderConstruction: { table: { disable: false } },
+    constructionBandTitle: { table: { disable: false } },
+  },
+  args: {
+    isUnderConstruction: true,
+    constructionBandTitle: loremIpsum,
   },
 } satisfies Story;

@@ -61,6 +61,8 @@ const meta = {
     },
     otherLanguagesURL: { table: { category: category.props } },
     searchContent: { control: 'text', table: { category: category.props } },
+    constructionBandTitle: { table: { category: category.props } },
+    isUnderConstruction: { table: { category: category.props } },
     // Events
     onSearchClick: { ...htmlEventDescription },
     onSearch: { ...htmlEventDescription },
