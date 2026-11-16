@@ -23,12 +23,7 @@ import {
 
 import { Link } from '@skatteetaten/ds-buttons';
 import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
-import {
-  EarthSVGpath,
-  Icon,
-  MenuDownSVGpath,
-  MenuUpSVGpath,
-} from '@skatteetaten/ds-icons';
+import { Icon, MenuDownSVGpath, MenuUpSVGpath } from '@skatteetaten/ds-icons';
 
 import { ReactComponent as EnglishFlagIcon } from './Assets/en-flag.svg';
 import { ReactComponent as NorwegianFlagIcon } from './Assets/no-flag.svg';
@@ -282,12 +277,8 @@ export const TopBannerLangPicker = (({
                     setCurrentFocus(Object.keys(languages).length);
                   }}
                 >
-                  <Link
-                    ref={otherLanguagesLinkRef}
-                    href={otherLanguagesURL}
-                    svgPath={EarthSVGpath}
-                  >
-                    {'See more languages'}
+                  <Link ref={otherLanguagesLinkRef} href={otherLanguagesURL}>
+                    {'Other languages'}
                   </Link>
                 </li>
               )}
