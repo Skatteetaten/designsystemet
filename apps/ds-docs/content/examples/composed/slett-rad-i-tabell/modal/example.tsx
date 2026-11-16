@@ -29,8 +29,6 @@ const initialData = [
   },
 ];
 
-const tableCaption = 'Arbeidsoppgaver';
-
 export default function TableDeleteRowPermanentExample(): ReactElement {
   const [data, setData] = useState(initialData);
   const [rowToDeleteId, setRowToDeleteId] = useState<string | null>(null);
@@ -81,56 +79,61 @@ export default function TableDeleteRowPermanentExample(): ReactElement {
 
   return (
     <div className={styles.container}>
-      {data.length > 0 ? (
-        <Table caption={tableCaption} size={'small'}>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell scope={'col'}>{'Opprettet'}</Table.HeaderCell>
-              <Table.HeaderCell scope={'col'}>
-                {'Arbeidsoppgave'}
-              </Table.HeaderCell>
-              <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
-              <Table.HeaderCell as={'td'} />
+      <Table caption={'Arbeidsoppgaver'} size={'small'}>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell scope={'col'}>{'Opprettet'}</Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>
+              {'Arbeidsoppgave'}
+            </Table.HeaderCell>
+            <Table.HeaderCell scope={'col'}>{'Navn'}</Table.HeaderCell>
+            <Table.HeaderCell as={'td'} />
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          {data.map((person) => (
+            <Table.Row key={person.id}>
+              <Table.DataCell>{person.dato}</Table.DataCell>
+              <Table.DataCell>{person.task}</Table.DataCell>
+              <Table.DataCell>{person.name}</Table.DataCell>
+              <Table.DataCell>
+                <InlineButton
+                  ref={person.id === focusTargetId ? focusTargetRef : undefined}
+                  svgPath={DeleteSVGpath}
+                  onClick={(): void => openModal(person.id)}
+                >
+                  {'Slett'}
+                </InlineButton>
+              </Table.DataCell>
             </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            {data.map((person) => (
-              <Table.Row key={person.id}>
-                <Table.DataCell>{person.dato}</Table.DataCell>
-                <Table.DataCell>{person.task}</Table.DataCell>
-                <Table.DataCell>{person.name}</Table.DataCell>
-                <Table.DataCell>
-                  <InlineButton
-                    ref={
-                      person.id === focusTargetId ? focusTargetRef : undefined
-                    }
-                    svgPath={DeleteSVGpath}
-                    onClick={(): void => openModal(person.id)}
-                  >
-                    {'Slett'}
-                  </InlineButton>
-                </Table.DataCell>
-              </Table.Row>
-            ))}
-          </Table.Body>
-        </Table>
-      ) : (
-        <Paragraph ref={emptyMessageRef} canBeManuallyFocused>
-          {`Tabellen «${tableCaption}» er tom.`}
-        </Paragraph>
-      )}
+          ))}
+          {data.length === 0 && (
+            <Table.Row>
+              <Table.DataCell colSpan={4}>
+                <Paragraph ref={emptyMessageRef} canBeManuallyFocused>
+                  {`Tabellen er tom.`}
+                </Paragraph>
+              </Table.DataCell>
+            </Table.Row>
+          )}
+        </Table.Body>
+      </Table>
 
       <Modal
         ref={modalRef}
-        title={'Er du sikker på du vil slette?'}
+        title={'Slette arbeidsoppgave?'}
         onClose={handleModalClose}
       >
         <Paragraph hasSpacing>
-          {`Arbeidsoppgaven til ${rowToDelete?.name} blir slettet for godt.`}
+          {`Arbeidsoppgaven "${rowToDelete?.task}" for ${rowToDelete?.name} blir slettet permanent.`}
         </Paragraph>
         <div className={styles.modalButtons}>
-          <Button variant={'danger'} onClick={handleDelete}>
-            {'Slett'}
+          <Button
+            variant={'danger'}
+            svgPath={DeleteSVGpath}
+            onClick={handleDelete}
+          >
+            {'Slett arbeidsoppgave'}
           </Button>
           <Button variant={'secondary'} onClick={handleCancel}>
             {'Avbryt'}
