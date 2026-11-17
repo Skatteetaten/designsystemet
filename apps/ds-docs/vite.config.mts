@@ -70,6 +70,14 @@ export default defineConfig(() => ({
       transformMixedEsModules: true,
     },
   },
+  resolve: {
+    alias: {
+      '@skatteetaten/ds-core-utils/ds-classes.scss': resolve(
+        workspaceRoot,
+        'libs/ds-core-utils/src/mixins/ds-classes.scss'
+      ),
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
