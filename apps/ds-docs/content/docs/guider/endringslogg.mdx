@@ -6,6 +6,16 @@ description: Historikk over viktige endringer i designsystemet. Den nyeste versj
 import { Accordion } from '@skatteetaten/ds-collections';
 import styles from './endringslogg.module.scss';
 
+## Versjon 3.2.0 – 18. november 2026
+
+### Nye komponenter og funksjoner
+- **TopBannerInternal.ActionMenu**: Ny prop `classNames` med `button` og `children` for å style menyknappen og menyflaten.
+
+### Oppdatert dokumentasjon og eksempler
+- Nytt eksempel: [**Slett rad i tabell**](/eksempler/hjelpe-bruker-med/slett-rad-i-tabell) viser sletting med bekreftelse i modal og hvordan fokus håndteres etter sletting eller avbrudd.
+- Ny side: [**CSS-hjelpeklasser**](/guider/styling/hjelpeklasser) gir informasjon om hjelpeklassene og eksempler på bruk.
+- **API-dokumentasjon**: Props med oversatte standardtekster viser nå riktig standardverdi i stedet for funksjonsnavnet.
+
 ## Versjon 3.1.0 – 17. november 2026
 
 ### Nye komponenter og funksjoner
@@ -13,7 +23,7 @@ import styles from './endringslogg.module.scss';
 - **Select**: Ny prop `readOnly`. Siden `<select>` ikke støtter `readonly`, vises et skrivebeskyttet tekstfelt i stedet. Det gir noen begrensninger, blant annet for ref, onFocus og onBlur. Se API-dokumentasjonen for detaljer.
 - **Table.DataCell**: Ny prop `verticalAlignment` med verdiene top, middle og bottom.
 - **TopBannerExternal**: Nye props `isUnderConstruction` og `constructionBandTitle` for å vise et konstruksjonsbånd, for eksempel i testmiljø. Fungerer som konstruksjonsbåndet i TopBannerInternal.
-- **TopBannerInternal.ActionMenu**: Nye props `menuLabel` og `svgPath` for å endre tekst og ikon på menyknappen. Ny prop `classNames` med `button` og `children` for å style menyknappen og menyflaten.
+- **TopBannerInternal.ActionMenu**: Nye props `menuLabel` og `svgPath` for å endre tekst og ikon på menyknappen.
 - **Blockquote**: Ny farge `burgundy` (rød strek) i `borderColor`, for eksempel for å skille positive og negative eksempler.
 - **Icon**: Nye ikoner: CalendarCheck, Car, CashDown, CashMultiple, CashUp, EmailFilled, Folder, FolderOutline, Receipt og ReceiptFilled.
 - **CSS-hjelpeklasser**: `@skatteetaten/ds-core-utils` tilbyr nå `ds-classes.scss` med hjelpeklasser for spacing (margin, padding og gap), display, flex-oppsett, full bredde, fet skrift og skjermlesertekst. Klassene bruker designsystemets spacing-tokens.
@@ -36,8 +46,6 @@ import styles from './endringslogg.module.scss';
 - **Standardtekster**: Standardtekster i blant annet Spinner, ScrollToTopButton, TableSum og hjelpeknappen i Popover oppdateres igjen ved språkbytte. Regresjon fra 3.0.0.
 
 ### Oppdatert dokumentasjon og eksempler
-- Nytt eksempel: **Slett rad i tabell** viser sletting med bekreftelse i modal og hvordan fokus håndteres etter sletting eller avbrudd.
-- **API-dokumentasjon**: Props med oversatte standardtekster viser nå riktig standardverdi i stedet for funksjonsnavnet.
 - **Blockquote**: Dokumentert den nye fargen `burgundy`.
 - **Formattere**: Eksemplene for kontonummer viser nå 11 siffer.
 - **Dokumentasjonssiden**: Filtreringen i venstremenyen beholdes når man velger et treff.
