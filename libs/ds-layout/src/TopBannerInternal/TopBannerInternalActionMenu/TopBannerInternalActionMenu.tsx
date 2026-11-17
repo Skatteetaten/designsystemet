@@ -22,6 +22,9 @@ import { TopBannerInternalActionMenuProps } from './TopBannerInternalActionMenu.
 
 import styles from './TopBannerInternalActionMenu.module.scss';
 
+export const getDefaultMenuLabel = (): string =>
+  dsI18n.t('ds_layout:topbannerbutton.Menu');
+
 /* eslint-disable react-compiler/react-compiler */
 
 /* eslint-disable react/forbid-dom-props */
@@ -32,13 +35,12 @@ export const TopBannerInternalActionMenu = ({
   lang,
   'data-testid': dataTestId,
   menuActionsRef,
+  menuLabel = getDefaultMenuLabel(),
+  svgPath = MenuSVGpath,
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
+  useTranslation('ds_layout', { i18n: dsI18n });
   const arrowRef = useRef<HTMLDivElement>(null);
-  const arrowLen = arrowRef.current?.offsetWidth ?? 0;
-  // +6 for at pilen skal ligge på utsiden av outline på knappen
-  const floatingOffset = Math.sqrt(2 * arrowLen ** 2) / 2 + 6;
-
   const [isOpen, setOpen] = useState<boolean>(false);
 
   const floatingData = useFloating<HTMLButtonElement>({
@@ -46,13 +48,19 @@ export const TopBannerInternalActionMenu = ({
     onOpenChange: (open) => {
       setOpen(open);
     },
-    placement: 'bottom-start',
+    placement: 'bottom',
     whileElementsMounted: autoUpdate,
     middleware: [
-      offset({ mainAxis: floatingOffset, alignmentAxis: -32 }),
+      offset(() => ({
+        // +6 for at pilen skal ligge på utsiden av outline på knappen
+        mainAxis: (Math.SQRT2 * (arrowRef.current?.offsetWidth ?? 0)) / 2 + 6,
+      })),
       flip(),
       shift(),
-      arrow({ element: arrowRef }),
+      arrow(() => ({
+        element: arrowRef,
+        padding: (arrowRef.current?.offsetWidth ?? 0) / 2,
+      })),
     ],
   });
 
@@ -60,10 +68,8 @@ export const TopBannerInternalActionMenu = ({
     ancestorScroll: true,
   });
   const interactions = useInteractions([dismiss]);
-  const { refs, floatingStyles, middlewareData } = floatingData;
+  const { refs, floatingStyles, middlewareData, placement } = floatingData;
   const { getFloatingProps, getReferenceProps } = interactions;
-
-  const { t } = useTranslation('ds_layout', { i18n: dsI18n });
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mergedButtonRef = useMergeRefs([refs.setReference, buttonRef, ref]);
@@ -87,13 +93,13 @@ export const TopBannerInternalActionMenu = ({
         data-testid={dataTestId}
         {...getReferenceProps()}
         ref={mergedButtonRef}
-        svgPath={MenuSVGpath}
+        svgPath={svgPath}
         brightness={'light'}
         onClick={() => {
           setOpen(!isOpen);
         }}
       >
-        {t('topbannerbutton.Menu')}
+        {menuLabel}
       </InlineButton>
       {isOpen && (
         <FloatingFocusManager
@@ -108,16 +114,15 @@ export const TopBannerInternalActionMenu = ({
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
+            data-placement={placement}
           >
             {children}
-
             <div
               ref={arrowRef}
+              className={`${styles.arrow}`.trim()}
               style={{
                 left: middlewareData.arrow?.x,
-                top: `-${(arrowRef.current?.offsetWidth ?? 0) / 2}px`,
               }}
-              className={`${styles.arrow}`.trim()}
             ></div>
           </div>
         </FloatingFocusManager>

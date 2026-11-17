@@ -9,7 +9,10 @@ import { Alert } from '@skatteetaten/ds-status';
 import { Heading, Paragraph } from '@skatteetaten/ds-typography';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
-import { loremIpsum } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsum,
+} from './testUtils/storybook.testing.utils';
 
 const defaultText =
   'Det finnes feil i kjøretøydata. Sjekk at dette ikke har avgiftsmessige konsekvenser.';
@@ -103,6 +106,21 @@ export const WithAttributes = {
     await expect(alert).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { showAlert: true, onClose: (): void => undefined },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_status:alert.CloseMessage'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -226,7 +244,7 @@ const TemplateAllVariants: StoryFn<typeof Alert> = (args) => (
         <Alert
           {...args}
           key={`messageBar_${index}`}
-          className={'bottomSpacingXL'}
+          className={'mb-xl'}
           variant={variant}
         />
       );
@@ -234,30 +252,18 @@ const TemplateAllVariants: StoryFn<typeof Alert> = (args) => (
   </>
 );
 
-export const AllVariants = {
+export const AllVariantsWithCloseButton = {
   render: TemplateAllVariants,
-  name: 'All Variants (A1)',
+  name: 'All Variants With Close Button (A1)',
   args: {
     showAlert: true,
-  },
-} satisfies Story;
-
-export const AllVariantsMobile = {
-  render: TemplateAllVariants,
-  name: 'All Variants On Small Screen (A1)',
-  args: {
-    showAlert: true,
-  },
-  globals: {
-    viewport: {
-      value: '--mobile',
-    },
+    onClose: fn(),
   },
 } satisfies Story;
 
 export const AllVariantsWithCloseButtonMobile = {
   render: TemplateAllVariants,
-  name: 'All Variants On Small Screen (A1)',
+  name: 'All Variants With Close Button On Small Screen (A1)',
   args: {
     showAlert: true,
     onClose: fn(),
@@ -269,12 +275,13 @@ export const AllVariantsWithCloseButtonMobile = {
   },
 } satisfies Story;
 
-export const AllLightVariants = {
+export const AllLightVariantsWithCloseButton = {
   render: TemplateAllVariants,
-  name: 'All Light Variants',
+  name: 'All Light Variants With Close Button',
   args: {
     showAlert: true,
     backgroundBrightness: 'light',
+    onClose: fn(),
   },
   globals: {
     backgrounds: {
@@ -375,6 +382,41 @@ export const WithCloseButton = {
   },
 } satisfies Story;
 
+export const VariantDangerWithCloseButton = {
+  name: 'Variant Danger With Close Button',
+  args: {
+    showAlert: true,
+    variant: 'danger',
+    onClose: fn(),
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+} satisfies Story;
+
+export const VariantDangerWithCloseButtonMobile = {
+  name: 'Variant Danger With Close Button On Small Screen',
+  args: {
+    showAlert: true,
+    variant: 'danger',
+    onClose: fn(),
+  },
+  argTypes: {
+    variant: { table: { disable: false } },
+  },
+  parameters: {
+    imageSnapshot: { pseudoStates: ['hover', 'focus-visible', 'active'] },
+  },
+  globals: {
+    viewport: {
+      value: '--mobile',
+    },
+  },
+} satisfies Story;
+
 export const WithCloseOnClickButton = {
   name: 'With OnClick Close Button (A4)',
   args: {
@@ -434,7 +476,7 @@ export const WithAriaLiveOff = {
 export const InFlexColumnContainer = {
   render: (args): JSX.Element => {
     return (
-      <div className={'flex flexColumn gapM'}>
+      <div className={'flex flex-column gap-m'}>
         <Paragraph>{'Dette er en tekst som ligger over varselet'}</Paragraph>
         <Alert {...args}>{args.children}</Alert>
         <Paragraph>{'Dette er en tekst som ligger under varselet'}</Paragraph>

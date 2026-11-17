@@ -58,7 +58,7 @@ const ComboboxFormExample = (): JSX.Element => {
           onSelectionChange={() => setUncontrolledError('')}
           onInputChange={() => setUncontrolledError('')}
         />
-        <Button type={'submit'} className={'bottomSpacingXL'}>
+        <Button type={'submit'} className={'mb-xl'}>
           {'Send inn'}
         </Button>
       </form>

@@ -3,6 +3,7 @@ import { expect, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerUserButton } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerUserButton/TopBannerUserButton';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -85,6 +86,26 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(dsI18n.t('ds_layout:topbannerbutton.Myself'))
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByTitle(
+          dsI18n.t('ds_layout:topbannerbutton.MyselfTitle')
+        )
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
+
 export const Defaults = {
   name: 'Defaults (Username A2)',
   args: {},
@@ -105,7 +126,7 @@ export const Defaults = {
 } satisfies Story;
 
 const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
-  <div className={'topbannerButtonContainer'}>
+  <div className={'flex gap-s'}>
     {userRoleArr.map((role, index) => {
       const name =
         role === 'andre'
@@ -114,7 +135,6 @@ const TemplateWithAllRoles: StoryFn<typeof TopBannerUserButton> = (args) => (
       return (
         <TopBannerUserButton
           key={`user_${index}`}
-          className={'bottomSpacingXL'}
           {...args}
           user={{ role, name }}
         />

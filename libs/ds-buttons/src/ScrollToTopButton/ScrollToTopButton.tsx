@@ -1,4 +1,5 @@
 import { useEffect, useState, JSX } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { MoveUpIcon } from '@skatteetaten/ds-icons';
@@ -27,6 +28,7 @@ export const ScrollToTopButton = ({
   scrollToMain = true,
   children = getDefaultScrollToTopButtonText(),
 }: ScrollToTopButtonProps): JSX.Element => {
+  useTranslation('ds_buttons', { i18n: dsI18n });
   const [visible, setVisible] = useState<boolean>(!visibilityThreshold);
   useEffect(() => {
     const onScroll = (): void => {

@@ -7,7 +7,11 @@ import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { ChevronDownSVGpath, ChevronUpSVGpath } from '@skatteetaten/ds-icons';
 
-import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
+import {
+  defaultLabel,
+  defaultOptions,
+  largeOptions,
+} from './utils/combobox.test.utils';
 
 const meta = {
   component: Combobox,
@@ -198,6 +202,60 @@ export const SearchFiltering = {
       options = canvas.queryAllByRole('option');
       await expect(options).toHaveLength(0);
     }
+  },
+} satisfies Story;
+
+export const LargeOptionListFiltering = {
+  name: 'Stor liste med like alternativer filtreres og velges riktig',
+  args: {
+    options: largeOptions,
+  },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole('combobox');
+
+    // Hele listen skal vises uten søk, slik at brukeren kan scrolle
+    await userEvent.click(inputElement);
+    await expect(canvas.getAllByRole('option')).toHaveLength(
+      largeOptions.length
+    );
+
+    // Søk snevrer inn listen
+    await userEvent.type(inputElement, 'Skatteinfo om gjeld 01');
+    await waitFor(() => expect(canvas.getAllByRole('option')).toHaveLength(10));
+
+    // Piltast markerer et alternativ som finnes i den filtrerte listen
+    await userEvent.keyboard('{ArrowDown}');
+    const filteredOptionIds = canvas
+      .getAllByRole('option')
+      .map((option) => option.getAttribute('id'));
+    await expect(filteredOptionIds).toContain(
+      inputElement.getAttribute('aria-activedescendant')
+    );
+
+    // Enter rett etter skriving skal velge alternativet som matcher teksten
+    await userEvent.clear(inputElement);
+    await userEvent.type(inputElement, 'Skatteinfo om pensjon 123{Enter}');
+    await expect(inputElement).toHaveValue('Skatteinfo om pensjon 123');
+    await expect(inputElement).toHaveAttribute('aria-expanded', 'false');
+
+    // Gjenåpning viser hele listen med valgt alternativ markert og aktivt
+    await userEvent.click(inputElement);
+    const options = canvas.getAllByRole('option');
+    await expect(options).toHaveLength(largeOptions.length);
+    const selectedOption = options.find(
+      (option) => option.textContent?.trim() === 'Skatteinfo om pensjon 123'
+    );
+    await expect(selectedOption).toHaveAttribute('aria-selected', 'true');
+    await waitFor(() =>
+      expect(inputElement).toHaveAttribute(
+        'aria-activedescendant',
+        selectedOption?.getAttribute('id')
+      )
+    );
   },
 } satisfies Story;
 

@@ -47,6 +47,7 @@ export const DocsTopBanner = (): JSX.Element => {
   const languageAlertRef = useRef<HTMLDivElement>(null);
   const showPageNavigationInMenu = !useMediaQuery('(min-width: 1024px)');
   const [alertLanguage, setAlertLanguage] = useState<string | null>(null);
+  const [filterValue, setFilterValue] = useState('');
 
   const handleLanguageClick = (event: MouseEvent<HTMLButtonElement>): void => {
     const language = event.currentTarget.lang;
@@ -96,7 +97,12 @@ export const DocsTopBanner = (): JSX.Element => {
               <Heading as={'h2'} level={3} hasSpacing>
                 {'Innhold i designsystemet'}
               </Heading>
-              <Navigation pageTree={pageTree} onNavigate={closeMenu} />
+              <Navigation
+                pageTree={pageTree}
+                filterValue={filterValue}
+                onFilterChange={setFilterValue}
+                onNavigate={closeMenu}
+              />
             </>
           ) : undefined
         }

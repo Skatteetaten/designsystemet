@@ -7,7 +7,12 @@ import { getDefaultSpinnerLabel, dsI18n } from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { defaultLabel, defaultOptions } from './utils/combobox.test.utils';
+import {
+  defaultLabel,
+  defaultOptions,
+  largeOptions,
+} from './utils/combobox.test.utils';
+import { testLanguageChange } from '../testUtils/storybook.testing.utils';
 
 const meta = {
   component: Combobox,
@@ -38,6 +43,7 @@ const meta = {
     helpSvgPath: { table: { disable: true } },
     maxSelected: { table: { disable: true } },
     spinnerProps: { table: { disable: true } },
+    preserveSearch: { table: { disable: true } },
     titleHelpSvg: { table: { disable: true } },
     // HTML attributes
     accessKey: { table: { disable: true } },
@@ -114,6 +120,26 @@ export const WithAttributes = {
     const combobox = canvas.getByRole('combobox');
     await expect(combobox).toHaveAttribute('id', 'combobox-id');
     await expect(combobox).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: { chromatic: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('combobox'));
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByPlaceholderText(
+          dsI18n.t('ds_forms:combobox.TypeOrSelect')
+        )
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByText(
+          dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 3 })
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -648,6 +674,142 @@ export const WithName = {
     const canvas = within(canvasElement);
     const inputElement = canvas.getByRole('combobox');
     await expect(inputElement).toHaveAttribute('name', 'category');
+  },
+} satisfies Story;
+
+export const WithPreserveSearch = {
+  name: 'With PreserveSearch',
+  args: {
+    preserveSearch: true,
+    multiple: true,
+  },
+  argTypes: {
+    preserveSearch: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+
+    // "ge" treffer Norge og Sverige, men ikke Danmark
+    await userEvent.type(combobox, 'ge');
+    await expect(canvas.getAllByRole('option')).toHaveLength(2);
+
+    // Søket og filtreringen skal beholdes etter hvert valg
+    await userEvent.click(canvas.getByRole('option', { name: /Norge/ }));
+    await expect(combobox).toHaveValue('ge');
+    await expect(canvas.getAllByRole('option')).toHaveLength(2);
+
+    await userEvent.click(canvas.getByRole('option', { name: /Sverige/ }));
+    await expect(combobox).toHaveValue('ge');
+    await expect(canvas.getAllByRole('option')).toHaveLength(2);
+
+    // Må teste at søket faktisk blir tømt når brukeren tabber ut av comboboxen
+    await userEvent.tab();
+    await waitFor(() => expect(combobox).toHaveValue(''));
+  },
+} satisfies Story;
+
+export const WithManyOptions = {
+  name: 'With Many Options',
+  args: {
+    options: largeOptions,
+    multiple: true,
+    maxSelected: 2,
+  },
+  argTypes: {
+    multiple: { table: { disable: false } },
+    maxSelected: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const combobox = canvas.getByRole('combobox');
+    const accessibilityAnnouncer = canvasElement.querySelectorAll(
+      'div[class*="srOnly"]'
+    )[1];
+    const getOptionByLabel = (label: string): HTMLElement => {
+      const option = canvas
+        .getAllByRole('option')
+        .find((element) => element.textContent?.trim() === label);
+      if (!option) {
+        throw new Error(`Fant ikke alternativet "${label}"`);
+      }
+      return option;
+    };
+    const getDisabledOptions = (): HTMLElement[] =>
+      canvas
+        .getAllByRole('option')
+        .filter((option) => option.getAttribute('aria-disabled') === 'true');
+
+    // Hele listen vises uten søk, og antallet annonseres
+    await userEvent.click(combobox);
+    await expect(canvas.getAllByRole('option')).toHaveLength(
+      largeOptions.length
+    );
+    await expect(accessibilityAnnouncer).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.OptionsAvailable', {
+        count: largeOptions.length,
+      })
+    );
+
+    // Søk filtrerer listen, og nytt antall annonseres
+    await userEvent.type(combobox, 'gjeld 01');
+    await waitFor(() => expect(canvas.getAllByRole('option')).toHaveLength(10));
+    await waitFor(() =>
+      expect(accessibilityAnnouncer).toHaveTextContent(
+        dsI18n.t('ds_forms:combobox.OptionsAvailable', { count: 10 })
+      )
+    );
+
+    // Valg tømmer søket, og valgt alternativ markeres i hele listen
+    await userEvent.click(
+      canvas.getByRole('option', { name: 'Skatteinfo om gjeld 012' })
+    );
+    await expect(combobox).toHaveValue('');
+    await waitFor(() =>
+      expect(canvas.getAllByRole('option')).toHaveLength(largeOptions.length)
+    );
+    await expect(getOptionByLabel('Skatteinfo om gjeld 012')).toHaveAttribute(
+      'aria-selected',
+      'true'
+    );
+    await expect(getDisabledOptions()).toHaveLength(0);
+
+    // Når maks antall er valgt, deaktiveres resten av alternativene
+    await userEvent.type(combobox, 'pensjon 123');
+    await waitFor(() => expect(canvas.getAllByRole('option')).toHaveLength(1));
+    await userEvent.click(
+      canvas.getByRole('option', { name: 'Skatteinfo om pensjon 123' })
+    );
+    await waitFor(() =>
+      expect(canvas.getAllByRole('option')).toHaveLength(largeOptions.length)
+    );
+    await expect(getDisabledOptions()).toHaveLength(largeOptions.length - 2);
+    await expect(getOptionByLabel('Skatteinfo om pensjon 123')).toHaveAttribute(
+      'aria-selected',
+      'true'
+    );
+    await expect(canvas.getByRole('status')).toHaveTextContent(
+      dsI18n.t('ds_forms:combobox.SelectedOfTotalPlural', {
+        selected: 2,
+        total: 2,
+      })
+    );
+
+    // Fjerning av et valg aktiverer alternativene igjen
+    await userEvent.click(getOptionByLabel('Skatteinfo om pensjon 123'));
+    await waitFor(() =>
+      expect(getOptionByLabel('Skatteinfo om pensjon 123')).toHaveAttribute(
+        'aria-selected',
+        'false'
+      )
+    );
+    await expect(getDisabledOptions()).toHaveLength(0);
   },
 } satisfies Story;
 

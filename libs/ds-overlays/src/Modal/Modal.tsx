@@ -135,6 +135,9 @@ export const Modal = ({
   }, [children, dismissOnEsc]);
 
   const isClickOutside = (event: MouseEvent): boolean => {
+    if (event.target !== event.currentTarget) {
+      return false;
+    }
     if (!(event.currentTarget instanceof HTMLElement)) {
       return true;
     }

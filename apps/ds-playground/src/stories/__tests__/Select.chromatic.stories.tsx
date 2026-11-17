@@ -10,7 +10,7 @@ const meta = {
   component: Select,
   tags: ['chromatic', '!autodocs'],
   parameters: {
-    pseudoSelector: 'select',
+    pseudoSelector: ['select', 'input'],
   },
 } satisfies Meta<typeof Select>;
 export default meta;

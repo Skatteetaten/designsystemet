@@ -59,6 +59,8 @@ export const TopBannerExternal = ({
   otherLanguagesURL,
   searchContent,
   showSami = true,
+  isUnderConstruction = false,
+  constructionBandTitle = 'Test',
   children,
   onLanguageClick,
   onLogInClick,
@@ -247,6 +249,13 @@ export const TopBannerExternal = ({
       >
         {skipLink?.text}
       </TopBannerSkipLink>
+      {isUnderConstruction && (
+        <div className={styles.constructionBand}>
+          <div className={styles.constructionBandTitle}>
+            {constructionBandTitle}
+          </div>
+        </div>
+      )}
       <div className={styles.containerForMainMenu}>
         <div className={styles.topContainer}>
           <TopBannerLogo {...logo} />

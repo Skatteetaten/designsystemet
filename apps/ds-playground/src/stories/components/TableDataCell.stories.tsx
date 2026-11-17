@@ -12,6 +12,7 @@ const meta = {
     children: { control: 'text', table: { category: category.props } },
     as: { table: { category: category.props } },
     alignment: { table: { category: category.props } },
+    verticalAlignment: { table: { category: category.props } },
     // HTML
     colSpan: { table: { category: category.htmlAttribute } },
     rowSpan: { table: { category: category.htmlAttribute } },

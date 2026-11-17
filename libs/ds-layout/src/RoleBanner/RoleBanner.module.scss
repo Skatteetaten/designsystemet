@@ -1,6 +1,14 @@
 @use 'libs/ds-core-designtokens/lib/designtokens/breakpoints';
 @use 'libs/ds-core-utils/src/mixins/styles' as style;
 
+.content {
+  max-width: var(--semantic-responsive-container);
+  padding: var(--semantic-responsive-container-spacing);
+  margin: auto;
+  font-size: var(--font-size-m);
+  line-height: var(--semantic-line-height-default);
+}
+
 .roleBanner {
   position: sticky;
   z-index: 60;
@@ -16,9 +24,16 @@
   &[data-scrolled='true'][data-sticky='true'] {
     max-height: 3.5rem;
 
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      column-gap: var(--spacing-xs);
+    }
+
     .nameWrapper {
-      display: block;
       overflow: hidden;
+      min-width: 0;
       max-width: 100%;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -26,6 +41,10 @@
 
     @media (min-width: breakpoints.$breakpoint-xs) {
       max-height: none;
+
+      .content {
+        display: block;
+      }
 
       .nameWrapper {
         display: inline;
@@ -44,12 +63,8 @@
   }
 }
 
-.content {
-  max-width: var(--semantic-responsive-container);
-  padding: var(--semantic-responsive-container-spacing);
-  margin: auto;
-  font-size: var(--font-size-m);
-  line-height: var(--semantic-line-height-default);
+.identifier {
+  white-space: nowrap;
 }
 
 .bold {

@@ -1,10 +1,10 @@
-import type { JSX } from 'react';
-
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TopBannerInternal } from '@skatteetaten/ds-layout';
 
-import { category } from '../../../.storybook/helpers';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { getDefaultMenuLabel } from '../../../../../libs/ds-layout/src/TopBannerInternal/TopBannerInternalActionMenu/TopBannerInternalActionMenu';
+import { category, svgPathDescription } from '../../../.storybook/helpers';
 
 const meta = {
   component: TopBannerInternal.ActionMenu,
@@ -13,6 +13,19 @@ const meta = {
     // Props
     children: { control: 'text', table: { category: category.props } },
     menuActionsRef: { control: false, table: { category: category.props } },
+    menuLabel: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDefaultMenuLabel() },
+      },
+    },
+    svgPath: {
+      ...svgPathDescription,
+      table: {
+        category: category.props,
+        defaultValue: { summary: 'MenuSVGpath' },
+      },
+    },
   },
   args: {
     children: 'Menu Content',
@@ -25,12 +38,4 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Preview: Story = {
-  decorators: [
-    (Story): JSX.Element => (
-      <div className={'bottomSpacingXL'}>
-        <Story />
-      </div>
-    ),
-  ],
-} satisfies Story;
+export const Preview: Story = {} satisfies Story;

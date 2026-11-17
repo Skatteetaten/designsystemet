@@ -17,6 +17,23 @@ import { getScreenReaderSortDirectionText } from '../utils';
 
 import styles from './Table.module.scss';
 
+const isTransparent = (color: string): boolean =>
+  color === '' || color === 'transparent' || /^rgba\(.*,\s*0\)$/.test(color);
+
+const findBackgroundColor = (
+  element: Element | null | undefined
+): string | undefined => {
+  let current = element;
+  while (current) {
+    const color = getComputedStyle(current).backgroundColor;
+    if (!isTransparent(color)) {
+      return color;
+    }
+    current = current.parentElement;
+  }
+  return undefined;
+};
+
 /**
  * Table
  *
@@ -38,8 +55,8 @@ export const Table = ({
   setSortState,
   children,
 }: TableProps): JSX.Element => {
+  const fadeWrapperRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const srTimeoutId = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const [isTableScrollable, setIsTableScrollable] = useState<boolean>(false);
   const [shouldShowSRText, setShouldShowSRText] = useState<boolean>(false);
@@ -113,16 +130,31 @@ export const Table = ({
     };
   }, []);
 
+  /* Fade-laget må ha samme farge som tabellen. */
   useEffect(() => {
-    if (srTimeoutId.current) {
-      clearTimeout(srTimeoutId.current);
+    const fadeWrapper = fadeWrapperRef.current;
+    if (!isTableScrollable || !fadeWrapper) {
+      return;
     }
-    setShouldShowSRText(true);
+    const color = findBackgroundColor(
+      wrapperRef.current?.querySelector('table')
+    );
+    if (color) {
+      fadeWrapper.style.setProperty('--table-fade-color', color);
+    } else {
+      fadeWrapper.style.removeProperty('--table-fade-color');
+    }
+  }, [isTableScrollable]);
 
-    srTimeoutId.current = setTimeout(() => {
+  useEffect(() => {
+    setShouldShowSRText(true);
+    const timeoutId = setTimeout(() => {
       setShouldShowSRText(false);
-      srTimeoutId.current = undefined;
     }, 3000);
+
+    return (): void => {
+      clearTimeout(timeoutId);
+    };
   }, [sortState]);
 
   return (
@@ -135,27 +167,29 @@ export const Table = ({
         setRowInEditModeId: setInternalRowInEditModeId,
       }}
     >
-      <div
-        ref={wrapperRef}
-        className={wrapperClassName}
-        tabIndex={isTableScrollable ? 0 : undefined}
-      >
-        <table
-          ref={ref}
-          id={id}
-          className={concatenatedClassName}
-          lang={lang}
-          data-testid={dataTestId}
-          tabIndex={canBeManuallyFocused ? -1 : undefined}
+      <div ref={fadeWrapperRef} className={wrapperClassName}>
+        <div
+          ref={wrapperRef}
+          className={isTableScrollable ? styles.scrollContainer : undefined}
+          tabIndex={isTableScrollable ? 0 : undefined}
         >
-          <caption className={captionClassName}>{caption}</caption>
-          {children}
-        </table>
-        {sortState && (
-          <div className={styles.hidden} aria-live={'polite'}>
-            {getScreenReaderSortDirectionText(shouldShowSRText, sortState, t)}
-          </div>
-        )}
+          <table
+            ref={ref}
+            id={id}
+            className={concatenatedClassName}
+            lang={lang}
+            data-testid={dataTestId}
+            tabIndex={canBeManuallyFocused ? -1 : undefined}
+          >
+            <caption className={captionClassName}>{caption}</caption>
+            {children}
+          </table>
+          {sortState && (
+            <div className={styles.hidden} aria-live={'polite'}>
+              {getScreenReaderSortDirectionText(shouldShowSRText, sortState, t)}
+            </div>
+          )}
+        </div>
       </div>
     </TableContext.Provider>
   );

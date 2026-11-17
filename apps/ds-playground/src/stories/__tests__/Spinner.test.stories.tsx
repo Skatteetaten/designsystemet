@@ -3,7 +3,10 @@ import { JSX } from 'react';
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { Spinner } from '@skatteetaten/ds-progress';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Spinner,
@@ -92,6 +95,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(getDefaultSpinnerLabel())
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
+
 export const WithCustomClassNames = {
   name: 'With Custom ClassNames (FA3)',
   args: {
@@ -135,37 +152,17 @@ export const WithSizeAndPosition = {
   name: 'With Size, TitlePostition, Children (A1, A2, A4)',
   render: (args): JSX.Element => {
     return (
-      <>
-        <Spinner className={'bottomSpacingXL'} size={'small'} {...args} />
-        <Spinner className={'bottomSpacingXL'} size={'medium'} {...args} />
-        <Spinner className={'bottomSpacingXL'} size={'large'} {...args} />
-        <Spinner className={'bottomSpacingXL'} size={'extraLarge'} {...args} />
+      <div className={'flex flex-column gap-xl'}>
+        <Spinner size={'small'} {...args} />
+        <Spinner size={'medium'} {...args} />
+        <Spinner size={'large'} {...args} />
+        <Spinner size={'extraLarge'} {...args} />
 
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'small'}
-          {...args}
-        />
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'medium'}
-          {...args}
-        />
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'large'}
-          {...args}
-        />
-        <Spinner
-          className={'bottomSpacingXL'}
-          titlePosition={'right'}
-          size={'extraLarge'}
-          {...args}
-        />
-      </>
+        <Spinner titlePosition={'right'} size={'small'} {...args} />
+        <Spinner titlePosition={'right'} size={'medium'} {...args} />
+        <Spinner titlePosition={'right'} size={'large'} {...args} />
+        <Spinner titlePosition={'right'} size={'extraLarge'} {...args} />
+      </div>
     );
   },
   args: {
@@ -191,7 +188,7 @@ export const WithColorsLightBackground = {
   render: (args): JSX.Element => {
     return (
       <>
-        <Spinner className={'bottomSpacingXL'} {...args}>
+        <Spinner className={'mb-xl'} {...args}>
           {'Henter innhold'}
         </Spinner>
         <Spinner color={'interactive'} {...args}>

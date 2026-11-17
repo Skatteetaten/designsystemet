@@ -6,13 +6,16 @@ import { expect, userEvent, fireEvent, within, waitFor } from 'storybook/test';
 import { Button } from '@skatteetaten/ds-buttons';
 import breakpoints from '@skatteetaten/ds-core-designtokens/designtokens/breakpoints.json';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
-import { TextField } from '@skatteetaten/ds-forms';
+import { Select, TextField } from '@skatteetaten/ds-forms';
 import { WarningOutlineIcon } from '@skatteetaten/ds-icons';
 import { TopBannerExternal } from '@skatteetaten/ds-layout';
 import { Modal } from '@skatteetaten/ds-overlays';
 import { Paragraph } from '@skatteetaten/ds-typography';
 
-import { loremIpsum } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  loremIpsum,
+} from './testUtils/storybook.testing.utils';
 import { webComponent } from '../../../.storybook/webcomponent-decorator';
 import farmerIllustration from '../../assets/farmer-illustration.svg';
 import waitIllustration from '../../assets/wait-alert-illustration.png';
@@ -83,8 +86,8 @@ const TemplateModal: StoryFn<typeof Modal> = (args) => {
             'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
           }
         </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+        <div className={'flex flex-wrap gap-m'}>
+          <Button>{'Erstatt opplysninger'}</Button>
           <Button
             variant={'tertiary'}
             onClick={(): void => ref.current?.close()}
@@ -128,6 +131,22 @@ export const WithAttributes = {
     await expect(modal).toHaveClass('dummyClassname');
     await expect(modal).toHaveAttribute('lang', 'nb');
     await expect(modal).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: TemplateModal,
+  parameters: { chromatic: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Åpne modal' }));
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_overlays:modal.CloseModal'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -480,7 +499,7 @@ const TemplateModalWithStateChangeAndFocusedInput: StoryFn<typeof Modal> = (
             label={'Navn'}
           />
         ) : (
-          <Button className={'marginRightM'} onClick={() => setShowInput(true)}>
+          <Button onClick={() => setShowInput(true)}>
             {'Vis og fokuser inputfelt'}
           </Button>
         )}
@@ -506,10 +525,7 @@ const TemplateModalWithStateChange: StoryFn<typeof Modal> = (args) => {
             }
           </Paragraph>
         ) : (
-          <Button
-            className={'marginRightM'}
-            onClick={() => setShowMessage(true)}
-          >
+          <Button onClick={() => setShowMessage(true)}>
             {'Erstatt opplysninger'}
           </Button>
         )}
@@ -599,17 +615,14 @@ const TemplateWithAutoOpen: StoryFn<typeof Modal> = (args) => {
             'Du har valgt å laste opp nye opplysninger fra fil. Vil du at disse skal gjelde fra nå av?'
           }
         </Paragraph>
-        <div className={'flex'}>
-          <Button className={'marginRightM'}>{'Erstatt opplysninger'}</Button>
+        <div className={'flex flex-wrap gap-m'}>
+          <Button>{'Erstatt opplysninger'}</Button>
           <Button variant={'tertiary'} onClick={onCloseOnClickHandler}>
             {'Avbryt'}
           </Button>
         </div>
       </Modal>
-      <Button
-        className={'marginRightM'}
-        onClick={() => ref.current?.showModal()}
-      >
+      <Button onClick={() => ref.current?.showModal()}>
         {'Åpne modal ref.current.showModal'}
       </Button>
     </>
@@ -698,10 +711,7 @@ const TemplateAutoOpenAndCloseOnEscape: StoryFn<typeof Modal> = (args) => {
       <Modal {...args} ref={ref}>
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
       </Modal>
-      <Button
-        className={'marginRightM'}
-        onClick={() => ref.current?.showModal()}
-      >
+      <Button onClick={() => ref.current?.showModal()}>
         {'Åpne med klikk'}
       </Button>
     </>
@@ -749,10 +759,7 @@ const TemplateWithAutoOpenAndCloseOnUserInput: StoryFn<typeof Modal> = (
         <Paragraph hasSpacing>{'Modalinnhold'}</Paragraph>
         <Button onClick={() => ref.current?.close()}>{'Lukk modal'}</Button>
       </Modal>
-      <Button
-        className={'marginRightM'}
-        onClick={() => ref.current?.showModal()}
-      >
+      <Button onClick={() => ref.current?.showModal()}>
         {'Åpne med klikk'}
       </Button>
     </>
@@ -831,6 +838,61 @@ export const WithFormValidationFocusRetention = {
   },
 } satisfies Story;
 
+const TemplateWithSelect: StoryFn<typeof Modal> = (args) => {
+  const ref = useRef<HTMLDialogElement>(null);
+  const [fruit, setFruit] = useState('');
+
+  return (
+    <>
+      <Button onClick={(): void => ref.current?.showModal()}>
+        {'Åpne modal'}
+      </Button>
+      <Modal {...args} ref={ref}>
+        <Select
+          label={'Fruktsort'}
+          value={fruit}
+          onChange={(e): void => setFruit(e.target.value)}
+        >
+          <Select.Option value={'banan'}>{'Banan'}</Select.Option>
+          <Select.Option value={'eple'}>{'Eple'}</Select.Option>
+          <Select.Option value={'kiwi'}>{'Kiwi'}</Select.Option>
+          <Select.Option value={'pære'}>{'Pære'}</Select.Option>
+          <Select.Option value={'sitron'}>{'Sitron'}</Select.Option>
+        </Select>
+        <Paragraph hasSpacing>{`Valgt frukt: ${fruit || 'ingen'}`}</Paragraph>
+        <Button onClick={(): void => ref.current?.close()}>{'Lukk'}</Button>
+      </Modal>
+    </>
+  );
+};
+
+export const WithSelect = {
+  render: TemplateWithSelect,
+  name: 'With Select',
+  args: {
+    dismissOnOutsideClick: true,
+  },
+  argTypes: {
+    dismissOnOutsideClick: { table: { disable: false } },
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Åpne modal' }));
+    const modal = canvas.getByRole('dialog');
+    const select = within(modal).getByRole('combobox');
+
+    // Native nedtrekkslister kan rapportere museklikk med koordinater utenfor dialogen
+    const rect = modal.getBoundingClientRect();
+    const outside = { clientX: rect.right + 10, clientY: rect.bottom + 10 };
+    fireEvent.mouseDown(select, outside);
+    fireEvent.mouseUp(select, outside);
+    await expect(modal).toBeVisible();
+  },
+} satisfies Story;
+
 export const MinimumWidth = {
   render: (args): JSX.Element => {
     const ref = useRef<HTMLDialogElement>(null);
@@ -841,8 +903,8 @@ export const MinimumWidth = {
           {'Åpne modal'}
         </Button>
         <Modal {...args} ref={ref}>
-          <div className={'flex'}>
-            <Button className={'marginRightM'}>{'Ja'}</Button>
+          <div className={'flex gap-m'}>
+            <Button>{'Ja'}</Button>
             <Button
               variant={'tertiary'}
               onClick={(): void => ref.current?.close()}

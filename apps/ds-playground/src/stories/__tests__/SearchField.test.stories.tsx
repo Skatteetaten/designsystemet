@@ -26,7 +26,10 @@ import {
 import { SearchField, searchInList } from '@skatteetaten/ds-forms';
 import { Alert } from '@skatteetaten/ds-status';
 
-import { wrapper } from './testUtils/storybook.testing.utils';
+import {
+  testLanguageChange,
+  wrapper,
+} from './testUtils/storybook.testing.utils';
 import { SystemSVGPaths } from '../utils/icon.systems';
 
 const verifyAttribute =
@@ -158,6 +161,26 @@ export const WithAttributes = {
     await expect(searchbox).toHaveAttribute('data-testid', '123ID');
     await expect(searchbox).toHaveAttribute('form', '123form');
     await expect(searchbox).toHaveAttribute('autocomplete', 'off');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { value: 'test' },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_forms:searchfield.ButtonTitle'),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_forms:searchfield.ClearButtonTitle'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -833,7 +856,7 @@ export const WithSpinnerProps = {
 
 const TwoSearchFields: StoryFn<typeof SearchField> = () => {
   return (
-    <div className={'flex gapS'}>
+    <div className={'flex gap-s'}>
       <SearchField label={'Søk etter grønnsaker'} hideLabel={false} />
       <SearchField
         label={'Søk etter grønnsaker'}

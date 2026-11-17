@@ -9,8 +9,11 @@ import {
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, fireEvent, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { SortState, Table, TableProps } from '@skatteetaten/ds-table';
 import { Heading } from '@skatteetaten/ds-typography';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const caption = 'tabellcaption';
 const meta = {
@@ -134,6 +137,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithLanguageChange = {
+  render: Template,
+  args: { sortState: { sortKey: 'category', direction: 'ascending' } },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByText(dsI18n.t('ds_tables:table.SortedAscending'))
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
+
 export const Defaults = {
   render: Template,
   name: 'Defaults (Table A1, A8, B1, B2, TableRow B1, A20)',
@@ -184,9 +201,9 @@ const TemplateScroll: StoryFn<typeof Table> = (args) => {
   );
 };
 
-export const WithScrollbar = {
+export const WithScrollbarAndFadeEffect = {
   render: TemplateScroll,
-  name: 'With Scroll (A5)',
+  name: 'With Scroll And Fade Effect (A5)',
   parameters: {
     // color contrast issue
     a11y: {
@@ -238,6 +255,88 @@ export const WithFullWidthAndTextAlignment = {
   name: 'With Full Width And Text Alignment (Table A4, A10, TableHeader A1, TableRow A2)',
   args: {
     hasFullWidth: true,
+  },
+} satisfies Story;
+
+const TemplateVerticalAlignment: StoryFn<typeof Table> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell scope={'col'}>{'default'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'top'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'middle'}</Table.HeaderCell>
+        <Table.HeaderCell scope={'col'}>{'bottom'}</Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row className={'tallTableRow'}>
+        <Table.DataCell>{'default'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'top'}>{'top'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'middle'}>{'middle'}</Table.DataCell>
+        <Table.DataCell verticalAlignment={'bottom'}>{'bottom'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
+export const WithVerticalAlignment = {
+  render: TemplateVerticalAlignment,
+  name: 'With Vertical Alignment (TableDataCell)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    const cells = (text: string): HTMLElement =>
+      canvas.getByRole('cell', { name: text });
+
+    await expect(getComputedStyle(cells('default')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(cells('top')).verticalAlign).toBe('top');
+    await expect(getComputedStyle(cells('middle')).verticalAlign).toBe(
+      'middle'
+    );
+    await expect(getComputedStyle(cells('bottom')).verticalAlign).toBe(
+      'bottom'
+    );
+  },
+} satisfies Story;
+
+const TemplateLongSortableHeader: StoryFn<typeof Table> = (args) => (
+  <Table {...args}>
+    <Table.Header>
+      <Table.Row>
+        <Table.HeaderCell
+          className={'dummyWidth200'}
+          sortKey={'lang'}
+          isSortable
+        >
+          {'lang tekst som går over flere linjer'}
+        </Table.HeaderCell>
+        <Table.HeaderCell sortKey={'kort'} isSortable>
+          {'kort'}
+        </Table.HeaderCell>
+      </Table.Row>
+    </Table.Header>
+    <Table.Body>
+      <Table.Row>
+        <Table.DataCell>{'lang'}</Table.DataCell>
+        <Table.DataCell>{'kort'}</Table.DataCell>
+      </Table.Row>
+    </Table.Body>
+  </Table>
+);
+
+export const WithLongSortableHeader = {
+  render: TemplateLongSortableHeader,
+  name: 'With Long Sortable Header (TableHeaderCell)',
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+
+    const langTekstButton = canvas.getByRole('button', { name: /lang/ });
+    await expect(getComputedStyle(langTekstButton).verticalAlign).toBe(
+      'bottom'
+    );
+    const kortTekstButton = canvas.getByRole('button', { name: /kort/ });
+    await expect(getComputedStyle(kortTekstButton).verticalAlign).toBe(
+      'bottom'
+    );
   },
 } satisfies Story;
 

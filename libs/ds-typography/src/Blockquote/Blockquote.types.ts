@@ -4,7 +4,7 @@ import { BaseProps, Color } from '@skatteetaten/ds-core-utils';
 
 export type BlockquoteColor = Extract<
   Color,
-  'forest' | 'ochre' | 'graphite' | 'denim'
+  'forest' | 'ochre' | 'graphite' | 'denim' | 'burgundy'
 >;
 
 export interface BlockquoteProps extends BaseProps {

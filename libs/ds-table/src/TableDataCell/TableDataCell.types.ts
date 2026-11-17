@@ -2,7 +2,11 @@ import { HTMLProps, ReactNode, Ref } from 'react';
 
 import { BaseProps } from '@skatteetaten/ds-core-utils';
 
-import { TableCellAs, TextAlignment } from '../Table/Table.types';
+import {
+  TableCellAs,
+  TextAlignment,
+  VerticalAlignment,
+} from '../Table/Table.types';
 
 type RequiredTableDataCellHTMLAttributes = Pick<
   HTMLProps<HTMLTableCellElement>,
@@ -15,6 +19,8 @@ export interface TableDataCellProps
   ref?: Ref<HTMLTableCellElement>;
   /** Tekstjustering */
   alignment?: TextAlignment;
+  /** Vertikal justering av innholdet i cellen */
+  verticalAlignment?: VerticalAlignment;
   /** HTML-element for cellen*/
   as?: TableCellAs;
   /** Innhold i cellen*/

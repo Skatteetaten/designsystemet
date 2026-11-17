@@ -11,6 +11,10 @@ import {
   TopBannerExternalHandle,
 } from '@skatteetaten/ds-layout';
 
+import {
+  loremIpsum,
+  testLanguageChange,
+} from './testUtils/storybook.testing.utils';
 import customLogo from '../../assets/custom-logo.svg';
 import { ReactComponent as FlagFinland } from '../../assets/fi-flag.svg';
 import { ReactComponent as FlagPlaceholder } from '../../assets/Flag_placeholder.svg';
@@ -128,6 +132,29 @@ export const WithAttributes = {
     await expect(header).toHaveAttribute('id', 'htmlId');
     await expect(header).toHaveAttribute('lang', 'nb');
     await expect(header).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  args: { firstColumn: defaultColumn },
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('button', {
+          name: dsI18n.t('ds_layout:topbannerbutton.Menu'),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('link', {
+          name: dsI18n.t('ds_layout:topbanner.SkipLinkText'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -762,5 +789,17 @@ export const LangPickerInMenuWhenLoggedInOnMobile = {
     await expect(
       canvas.getByRole('button', { name: 'Bokmål Meny' })
     ).toBeInTheDocument();
+  },
+} satisfies Story;
+
+export const WithConstructionBandAndCustomTitle = {
+  name: 'With Constructionband And Custom Title',
+  argTypes: {
+    isUnderConstruction: { table: { disable: false } },
+    constructionBandTitle: { table: { disable: false } },
+  },
+  args: {
+    isUnderConstruction: true,
+    constructionBandTitle: loremIpsum,
   },
 } satisfies Story;

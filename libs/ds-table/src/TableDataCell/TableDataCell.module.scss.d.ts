@@ -7,6 +7,9 @@ declare const classNames: {
   readonly dataCell_left: 'dataCell_left';
   readonly dataCell_right: 'dataCell_right';
   readonly dataCell_center: 'dataCell_center';
+  readonly dataCell_top: 'dataCell_top';
+  readonly dataCell_middle: 'dataCell_middle';
+  readonly dataCell_bottom: 'dataCell_bottom';
   readonly dataCell_extraSmall: 'dataCell_extraSmall';
 };
 export default classNames;

@@ -8,6 +8,7 @@ import { AccountEnkSVGpath, CalendarSVGpath } from '@skatteetaten/ds-icons';
 import { NavigationTile } from '@skatteetaten/ds-navigation';
 
 import { SystemSVGPaths } from '../utils/icon.systems';
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const systemIconViewBox = '0 0 24 24';
 const defaultTitle = 'Skatt';
@@ -92,7 +93,7 @@ const OnClickTemplate: StoryFn<typeof NavigationTile> = (args) => {
 };
 
 const TemplateWithAllHeadings: StoryFn<typeof NavigationTile> = (args) => (
-  <nav className={'flex flexColumn gapXs'}>
+  <nav className={'flex flex-column gap-xs'}>
     {headingAsArr.map((headingLevel, item) => {
       return (
         <NavigationTile
@@ -107,7 +108,7 @@ const TemplateWithAllHeadings: StoryFn<typeof NavigationTile> = (args) => (
 );
 
 const TemplateWithMultipleTiles: StoryFn<typeof NavigationTile> = (args) => (
-  <nav className={'flex gapS'}>
+  <nav className={'flex gap-s'}>
     <NavigationTile {...args} />
     <NavigationTile {...args} />
   </nav>
@@ -166,6 +167,20 @@ export const WithAttributes = {
     await expect(link).toHaveAttribute('id', 'htmlId');
     await expect(link).toHaveAttribute('lang', 'nb');
     await expect(link).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: Template,
+  args: { isExternal: true },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByLabelText(dsI18n.t('ds_buttons:shared.ExternalIcon'))
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
@@ -399,24 +414,19 @@ export const WithTilesInColumns = {
 } satisfies Story;
 
 const TemplateWithSpinner: StoryFn<typeof NavigationTile> = (args) => (
-  <>
+  <div className={'flex flex-column gap-xl'}>
     <NavigationTile
       {...args}
-      className={'bottomSpacingXL'}
       size={'extraLarge'}
       onClick={(e): void => e.preventDefault()}
     />
-    <NavigationTile
-      {...args}
-      className={'bottomSpacingXL'}
-      onClick={(e): void => e.preventDefault()}
-    />
+    <NavigationTile {...args} onClick={(e): void => e.preventDefault()} />
     <NavigationTile
       {...args}
       size={'medium'}
       onClick={(e): void => e.preventDefault()}
     />
-  </>
+  </div>
 );
 
 export const WithSpinner = {

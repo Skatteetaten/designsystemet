@@ -1,7 +1,10 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
 import { expect, within } from 'storybook/test';
 
+import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { Table } from '@skatteetaten/ds-table';
+
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 
 const meta = {
   component: Table.HeaderCell,
@@ -97,6 +100,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithLanguageChange = {
+  render: Template,
+  args: { isSortable: true, sortKey: 'column' },
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByTitle(dsI18n.t('ds_tables:table.Sortable'))
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
+
 export const WithChildren = {
   render: Template,
   name: 'With Children (Table A8)',
@@ -149,7 +166,7 @@ export const WithDisabled = {
   },
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);
-    const dataCell = canvas.getByText('columnheader');
-    await expect(dataCell).toBeDisabled();
+    const sortButton = canvas.getByRole('button', { name: /columnheader/ });
+    await expect(sortButton).toBeDisabled();
   },
 } satisfies Story;

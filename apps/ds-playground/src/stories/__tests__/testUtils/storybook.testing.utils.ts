@@ -1,5 +1,21 @@
 import { PageScreenshotOptions } from 'playwright';
 
+import { dsI18n, Languages } from '@skatteetaten/ds-core-utils';
+
+export const testLanguageChange = async (
+  checkTranslation: () => Promise<void>
+): Promise<void> => {
+  const originalLanguage = dsI18n.language;
+  try {
+    for (const language of Object.values(Languages)) {
+      await dsI18n.changeLanguage(language);
+      await checkTranslation();
+    }
+  } finally {
+    await dsI18n.changeLanguage(originalLanguage);
+  }
+};
+
 export const wrapper = '[data-test-block]';
 export const screenShotOptions: PageScreenshotOptions = {
   fullPage: true,

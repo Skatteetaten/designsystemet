@@ -81,7 +81,8 @@
     outline: 2px solid var(--semantic-danger-foreground);
   }
 
-  &:hover::after {
+  /* :not(:has(table)) hindrer at regelen fjerner fade-laget (::after) rundt Table ved hover. */
+  &:not(:has(table)):hover::after {
     content: var(--note);
     background-color: white;
     border: 2px solid var(--semantic-danger-foreground);

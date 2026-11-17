@@ -75,7 +75,7 @@ export const Examples: Story = {
 
     return (
       <nav
-        className={'flex gapXl'}
+        className={'flex gap-xl'}
         aria-label={'Beskrivelse av navigasjonsflater'}
       >
         <NavigationTile

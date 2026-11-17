@@ -6,6 +6,8 @@ import { expect, within } from 'storybook/test';
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 import { RoleBanner } from '@skatteetaten/ds-layout';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const meta = {
   component: RoleBanner,
   title: 'Tester/RoleBanner',
@@ -85,6 +87,20 @@ export const WithAttributes = {
   },
 } satisfies Story;
 
+export const WithLanguageChange = {
+  parameters: { imageSnapshot: { disableSnapshot: true } },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('region', {
+          name: dsI18n.t('ds_layout:rolebanner.AriaLabel'),
+        })
+      ).toBeInTheDocument();
+    });
+  },
+} satisfies Story;
+
 export const Defaults = {
   name: 'Defaults (A1, B1)',
   args: {},
@@ -113,13 +129,11 @@ export const AllRoles = {
     htmlValidate: { test: 'off' },
   },
   render: (): JSX.Element => (
-    <>
+    <div className={'flex flex-column gap-xl'}>
       <RoleBanner
-        className={'bottomSpacingXL'}
         user={{ name: 'Ola Nordmann', role: 'meg', identifier: '010199 12345' }}
       />
       <RoleBanner
-        className={'bottomSpacingXL'}
         user={{
           name: 'Kari Hansen',
           role: 'andre',
@@ -133,7 +147,7 @@ export const AllRoles = {
           identifier: '999 888 777',
         }}
       />
-    </>
+    </div>
   ),
   play: async ({ canvasElement }): Promise<void> => {
     const canvas = within(canvasElement);

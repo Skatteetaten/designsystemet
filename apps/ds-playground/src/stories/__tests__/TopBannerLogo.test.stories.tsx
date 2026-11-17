@@ -3,6 +3,7 @@ import { expect, fireEvent, fn, waitFor, within } from 'storybook/test';
 
 import { dsI18n } from '@skatteetaten/ds-core-utils';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { TopBannerLogo } from '../../../../../libs/ds-layout/src/TopBannerExternal/TopBannerLogo/TopBannerLogo';
 import customLogo from '../../assets/custom-logo.svg';
@@ -88,6 +89,23 @@ export const WithAttributes = {
     await expect(link).toHaveClass('dummyClassname');
     await expect(link).toHaveAttribute('lang', 'en');
     await expect(link).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('img', {
+          name: dsI18n.t('ds_layout:topbanner.SkeLogoLinkText'),
+        })
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 

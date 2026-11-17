@@ -61,6 +61,8 @@ const meta = {
     },
     otherLanguagesURL: { table: { category: category.props } },
     searchContent: { control: 'text', table: { category: category.props } },
+    constructionBandTitle: { table: { category: category.props } },
+    isUnderConstruction: { table: { category: category.props } },
     // Events
     onSearchClick: { ...htmlEventDescription },
     onSearch: { ...htmlEventDescription },
@@ -297,14 +299,12 @@ export const ExampleWithRolePicker: Story = {
               <Card spacing={'s'}>
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
-                    {user.role === 'meg' && (
-                      <FavoriteIcon className={styles.marginRightS} />
-                    )}
+                    {user.role === 'meg' && <FavoriteIcon className={'mr-s'} />}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon className={styles.marginRightS} />
+                      <AccountMultipleIcon className={'mr-s'} />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon className={styles.marginRightS} />
+                      <BriefcaseIcon className={'mr-s'} />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -317,7 +317,7 @@ export const ExampleWithRolePicker: Story = {
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li key={index} className={styles.marginBottomS}>
+                      <li key={index} className={'mb-s'}>
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -334,15 +334,12 @@ export const ExampleWithRolePicker: Story = {
               </Card>
             ) : (
               <>
-                <Heading as={'h2'} level={3} className={styles.flex}>
-                  <PersonIcon
-                    className={styles.marginRightS}
-                    size={'largePlus'}
-                  />
+                <Heading as={'h2'} level={3} className={'flex'}>
+                  <PersonIcon className={'mr-s'} size={'largePlus'} />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph className={styles.marginBottomS}>
+                <Paragraph className={'mb-s'}>
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
                 <Button
@@ -366,7 +363,7 @@ export const ExampleWithRolePicker: Story = {
                       {'For personer'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup className={'mb-xl'}>
                     {personlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -385,7 +382,7 @@ export const ExampleWithRolePicker: Story = {
                       {'For bedrifter og organisasjoner'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup className={'mb-xl'}>
                     {virksomhetlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -407,11 +404,7 @@ export const ExampleWithRolePicker: Story = {
                   <Heading as={'h3'} level={4} hasSpacing>
                     <a href={LenkerUinnlogget.PRESSE}>{'Presse'}</a>
                   </Heading>
-                  <Heading
-                    as={'h3'}
-                    level={4}
-                    className={styles.marginBottomXL}
-                  >
+                  <Heading as={'h3'} level={4} className={'mb-xl'}>
                     <a href={LenkerUinnlogget.SAMARBEIDSPARTNERE}>
                       {'Samarbeidspartner'}
                     </a>
@@ -426,7 +419,7 @@ export const ExampleWithRolePicker: Story = {
           user={user}
           searchContent={
             <>
-              <Paragraph className={styles.marginBottomS}>
+              <Paragraph className={'mb-s'}>
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>
@@ -735,14 +728,12 @@ export const ExampleWithUserMenu: Story = {
               <Card spacing={'s'}>
                 <Card.Content>
                   <Heading as={'h2'} level={3}>
-                    {user.role === 'meg' && (
-                      <FavoriteIcon className={styles.marginRightS} />
-                    )}
+                    {user.role === 'meg' && <FavoriteIcon className={'mr-s'} />}
                     {user.role === 'andre' && (
-                      <AccountMultipleIcon className={styles.marginRightS} />
+                      <AccountMultipleIcon className={'mr-s'} />
                     )}
                     {user.role === 'virksomhet' && (
-                      <BriefcaseIcon className={styles.marginRightS} />
+                      <BriefcaseIcon className={'mr-s'} />
                     )}
 
                     {user?.role === 'meg' ? 'Mitt innhold' : user.name}
@@ -755,7 +746,7 @@ export const ExampleWithUserMenu: Story = {
                       ? virksomhetLinks
                       : loggedInLinks
                     ).map((link, index) => (
-                      <li key={index} className={styles.marginBottomS}>
+                      <li key={index} className={'mb-s'}>
                         <Link
                           href={link.href}
                           onClick={(e): void => {
@@ -772,15 +763,12 @@ export const ExampleWithUserMenu: Story = {
               </Card>
             ) : (
               <>
-                <Heading as={'h2'} level={3} className={styles.flex}>
-                  <PersonIcon
-                    className={styles.marginRightS}
-                    size={'largePlus'}
-                  />
+                <Heading as={'h2'} level={3} className={'flex'}>
+                  <PersonIcon className={'mr-s'} size={'largePlus'} />
 
                   {'Min side'}
                 </Heading>
-                <Paragraph className={styles.marginBottomS}>
+                <Paragraph className={'mb-s'}>
                   {'Se dine oppgaver og oversikt. Les og svar på meldinger.'}
                 </Paragraph>
                 <Button
@@ -804,7 +792,7 @@ export const ExampleWithUserMenu: Story = {
                       {'For personer'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup className={'mb-xl'}>
                     {personlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -823,7 +811,7 @@ export const ExampleWithUserMenu: Story = {
                       {'For bedrifter og organisasjoner'}
                     </a>
                   </Heading>
-                  <LinkGroup className={styles.marginBottomXL}>
+                  <LinkGroup className={'mb-xl'}>
                     {virksomhetlinks.map((link) => (
                       <LinkGroup.Link
                         key={link.text}
@@ -845,11 +833,7 @@ export const ExampleWithUserMenu: Story = {
                   <Heading as={'h3'} level={4} hasSpacing>
                     <a href={LenkerUinnlogget.PRESSE}>{'Presse'}</a>
                   </Heading>
-                  <Heading
-                    as={'h3'}
-                    level={4}
-                    className={styles.marginBottomXL}
-                  >
+                  <Heading as={'h3'} level={4} className={'mb-xl'}>
                     <a href={LenkerUinnlogget.SAMARBEIDSPARTNERE}>
                       {'Samarbeidspartner'}
                     </a>
@@ -863,7 +847,7 @@ export const ExampleWithUserMenu: Story = {
           }
           searchContent={
             <>
-              <Paragraph className={styles.marginBottomS}>
+              <Paragraph className={'mb-s'}>
                 {'Dette har andre søkt på:'}
               </Paragraph>
               <LinkGroup>

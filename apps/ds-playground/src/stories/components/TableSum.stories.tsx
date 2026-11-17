@@ -37,7 +37,7 @@ type Story = StoryObj<typeof meta>;
 export const Preview: Story = {
   decorators: [
     (Story): JSX.Element => (
-      <Table caption={'sum example'} className={'width100'}>
+      <Table caption={'sum example'} hasFullWidth>
         <Story />
       </Table>
     ),

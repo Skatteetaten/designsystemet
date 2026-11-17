@@ -40,6 +40,18 @@
     text-align: center;
   }
 
+  &_top {
+    vertical-align: top;
+  }
+
+  &_middle {
+    vertical-align: middle;
+  }
+
+  &_bottom {
+    vertical-align: bottom;
+  }
+
   &_extraSmall {
     padding: calc(var(--spacing-xs) * 1.5) var(--spacing-s)
       calc(var(--spacing-xs) - var(--table-cell-border-width));

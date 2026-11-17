@@ -58,10 +58,13 @@ export const Examples: Story = {
         helpText={'Legg inn hvilken periode du trenger bekreftelse for.'}
       >
         <DatePicker
-          className={'inlineBlock exampleSpacing'}
+          className={'inline-block mr-m'}
           label={'Fra dato (dd.mm.åååå)'}
         />
-        <DatePicker className={'inlineBlock'} label={'Til dato (dd.mm.åååå)'} />
+        <DatePicker
+          className={'inline-block'}
+          label={'Til dato (dd.mm.åååå)'}
+        />
       </Fieldset>
     );
   },

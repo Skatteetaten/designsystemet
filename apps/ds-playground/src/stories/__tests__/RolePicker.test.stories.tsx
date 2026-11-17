@@ -14,6 +14,8 @@ import {
   RolePicker,
 } from '@skatteetaten/ds-overlays';
 
+import { testLanguageChange } from './testUtils/storybook.testing.utils';
+
 const me: Person = {
   name: 'Ola Nordmann',
   personId: '10101012345',
@@ -439,6 +441,42 @@ export const WithAttributes = {
     await expect(container).toHaveClass('dummyClassname');
     await expect(container).toHaveAttribute('lang', 'en');
     await expect(container).toHaveAttribute('data-testid', '123ID');
+  },
+} satisfies Story;
+
+export const WithLanguageChange = {
+  render: DefaultTemplate,
+  parameters: {
+    imageSnapshot: { disableSnapshot: true },
+    chromatic: { disableSnapshot: true },
+  },
+  play: async ({ canvasElement }): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(
+      canvas.getByRole('button', { name: 'Vis representasjonsvelger' })
+    );
+    await testLanguageChange(async () => {
+      await expect(
+        await canvas.findByRole('heading', {
+          name: dsI18n.t('ds_overlays:rolepicker.Heading').trim(),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('heading', {
+          name: dsI18n.t('ds_overlays:rolepicker.BusinessesHeading').trim(),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByRole('heading', {
+          name: dsI18n.t('ds_overlays:rolepicker.PeopleHeading').trim(),
+        })
+      ).toBeInTheDocument();
+      await expect(
+        await canvas.findByLabelText(
+          dsI18n.t('ds_overlays:rolepicker.SearchText')
+        )
+      ).toBeInTheDocument();
+    });
   },
 } satisfies Story;
 
