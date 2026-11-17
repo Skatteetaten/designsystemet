@@ -32,6 +32,7 @@ export const TopBannerInternalActionMenu = ({
   ref,
   id,
   className = '',
+  classNames,
   lang,
   'data-testid': dataTestId,
   menuActionsRef,
@@ -88,7 +89,7 @@ export const TopBannerInternalActionMenu = ({
     <>
       <InlineButton
         id={id}
-        className={className}
+        className={`${className} ${classNames?.button ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         {...getReferenceProps()}
@@ -110,7 +111,7 @@ export const TopBannerInternalActionMenu = ({
           initialFocus={-1}
         >
           <div
-            className={styles.menu}
+            className={`${styles.menu} ${classNames?.children ?? ''}`.trim()}
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}
