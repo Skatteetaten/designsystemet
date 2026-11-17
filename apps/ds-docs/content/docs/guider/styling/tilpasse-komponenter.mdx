@@ -67,6 +67,14 @@ Hvis du trenger egen styling anbefaler vi å bygge videre på designtokens. De k
 
 På den måten får løsningen et uttrykk som harmonerer best mulig med resten av designsystemet. Se egen [artikkel om bruke designtokens](/guider/styling/bruke-tokens) for detaljer.
 
+## Bruk hjelpeklasser for enkel avstand og layout
+
+Trenger du bare litt avstand eller en enkel flex-rad rundt komponentene, kan du bruke [hjelpeklassene](/guider/styling/hjelpeklasser) i stedet for å lage egen CSS. De bygger på de samme designtokens.
+
+```tsx
+<Button className={'mt-l'}>{'Lagre'}</Button>
+```
+
 ## Overstyr komponenten med CSS
 
 Alle komponenter støtter overstyring via className(s)-prop. For className legges det en css-klasse på komponentens ytterste element, mens for classNames legges klassen på underelementer.
