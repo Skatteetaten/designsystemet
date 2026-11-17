@@ -13,7 +13,7 @@ import styles from './endringslogg.module.scss';
 - **Select**: Ny prop `readOnly`. Siden `<select>` ikke støtter `readonly`, vises et skrivebeskyttet tekstfelt i stedet. Det gir noen begrensninger, blant annet for ref, onFocus og onBlur. Se API-dokumentasjonen for detaljer.
 - **Table.DataCell**: Ny prop `verticalAlignment` med verdiene top, middle og bottom.
 - **TopBannerExternal**: Nye props `isUnderConstruction` og `constructionBandTitle` for å vise et konstruksjonsbånd, for eksempel i testmiljø. Fungerer som konstruksjonsbåndet i TopBannerInternal.
-- **TopBannerInternal.ActionMenu**: Nye props `menuLabel` og `svgPath` for å endre tekst og ikon på menyknappen. Ny prop `classNames` med `button` og `children` for å style menyknappen og menyflaten, for eksempel for å justere `z-index`.
+- **TopBannerInternal.ActionMenu**: Nye props `menuLabel` og `svgPath` for å endre tekst og ikon på menyknappen. Ny prop `classNames` med `button` og `children` for å style menyknappen og menyflaten.
 - **Blockquote**: Ny farge `burgundy` (rød strek) i `borderColor`, for eksempel for å skille positive og negative eksempler.
 - **Icon**: Nye ikoner: CalendarCheck, Car, CashDown, CashMultiple, CashUp, EmailFilled, Folder, FolderOutline, Receipt og ReceiptFilled.
 - **CSS-hjelpeklasser**: `@skatteetaten/ds-core-utils` tilbyr nå `ds-classes.scss` med hjelpeklasser for spacing (margin, padding og gap), display, flex-oppsett, full bredde, fet skrift og skjermlesertekst. Klassene bruker designsystemets spacing-tokens.
@@ -24,12 +24,10 @@ import styles from './endringslogg.module.scss';
 - **Popover og WordInfo**: Innholdet blir ikke lenger kuttet når komponenten brukes i en tabell som kan scrolles, for eksempel på smale skjermer, med stor skrift eller ved høy zoom.
 
 #### Layout og visuell kvalitet
-- **Table.HeaderCell**: Innholdet er nå bunnjustert, slik at kolonneoverskrifter med ulik tekstlengde står på linje.
-- **Table**: Fade-effekten ved horisontal scrolling bruker nå tabellens bakgrunnsfarge.
+- **Table.HeaderCell**: Innholdet er nå bunnjustert, slik at kolonneoverskrifter med ulik tekstlengde står på linje, og sorteringsknappen vises på samme linje som teksten.
 - **Popover**: Teksten arver ikke lenger farge fra foreldreelementet, for eksempel hvit tekst når komponenten brukes i TopBannerInternal.
 - **RoleBanner**: Innholdet hopper ikke lenger fra én til to linjer ved scrolling når det er nok plass.
 - **TopBannerExternal**: Lenken til andre språk i språkvelgeren har fått teksten «Other languages», og klodeikonet er fjernet.
-- **TopBannerInternal.ActionMenu**: Menyen vises nå sentrert under knappen, og pilen følger plasseringen også når menyen vises over knappen.
 
 #### Funksjonelle feilrettinger
 - **Modal**: Modalen lukkes ikke lenger i Firefox når brukeren velger et alternativ i en Select inne i modalen.
@@ -39,7 +37,6 @@ import styles from './endringslogg.module.scss';
 
 ### Oppdatert dokumentasjon og eksempler
 - Nytt eksempel: **Slett rad i tabell** viser sletting med bekreftelse i modal og hvordan fokus håndteres etter sletting eller avbrudd.
-- Nytt eksempel: **4.1.2 Navn, rolle, verdi** viser vanlige feil vi finner med ARIA, hvorfor de skaper problemer for brukerne, og hvordan du unngår dem.
 - **API-dokumentasjon**: Props med oversatte standardtekster viser nå riktig standardverdi i stedet for funksjonsnavnet.
 - **Blockquote**: Dokumentert den nye fargen `burgundy`.
 - **Formattere**: Eksemplene for kontonummer viser nå 11 siffer.
