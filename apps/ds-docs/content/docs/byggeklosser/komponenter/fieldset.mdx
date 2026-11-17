@@ -45,8 +45,12 @@ icon: /illustrations/fieldset.svg
 - Skjulte `legend`-elementer skal fortsatt gi meningsfull kontekst.
 - Ikke erstatt `legend` med en vanlig visuell overskrift — det bryter semantikken.
 
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { Fieldset } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={Fieldset} />
+<TypeTable
+	of={Fieldset}
+	defaultValues={{ titleHelpSvg: getDefaultHelpButtonTitle() }}
+/>

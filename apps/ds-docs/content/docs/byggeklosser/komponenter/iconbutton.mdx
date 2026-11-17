@@ -64,7 +64,11 @@ Varianter finnes også i flere størrelser; størrelse og sirkel påvirker synli
   - Noen skjermlesere ignorerer inaktive elementer.
 
 import { IconButton } from '@skatteetaten/ds-buttons';
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 
 ## Props
 
-<TypeTable of={IconButton} />
+<TypeTable
+	of={IconButton}
+	defaultValues={{ spinnerTitle: getDefaultSpinnerLabel() }}
+/>

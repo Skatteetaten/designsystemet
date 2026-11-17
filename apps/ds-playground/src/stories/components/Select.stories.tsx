@@ -6,7 +6,7 @@ import {
   autoCompletePropDescription,
   getDefaultHelpButtonTitle,
 } from '@skatteetaten/ds-core-utils';
-import { Select } from '@skatteetaten/ds-forms';
+import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 
 import {
   category,
@@ -24,7 +24,12 @@ const meta = {
     classNames: { control: false, table: { category: category.props } },
     defaultValue: { control: 'text', table: { category: category.props } },
     value: { control: 'text', table: { category: category.props } },
-    placeholder: { table: { category: category.props } },
+    placeholder: {
+      table: {
+        category: category.props,
+        defaultValue: { summary: getDefaultSelectPlaceholder() },
+      },
+    },
     description: { control: 'text', table: { category: category.props } },
     errorMessage: { table: { category: category.props } },
     hasSpacing: { table: { category: category.props } },

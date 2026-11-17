@@ -25,6 +25,11 @@ import styles from './TopBannerInternalActionMenu.module.scss';
 export const getDefaultMenuLabel = (): string =>
   dsI18n.t('ds_layout:topbannerbutton.Menu');
 
+export const defaultMenuSvgPath = {
+  name: 'MenuSVGpath',
+  svgPath: MenuSVGpath,
+};
+
 /* eslint-disable react-compiler/react-compiler */
 
 /* eslint-disable react/forbid-dom-props */
@@ -37,7 +42,7 @@ export const TopBannerInternalActionMenu = ({
   'data-testid': dataTestId,
   menuActionsRef,
   menuLabel = getDefaultMenuLabel(),
-  svgPath = MenuSVGpath,
+  svgPath = defaultMenuSvgPath.svgPath,
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
   useTranslation('ds_layout', { i18n: dsI18n });

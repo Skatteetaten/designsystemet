@@ -38,6 +38,7 @@ export interface ComponentWithDocgen {
 
 interface TypeTableProps {
   of: ComponentWithDocgen;
+  defaultValues?: Record<string, string | number | boolean>;
 }
 
 const getDisplayName = (of: ComponentWithDocgen): string => {
@@ -78,7 +79,10 @@ const getDefaultValue = (defaultValue: DocgenDefaultValue | null): string => {
   return String(defaultValue.value);
 };
 
-export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
+export const TypeTable = ({
+  of,
+  defaultValues,
+}: TypeTableProps): JSX.Element => {
   const props = Object.values(of.__docgenInfo?.props ?? {});
   const displayName = getDisplayName(of);
 
@@ -98,7 +102,9 @@ export const TypeTable = ({ of }: TypeTableProps): JSX.Element => {
       </Table.Header>
       <Table.Body>
         {props.map((prop) => {
-          const defaultValue = getDefaultValue(prop.defaultValue);
+          const defaultValue = String(
+            defaultValues?.[prop.name] ?? getDefaultValue(prop.defaultValue)
+          );
           const description = prop.description;
 
           return (

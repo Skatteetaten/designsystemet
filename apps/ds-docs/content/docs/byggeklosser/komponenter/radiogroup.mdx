@@ -64,11 +64,15 @@ icon: /illustrations/radiogroup.svg
 - RadioGroup må alltid inneholde faktiske valg (children), selv om det teknisk er mulig å la den være tom.
 - Vertikal visning gir best støtte for beskrivelser og leseflyt.
 
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { RadioGroup } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={RadioGroup} />
+<TypeTable
+	of={RadioGroup}
+	defaultValues={{ titleHelpSvg: getDefaultHelpButtonTitle() }}
+/>
 
 ### RadioGroup.Radio
 

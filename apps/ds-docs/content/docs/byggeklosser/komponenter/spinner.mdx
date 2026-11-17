@@ -70,8 +70,12 @@ Bruk kort og tydelig tekst som forklarer hva som lastes, eller hvorfor brukeren 
 - Bruk ikke spinner uten en aktiv prosess i bakgrunnen.
 - Bruk forklarende tekst dersom det ikke er tydelig hva som lastes.
 
+import { getDefaultSpinnerLabel } from '@skatteetaten/ds-core-utils';
 import { Spinner } from '@skatteetaten/ds-progress';
 
 ## Props
 
-<TypeTable of={Spinner} />
+<TypeTable
+	of={Spinner}
+	defaultValues={{ children: getDefaultSpinnerLabel() }}
+/>

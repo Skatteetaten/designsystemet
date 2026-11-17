@@ -70,11 +70,18 @@ Det gir:
 - Unngå deaktivert tilstand — det kan være vanskelig for brukere å forstå hvorfor feltet ikke kan brukes. Bruk heller `readOnly` når valget ikke skal endres.
 - I read-only-modus leser skjermlesere feltet som et tekstfelt, ikke som en nedtrekksliste. Ledeteksten må derfor gi nok kontekst til at brukeren forstår hva verdien gjelder.
 
-import { Select } from '@skatteetaten/ds-forms';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={Select} />
+<TypeTable
+	of={Select}
+	defaultValues={{
+		titleHelpSvg: getDefaultHelpButtonTitle(),
+		placeholder: getDefaultSelectPlaceholder(),
+	}}
+/>
 
 ### Select.Option
 

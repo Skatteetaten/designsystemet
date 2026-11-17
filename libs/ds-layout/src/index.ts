@@ -4,6 +4,7 @@ export * from './TopBannerExternal/TopBannerExternal';
 export * from './TopBannerExternal/TopBannerExternal.types';
 export * from './TopBannerInternal/TopBannerInternal';
 export * from './TopBannerInternal/TopBannerInternal.types';
+export * from './TopBannerInternal/TopBannerInternalActionMenu/TopBannerInternalActionMenu';
 export * from './TopBannerInternal/TopBannerInternalActionMenu/TopBannerInternalActionMenu.types';
 export * from './TopBannerExternal/TopBannerExternalUserMenu/TopBannerExternalUserMenu';
 export * from './TopBannerExternal/TopBannerExternalUserMenu/TopBannerExternalUserMenu.types';

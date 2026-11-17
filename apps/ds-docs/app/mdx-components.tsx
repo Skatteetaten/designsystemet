@@ -25,6 +25,7 @@ interface CanvasMdxProps {
 
 interface TypeTableMdxProps {
   of: ComponentWithDocgen;
+  defaultValues?: Record<string, string | number | boolean>;
 }
 
 interface WordInfoTermMdxProps {
@@ -159,7 +160,9 @@ const components = {
   Canvas: ({ children, examplesPath }: CanvasMdxProps): JSX.Element => (
     <Canvas examplesPath={examplesPath}>{children}</Canvas>
   ),
-  TypeTable: ({ of }: TypeTableMdxProps): JSX.Element => <TypeTable of={of} />,
+  TypeTable: ({ of, defaultValues }: TypeTableMdxProps): JSX.Element => (
+    <TypeTable of={of} defaultValues={defaultValues} />
+  ),
   LinkGroup: RouterDsLinkGroup,
   NavigationTile: RouterNavigationTile,
   WordInfoTerm,
