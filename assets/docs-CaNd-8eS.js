@@ -1,0 +1,1 @@
+import{k as f,m as l}from"./docs-B_51Iw5J.js";import"./chunk-62JRHF6Z-B4JvYaBZ.js";import"./router-link-BGTgsLNT.js";import"./index-Dxsq0Xcr.js";import"./public-url-a6YwxxU7.js";import"./example-url-LnKurhmX.js";import"./root-ygnen4eY.js";import"./docs.module-QlWeCenT.js";export{f as clientLoader,l as default};

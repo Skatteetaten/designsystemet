@@ -1,0 +1,9 @@
+import{j as e}from"./chunk-62JRHF6Z-B4JvYaBZ.js";let o={title:"Slett rad i tabell",description:"Denne eksempelsiden viser hvordan man kan hjelpe brukeren med sletting av data i en tabell."},a={contents:[{heading:"fokushåndtering",content:`Når en rad slettes, er det viktig at fokus settes på nærmeste fokuserbare element.
+Hvis det finnes en rad over den slettede raden, settes fokus på Slett-knappen i den raden.
+Hvis det ikke finnes en rad over, settes fokus på Slett-knappen i raden under.`},{heading:"fokushåndtering",content:"Hvis slettingen avbrytes, settes fokus tilbake på Slett-knappen som ble trykket."}],headings:[{id:"sletting-med-modal",content:"Sletting med modal"},{id:"fokushåndtering",content:"Fokushåndtering"}]},l=[{depth:2,url:"#sletting-med-modal",title:e.jsx(e.Fragment,{children:"Sletting med modal"})},{depth:2,url:"#fokushåndtering",title:e.jsx(e.Fragment,{children:"Fokushåndtering"})}];function r(n){const t={h2:"h2",p:"p",...n.components},{Canvas:s}=t;return s||d("Canvas"),e.jsxs(e.Fragment,{children:[e.jsx(t.h2,{id:"sletting-med-modal",children:"Sletting med modal"}),`
+`,e.jsx(s,{examplesPath:"composed/slett-rad-i-tabell/modal"}),`
+`,e.jsx(t.h2,{id:"fokushåndtering",children:"Fokushåndtering"}),`
+`,e.jsx(t.p,{children:`Når en rad slettes, er det viktig at fokus settes på nærmeste fokuserbare element.
+Hvis det finnes en rad over den slettede raden, settes fokus på Slett-knappen i den raden.
+Hvis det ikke finnes en rad over, settes fokus på Slett-knappen i raden under.`}),`
+`,e.jsx(t.p,{children:"Hvis slettingen avbrytes, settes fokus tilbake på Slett-knappen som ble trykket."})]})}function k(n={}){const{wrapper:t}=n.components||{};return t?e.jsx(t,{...n,children:e.jsx(r,{...n})}):r(n)}function d(n,t){throw new Error("Expected component `"+n+"` to be defined: you likely forgot to import, pass, or provide it.")}export{k as default,o as frontmatter,a as structuredData,l as toc};
