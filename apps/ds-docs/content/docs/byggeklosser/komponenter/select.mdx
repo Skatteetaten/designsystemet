@@ -23,6 +23,7 @@ icon: /illustrations/select.svg
 
 - Native select brukes for å gi brukerne forutsigbar og tilgjengelig atferd — nettleserens innebygde select har god støtte for skjermlesere og tastatur på alle plattformer.
 - 5–15 alternativer er en [anbefaling fra NN Group](https://www.nngroup.com/articles/listbox-dropdown/), ikke en hard grense. Med få alternativer bør du heller vise dem alle slik at brukeren kan sammenligne, og med mange alternativer blir en lukket liste tung å navigere. Se [Å velge blant flere](/eksempler/spørre-bruker-om/mange-valg) for en samlet oversikt.
+- `disabled` anbefales ikke fordi skjermlesere kan ignorere deaktiverte felt. `readOnly` er et bedre alternativ når valget ikke skal kunne endres, men verdien fortsatt skal vises og sendes med.
 
 ## Varianter og når bør du bruke dem
 
@@ -33,6 +34,14 @@ Det gir:
 
 - Native visning som varierer mellom nettlesere
 - Forutsigbar og tilgjengelig atferd for brukeren
+
+### Read-only
+
+- Brukes når brukeren skal se et valg som allerede er gjort, men ikke kan endre det.
+- Brukeren kan fortsatt navigere til feltet, markere og kopiere innholdet.
+- Verdien til valgt alternativ sendes med skjemaet når `name` er satt — i motsetning til disabled‑felt.
+- Vær forsiktig med å bruke read-only som en midlertidig lås, for eksempel mens noe lastes. Brukeren får da ingen forklaring på hvorfor feltet ikke kan endres.
+
 
 ### Plassering og justering
 
@@ -58,13 +67,21 @@ Det gir:
   - tydelig og konsistent ledetekst
   - logisk sortering
   - korte og forståelige alternativer
-- Unngå deaktivert tilstand — det kan være vanskelig for brukere å forstå hvorfor feltet ikke kan brukes.
+- Unngå deaktivert tilstand — det kan være vanskelig for brukere å forstå hvorfor feltet ikke kan brukes. Bruk heller `readOnly` når valget ikke skal endres.
+- I read-only-modus leser skjermlesere feltet som et tekstfelt, ikke som en nedtrekksliste. Ledeteksten må derfor gi nok kontekst til at brukeren forstår hva verdien gjelder.
 
-import { Select } from '@skatteetaten/ds-forms';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import { getDefaultSelectPlaceholder, Select } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={Select} />
+<TypeTable
+	of={Select}
+	defaultValues={{
+		titleHelpSvg: getDefaultHelpButtonTitle(),
+		placeholder: getDefaultSelectPlaceholder(),
+	}}
+/>
 
 ### Select.Option
 

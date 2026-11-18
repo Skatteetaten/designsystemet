@@ -84,7 +84,11 @@ Kvitteringssiden skal inneholde:
 - «Endre»-knapper i oppsummeringssteg håndterer fokusflyt automatisk.
 - Sørg for korrekt bruk av legend/labels i skjemaelementer per steg.
 
-import { StepList } from '@skatteetaten/ds-collections';
+import {
+	getDefaultEditButtonText,
+	getDefaultNextButtonText,
+	StepList,
+} from '@skatteetaten/ds-collections';
 
 ## Props
 
@@ -92,4 +96,10 @@ import { StepList } from '@skatteetaten/ds-collections';
 
 ### StepList.Step
 
-<TypeTable of={StepList.Step} />
+<TypeTable
+	of={StepList.Step}
+	defaultValues={{
+		editButtonText: getDefaultEditButtonText(),
+		nextButtonText: getDefaultNextButtonText(),
+	}}
+/>

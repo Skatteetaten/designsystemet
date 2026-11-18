@@ -72,8 +72,12 @@ All nødvendig informasjon skal ligge i ledetekst og beskrivelse, ikke placehold
   Dette er oppfylt som standard.
 - Read-only felt må fortsatt være semantisk korrekte og kunne leses av skjermleser.
 
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { TextArea } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={TextArea} />
+<TypeTable
+	of={TextArea}
+	defaultValues={{ titleHelpSvg: getDefaultHelpButtonTitle() }}
+/>

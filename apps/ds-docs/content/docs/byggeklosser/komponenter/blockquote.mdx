@@ -14,6 +14,8 @@ icon: /illustrations/blockquote.svg
 ## Unngå Blockquote når
 
 - innholdet er løpende tekst, eller annet innhold som bør stå i vanlige avsnitt
+- Ikke bruk Blockquote med rød strek for å fremheve advarsler eller feilmeldinger. Bruk heller [Alert](/byggeklosser/komponenter/alert) eller [ErrorMessage](/byggeklosser/komponenter/errormessage).
+
 
 ## Hvorfor vi anbefaler dette
 
@@ -25,13 +27,20 @@ icon: /illustrations/blockquote.svg
 
 ### Farge og formatering
 
-Blockqoute har en fast strek på venstre side. Fargen på streken kan endres ved å bruke `borderColor`-prop:
+Blockquote har en fast strek på venstre side. Fargen på streken kan endres ved å bruke `borderColor`-prop:
 
 - Ochre (Gul, default)
 - Forest (Grønn)
 - Denim (Blå)
 - Graphite (Grå)
 - Burgundy (Rød)
+
+#### Positive og negative eksempler
+
+Grønn og rød strek kan brukes sammen for å vise par av eksempler, for eksempel «gjør dette» og «ikke gjør dette».
+
+- Bruk Burgundy kun i slike par, sammen med et positivt eksempel. Rødt brukes ellers til feil og varsler, og en rød Blockquote alene kan oppfattes som en feilmelding.
+- Betydningen må alltid komme fram av teksten, for eksempel med «Ja» og «Nei» eller «Riktig» og «Feil». Fargen skal bare forsterke budskapet, ikke være eneste bærer av det.
 
 ### Plassering og justering
 
@@ -55,6 +64,7 @@ Det er ingen interaksjon i selve komponenten, men det er mulig å legge til vanl
 
 - Blockquote gir semantisk korrekt HTML for sitater.
 - Støtter skjermlesere ved tydelig markering av sitatinnhold.
+- Fargen på streken formidles ikke til skjermlesere eller brukere som ikke skiller farger. Når fargen har betydning, som ved positive og negative eksempler, må betydningen også stå i teksten ([WCAG 1.4.1 Bruk av farge](https://www.uutilsynet.no/wcag-standarden/141-bruk-av-farge-niva/93)).
 
 import { Blockquote } from '@skatteetaten/ds-typography';
 

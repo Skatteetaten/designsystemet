@@ -75,8 +75,12 @@ icon: /illustrations/searchfield.svg
 - Sørg for tydelig kontrast og fokusmarkering.
 - Hurtigoppslag må være navigerbare med tastatur.
 
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
 import { SearchField } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={SearchField} />
+<TypeTable
+	of={SearchField}
+	defaultValues={{ titleHelpSvg: getDefaultHelpButtonTitle() }}
+/>

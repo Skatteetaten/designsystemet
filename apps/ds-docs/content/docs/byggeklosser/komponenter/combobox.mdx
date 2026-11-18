@@ -66,8 +66,18 @@ icon: /illustrations/combobox.svg
 - Maksgrense for valg må kommuniseres i ledeteksten.
 - Navigering med tastatur skal fungere i hele listen.
 
+import {
+	getDefaultHelpButtonTitle,
+	getDefaultSpinnerLabel,
+} from '@skatteetaten/ds-core-utils';
 import { Combobox } from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={Combobox} />
+<TypeTable
+	of={Combobox}
+	defaultValues={{
+		titleHelpSvg: getDefaultHelpButtonTitle(),
+		spinnerLabel: getDefaultSpinnerLabel(),
+	}}
+/>

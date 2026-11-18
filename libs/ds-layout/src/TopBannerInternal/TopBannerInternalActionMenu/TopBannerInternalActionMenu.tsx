@@ -25,6 +25,11 @@ import styles from './TopBannerInternalActionMenu.module.scss';
 export const getDefaultMenuLabel = (): string =>
   dsI18n.t('ds_layout:topbannerbutton.Menu');
 
+export const defaultMenuSvgPath = {
+  name: 'MenuSVGpath',
+  svgPath: MenuSVGpath,
+};
+
 /* eslint-disable react-compiler/react-compiler */
 
 /* eslint-disable react/forbid-dom-props */
@@ -32,11 +37,12 @@ export const TopBannerInternalActionMenu = ({
   ref,
   id,
   className = '',
+  classNames,
   lang,
   'data-testid': dataTestId,
   menuActionsRef,
   menuLabel = getDefaultMenuLabel(),
-  svgPath = MenuSVGpath,
+  svgPath = defaultMenuSvgPath.svgPath,
   children,
 }: TopBannerInternalActionMenuProps): JSX.Element => {
   useTranslation('ds_layout', { i18n: dsI18n });
@@ -88,7 +94,7 @@ export const TopBannerInternalActionMenu = ({
     <>
       <InlineButton
         id={id}
-        className={className}
+        className={`${className} ${classNames?.button ?? ''}`.trim()}
         lang={lang}
         data-testid={dataTestId}
         {...getReferenceProps()}
@@ -110,7 +116,7 @@ export const TopBannerInternalActionMenu = ({
           initialFocus={-1}
         >
           <div
-            className={styles.menu}
+            className={`${styles.menu} ${classNames?.children ?? ''}`.trim()}
             {...getFloatingProps()}
             ref={refs.setFloating}
             style={floatingStyles}

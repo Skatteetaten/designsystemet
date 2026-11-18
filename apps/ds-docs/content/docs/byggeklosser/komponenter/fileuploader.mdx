@@ -53,8 +53,20 @@ FileUploader har ingen spesielle varianter, men har flere innebygde funksjonelle
 - Når en fil slettes, skal skjermleser informere om dette.
 - Sørg for at eventuelle Alerts er tydelige og semantisk korrekte.
 
-import { FileUploader } from '@skatteetaten/ds-forms';
+import { getDefaultHelpButtonTitle } from '@skatteetaten/ds-core-utils';
+import {
+	FileUploader,
+	getDefaultFileIconTitle,
+	getDefaultInProgressLabel,
+} from '@skatteetaten/ds-forms';
 
 ## Props
 
-<TypeTable of={FileUploader} />
+<TypeTable
+	of={FileUploader}
+	defaultValues={{
+		titleHelpSvg: getDefaultHelpButtonTitle(),
+		fileIconTitle: getDefaultFileIconTitle(),
+		spinnerLabel: getDefaultInProgressLabel(),
+	}}
+/>
